@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>News - Commissioner of Agriculture, Kogi State</title>
+  <title>Latest News - Kogi State Agriculture</title>
 
   <style>
     * {
@@ -20,14 +20,14 @@
     }
 
     header {
-      background: #006b35;
+      background: #008000;
       color: white;
-      padding: 25px 15px;
       text-align: center;
+      padding: 28px 15px;
     }
 
     header h1 {
-      font-size: 28px;
+      font-size: 30px;
       margin-bottom: 8px;
     }
 
@@ -51,7 +51,7 @@
 
     .button {
       display: inline-block;
-      background: #006b35;
+      background: #008000;
       color: white;
       text-decoration: none;
       padding: 12px 18px;
@@ -59,89 +59,132 @@
       font-weight: bold;
     }
 
+    .button:hover {
+      background: #005c00;
+    }
+
     .news-card {
       background: white;
-      margin-bottom: 25px;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 3px 12px rgba(0,0,0,0.10);
+      margin-bottom: 30px;
+      padding: 22px;
+      border-radius: 12px;
+      box-shadow: 0 3px 15px rgba(0,0,0,0.10);
     }
 
     .news-card img {
+      display: block;
       width: 100%;
-      max-height: 400px;
+      max-height: 450px;
       object-fit: cover;
-      border-radius: 8px;
-      margin-bottom: 15px;
+      border-radius: 10px;
+      margin-bottom: 18px;
     }
 
     .news-card h2 {
-      color: #006b35;
+      color: #008000;
+      font-size: 25px;
       margin-bottom: 8px;
-      font-size: 23px;
     }
 
     .date {
       color: #777;
       font-size: 14px;
-      margin-bottom: 15px;
+      margin-bottom: 16px;
     }
 
     .content {
-      line-height: 1.7;
+      line-height: 1.8;
       font-size: 16px;
       white-space: pre-line;
     }
 
-    /* SHARE BUTTON */
+    .share-area {
+      margin-top: 20px;
+      padding-top: 15px;
+      border-top: 1px solid #ddd;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .share-btn,
+    .copy-btn {
+      border: none;
+      color: white;
+      padding: 11px 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 14px;
+    }
 
     .share-btn {
-      display: block;
-      width: 100%;
-      margin-top: 20px;
-      padding: 15px;
-      background: #006b35;
-      color: white;
-      border: none;
-      border-radius: 7px;
-      font-size: 17px;
-      font-weight: bold;
-      cursor: pointer;
+      background: #25D366;
+    }
+
+    .copy-btn {
+      background: #008000;
     }
 
     .share-btn:hover {
-      background: #004d26;
+      background: #1da851;
+    }
+
+    .copy-btn:hover {
+      background: #005c00;
     }
 
     .empty {
       background: white;
-      padding: 30px;
+      padding: 35px;
       text-align: center;
       border-radius: 10px;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.10);
     }
 
     .empty h2 {
-      color: #006b35;
+      color: #008000;
       margin-bottom: 10px;
     }
 
     footer {
       margin-top: 40px;
-      background: #006b35;
+      background: #004d00;
       color: white;
       text-align: center;
-      padding: 20px;
+      padding: 25px 15px;
       font-size: 14px;
+    }
+
+    footer p {
+      margin: 5px;
     }
 
     @media (max-width: 600px) {
 
       header h1 {
-        font-size: 23px;
+        font-size: 24px;
       }
 
       .news-card h2 {
-        font-size: 20px;
+        font-size: 21px;
+      }
+
+      .top-buttons {
+        flex-direction: column;
+      }
+
+      .button {
+        text-align: center;
+      }
+
+      .share-area {
+        flex-direction: column;
+      }
+
+      .share-btn,
+      .copy-btn {
+        width: 100%;
       }
 
     }
@@ -151,10 +194,14 @@
 <body>
 
 <header>
-  <h1>Latest News</h1>
-  <p>Commissioner of Agriculture - Kogi State</p>
-</header>
 
+  <h1>Latest News</h1>
+
+  <p>
+    Commissioner of Agriculture and Food Security - Kogi State
+  </p>
+
+</header>
 
 <div class="container">
 
@@ -170,25 +217,31 @@
 
   </div>
 
-
   <div id="newsContainer"></div>
 
 </div>
 
-
 <footer>
-  © 2026 Commissioner of Agriculture - Kogi State
-</footer>
 
+  <p>
+    <strong>Kogi State Ministry of Agriculture</strong>
+  </p>
+
+  <p>
+    © 2026 Kogi State Ministry of Agriculture.
+    All Rights Reserved.
+  </p>
+
+</footer>
 
 <script>
 
 function displayNews() {
 
-  const container =
+  const newsContainer =
     document.getElementById("newsContainer");
 
-  const newsList =
+  let newsList =
     JSON.parse(
       localStorage.getItem("kogiNews")
     ) || [];
@@ -196,53 +249,54 @@ function displayNews() {
 
   if (newsList.length === 0) {
 
-    container.innerHTML = `
-
+    newsContainer.innerHTML = `
       <div class="empty">
 
         <h2>No News Available</h2>
 
         <p>
-          News updates will appear here
-          when they are published.
+          News updates will appear here when they are published.
         </p>
 
       </div>
-
     `;
 
     return;
   }
 
 
-  container.innerHTML = "";
+  newsContainer.innerHTML = "";
 
 
   newsList.forEach(function(news, index) {
 
-    const article =
-      document.createElement("article");
-
-    article.className = "news-card";
+    let imageHTML = "";
 
 
-    let image = "";
+    if (
+      news.image &&
+      news.image.trim() !== ""
+    ) {
 
-    if (news.image) {
-
-      image = `
+      imageHTML = `
         <img
           src="${news.image}"
-          alt="News Image"
+          alt="${escapeHTML(news.title)}"
         >
       `;
 
     }
 
 
-    article.innerHTML = `
+    const newsItem =
+      document.createElement("article");
 
-      ${image}
+    newsItem.className = "news-card";
+
+
+    newsItem.innerHTML = `
+
+      ${imageHTML}
 
       <h2>
         ${escapeHTML(news.title)}
@@ -256,24 +310,35 @@ function displayNews() {
         ${escapeHTML(news.content)}
       </div>
 
-      <button
-        class="share-btn"
-        onclick="shareNews(${index})"
-      >
-        📤 SHARE THIS NEWS
-      </button>
+      <div class="share-area">
+
+        <button
+          class="share-btn"
+          onclick="shareNews(${index})"
+        >
+          📤 Share News
+        </button>
+
+        <button
+          class="copy-btn"
+          onclick="copyNewsLink()"
+        >
+          🔗 Copy Page Link
+        </button>
+
+      </div>
 
     `;
 
 
-    container.appendChild(article);
+    newsContainer.appendChild(newsItem);
 
   });
 
 }
 
 
-/* SHARE FUNCTION */
+/* SHARE NEWS */
 
 function shareNews(index) {
 
@@ -287,61 +352,87 @@ function shareNews(index) {
 
 
   if (!news) {
-
-    alert("News could not be found.");
-
     return;
-
   }
 
 
-  const text =
-    news.title +
-    "\n\n" +
-    news.content +
-    "\n\n" +
-    window.location.href;
+  const shareData = {
+
+    title: news.title,
+
+    text:
+      news.title +
+      "\n\n" +
+      news.content,
+
+    url: window.location.href
+
+  };
 
 
   if (navigator.share) {
 
-    navigator.share({
+    navigator.share(shareData)
+      .catch(function(error) {
 
-      title: news.title,
-
-      text: news.content,
-
-      url: window.location.href
-
-    })
-
-    .catch(function(error) {
-
-      console.log(error);
-
-    });
-
-  }
-
-  else {
-
-    navigator.clipboard.writeText(text)
-
-      .then(function() {
-
-        alert(
-          "News copied. You can paste it on WhatsApp, Facebook or another platform."
-        );
-
-      })
-
-      .catch(function() {
-
-        alert(
-          "Sharing is not supported on this browser."
+        console.log(
+          "Sharing cancelled:",
+          error
         );
 
       });
+
+  } else {
+
+    const whatsappText =
+      encodeURIComponent(
+        news.title +
+        "\n\n" +
+        news.content +
+        "\n\n" +
+        window.location.href
+      );
+
+
+    window.open(
+      "https://wa.me/?text=" +
+      whatsappText,
+      "_blank"
+    );
+
+  }
+
+}
+
+
+/* COPY PAGE LINK */
+
+function copyNewsLink() {
+
+  const link =
+    window.location.href;
+
+
+  if (
+    navigator.clipboard &&
+    navigator.clipboard.writeText
+  ) {
+
+    navigator.clipboard.writeText(link)
+      .then(function() {
+
+        alert(
+          "News page link copied successfully."
+        );
+
+      });
+
+  } else {
+
+    alert(
+      "Copy this link:\n\n" +
+      link
+    );
 
   }
 
@@ -351,6 +442,10 @@ function shareNews(index) {
 /* SECURITY */
 
 function escapeHTML(text) {
+
+  if (!text) {
+    return "";
+  }
 
   return String(text)
 
