@@ -23,25 +23,21 @@
       background: #008000;
       color: white;
       text-align: center;
-      padding: 28px 15px;
+      padding: 25px 15px;
     }
 
     header h1 {
-      font-size: 30px;
       margin-bottom: 8px;
     }
 
     .container {
       width: 94%;
-      max-width: 1100px;
+      max-width: 1000px;
       margin: 30px auto;
     }
 
-    .top-buttons {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      margin-bottom: 30px;
+    .buttons {
+      margin-bottom: 25px;
     }
 
     .button {
@@ -51,99 +47,36 @@
       text-decoration: none;
       padding: 12px 18px;
       border-radius: 6px;
+      margin-right: 8px;
+      margin-bottom: 8px;
       font-weight: bold;
-    }
-
-    .button:hover {
-      background: #005c00;
-    }
-
-    .intro {
-      background: white;
-      padding: 25px;
-      border-radius: 10px;
-      text-align: center;
-      margin-bottom: 30px;
-      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
-    }
-
-    .intro h2 {
-      color: #008000;
-      margin-bottom: 10px;
-    }
-
-    .intro p {
-      color: #555;
-      line-height: 1.7;
     }
 
     .gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 20px;
     }
 
-    .gallery-item {
+    .photo {
       background: white;
-      padding: 10px;
+      padding: 12px;
       border-radius: 10px;
-      box-shadow: 0 3px 12px rgba(0,0,0,0.10);
-      cursor: pointer;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.12);
     }
 
-    .gallery-item img {
+    .photo img {
       width: 100%;
-      height: 240px;
-      object-fit: cover;
-      border-radius: 8px;
       display: block;
+      border-radius: 8px;
+      cursor: pointer;
     }
 
     .caption {
-      padding: 12px 5px 5px;
       text-align: center;
       color: #008000;
       font-weight: bold;
-    }
-
-    .empty {
-      background: white;
-      padding: 35px;
-      text-align: center;
-      border-radius: 10px;
-    }
-
-    /* FULL IMAGE VIEW */
-
-    .lightbox {
-      display: none;
-      position: fixed;
-      z-index: 9999;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0,0,0,0.92);
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
-    }
-
-    .lightbox img {
-      max-width: 95%;
-      max-height: 85%;
-      object-fit: contain;
-      border-radius: 8px;
-    }
-
-    .close {
-      position: absolute;
-      top: 15px;
-      right: 25px;
-      color: white;
-      font-size: 40px;
-      cursor: pointer;
-      font-weight: bold;
+      padding: 12px 5px 5px;
     }
 
     footer {
@@ -156,23 +89,6 @@
 
     footer p {
       margin: 5px;
-    }
-
-    @media (max-width: 600px) {
-
-      header h1 {
-        font-size: 24px;
-      }
-
-      .gallery {
-        grid-template-columns: 1fr;
-      }
-
-      .gallery-item img {
-        height: auto;
-        max-height: 400px;
-      }
-
     }
   </style>
 </head>
@@ -191,92 +107,37 @@
 
 <div class="container">
 
-  <div class="top-buttons">
+  <div class="buttons">
 
     <a href="index.html" class="button">
       ← Home
     </a>
 
     <a href="news.html" class="button">
-      Latest News
+      News
     </a>
-
-  </div>
-
-  <div class="intro">
-
-    <h2>Agriculture in Action</h2>
-
-    <p>
-      Explore photographs from agricultural activities, programmes,
-      projects, farmer engagement and events across Kogi State.
-    </p>
 
   </div>
 
   <div class="gallery">
 
-    <!-- IMAGE 1 -->
-
-    <div class="gallery-item"
-         onclick="openImage('https://i.ibb.co/QvR2mBTc/IMG-20260814-WA0168.jpg')">
+    <div class="photo">
 
       <img
         src="https://i.ibb.co/QvR2mBTc/IMG-20260814-WA0168.jpg"
-        alt="Kogi State Agriculture"
+        alt="Hon. Timothy Ojomah"
+        onclick="window.open(this.src, '_blank')"
       >
 
       <div class="caption">
-        Agricultural Leadership
+        Hon. Timothy Ojomah
       </div>
 
     </div>
-
-
-    <!-- ADD MORE IMAGES BELOW -->
-
-    <!--
-    <div class="gallery-item"
-         onclick="openImage('YOUR_IMAGE_LINK')">
-
-      <img
-        src="YOUR_IMAGE_LINK"
-        alt="Agricultural Activity"
-      >
-
-      <div class="caption">
-        Agricultural Activity
-      </div>
-
-    </div>
-    -->
 
   </div>
 
 </div>
-
-
-<!-- LIGHTBOX -->
-
-<div
-  id="lightbox"
-  class="lightbox"
-  onclick="closeImage()"
->
-
-  <span class="close">
-    &times;
-  </span>
-
-  <img
-    id="lightboxImage"
-    src=""
-    alt="Large Image"
-    onclick="event.stopPropagation()"
-  >
-
-</div>
-
 
 <footer>
 
@@ -294,32 +155,6 @@
   </p>
 
 </footer>
-
-
-<script>
-
-function openImage(imageURL) {
-
-  document.getElementById(
-    "lightboxImage"
-  ).src = imageURL;
-
-  document.getElementById(
-    "lightbox"
-  ).style.display = "flex";
-
-}
-
-
-function closeImage() {
-
-  document.getElementById(
-    "lightbox"
-  ).style.display = "none";
-
-}
-
-</script>
 
 </body>
 </html>
