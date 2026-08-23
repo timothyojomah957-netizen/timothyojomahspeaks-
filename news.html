@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>News - Kogi State Ministry of Agriculture</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f5f5f5;
+      color: #222;
+    }
+
+    header {
+      background: #008000;
+      color: white;
+      padding: 18px 6%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    nav {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+      padding: 8px 10px;
+      border-radius: 4px;
+    }
+
+    nav a:hover {
+      background: white;
+      color: #008000;
+    }
+
+    .hero {
+      background:
+        linear-gradient(
+          rgba(0, 100, 0, 0.75),
+          rgba(0, 100, 0, 0.75)
+        ),
+        url("https://i.ibb.co/1YvrWFxp/IMG-20260814-WA0173.jpg")
+        center/cover no-repeat;
+
+      padding: 80px 20px;
+      text-align: center;
+      color: white;
+    }
+
+    .hero h1 {
+      font-size: 42px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    section {
+      padding: 60px 7%;
+    }
+
+    .section-title {
+      text-align: center;
+      color: #008000;
+      font-size: 32px;
+      margin-bottom: 15px;
+    }
+
+    .section-text {
+      max-width: 850px;
+      margin: auto;
+      text-align: center;
+      color: #555;
+      line-height: 1.8;
+    }
+
+    .news-container {
+      max-width: 1000px;
+      margin: 40px auto 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+    }
+
+    .news-card {
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+    }
+
+    .news-card img {
+      width: 100%;
+      height: 210px;
+      object-fit: cover;
+    }
+
+    .news-content {
+      padding: 25px;
+    }
+
+    .news-content h3 {
+      color: #008000;
+      margin-bottom: 10px;
+      line-height: 1.4;
+    }
+
+    .date {
+      color: #777;
+      font-size: 13px;
+      margin-bottom: 12px;
+    }
+
+    .news-content p {
+      color: #555;
+      line-height: 1.7;
+    }
+
+    .read-more {
+      display: inline-block;
+      margin-top: 15px;
+      color: #008000;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .read-more:hover {
+      text-decoration: underline;
+    }
+
+    .back {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #008000;
+      color: white;
+      padding: 12px 22px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    .btn:hover {
+      background: #006600;
+    }
+
+    footer {
+      background: #004d00;
+      color: white;
+      text-align: center;
+      padding: 25px 15px;
+    }
+
+    footer p {
+      margin: 6px 0;
+    }
+
+    @media (max-width: 700px) {
+      header {
+        justify-content: center;
+        text-align: center;
+      }
+
+      nav {
+        justify-content: center;
+      }
+
+      .hero h1 {
+        font-size: 32px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+
+    <div class="logo">
+      KOGI STATE AGRICULTURE
+    </div>
+
+    <nav>
+
+      <a href="index.html">Home</a>
+
+      <a href="about.html">About</a>
+
+      <a href="biography.html">Biography</a>
+
+      <a href="mission.html">Mission &amp; Vision</a>
+
+      <a href="portfolio.html">Portfolio</a>
+
+      <a href="service-project.html">Projects</a>
+
+      <a href="service.html">Services</a>
+
+      <a href="farmer.html">Farmers</a>
+
+      <a href="gallery.html">Gallery</a>
+
+      <a href="video.html">Videos</a>
+
+      <a href="news.html">News</a>
+
+      <a href="contact.html">Contact</a>
+
+    </nav>
+
+  </header>
+
+
+  <!-- HERO -->
+  <section class="hero">
+
+    <h1>Latest News</h1>
+
+    <p>
+      News, updates and activities from the Kogi State Ministry of Agriculture.
+    </p>
+
+  </section>
+
+
+  <!-- NEWS -->
+  <section>
+
+    <h2 class="section-title">
+      Agricultural News &amp; Updates
+    </h2>
+
+    <p class="section-text">
+      Stay informed about agricultural programmes, farmer empowerment
+      initiatives, projects, events and other developments across Kogi State.
+    </p>
+
+
+    <div class="news-container">
+
+      <!-- NEWS 1 -->
+      <div class="news-card">
+
+        <img
+          src="https://i.ibb.co/1YvrWFxp/IMG-20260814-WA0173.jpg"
+          alt="Kogi State Agriculture"
+        >
+
+        <div class="news-content">
+
+          <h3>
+            Agricultural Development and Farmer Support
+          </h3>
+
+          <div class="date">
+            Kogi State Ministry of Agriculture
+          </div>
+
+          <p>
+            The Ministry continues to promote agricultural development,
+            support farmers and encourage initiatives that can improve
+            food production and strengthen the agricultural sector.
+          </p>
+
+          <a href="contact.html" class="read-more">
+            Learn More →
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <!-- NEWS 2 -->
+      <div class="news-card">
+
+        <img
+          src="https://i.ibb.co/1YvrWFxp/IMG-20260814-WA0173.jpg"
+          alt="Agricultural Programme"
+        >
+
+        <div class="news-content">
+
+          <h3>
+            Supporting Farmers Across Kogi State
+          </h3>
+
+          <div class="date">
+            Kogi State Ministry of Agriculture
+          </div>
+
+          <p>
+            Agricultural programmes and initiatives are being promoted
+            to create opportunities for farmers, improve productivity
+            and contribute to food security in the state.
+          </p>
+
+          <a href="contact.html" class="read-more">
+            Learn More →
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <!-- NEWS 3 -->
+      <div class="news-card">
+
+        <img
+          src="https://i.ibb.co/1YvrWFxp/IMG-20260814-WA0173.jpg"
+          alt="Agriculture and Youth Empowerment"
+        >
+
+        <div class="news-content">
+
+          <h3>
+            Encouraging Youth Participation in Agriculture
+          </h3>
+
+          <div class="date">
+            Kogi State Ministry of Agriculture
+          </div>
+
+          <p>
+            Youth participation in agriculture remains an important part
+            of building a stronger and more sustainable agricultural
+            future for Kogi State.
+          </p>
+
+          <a href="contact.html" class="read-more">
+            Learn More →
+          </a>
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+
+    <div class="back">
+
+      <a href="index.html" class="btn">
+        Back to Home
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer>
+
+    <p>
+      <strong>Kogi State Ministry of Agriculture</strong>
+    </p>
+
+    <p>
+      Official Website of the Commissioner of Agriculture
+    </p>
+
+    <p>
+      © 2026 Kogi State Ministry of Agriculture.
+      All Rights Reserved.
+    </p>
+
+  </footer>
+
+</body>
+</html>
