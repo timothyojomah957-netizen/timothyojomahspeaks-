@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Profile - Hon. Timothy Ojomah</title>
 
   <style>
@@ -20,27 +21,56 @@
       padding: 25px 15px;
     }
 
+    header h1 {
+      margin-bottom: 8px;
+    }
+
     .container {
       width: 94%;
       max-width: 900px;
       margin: 30px auto;
     }
 
-    .back {
+    .top-buttons {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 25px;
+    }
+
+    .back,
+    .share-btn {
       display: inline-block;
-      background: #008000;
       color: white;
       text-decoration: none;
       padding: 12px 18px;
       border-radius: 6px;
-      margin-bottom: 25px;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+      font-size: 15px;
+    }
+
+    .back {
+      background: #008000;
+    }
+
+    .share-btn {
+      background: #25D366;
+    }
+
+    .back:hover {
+      background: #005c00;
+    }
+
+    .share-btn:hover {
+      background: #1da851;
     }
 
     .profile {
       background: white;
       padding: 25px;
       border-radius: 12px;
-      text-align: center;
       box-shadow: 0 3px 15px rgba(0,0,0,0.12);
     }
 
@@ -53,22 +83,28 @@
       border-radius: 12px;
     }
 
-    h1 {
+    .name {
       color: #008000;
+      text-align: center;
+      margin-bottom: 8px;
+    }
+
+    .position {
+      text-align: center;
+      font-weight: bold;
+      color: #555;
+      margin-bottom: 30px;
     }
 
     h2 {
       color: #008000;
       margin-top: 30px;
+      border-bottom: 2px solid #008000;
+      padding-bottom: 7px;
     }
 
     p {
       line-height: 1.8;
-      text-align: left;
-    }
-
-    .center {
-      text-align: center;
     }
 
     footer {
@@ -78,6 +114,21 @@
       text-align: center;
       padding: 25px 15px;
     }
+
+    footer p {
+      margin: 5px;
+    }
+
+    @media (max-width: 600px) {
+      .top-buttons {
+        flex-direction: column;
+      }
+
+      .back,
+      .share-btn {
+        text-align: center;
+      }
+    }
   </style>
 </head>
 
@@ -85,26 +136,37 @@
 
 <header>
   <h1>Profile</h1>
-  <p class="center">Kogi State Ministry of Agriculture</p>
+  <p>Kogi State Ministry of Agriculture</p>
 </header>
 
 <div class="container">
 
-  <a href="index.html" class="back">
-    ← Back to Home
-  </a>
+  <div class="top-buttons">
+
+    <a href="index.html" class="back">
+      ← Back to Home
+    </a>
+
+    <button class="share-btn" onclick="shareProfile()">
+      📤 Share Profile
+    </button>
+
+  </div>
 
   <div class="profile">
 
     <img
       src="https://i.ibb.co/QvR2mBTc/IMG-20260814-WA0168.jpg"
-      alt="Hon. Timothy Ojomah">
+      alt="Hon. Timothy Ojomah"
+    >
 
-    <h1>Hon. Timothy Ojomah</h1>
+    <h1 class="name">
+      Hon. Timothy Ojomah
+    </h1>
 
-    <h3>
+    <p class="position">
       Commissioner of Agriculture and Food Security, Kogi State
-    </h3>
+    </p>
 
     <h2>About the Commissioner</h2>
 
@@ -132,23 +194,26 @@
     <h2>Key Areas of Focus</h2>
 
     <p>
-      <strong>Farmer Empowerment:</strong> Supporting farmers with
-      opportunities, knowledge and resources.
+      <strong>Farmer Empowerment:</strong>
+      Supporting farmers with opportunities, knowledge and resources.
     </p>
 
     <p>
-      <strong>Food Security:</strong> Promoting agricultural initiatives
-      that contribute to increased food production.
+      <strong>Food Security:</strong>
+      Promoting agricultural initiatives that contribute to increased
+      food production.
     </p>
 
     <p>
-      <strong>Youth in Agriculture:</strong> Encouraging young people
-      to participate in agriculture and agricultural businesses.
+      <strong>Youth in Agriculture:</strong>
+      Encouraging young people to participate in agriculture and
+      agricultural businesses.
     </p>
 
     <p>
-      <strong>Agricultural Development:</strong> Promoting sustainable
-      agricultural development throughout Kogi State.
+      <strong>Agricultural Development:</strong>
+      Promoting sustainable agricultural development throughout
+      Kogi State.
     </p>
 
   </div>
@@ -156,19 +221,58 @@
 </div>
 
 <footer>
-  <p class="center">
+
+  <p>
     <strong>Kogi State Ministry of Agriculture</strong>
   </p>
 
-  <p class="center">
+  <p>
     Official Website of the Commissioner of Agriculture
   </p>
 
-  <p class="center">
+  <p>
     © 2026 Kogi State Ministry of Agriculture.
     All Rights Reserved.
   </p>
+
 </footer>
+
+<script>
+
+function shareProfile() {
+
+  const shareData = {
+    title: "Hon. Timothy Ojomah - Commissioner of Agriculture",
+    text: "View the official profile of Hon. Timothy Ojomah, Commissioner of Agriculture and Food Security, Kogi State.",
+    url: window.location.href
+  };
+
+  if (navigator.share) {
+
+    navigator.share(shareData)
+      .catch(function(error) {
+        console.log("Sharing cancelled:", error);
+      });
+
+  } else {
+
+    const profileLink = window.location.href;
+
+    navigator.clipboard.writeText(profileLink)
+      .then(function() {
+        alert(
+          "Profile link copied. You can now paste it on WhatsApp, Facebook or anywhere you want to share it."
+        );
+      })
+      .catch(function() {
+        alert("Copy this profile link: " + profileLink);
+      });
+
+  }
+
+}
+
+</script>
 
 </body>
 </html>
