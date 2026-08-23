@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Gallery | Hon. Timothy Ojomah</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f5f7f5;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #0b5d1e;
+      color: white;
+      text-align: center;
+      padding: 30px 15px;
+    }
+
+    header h1 {
+      font-size: 30px;
+      margin-bottom: 8px;
+    }
+
+    header p {
+      font-size: 16px;
+    }
+
+    nav {
+      background: #084515;
+      text-align: center;
+      padding: 13px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 30px auto;
+      padding: 20px;
+    }
+
+    .intro {
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      text-align: center;
+      margin-bottom: 25px;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+    }
+
+    .intro h2 {
+      color: #0b5d1e;
+      margin-bottom: 10px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .photo {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.10);
+    }
+
+    .photo img {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .caption {
+      padding: 15px;
+      text-align: center;
+      font-weight: bold;
+      color: #0b5d1e;
+    }
+
+    .back {
+      display: block;
+      width: fit-content;
+      margin: 30px auto 10px;
+      background: #0b5d1e;
+      color: white;
+      text-decoration: none;
+      padding: 12px 24px;
+      border-radius: 6px;
+    }
+
+    .back:hover {
+      background: #063b12;
+    }
+
+    footer {
+      background: #084515;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 30px;
+    }
+
+    @media (max-width: 800px) {
+      .gallery {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 500px) {
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+
+      header h1 {
+        font-size: 24px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Gallery</h1>
+    <p>Hon. Timothy Ojomah — Agriculture and Food Security</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="mission.html">Mission & Vision</a>
+    <a href="gallery.html">Gallery</a>
+  </nav>
+
+  <div class="container">
+
+    <div class="intro">
+      <h2>Photo Gallery</h2>
+      <p>
+        Explore moments, activities and events relating to agriculture,
+        food security and community development.
+      </p>
+    </div>
+
+    <div class="gallery">
+
+      <div class="photo">
+        <img src="images/gallery1.jpg" alt="Agricultural activity">
+        <div class="caption">Agricultural Development</div>
+      </div>
+
+      <div class="photo">
+        <img src="images/gallery2.jpg" alt="Farmers and agriculture">
+        <div class="caption">Supporting Our Farmers</div>
+      </div>
+
+      <div class="photo">
+        <img src="images/gallery3.jpg" alt="Community engagement">
+        <div class="caption">Community Engagement</div>
+      </div>
+
+      <div class="photo">
+        <img src="images/gallery4.jpg" alt="Agricultural programme">
+        <div class="caption">Agricultural Programme</div>
+      </div>
+
+      <div class="photo">
+        <img src="images/gallery5.jpg" alt="Food security initiative">
+        <div class="caption">Food Security Initiative</div>
+      </div>
+
+      <div class="photo">
+        <img src="images/gallery6.jpg" alt="Farm development">
+        <div class="caption">Farm Development</div>
+      </div>
+
+    </div>
+
+    <a class="back" href="index.html">← Back to Home</a>
+
+  </div>
+
+  <footer>
+    <p>&copy; 2026 Hon. Timothy Ojomah. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>
