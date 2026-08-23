@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>News Publishing - Commissioner of Agriculture</title>
+  <title>Publish News - Commissioner of Agriculture</title>
 
   <style>
     * {
@@ -22,30 +22,30 @@
     header {
       background: #006b35;
       color: white;
-      padding: 20px;
+      padding: 25px 15px;
       text-align: center;
     }
 
     header h1 {
-      font-size: 25px;
+      font-size: 26px;
       margin-bottom: 8px;
     }
 
     header p {
-      font-size: 14px;
+      font-size: 15px;
     }
 
     .container {
       width: 95%;
-      max-width: 850px;
+      max-width: 800px;
       margin: 30px auto;
     }
 
-    .card {
+    .form-box {
       background: white;
       padding: 25px;
       border-radius: 10px;
-      box-shadow: 0 3px 12px rgba(0,0,0,0.12);
+      box-shadow: 0 3px 12px rgba(0,0,0,0.10);
     }
 
     h2 {
@@ -56,59 +56,135 @@
 
     label {
       display: block;
+      font-weight: bold;
       margin-top: 15px;
       margin-bottom: 7px;
-      font-weight: bold;
     }
 
     input,
     textarea {
       width: 100%;
-      padding: 12px;
+      padding: 13px;
       border: 1px solid #ccc;
       border-radius: 6px;
-      font-size: 15px;
+      font-size: 16px;
+      outline: none;
+    }
+
+    input:focus,
+    textarea:focus {
+      border-color: #006b35;
     }
 
     textarea {
-      min-height: 180px;
+      min-height: 220px;
       resize: vertical;
+      line-height: 1.6;
     }
 
-    button {
+    .publish-btn {
       width: 100%;
-      margin-top: 20px;
-      padding: 14px;
-      border: none;
-      border-radius: 6px;
       background: #006b35;
       color: white;
-      font-size: 16px;
+      border: none;
+      padding: 14px;
+      margin-top: 22px;
+      border-radius: 6px;
+      font-size: 17px;
       font-weight: bold;
       cursor: pointer;
     }
 
-    button:hover {
+    .publish-btn:hover {
       background: #004d26;
     }
 
-    .back {
-      display: block;
-      text-align: center;
+    .clear-btn {
+      width: 100%;
+      background: #777;
+      color: white;
+      border: none;
+      padding: 12px;
+      margin-top: 10px;
+      border-radius: 6px;
+      font-size: 15px;
+      cursor: pointer;
+    }
+
+    .message {
+      display: none;
       margin-top: 20px;
+      padding: 14px;
+      border-radius: 6px;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .success {
+      background: #dff3e5;
+      color: #176b2f;
+    }
+
+    .error {
+      background: #f8d7da;
+      color: #842029;
+    }
+
+    .links {
+      text-align: center;
+      margin-top: 25px;
+    }
+
+    .links a {
+      display: inline-block;
+      margin: 5px;
       color: #006b35;
       text-decoration: none;
       font-weight: bold;
     }
 
-    .notice {
-      background: #fff3cd;
-      border: 1px solid #ffe69c;
-      padding: 12px;
-      border-radius: 6px;
-      margin-bottom: 20px;
+    footer {
+      margin-top: 40px;
+      background: #006b35;
+      color: white;
+      text-align: center;
+      padding: 20px;
       font-size: 14px;
-      line-height: 1.5;
+    }
+
+    .preview {
+      margin-top: 30px;
+    }
+
+    .preview-card {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.10);
+    }
+
+    .preview-card img {
+      width: 100%;
+      max-height: 350px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+
+    .preview-card h3 {
+      color: #006b35;
+      margin-bottom: 8px;
+    }
+
+    .preview-date {
+      color: #777;
+      font-size: 13px;
+      margin-bottom: 12px;
+    }
+
+    .preview-content {
+      line-height: 1.7;
+      white-space: pre-line;
     }
   </style>
 </head>
@@ -116,91 +192,287 @@
 <body>
 
 <header>
-  <h1>News Publishing</h1>
+  <h1>Publish News</h1>
   <p>Commissioner of Agriculture - Kogi State</p>
 </header>
 
 <div class="container">
 
-  <div class="card">
+  <div class="form-box">
 
-    <h2>Add News</h2>
+    <h2>News Publishing Form</h2>
 
-    <div class="notice">
-      Fill in the information below to prepare a new news article.
-      After submitting, the article will be displayed on this page.
+    <label for="title">News Title</label>
+
+    <input
+      type="text"
+      id="title"
+      placeholder="Enter news title"
+    >
+
+    <label for="image">News Image URL</label>
+
+    <input
+      type="text"
+      id="image"
+      placeholder="Paste image URL here (optional)"
+    >
+
+    <label for="content">News Story</label>
+
+    <textarea
+      id="content"
+      placeholder="Write the full news story here..."
+    ></textarea>
+
+    <button
+      class="publish-btn"
+      onclick="publishNews()"
+    >
+      Publish News
+    </button>
+
+    <button
+      class="clear-btn"
+      onclick="clearForm()"
+    >
+      Clear Form
+    </button>
+
+    <div
+      id="message"
+      class="message"
+    ></div>
+
+  </div>
+
+
+  <div class="preview">
+
+    <h2>Preview</h2>
+
+    <div
+      id="previewArea"
+      class="preview-card"
+    >
+      <p>
+        Enter your news above to see a preview.
+      </p>
     </div>
 
-    <form id="newsForm">
+  </div>
 
-      <label for="title">News Title</label>
-      <input
-        type="text"
-        id="title"
-        placeholder="Enter news title"
-        required
-      >
 
-      <label for="date">News Date</label>
-      <input
-        type="date"
-        id="date"
-        required
-      >
+  <div class="links">
 
-      <label for="image">News Image URL</label>
-      <input
-        type="text"
-        id="image"
-        placeholder="Paste image URL here"
-      >
+    <a href="news.html">
+      View News Page
+    </a>
 
-      <label for="content">News Content</label>
-      <textarea
-        id="content"
-        placeholder="Write the full news story here..."
-        required
-      ></textarea>
+    |
 
-      <button type="submit">Publish News</button>
-
-    </form>
-
-    <a href="news.html" class="back">← Back to News Page</a>
+    <a href="index.html">
+      Back to Home
+    </a>
 
   </div>
 
 </div>
 
+
+<footer>
+  © 2026 Commissioner of Agriculture - Kogi State
+</footer>
+
+
 <script>
 
-  document.getElementById("newsForm").addEventListener("submit", function(event) {
+function publishNews() {
 
-    event.preventDefault();
+  const title =
+    document.getElementById("title").value.trim();
 
-    const title = document.getElementById("title").value;
-    const date = document.getElementById("date").value;
-    const image = document.getElementById("image").value;
-    const content = document.getElementById("content").value;
+  const image =
+    document.getElementById("image").value.trim();
 
-    const news = {
-      title: title,
-      date: date,
-      image: image,
-      content: content
-    };
+  const content =
+    document.getElementById("content").value.trim();
 
-    let newsList = JSON.parse(localStorage.getItem("kogiNews")) || [];
 
-    newsList.unshift(news);
+  if (title === "") {
 
-    localStorage.setItem("kogiNews", JSON.stringify(newsList));
+    showMessage(
+      "Please enter a news title.",
+      "error"
+    );
 
-    alert("News published successfully!");
+    return;
+  }
 
-    document.getElementById("newsForm").reset();
 
-  });
+  if (content === "") {
+
+    showMessage(
+      "Please enter the news story.",
+      "error"
+    );
+
+    return;
+  }
+
+
+  const news = {
+
+    title: title,
+
+    image: image,
+
+    content: content,
+
+    date: new Date().toLocaleDateString(
+      "en-NG",
+      {
+        day: "numeric",
+        month: "long",
+        year: "numeric"
+      }
+    )
+
+  };
+
+
+  let newsList =
+    JSON.parse(
+      localStorage.getItem("kogiNews")
+    ) || [];
+
+
+  newsList.unshift(news);
+
+
+  localStorage.setItem(
+    "kogiNews",
+    JSON.stringify(newsList)
+  );
+
+
+  showMessage(
+    "News published successfully!",
+    "success"
+  );
+
+
+  showPreview(news);
+
+
+  document.getElementById("title").value = "";
+
+  document.getElementById("image").value = "";
+
+  document.getElementById("content").value = "";
+
+}
+
+
+function showPreview(news) {
+
+  let imageHTML = "";
+
+
+  if (news.image !== "") {
+
+    imageHTML = `
+      <img
+        src="${escapeHTML(news.image)}"
+        alt="News Image"
+      >
+    `;
+
+  }
+
+
+  document.getElementById(
+    "previewArea"
+  ).innerHTML = `
+
+    ${imageHTML}
+
+    <h3>
+      ${escapeHTML(news.title)}
+    </h3>
+
+    <div class="preview-date">
+      Published: ${escapeHTML(news.date)}
+    </div>
+
+    <div class="preview-content">
+      ${escapeHTML(news.content)}
+    </div>
+
+  `;
+
+}
+
+
+function showMessage(text, type) {
+
+  const message =
+    document.getElementById("message");
+
+
+  message.textContent = text;
+
+  message.className =
+    "message " + type;
+
+  message.style.display = "block";
+
+
+  setTimeout(function() {
+
+    message.style.display = "none";
+
+  }, 4000);
+
+}
+
+
+function clearForm() {
+
+  document.getElementById("title").value = "";
+
+  document.getElementById("image").value = "";
+
+  document.getElementById("content").value = "";
+
+  document.getElementById("previewArea").innerHTML = `
+
+    <p>
+      Enter your news above to see a preview.
+    </p>
+
+  `;
+
+  document.getElementById("message").style.display = "none";
+
+}
+
+
+function escapeHTML(text) {
+
+  return text
+
+    .replace(/&/g, "&amp;")
+
+    .replace(/</g, "&lt;")
+
+    .replace(/>/g, "&gt;")
+
+    .replace(/"/g, "&quot;")
+
+    .replace(/'/g, "&#039;");
+
+}
 
 </script>
 
