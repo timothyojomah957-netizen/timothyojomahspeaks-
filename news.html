@@ -92,59 +92,33 @@
       margin-bottom: 16px;
     }
 
-    .content {
+    .summary {
       line-height: 1.8;
       font-size: 16px;
-      white-space: pre-line;
+      margin-bottom: 18px;
     }
 
-    .share-area {
-      margin-top: 20px;
-      padding-top: 15px;
-      border-top: 1px solid #ddd;
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
-
-    .share-btn,
-    .copy-btn {
-      border: none;
-      color: white;
-      padding: 11px 16px;
-      border-radius: 6px;
-      cursor: pointer;
-      font-weight: bold;
-      font-size: 14px;
-    }
-
-    .share-btn {
-      background: #25D366;
-    }
-
-    .copy-btn {
+    .read-button {
+      display: inline-block;
       background: #008000;
+      color: white;
+      text-decoration: none;
+      padding: 12px 18px;
+      border-radius: 6px;
+      font-weight: bold;
     }
 
-    .share-btn:hover {
-      background: #1da851;
-    }
-
-    .copy-btn:hover {
+    .read-button:hover {
       background: #005c00;
     }
 
-    .empty {
-      background: white;
-      padding: 35px;
-      text-align: center;
-      border-radius: 10px;
-      box-shadow: 0 3px 12px rgba(0,0,0,0.10);
-    }
-
-    .empty h2 {
-      color: #008000;
-      margin-bottom: 10px;
+    .publish-note {
+      background: #fff;
+      padding: 20px;
+      margin-top: 25px;
+      border-left: 5px solid #008000;
+      border-radius: 6px;
+      line-height: 1.7;
     }
 
     footer {
@@ -178,15 +152,6 @@
         text-align: center;
       }
 
-      .share-area {
-        flex-direction: column;
-      }
-
-      .share-btn,
-      .copy-btn {
-        width: 100%;
-      }
-
     }
   </style>
 </head>
@@ -203,6 +168,7 @@
 
 </header>
 
+
 <div class="container">
 
   <div class="top-buttons">
@@ -217,9 +183,56 @@
 
   </div>
 
-  <div id="newsContainer"></div>
+
+  <!-- NEWS ARTICLE -->
+
+  <article class="news-card">
+
+    <img
+      src="https://i.ibb.co/1YvrWFxp/IMG-20260814-WA0173.jpg"
+      alt="Kogi State agricultural activities"
+    >
+
+    <h2>
+      Commissioner Launches New Agricultural Programme
+    </h2>
+
+    <div class="date">
+      Published: August 23, 2026
+    </div>
+
+    <div class="summary">
+
+      The Kogi State Ministry of Agriculture continues to strengthen
+      agricultural development through programmes and initiatives aimed
+      at supporting farmers, improving food production and promoting
+      agricultural development across the state.
+
+    </div>
+
+    <a
+      href="news-1.html"
+      class="read-button"
+    >
+      Read Full Story →
+    </a>
+
+  </article>
+
+
+  <div class="publish-note">
+
+    <strong>News Update:</strong>
+
+    <p>
+      New agricultural news and updates will be published on this page.
+      Visit the Publish News section to prepare new stories.
+    </p>
+
+  </div>
 
 </div>
+
 
 <footer>
 
@@ -233,238 +246,6 @@
   </p>
 
 </footer>
-
-<script>
-
-function displayNews() {
-
-  const newsContainer =
-    document.getElementById("newsContainer");
-
-  let newsList =
-    JSON.parse(
-      localStorage.getItem("kogiNews")
-    ) || [];
-
-
-  if (newsList.length === 0) {
-
-    newsContainer.innerHTML = `
-      <div class="empty">
-
-        <h2>No News Available</h2>
-
-        <p>
-          News updates will appear here when they are published.
-        </p>
-
-      </div>
-    `;
-
-    return;
-  }
-
-
-  newsContainer.innerHTML = "";
-
-
-  newsList.forEach(function(news, index) {
-
-    let imageHTML = "";
-
-
-    if (
-      news.image &&
-      news.image.trim() !== ""
-    ) {
-
-      imageHTML = `
-        <img
-          src="${news.image}"
-          alt="${escapeHTML(news.title)}"
-        >
-      `;
-
-    }
-
-
-    const newsItem =
-      document.createElement("article");
-
-    newsItem.className = "news-card";
-
-
-    newsItem.innerHTML = `
-
-      ${imageHTML}
-
-      <h2>
-        ${escapeHTML(news.title)}
-      </h2>
-
-      <div class="date">
-        Published: ${escapeHTML(news.date)}
-      </div>
-
-      <div class="content">
-        ${escapeHTML(news.content)}
-      </div>
-
-      <div class="share-area">
-
-        <button
-          class="share-btn"
-          onclick="shareNews(${index})"
-        >
-          📤 Share News
-        </button>
-
-        <button
-          class="copy-btn"
-          onclick="copyNewsLink()"
-        >
-          🔗 Copy Page Link
-        </button>
-
-      </div>
-
-    `;
-
-
-    newsContainer.appendChild(newsItem);
-
-  });
-
-}
-
-
-/* SHARE NEWS */
-
-function shareNews(index) {
-
-  const newsList =
-    JSON.parse(
-      localStorage.getItem("kogiNews")
-    ) || [];
-
-
-  const news = newsList[index];
-
-
-  if (!news) {
-    return;
-  }
-
-
-  const shareData = {
-
-    title: news.title,
-
-    text:
-      news.title +
-      "\n\n" +
-      news.content,
-
-    url: window.location.href
-
-  };
-
-
-  if (navigator.share) {
-
-    navigator.share(shareData)
-      .catch(function(error) {
-
-        console.log(
-          "Sharing cancelled:",
-          error
-        );
-
-      });
-
-  } else {
-
-    const whatsappText =
-      encodeURIComponent(
-        news.title +
-        "\n\n" +
-        news.content +
-        "\n\n" +
-        window.location.href
-      );
-
-
-    window.open(
-      "https://wa.me/?text=" +
-      whatsappText,
-      "_blank"
-    );
-
-  }
-
-}
-
-
-/* COPY PAGE LINK */
-
-function copyNewsLink() {
-
-  const link =
-    window.location.href;
-
-
-  if (
-    navigator.clipboard &&
-    navigator.clipboard.writeText
-  ) {
-
-    navigator.clipboard.writeText(link)
-      .then(function() {
-
-        alert(
-          "News page link copied successfully."
-        );
-
-      });
-
-  } else {
-
-    alert(
-      "Copy this link:\n\n" +
-      link
-    );
-
-  }
-
-}
-
-
-/* SECURITY */
-
-function escapeHTML(text) {
-
-  if (!text) {
-    return "";
-  }
-
-  return String(text)
-
-    .replace(/&/g, "&amp;")
-
-    .replace(/</g, "&lt;")
-
-    .replace(/>/g, "&gt;")
-
-    .replace(/"/g, "&quot;")
-
-    .replace(/'/g, "&#039;");
-
-}
-
-
-displayNews();
-
-</script>
 
 </body>
 </html>
