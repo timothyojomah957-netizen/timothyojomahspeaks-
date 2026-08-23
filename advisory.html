@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Agricultural Advisory Services | Kogi State Ministry of Agriculture</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f5f5f5;
+      color: #222;
+    }
+
+    header {
+      background: #008000;
+      color: white;
+      padding: 20px 6%;
+      text-align: center;
+    }
+
+    header h1 {
+      margin-bottom: 15px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 8px 12px;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      background: white;
+      color: #008000;
+    }
+
+    .hero {
+      background: #006400;
+      color: white;
+      text-align: center;
+      padding: 75px 20px;
+    }
+
+    .hero h2 {
+      font-size: 42px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      max-width: 850px;
+      margin: auto;
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    section {
+      padding: 60px 7%;
+    }
+
+    .title {
+      text-align: center;
+      color: #008000;
+      font-size: 32px;
+      margin-bottom: 15px;
+    }
+
+    .intro {
+      max-width: 850px;
+      margin: auto;
+      text-align: center;
+      color: #555;
+      line-height: 1.8;
+    }
+
+    .advisory-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+      margin-top: 40px;
+    }
+
+    .advisory-card {
+      background: white;
+      padding: 30px 25px;
+      border-radius: 10px;
+      border-top: 5px solid #008000;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+    }
+
+    .icon {
+      font-size: 45px;
+      margin-bottom: 15px;
+    }
+
+    .advisory-card h3 {
+      color: #008000;
+      margin-bottom: 12px;
+    }
+
+    .advisory-card p {
+      color: #555;
+      line-height: 1.7;
+    }
+
+    .support {
+      background: white;
+    }
+
+    .support-list {
+      max-width: 900px;
+      margin: 35px auto 0;
+    }
+
+    .support-box {
+      background: #f1f8f1;
+      padding: 23px;
+      margin-bottom: 18px;
+      border-left: 5px solid #008000;
+      border-radius: 5px;
+    }
+
+    .support-box h3 {
+      color: #008000;
+      margin-bottom: 8px;
+    }
+
+    .support-box p {
+      color: #555;
+      line-height: 1.7;
+    }
+
+    .cta {
+      background: #008000;
+      color: white;
+      text-align: center;
+    }
+
+    .cta .title {
+      color: white;
+    }
+
+    .cta p {
+      max-width: 850px;
+      margin: auto;
+      line-height: 1.8;
+      font-size: 17px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 25px;
+      background: white;
+      color: #008000;
+      padding: 12px 25px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    footer {
+      background: #004d00;
+      color: white;
+      text-align: center;
+      padding: 25px 15px;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 700px) {
+      .hero h2 {
+        font-size: 32px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+
+  <h1>Kogi State Ministry of Agriculture</h1>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="biography.html">Biography</a>
+    <a href="mission.html">Mission & Vision</a>
+    <a href="achievements.html">Achievements</a>
+    <a href="projects.html">Projects</a>
+    <a href="programs.html">Programs</a>
+    <a href="services.html">Services</a>
+    <a href="events.html">Events</a>
+    <a href="partners.html">Partners</a>
+    <a href="testimonials.html">Testimonials</a>
+    <a href="downloads.html">Downloads</a>
+    <a href="faq.html">FAQ</a>
+    <a href="leadership.html">Leadership</a>
+    <a href="departments.html">Departments</a>
+    <a href="press.html">Press Releases</a>
+    <a href="directory.html">Directory</a>
+    <a href="opportunities.html">Opportunities</a>
+    <a href="stakeholders.html">Stakeholders</a>
+    <a href="farmers.html">Farmers</a>
+    <a href="youth.html">Youth</a>
+    <a href="women.html">Women</a>
+    <a href="cooperatives.html">Cooperatives</a>
+    <a href="extension.html">Extension</a>
+    <a href="investment.html">Investment</a>
+    <a href="agriculture-data.html">Agriculture Data</a>
+    <a href="research.html">Research</a>
+    <a href="climate-smart.html">Climate-Smart</a>
+    <a href="food-security.html">Food Security</a>
+    <a href="markets.html">Markets</a>
+    <a href="irrigation.html">Irrigation</a>
+    <a href="inputs.html">Agricultural Inputs</a>
+    <a href="mechanization.html">Mechanization</a>
+    <a href="training.html">Training</a>
+    <a href="finance.html">Finance</a>
+    <a href="processing.html">Processing</a>
+    <a href="storage.html">Storage</a>
+    <a href="logistics.html">Logistics</a>
+    <a href="insurance.html">Insurance</a>
+    <a href="land-management.html">Land Management</a>
+    <a href="food-processing.html">Food Processing</a>
+    <a href="quality-control.html">Quality Control</a>
+    <a href="agribusiness.html">Agribusiness</a>
+    <a href="statistics.html">Statistics</a>
+    <a href="innovation.html">Innovation</a>
+    <a href="risk-management.html">Risk Management</a>
+    <a href="environment.html">Environment</a>
+    <a href="youth-empowerment.html">Youth Empowerment</a>
+    <a href="community.html">Community</a>
+    <a href="agricultural-information.html">Agricultural Information</a>
+    <a href="monitoring.html">Monitoring</a>
+    <a href="planning-policy.html">Planning & Policy</a>
+    <a href="sustainability.html">Sustainability</a>
+    <a href="outreach.html">Outreach</a>
+    <a href="advisory.html">Advisory Services</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="video.html">Videos</a>
+    <a href="news.html">News</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+</header>
+
+<section class="hero">
+
+  <h2>Agricultural Advisory Services</h2>
+
+  <p>
+    Providing farmers and agricultural stakeholders with useful knowledge,
+    guidance and information to support better agricultural decisions and
+    improved farm productivity.
+  </p>
+
+</section>
+
+<section>
+
+  <h2 class="title">Our Advisory Services</h2>
+
+  <p class="intro">
+    Agricultural advisory services help farmers access practical information
+    and guidance on production, farm management, marketing and other
+    agricultural activities.
+  </p>
+
+  <div class="advisory-grid">
+
+    <div class="advisory-card">
+      <div class="icon">🌾</div>
+      <h3>Crop Production Advice</h3>
+      <p>
+        Providing guidance on crop production practices, farm management and
+        improved agricultural techniques.
+      </p>
+    </div>
+
+    <div class="advisory-card">
+      <div class="icon">🐄</div>
+      <h3>Livestock Guidance</h3>
+      <p>
+        Supporting livestock farmers with information on animal management,
+        production practices and farm improvement.
+      </p>
+    </div>
+
+    <div class="advisory-card">
+      <div class="icon">🌱</div>
+      <h3>Soil Management</h3>
+      <p>
+        Sharing information on responsible soil management and practices that
+        can help maintain agricultural productivity.
+      </p>
+    </div>
+
+    <div class="advisory-card">
+      <div class="icon">💧</div>
+      <h3>Water Management</h3>
+      <p>
+        Providing guidance on efficient agricultural water use and practices
+        that support sustainable production.
+      </p>
+    </div>
+
+    <div class="advisory-card">
+      <div class="icon">📈</div>
+      <h3>Farm Business Advice</h3>
+      <p>
+        Supporting farmers with information on farm planning, record keeping,
+        marketing and agricultural business management.
+      </p>
+    </div>
+
+    <div class="advisory-card">
+      <div class="icon">🤝</div>
+      <h3>Market Information</h3>
+      <p>
+        Connecting farmers with useful information about agricultural markets,
+        value chains and potential business opportunities.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+<section class="support">
+
+  <h2 class="title">How Farmers Can Benefit</h2>
+
+  <div class="support-list">
+
+    <div class="support-box">
+      <h3>Better Farm Decisions</h3>
+      <p>
+        Access to useful agricultural information can help farmers make more
+        informed decisions about their farming activities.
+      </p>
+    </div>
+
+    <div class="support-box">
+      <h3>Improved Productivity</h3>
+      <p>
+        Practical knowledge and improved production methods can contribute to
+        more efficient and productive farming.
+      </p>
+    </div>
+
+    <div class="support-box">
+      <h3>Access to Opportunities</h3>
+      <p>
+        Advisory services can help farmers become aware of relevant
+        agricultural programs, training and opportunities.
+      </p>
+    </div>
+
+    <div class="support-box">
+      <h3>Stronger Farm Management</h3>
+      <p>
+        Farmers can gain useful knowledge about planning, record keeping,
+        resource management and agricultural business practices.
+      </p>
+    </div>
+
+    <div class="support-box">
+      <h3>Knowledge Sharing</h3>
+      <p>
+        Advisory activities encourage communication and knowledge exchange
+        between farmers, extension personnel and agricultural stakeholders.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+<section class="cta">
+
+  <h2 class="title">Supporting Farmers With Knowledge</h2>
+
+  <p>
+    The Ministry is committed to strengthening agricultural knowledge,
+    information sharing and advisory support to help farmers and communities
+    contribute to the growth of Kogi State's agricultural sector.
+  </p>
+
+  <a href="contact.html" class="btn">
+    Contact the Ministry
+  </a>
+
+</section>
+
+<footer>
+
+  <p>
+    <strong>Kogi State Ministry of Agriculture</strong>
+  </p>
+
+  <p>
+    Official Website of the Commissioner of Agriculture and Food Security
+  </p>
+
+  <p>
+    © 2026 Kogi State Ministry of Agriculture.
+    All Rights Reserved.
+  </p>
+
+</footer>
+
+</body>
+</html>

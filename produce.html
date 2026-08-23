@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Where Farmers Can Sell Their Produce | Kogi State Ministry of Agriculture</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #f5f5f5;
+  color: #222;
+  line-height: 1.7;
+}
+
+header {
+  background: #008000;
+  color: white;
+  text-align: center;
+  padding: 25px 6%;
+}
+
+header h1 {
+  margin-bottom: 8px;
+}
+
+header p {
+  margin-bottom: 18px;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+nav a:hover {
+  background: white;
+  color: #008000;
+}
+
+.hero {
+  background: #006400;
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.hero h2 {
+  font-size: 42px;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  max-width: 900px;
+  margin: auto;
+  font-size: 18px;
+}
+
+section {
+  padding: 60px 7%;
+}
+
+.title {
+  text-align: center;
+  color: #008000;
+  font-size: 32px;
+  margin-bottom: 18px;
+}
+
+.intro {
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+  color: #555;
+}
+
+/* SELLING OPTIONS */
+
+.options {
+  background: white;
+}
+
+.option-grid {
+  max-width: 1100px;
+  margin: 40px auto 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px;
+}
+
+.option-card {
+  background: #f8fff8;
+  padding: 30px 25px;
+  border-radius: 10px;
+  border-top: 5px solid #008000;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+  text-align: center;
+}
+
+.option-card .icon {
+  font-size: 45px;
+  margin-bottom: 12px;
+}
+
+.option-card h3 {
+  color: #008000;
+  margin-bottom: 10px;
+}
+
+.option-card p {
+  color: #555;
+}
+
+/* MARKET PLACES */
+
+.marketplaces {
+  background: #f5f5f5;
+}
+
+.market-grid {
+  max-width: 1100px;
+  margin: 40px auto 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.market-card {
+  background: white;
+  padding: 28px;
+  border-radius: 10px;
+  border-left: 5px solid #008000;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+}
+
+.market-card h3 {
+  color: #008000;
+  margin-bottom: 10px;
+}
+
+.market-card p {
+  color: #555;
+}
+
+/* STEPS */
+
+.steps-section {
+  background: white;
+}
+
+.steps {
+  max-width: 900px;
+  margin: 40px auto 0;
+}
+
+.step {
+  display: flex;
+  gap: 20px;
+  background: #f8fff8;
+  padding: 22px;
+  margin-bottom: 18px;
+  border-left: 5px solid #008000;
+  border-radius: 7px;
+}
+
+.number {
+  min-width: 45px;
+  height: 45px;
+  background: #008000;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+.step h3 {
+  color: #008000;
+  margin-bottom: 6px;
+}
+
+/* FORM */
+
+.form-section {
+  background: #f5f5f5;
+}
+
+.form-container {
+  max-width: 850px;
+  margin: 40px auto 0;
+  background: white;
+  padding: 35px;
+  border-radius: 12px;
+  border-top: 6px solid #008000;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.form-container h3 {
+  color: #008000;
+  margin-bottom: 25px;
+  font-size: 24px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+textarea {
+  min-height: 130px;
+  resize: vertical;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 15px;
+  background: #008000;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 17px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background: #006400;
+}
+
+.notice {
+  margin-top: 25px;
+  padding: 18px;
+  background: #eaf7ea;
+  border-left: 5px solid #008000;
+  color: #555;
+}
+
+/* FOOTER */
+
+footer {
+  background: #004d00;
+  color: white;
+  text-align: center;
+  padding: 25px 15px;
+}
+
+@media (max-width: 700px) {
+
+  .hero h2 {
+    font-size: 30px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .step {
+    flex-direction: column;
+  }
+
+  .form-container {
+    padding: 22px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+<h1>Kogi State Ministry of Agriculture and Food Security</h1>
+
+<p>
+Hon. Timothy Ojomah — Commissioner for Agriculture and Food Security
+</p>
+
+<nav>
+
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="biography.html">Biography</a>
+<a href="mission.html">Mission & Vision</a>
+<a href="projects.html">Projects</a>
+<a href="services.html">Services</a>
+<a href="farmers.html">Farmers</a>
+<a href="farmer-information.html">Farmer Information</a>
+<a href="agricultural-education.html">Agricultural Education</a>
+<a href="farmer-registration.html">Farmer Registration</a>
+<a href="farmer-support.html">Farmer Support</a>
+<a href="farmer-cooperatives.html">Farmer Cooperatives</a>
+<a href="women-agriculture.html">Women in Agriculture</a>
+<a href="youth-agriculture.html">Youth in Agriculture</a>
+<a href="training.html">Training</a>
+<a href="agricultural-market.html">Market Information</a>
+<a href="sell-produce.html">Sell Your Produce</a>
+<a href="news.html">News</a>
+<a href="gallery.html">Gallery</a>
+<a href="contact.html">Contact</a>
+
+</nav>
+
+</header>
+
+
+<section class="hero">
+
+<h2>Where Farmers Can Sell Their Produce</h2>
+
+<p>
+Helping farmers identify suitable channels for selling crops, livestock,
+fish and other agricultural products while promoting responsible and
+transparent agricultural trade.
+</p>
+
+</section>
+
+
+<section class="options">
+
+<h2 class="title">Where Can Farmers Sell?</h2>
+
+<p class="intro">
+Farmers can explore different legitimate sales channels depending on the
+type, quantity, quality and location of their agricultural produce.
+</p>
+
+<div class="option-grid">
+
+<div class="option-card">
+
+<div class="icon">🏪</div>
+
+<h3>Local Markets</h3>
+
+<p>
+Farmers can sell agricultural produce directly to consumers and traders
+through local markets in their communities.
+</p>
+
+</div>
+
+
+<div class="option-card">
+
+<div class="icon">🤝</div>
+
+<h3>Farmer Cooperatives</h3>
+
+<p>
+Cooperatives can help members coordinate production, marketing and
+connections with potential buyers.
+</p>
+
+</div>
+
+
+<div class="option-card">
+
+<div class="icon">🏭</div>
+
+<h3>Processors</h3>
+
+<p>
+Farmers may supply suitable agricultural products to food processors,
+agro-processing businesses and other value-addition enterprises.
+</p>
+
+</div>
+
+
+<div class="option-card">
+
+<div class="icon">🚚</div>
+
+<h3>Wholesalers</h3>
+
+<p>
+Wholesalers may purchase agricultural commodities in larger quantities
+for distribution to other markets.
+</p>
+
+</div>
+
+
+<div class="option-card">
+
+<div class="icon">🛒</div>
+
+<h3>Retailers</h3>
+
+<p>
+Retail businesses may purchase farm products for resale directly to
+consumers.
+</p>
+
+</div>
+
+
+<div class="option-card">
+
+<div class="icon">🏢</div>
+
+<h3>Institutional Buyers</h3>
+
+<p>
+Eligible institutions and organizations may purchase agricultural
+products according to their procurement requirements.
+</p>
+
+</div>
+
+
+<div class="option-card">
+
+<div class="icon">📦</div>
+
+<h3>Aggregators</h3>
+
+<p>
+Agricultural aggregators may collect produce from several farmers and
+connect supplies with larger markets.
+</p>
+
+</div>
+
+
+<div class="option-card">
+
+<div class="icon">📱</div>
+
+<h3>Verified Online Channels</h3>
+
+<p>
+Farmers can explore legitimate digital platforms and online business
+networks for agricultural marketing.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="marketplaces">
+
+<h2 class="title">Market Areas in Kogi State</h2>
+
+<p class="intro">
+Farmers should confirm current market activities, opening arrangements,
+commodity demand and applicable trading requirements before travelling.
+</p>
+
+<div class="market-grid">
+
+<div class="market-card">
+
+<h3>Lokoja Area</h3>
+
+<p>
+Farmers around Lokoja can explore local markets, traders, processors,
+retailers and other agricultural buyers operating in the area.
+</p>
+
+</div>
+
+
+<div class="market-card">
+
+<h3>Okene Area</h3>
+
+<p>
+Farmers in and around Okene can explore appropriate local trading and
+agricultural distribution channels.
+</p>
+
+</div>
+
+
+<div class="market-card">
+
+<h3>Anyigba / Dekina Area</h3>
+
+<p>
+Farmers in the eastern part of Kogi State can explore agricultural markets,
+traders, cooperatives and potential commodity buyers.
+</p>
+
+</div>
+
+
+<div class="market-card">
+
+<h3>Idah Area</h3>
+
+<p>
+Farmers can explore local agricultural markets and relevant fisheries,
+crop and livestock trading opportunities.
+</p>
+
+</div>
+
+
+<div class="market-card">
+
+<h3>Ankpa Area</h3>
+
+<p>
+Farmers can identify appropriate buyers and market channels for crops and
+other agricultural commodities.
+</p>
+
+</div>
+
+
+<div class="market-card">
+
+<h3>Community Markets</h3>
+
+<p>
+Community markets across Kogi State remain important channels for farmers
+selling produce directly or through traders.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="steps-section">
+
+<h2 class="title">Tips Before Selling Your Produce</h2>
+
+<div class="steps">
+
+<div class="step">
+
+<div class="number">1</div>
+
+<div>
+
+<h3>Know the Current Market</h3>
+
+<p>
+Check recent market conditions and compare prices from more than one
+potential buyer where possible.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="step">
+
+<div class="number">2</div>
+
+<div>
+
+<h3>Sort and Grade Your Produce</h3>
+
+<p>
+Separate damaged, poor-quality and good-quality products where appropriate
+and package them properly.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="step">
+
+<div class="number">3</div>
+
+<div>
+
+<h3>Know Your Quantity</h3>
+
+<p>
+Know the exact quantity available for sale before negotiating with buyers.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="step">
+
+<div class="number">4</div>
+
+<div>
+
+<h3>Compare Buyers</h3>
+
+<p>
+Consider price, transportation costs, payment arrangements and other
+conditions before accepting an offer.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="step">
+
+<div class="number">5</div>
+
+<div>
+
+<h3>Verify the Buyer</h3>
+
+<p>
+Take reasonable steps to verify the identity and legitimacy of buyers
+before completing major transactions.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="form-section">
+
+<h2 class="title">Farmer-to-Buyer Enquiry</h2>
+
+<p class="intro">
+Farmers can submit their produce information for market-related enquiries.
+</p>
+
+<div class="form-container">
+
+<h3>Produce Sales Information</h3>
+
+<form action="#" method="POST">
+
+<div class="form-row">
+
+<div class="form-group">
+
+<label for="name">Farmer's Full Name *</label>
+
+<input
+type="text"
+id="name"
+name="name"
+placeholder="Enter your full name"
+required>
+
+</div>
+
+
+<div class="form-group">
+
+<label for="phone">Phone Number *</label>
+
+<input
+type="tel"
+id="phone"
+name="phone"
+placeholder="Enter phone number"
+required>
+
+</div>
+
+</div>
+
+
+<div class="form-row">
+
+<div class="form-group">
+
+<label for="lga">Local Government Area *</label>
+
+<select id="lga" name="lga" required>
+
+<option value="">Select LGA</option>
+<option>Adavi</option>
+<option>Ajaokuta</option>
+<option>Ankpa</option>
+<option>Bassa</option>
+<option>Dekina</option>
+<option>Ibaji</option>
+<option>Idah</option>
+<option>Igalamela/Odolu</option>
+<option>Ijumu</option>
+<option>Kogi</option>
+<option>Kogi-Koton Karfe</option>
+<option>Lokoja</option>
+<option>Mopa-Muro</option>
+<option>Ofu</option>
+<option>Ogori/Magongo</option>
+<option>Okehi</option>
+<option>Okene</option>
+<option>Olamaboro</option>
+<option>Omala</option>
+<option>Yagba East</option>
+<option>Yagba West</option>
+
+</select>
+
+</div>
+
+
+<div class="form-group">
+
+<label for="produce">Type of Produce *</label>
+
+<select id="produce" name="produce" required>
+
+<option value="">Select produce</option>
+<option>Rice</option>
+<option>Maize</option>
+<option>Cassava</option>
+<option>Beans</option>
+<option>Groundnut</option>
+<option>Vegetables</option>
+<option>Fruits</option>
+<option>Livestock</option>
+<option>Poultry</option>
+<option>Fish</option>
+<option>Other</option>
+
+</select>
+
+</div>
+
+</div>
+
+
+<div class="form-row">
+
+<div class="form-group">
+
+<label for="quantity">Quantity Available *</label>
+
+<input
+type="text"
+id="quantity"
+name="quantity"
+placeholder="Example: 50 bags"
+required>
+
+</div>
+
+
+<div class="form-group">
+
+<label for="location">Produce Location *</label>
+
+<input
+type="text"
+id="location"
+name="location"
+placeholder="Enter town/community"
+required>
+
+</div>
+
+</div>
+
+
+<div class="form-group">
+
+<label for="message">Additional Information</label>
+
+<textarea
+id="message"
+name="message"
+placeholder="Enter any additional information about your produce or selling request"></textarea>
+
+</div>
+
+
+<button type="submit" class="submit-btn">
+Submit Produce Information
+</button>
+
+</form>
+
+
+<div class="notice">
+
+<strong>Important:</strong>
+This page provides information about possible marketing channels. It does
+not guarantee a buyer, a specific price or a completed transaction. Farmers
+should verify buyers, prices, payment terms and other transaction details
+before selling their produce.
+
+</div>
+
+</div>
+
+</section>
+
+
+<footer>
+
+<p>
+<strong>Kogi State Ministry of Agriculture and Food Security</strong>
+</p>
+
+<p>
+Office of the Honourable Commissioner, Hon. Timothy Ojomah
+</p>
+
+<p>
+© 2026 Kogi State Ministry of Agriculture and Food Security.
+All Rights Reserved.
+</p>
+
+</footer>
+
+</body>
+</html>

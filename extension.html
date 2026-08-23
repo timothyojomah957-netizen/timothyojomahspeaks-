@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Agricultural Extension Services | Kogi State Ministry of Agriculture</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f5f5f5;
+      color: #222;
+    }
+
+    header {
+      background: #008000;
+      color: white;
+      padding: 25px 6%;
+      text-align: center;
+    }
+
+    header h1 {
+      margin-bottom: 8px;
+    }
+
+    header p {
+      margin-bottom: 18px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 8px 12px;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      background: white;
+      color: #008000;
+    }
+
+    .hero {
+      background: #006400;
+      color: white;
+      text-align: center;
+      padding: 75px 20px;
+    }
+
+    .hero h2 {
+      font-size: 42px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      max-width: 850px;
+      margin: auto;
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    section {
+      padding: 60px 7%;
+    }
+
+    .title {
+      text-align: center;
+      color: #008000;
+      font-size: 32px;
+      margin-bottom: 15px;
+    }
+
+    .intro {
+      max-width: 850px;
+      margin: auto;
+      text-align: center;
+      color: #555;
+      line-height: 1.8;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 25px;
+      margin-top: 40px;
+    }
+
+    .card {
+      background: white;
+      padding: 30px 25px;
+      border-radius: 10px;
+      border-top: 5px solid #008000;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+    }
+
+    .icon {
+      font-size: 42px;
+      margin-bottom: 15px;
+    }
+
+    .card h3 {
+      color: #008000;
+      margin-bottom: 12px;
+    }
+
+    .card p {
+      color: #555;
+      line-height: 1.7;
+    }
+
+    .field {
+      background: white;
+    }
+
+    .field-list {
+      max-width: 950px;
+      margin: 35px auto 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .field-box {
+      background: #f1f8f1;
+      padding: 25px;
+      border-left: 5px solid #008000;
+      border-radius: 5px;
+    }
+
+    .field-box h3 {
+      color: #008000;
+      margin-bottom: 10px;
+    }
+
+    .field-box p {
+      color: #555;
+      line-height: 1.7;
+    }
+
+    .steps {
+      max-width: 900px;
+      margin: 35px auto 0;
+    }
+
+    .step {
+      background: white;
+      margin-bottom: 18px;
+      padding: 23px;
+      border-left: 5px solid #008000;
+      border-radius: 5px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+    }
+
+    .step h3 {
+      color: #008000;
+      margin-bottom: 8px;
+    }
+
+    .step p {
+      color: #555;
+      line-height: 1.7;
+    }
+
+    .farmer-note {
+      max-width: 900px;
+      margin: 40px auto 0;
+      background: #f1f8f1;
+      border: 2px solid #008000;
+      padding: 25px;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    .farmer-note h3 {
+      color: #008000;
+      margin-bottom: 10px;
+    }
+
+    .farmer-note p {
+      color: #555;
+      line-height: 1.8;
+    }
+
+    .cta {
+      background: #008000;
+      color: white;
+      text-align: center;
+    }
+
+    .cta h2 {
+      margin-bottom: 15px;
+    }
+
+    .cta p {
+      max-width: 850px;
+      margin: auto;
+      line-height: 1.8;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 25px;
+      background: white;
+      color: #008000;
+      padding: 13px 25px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    .btn:hover {
+      background: #e8e8e8;
+    }
+
+    footer {
+      background: #004d00;
+      color: white;
+      text-align: center;
+      padding: 25px 15px;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 700px) {
+
+      .hero h2 {
+        font-size: 31px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      section {
+        padding: 45px 5%;
+      }
+
+      .title {
+        font-size: 28px;
+      }
+
+      nav a {
+        font-size: 13px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+  <h1>Kogi State Ministry of Agriculture and Food Security</h1>
+
+  <p>
+    Hon. Timothy Ojomah — Commissioner for Agriculture and Food Security
+  </p>
+
+  <!-- WEBSITE NAVIGATION -->
+
+  <nav>
+
+    <a href="index.html">Home</a>
+
+    <a href="about.html">About</a>
+
+    <a href="biography.html">Biography</a>
+
+    <a href="mission.html">Mission & Vision</a>
+
+    <a href="portfolio.html">Portfolio</a>
+
+    <a href="projects.html">Projects</a>
+
+    <a href="services.html">Services</a>
+
+    <a href="farmers.html">Farmers</a>
+
+    <a href="farmer-information.html">Farmer Information</a>
+
+    <a href="agricultural-education.html">Agricultural Education</a>
+
+    <a href="extension-services.html">Extension Services</a>
+
+    <a href="farmer-registration.html">Farmer Registration</a>
+
+    <a href="farmer-support.html">Farmer Support</a>
+
+    <a href="agricultural-loan.html">Agricultural Funding</a>
+
+    <a href="news.html">News</a>
+
+    <a href="gallery.html">Gallery</a>
+
+    <a href="video.html">Video</a>
+
+    <a href="contact.html">Contact</a>
+
+  </nav>
+
+</header>
+
+
+<!-- HERO SECTION -->
+
+<section class="hero">
+
+  <h2>Agricultural Extension Services</h2>
+
+  <p>
+    Connecting farmers with agricultural knowledge, improved farming
+    practices, technical information and support for sustainable
+    agricultural development across Kogi State.
+  </p>
+
+</section>
+
+
+<!-- INTRODUCTION -->
+
+<section>
+
+  <h2 class="title">What Is Agricultural Extension?</h2>
+
+  <p class="intro">
+
+    Agricultural extension services help transfer useful agricultural
+    knowledge, technologies and information to farmers. Extension services
+    can help farmers make informed decisions, improve farm management and
+    adopt appropriate agricultural practices.
+
+  </p>
+
+
+  <div class="cards">
+
+
+    <div class="card">
+
+      <div class="icon">🌱</div>
+
+      <h3>Crop Advisory</h3>
+
+      <p>
+        Information on crop production, planting practices, farm management,
+        harvesting and improved agricultural techniques.
+      </p>
+
+    </div>
+
+
+    <div class="card">
+
+      <div class="icon">🐄</div>
+
+      <h3>Livestock Support</h3>
+
+      <p>
+        Agricultural information relating to livestock production,
+        animal management and improved husbandry practices.
+      </p>
+
+    </div>
+
+
+    <div class="card">
+
+      <div class="icon">🐟</div>
+
+      <h3>Fisheries & Aquaculture</h3>
+
+      <p>
+        Information and guidance relating to fish farming, aquaculture
+        management and responsible fisheries practices.
+      </p>
+
+    </div>
+
+
+    <div class="card">
+
+      <div class="icon">🚜</div>
+
+      <h3>Modern Farming Techniques</h3>
+
+      <p>
+        Promoting awareness of appropriate technologies, improved farming
+        methods and responsible agricultural practices.
+      </p>
+
+    </div>
+
+
+    <div class="card">
+
+      <div class="icon">📚</div>
+
+      <h3>Farmer Education</h3>
+
+      <p>
+        Supporting farmer learning through agricultural training,
+        demonstrations, workshops and knowledge-sharing activities.
+      </p>
+
+    </div>
+
+
+    <div class="card">
+
+      <div class="icon">📈</div>
+
+      <h3>Farm Productivity</h3>
+
+      <p>
+        Providing useful knowledge that can contribute to improved
+        productivity, efficiency and sustainable agricultural development.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- EXTENSION ACTIVITIES -->
+
+<section class="field">
+
+  <h2 class="title">Extension Activities</h2>
+
+  <p class="intro">
+
+    Agricultural extension activities can take place through training,
+    field demonstrations, farmer meetings, technical guidance and
+    community engagement.
+
+  </p>
+
+
+  <div class="field-list">
+
+
+    <div class="field-box">
+
+      <h3>Farmer Training</h3>
+
+      <p>
+        Training activities can provide farmers with practical agricultural
+        knowledge and improved production techniques.
+      </p>
+
+    </div>
+
+
+    <div class="field-box">
+
+      <h3>Field Demonstrations</h3>
+
+      <p>
+        Demonstrations can help farmers understand how improved agricultural
+        practices and technologies work in real farming situations.
+      </p>
+
+    </div>
+
+
+    <div class="field-box">
+
+      <h3>Technical Information</h3>
+
+      <p>
+        Farmers can receive information relevant to crop production,
+        livestock, fisheries, farm management and agricultural value chains.
+      </p>
+
+    </div>
+
+
+    <div class="field-box">
+
+      <h3>Community Engagement</h3>
+
+      <p>
+        Extension activities can connect agricultural officers with farmers,
+        communities and other agricultural stakeholders.
+      </p>
+
+    </div>
+
+
+    <div class="field-box">
+
+      <h3>Farmer Groups</h3>
+
+      <p>
+        Extension activities may be organized through farmer associations,
+        cooperatives and community-based agricultural groups.
+      </p>
+
+    </div>
+
+
+    <div class="field-box">
+
+      <h3>Agricultural Innovation</h3>
+
+      <p>
+        Farmers can learn about appropriate innovations and technologies
+        that may improve agricultural production and business activities.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- HOW TO ACCESS EXTENSION SERVICES -->
+
+<section>
+
+  <h2 class="title">How Farmers Can Access Extension Information</h2>
+
+  <p class="intro">
+
+    Farmers who need agricultural information can follow these general
+    steps to seek appropriate guidance.
+
+  </p>
+
+
+  <div class="steps">
+
+
+    <div class="step">
+
+      <h3>1. Identify Your Need</h3>
+
+      <p>
+        Identify the agricultural challenge, production issue or information
+        you need assistance with.
+      </p>
+
+    </div>
+
+
+    <div class="step">
+
+      <h3>2. Contact the Appropriate Office</h3>
+
+      <p>
+        Contact the relevant agricultural office, extension personnel or
+        appropriate Ministry channel for guidance.
+      </p>
+
+    </div>
+
+
+    <div class="step">
+
+      <h3>3. Participate in Training</h3>
+
+      <p>
+        Where available, participate in agricultural training, workshops,
+        demonstrations and farmer meetings.
+      </p>
+
+    </div>
+
+
+    <div class="step">
+
+      <h3>4. Apply Appropriate Knowledge</h3>
+
+      <p>
+        Apply relevant and appropriate agricultural practices to improve
+        farm management and productivity.
+      </p>
+
+    </div>
+
+
+    <div class="step">
+
+      <h3>5. Keep Learning</h3>
+
+      <p>
+        Continue seeking reliable agricultural information and stay informed
+        about new farming practices and opportunities.
+      </p>
+
+    </div>
+
+  </div>
+
+
+  <div class="farmer-note">
+
+    <h3>Important Information for Farmers</h3>
+
+    <p>
+      Farmers should verify agricultural advice, programmes, funding
+      opportunities, input distribution and other official announcements
+      through appropriate Ministry channels before taking action.
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- SUPPORT AREAS -->
+
+<section class="field">
+
+  <h2 class="title">Areas of Agricultural Guidance</h2>
+
+
+  <div class="cards">
+
+
+    <div class="card">
+
+      <div class="icon">🌾</div>
+
+      <h3>Crop Production</h3>
+
+      <p>
+        Guidance relating to crop selection, planting, farm care,
+        harvesting and responsible crop production.
+      </p>
+
+    </div>
+
+
+    <div class="card">
+
+      <div class="icon">🐓</div>
+
+      <h3>Poultry Farming</h3>
+
+      <p>
+        General agricultural information relating to poultry management,
+        production and farm practices.
+      </p>
+
+    </div>
+
+
+    <div class="card">
+
+      <div class="icon">🐖</div>
+
+      <h3>Animal Production</h3>
+
+      <p>
+        Information about responsible livestock management and improved
+        animal production practices.
+      </p>
+
+    </div>
+
+
+    <div class="card">
+
+      <div class="icon">💧</div>
+
+      <h3>Water Management</h3>
+
+      <p>
+        Information about responsible water use and appropriate farm
+        management practices.
+      </p>
+
+    </div>
+
+
+    <div class="card">
+
+      <div class="icon">🌍</div>
+
+      <h3>Climate-Smart Agriculture</h3>
+
+      <p>
+        Information about farming practices that can support resilience,
+        responsible resource management and sustainable agriculture.
+      </p>
+
+    </div>
+
+
+    <div class="card">
+
+      <div class="icon">💼</div>
+
+      <h3>Agribusiness</h3>
+
+      <p>
+        Useful information about agricultural enterprises, value chains,
+        farm records and market-oriented farming.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- CALL TO ACTION -->
+
+<section class="cta">
+
+  <h2>Need Agricultural Extension Information?</h2>
+
+  <p>
+
+    Farmers who need additional information can contact the Kogi State
+    Ministry of Agriculture and Food Security through the appropriate
+    official channels.
+
+  </p>
+
+
+  <a href="contact.html" class="btn">
+    Contact the Ministry
+  </a>
+
+  <br><br>
+
+
+  <a href="farmer-registration.html"
+     class="btn">
+    Register as a Farmer
+  </a>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+  <p>
+    <strong>
+      Kogi State Ministry of Agriculture and Food Security
+    </strong>
+  </p>
+
+  <p>
+    Office of the Honourable Commissioner,
+    Hon. Timothy Ojomah
+  </p>
+
+  <p>
+    © 2026 Kogi State Ministry of Agriculture and Food Security.
+    All Rights Reserved.
+  </p>
+
+</footer>
+
+</body>
+</html>

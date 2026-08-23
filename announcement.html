@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Agricultural Announcements | Kogi State Ministry of Agriculture</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f5f5f5;
+      color: #222;
+    }
+
+    header {
+      background: #008000;
+      color: white;
+      text-align: center;
+      padding: 25px 6%;
+    }
+
+    header h1 {
+      margin-bottom: 15px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 8px 12px;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      background: white;
+      color: #008000;
+    }
+
+    .hero {
+      background: #006400;
+      color: white;
+      text-align: center;
+      padding: 75px 20px;
+    }
+
+    .hero h2 {
+      font-size: 42px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      max-width: 850px;
+      margin: auto;
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    section {
+      padding: 60px 7%;
+    }
+
+    .title {
+      text-align: center;
+      color: #008000;
+      font-size: 32px;
+      margin-bottom: 15px;
+    }
+
+    .intro {
+      max-width: 850px;
+      margin: auto;
+      text-align: center;
+      color: #555;
+      line-height: 1.8;
+    }
+
+    .announcement-list {
+      max-width: 1000px;
+      margin: 40px auto 0;
+    }
+
+    .announcement {
+      background: white;
+      margin-bottom: 22px;
+      padding: 28px;
+      border-left: 6px solid #008000;
+      border-radius: 8px;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+    }
+
+    .date {
+      display: inline-block;
+      background: #008000;
+      color: white;
+      padding: 7px 12px;
+      border-radius: 4px;
+      font-size: 13px;
+      margin-bottom: 12px;
+    }
+
+    .announcement h3 {
+      color: #008000;
+      margin-bottom: 10px;
+      font-size: 22px;
+    }
+
+    .announcement p {
+      color: #555;
+      line-height: 1.8;
+    }
+
+    .announcement a {
+      display: inline-block;
+      margin-top: 15px;
+      color: #008000;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .announcement a:hover {
+      text-decoration: underline;
+    }
+
+    .categories {
+      background: white;
+    }
+
+    .category-grid {
+      max-width: 1000px;
+      margin: 40px auto 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .category {
+      background: #f1f8f1;
+      padding: 25px;
+      text-align: center;
+      border-radius: 8px;
+      border-top: 4px solid #008000;
+    }
+
+    .category .icon {
+      font-size: 40px;
+      margin-bottom: 12px;
+    }
+
+    .category h3 {
+      color: #008000;
+      margin-bottom: 10px;
+    }
+
+    .category p {
+      color: #555;
+      line-height: 1.6;
+    }
+
+    .notice {
+      max-width: 900px;
+      margin: 40px auto 0;
+      padding: 25px;
+      background: #f1f8f1;
+      border: 2px solid #008000;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    .notice h3 {
+      color: #008000;
+      margin-bottom: 10px;
+    }
+
+    .notice p {
+      color: #555;
+      line-height: 1.8;
+    }
+
+    .cta {
+      background: #008000;
+      color: white;
+      text-align: center;
+    }
+
+    .cta h2 {
+      margin-bottom: 15px;
+    }
+
+    .cta p {
+      max-width: 850px;
+      margin: auto;
+      line-height: 1.8;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 25px;
+      background: white;
+      color: #008000;
+      padding: 12px 25px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    footer {
+      background: #004d00;
+      color: white;
+      text-align: center;
+      padding: 25px 15px;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 700px) {
+      .hero h2 {
+        font-size: 31px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+
+  <h1>Kogi State Ministry of Agriculture</h1>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="biography.html">Biography</a>
+    <a href="mission.html">Mission & Vision</a>
+    <a href="achievements.html">Achievements</a>
+    <a href="projects.html">Projects</a>
+    <a href="services.html">Services</a>
+    <a href="farmers.html">Farmers</a>
+    <a href="farmer-information.html">Farmer Information</a>
+    <a href="women.html">Women</a>
+    <a href="cooperatives.html">Cooperatives</a>
+    <a href="investment.html">Investment</a>
+    <a href="training.html">Training</a>
+    <a href="procurement.html">Procurement</a>
+    <a href="partnerships.html">Partnerships</a>
+    <a href="agricultural-announcements.html">Announcements</a>
+    <a href="news.html">News</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+</header>
+
+<section class="hero">
+
+  <h2>Agricultural Announcements</h2>
+
+  <p>
+    Stay informed about official agricultural programmes, opportunities,
+    activities, notices and important information from the Ministry.
+  </p>
+
+</section>
+
+<section>
+
+  <h2 class="title">Latest Announcements</h2>
+
+  <p class="intro">
+    This section provides a central place for agricultural announcements
+    intended for farmers, businesses, communities and other stakeholders.
+  </p>
+
+  <div class="announcement-list">
+
+    <div class="announcement">
+
+      <span class="date">OFFICIAL NOTICE</span>
+
+      <h3>Farmer Programme Updates</h3>
+
+      <p>
+        Farmers are encouraged to regularly check official Ministry channels
+        for information about agricultural programmes, support initiatives
+        and participation requirements.
+      </p>
+
+      <a href="contact.html">Contact the Ministry →</a>
+
+    </div>
+
+    <div class="announcement">
+
+      <span class="date">AGRICULTURAL NOTICE</span>
+
+      <h3>Training & Capacity Building</h3>
+
+      <p>
+        Information about agricultural training, workshops, demonstrations
+        and capacity-building opportunities will be communicated through
+        authorized channels.
+      </p>
+
+      <a href="training.html">View Training Information →</a>
+
+    </div>
+
+    <div class="announcement">
+
+      <span class="date">FARMERS' NOTICE</span>
+
+      <h3>Agricultural Information for Farmers</h3>
+
+      <p>
+        Farmers should stay informed about production guidance, agricultural
+        activities, market opportunities and other relevant information.
+      </p>
+
+      <a href="farmer-information.html">Farmer Information →</a>
+
+    </div>
+
+    <div class="announcement">
+
+      <span class="date">PUBLIC NOTICE</span>
+
+      <h3>Official Agricultural Activities</h3>
+
+      <p>
+        Updates concerning agricultural events, programmes, stakeholder
+        meetings and other Ministry activities will be published through
+        official communication channels.
+      </p>
+
+      <a href="calendar.html">View Agricultural Calendar →</a>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section class="categories">
+
+  <h2 class="title">Announcement Categories</h2>
+
+  <div class="category-grid">
+
+    <div class="category">
+      <div class="icon">🌱</div>
+      <h3>Farmer Programmes</h3>
+      <p>
+        Updates about agricultural programmes and farmer support initiatives.
+      </p>
+    </div>
+
+    <div class="category">
+      <div class="icon">📚</div>
+      <h3>Training</h3>
+      <p>
+        Notices about workshops, seminars and agricultural training.
+      </p>
+    </div>
+
+    <div class="category">
+      <div class="icon">🤝</div>
+      <h3>Stakeholder Meetings</h3>
+      <p>
+        Information about meetings and engagements with agricultural
+        stakeholders.
+      </p>
+    </div>
+
+    <div class="category">
+      <div class="icon">📢</div>
+      <h3>Public Notices</h3>
+      <p>
+        Important information and official notices from the Ministry.
+      </p>
+    </div>
+
+    <div class="category">
+      <div class="icon">🚜</div>
+      <h3>Farm Activities</h3>
+      <p>
+        Updates concerning agricultural activities and field programmes.
+      </p>
+    </div>
+
+    <div class="category">
+      <div class="icon">💼</div>
+      <h3>Opportunities</h3>
+      <p>
+        Information about relevant agricultural opportunities and initiatives.
+      </p>
+    </div>
+
+  </div>
+
+  <div class="notice">
+
+    <h3>Important Verification Notice</h3>
+
+    <p>
+      Always verify agricultural announcements, programmes, payment requests,
+      registration instructions and other opportunities through official
+      Ministry channels before taking action.
+    </p>
+
+  </div>
+
+</section>
+
+<section class="cta">
+
+  <h2>Stay Updated</h2>
+
+  <p>
+    Keep checking the Ministry's official website and communication channels
+    for new agricultural announcements and important notices.
+  </p>
+
+  <a href="contact.html" class="btn">
+    Contact the Ministry
+  </a>
+
+</section>
+
+<footer>
+
+  <p>
+    <strong>Kogi State Ministry of Agriculture</strong>
+  </p>
+
+  <p>
+    Official Website of the Commissioner of Agriculture and Food Security
+  </p>
+
+  <p>
+    © 2026 Kogi State Ministry of Agriculture.
+    All Rights Reserved.
+  </p>
+
+</footer>
+
+</body>
+</html>

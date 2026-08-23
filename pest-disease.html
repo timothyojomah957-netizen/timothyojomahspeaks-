@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Pest & Disease Awareness | Kogi State Ministry of Agriculture</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f5f5f5;
+      color: #222;
+    }
+
+    header {
+      background: #008000;
+      color: white;
+      text-align: center;
+      padding: 25px 6%;
+    }
+
+    header h1 {
+      margin-bottom: 8px;
+    }
+
+    header p {
+      margin-bottom: 18px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 8px 12px;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      background: white;
+      color: #008000;
+    }
+
+    .hero {
+      background: #006400;
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    .hero h2 {
+      font-size: 42px;
+      margin-bottom: 18px;
+    }
+
+    .hero p {
+      max-width: 900px;
+      margin: auto;
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    section {
+      padding: 60px 7%;
+    }
+
+    .title {
+      text-align: center;
+      color: #008000;
+      font-size: 32px;
+      margin-bottom: 18px;
+    }
+
+    .intro {
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+      color: #555;
+      line-height: 1.8;
+    }
+
+    .overview {
+      background: white;
+    }
+
+    .overview-box {
+      max-width: 950px;
+      margin: 40px auto 0;
+      background: #f1f8f1;
+      padding: 35px;
+      border-left: 6px solid #008000;
+      border-radius: 8px;
+    }
+
+    .overview-box h3 {
+      color: #008000;
+      font-size: 25px;
+      margin-bottom: 15px;
+    }
+
+    .overview-box p {
+      color: #555;
+      line-height: 1.9;
+    }
+
+    .awareness-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+      margin-top: 40px;
+    }
+
+    .card {
+      background: white;
+      padding: 30px 25px;
+      border-radius: 10px;
+      border-top: 5px solid #008000;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+    }
+
+    .icon {
+      font-size: 45px;
+      margin-bottom: 15px;
+    }
+
+    .card h3 {
+      color: #008000;
+      margin-bottom: 12px;
+    }
+
+    .card p {
+      color: #555;
+      line-height: 1.7;
+    }
+
+    .warning {
+      background: white;
+    }
+
+    .warning-list {
+      max-width: 950px;
+      margin: 40px auto 0;
+    }
+
+    .warning-item {
+      display: flex;
+      gap: 20px;
+      background: #f1f8f1;
+      padding: 23px;
+      margin-bottom: 18px;
+      border-left: 5px solid #008000;
+      border-radius: 6px;
+    }
+
+    .number {
+      min-width: 42px;
+      height: 42px;
+      background: #008000;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
+
+    .warning-item h3 {
+      color: #008000;
+      margin-bottom: 8px;
+    }
+
+    .warning-item p {
+      color: #555;
+      line-height: 1.7;
+    }
+
+    .pest-section {
+      background: #f5f5f5;
+    }
+
+    .signs {
+      max-width: 1000px;
+      margin: 40px auto 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .sign-box {
+      background: white;
+      padding: 25px;
+      text-align: center;
+      border-radius: 8px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+    }
+
+    .sign-box h3 {
+      color: #008000;
+      margin-bottom: 10px;
+    }
+
+    .sign-box p {
+      color: #555;
+      line-height: 1.6;
+    }
+
+    .notice {
+      max-width: 900px;
+      margin: 40px auto 0;
+      padding: 25px;
+      background: #f1f8f1;
+      border: 2px solid #008000;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    .notice h3 {
+      color: #008000;
+      margin-bottom: 10px;
+    }
+
+    .notice p {
+      color: #555;
+      line-height: 1.8;
+    }
+
+    .cta {
+      background: #008000;
+      color: white;
+      text-align: center;
+    }
+
+    .cta h2 {
+      margin-bottom: 15px;
+    }
+
+    .cta p {
+      max-width: 850px;
+      margin: auto;
+      line-height: 1.8;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 25px;
+      background: white;
+      color: #008000;
+      padding: 12px 25px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    footer {
+      background: #004d00;
+      color: white;
+      text-align: center;
+      padding: 25px 15px;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 700px) {
+      .hero h2 {
+        font-size: 31px;
+      }
+
+      .warning-item {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+
+  <h1>Kogi State Ministry of Agriculture and Food Security</h1>
+
+  <p>
+    Hon. Timothy Ojomah — Commissioner for Agriculture and Food Security
+  </p>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="biography.html">Biography</a>
+    <a href="mission.html">Mission & Vision</a>
+    <a href="achievements.html">Achievements</a>
+    <a href="projects.html">Projects</a>
+    <a href="services.html">Services</a>
+    <a href="farmers.html">Farmers</a>
+    <a href="farmer-information.html">Farmer Information</a>
+    <a href="agricultural-education.html">Agricultural Education</a>
+    <a href="extension-services.html">Extension Services</a>
+    <a href="modern-farming.html">Modern Farming</a>
+    <a href="field-demonstrations.html">Field Demonstrations</a>
+    <a href="crop-livestock-guidance.html">Crop & Livestock Guidance</a>
+    <a href="pest-disease-awareness.html">Pest & Disease Awareness</a>
+    <a href="livestock-agriculture.html">Livestock</a>
+    <a href="fisheries-aquaculture.html">Fisheries</a>
+    <a href="food-security.html">Food Security</a>
+    <a href="farmer-cooperatives.html">Cooperatives</a>
+    <a href="women-in-agriculture.html">Women in Agriculture</a>
+    <a href="youth-family-farming.html">Youth & Family Farming</a>
+    <a href="investment.html">Investment</a>
+    <a href="training.html">Training</a>
+    <a href="partnerships.html">Partnerships</a>
+    <a href="agricultural-announcements.html">Announcements</a>
+    <a href="news.html">News</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+</header>
+
+<section class="hero">
+
+  <h2>Pest & Disease Awareness</h2>
+
+  <p>
+    Promoting early observation, responsible prevention and timely reporting
+    of agricultural pests and diseases to protect crops, livestock and food
+    production.
+  </p>
+
+</section>
+
+<section class="overview">
+
+  <h2 class="title">Protecting Farms Through Awareness</h2>
+
+  <p class="intro">
+    Early identification of unusual crop damage or signs of animal illness
+    can help farmers respond quickly and seek appropriate professional
+    assistance.
+  </p>
+
+  <div class="overview-box">
+
+    <h3>Why Awareness Matters</h3>
+
+    <p>
+      Agricultural pests and diseases can affect crop growth, livestock
+      health, farm income and food availability. Regular monitoring and good
+      farm hygiene are important parts of responsible agricultural management.
+    </p>
+
+    <br>
+
+    <p>
+      Farmers should avoid making assumptions about the cause of a problem.
+      When symptoms are unclear or serious, seek advice from qualified
+      agricultural extension or veterinary professionals.
+    </p>
+
+  </div>
+
+</section>
+
+<section>
+
+  <h2 class="title">Common Areas of Awareness</h2>
+
+  <p class="intro">
+    Farmers should regularly observe their farms and report unusual problems
+    through appropriate agricultural channels.
+  </p>
+
+  <div class="awareness-grid">
+
+    <div class="card">
+      <div class="icon">🐛</div>
+      <h3>Crop Pests</h3>
+      <p>
+        Insects and other organisms can damage leaves, stems, roots, fruits
+        and stored agricultural products.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🌿</div>
+      <h3>Crop Diseases</h3>
+      <p>
+        Diseases can cause unusual spots, wilting, discoloration, poor growth
+        or other changes in crops.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🐄</div>
+      <h3>Livestock Diseases</h3>
+      <p>
+        Changes in animal behaviour, appetite, movement or general condition
+        should be taken seriously.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icon">📦</div>
+      <h3>Stored Product Pests</h3>
+      <p>
+        Proper storage and regular inspection can help reduce damage to
+        harvested crops and food products.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🌱</div>
+      <h3>Farm Hygiene</h3>
+      <p>
+        Good sanitation and responsible farm management can help reduce
+        conditions that encourage some agricultural problems.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icon">📢</div>
+      <h3>Early Reporting</h3>
+      <p>
+        Reporting unusual outbreaks quickly can help agricultural authorities
+        and professionals assess the situation appropriately.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+<section class="warning">
+
+  <h2 class="title">What Farmers Should Do</h2>
+
+  <div class="warning-list">
+
+    <div class="warning-item">
+
+      <div class="number">1</div>
+
+      <div>
+        <h3>Inspect Farms Regularly</h3>
+        <p>
+          Check crops, livestock, equipment and storage areas regularly for
+          unusual changes or signs of damage.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="warning-item">
+
+      <div class="number">2</div>
+
+      <div>
+        <h3>Record Unusual Symptoms</h3>
+        <p>
+          Where possible, note the affected crop or animal, location, date and
+          visible symptoms to help professionals assess the problem.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="warning-item">
+
+      <div class="number">3</div>
+
+      <div>
+        <h3>Seek Professional Advice</h3>
+        <p>
+          Contact appropriate agricultural extension officers or veterinary
+          professionals when serious or unfamiliar symptoms appear.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="warning-item">
+
+      <div class="number">4</div>
+
+      <div>
+        <h3>Follow Approved Recommendations</h3>
+        <p>
+          Use agricultural treatments and control measures only according to
+          appropriate professional or product-label guidance.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="warning-item">
+
+      <div class="number">5</div>
+
+      <div>
+        <h3>Report Suspected Outbreaks</h3>
+        <p>
+          Farmers should promptly report suspected serious outbreaks through
+          authorized agricultural or veterinary channels.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section class="pest-section">
+
+  <h2 class="title">Signs to Watch For</h2>
+
+  <div class="signs">
+
+    <div class="sign-box">
+      <h3>🍃 Leaf Damage</h3>
+      <p>
+        Holes, unusual spots, discoloration or unexpected changes in leaves.
+      </p>
+    </div>
+
+    <div class="sign-box">
+      <h3>🌱 Poor Growth</h3>
+      <p>
+        Stunted growth, wilting or unexpected changes in plant development.
+      </p>
+    </div>
+
+    <div class="sign-box">
+      <h3>🪰 Unusual Insects</h3>
+      <p>
+        Unexpected increases in insects or visible pest activity around crops.
+      </p>
+    </div>
+
+    <div class="sign-box">
+      <h3>🐄 Animal Changes</h3>
+      <p>
+        Changes in appetite, movement, behaviour or general condition.
+      </p>
+    </div>
+
+    <div class="sign-box">
+      <h3>🌾 Storage Damage</h3>
+      <p>
+        Insects, damaged grains, mould or unusual deterioration in stored
+        products.
+      </p>
+    </div>
+
+    <div class="sign-box">
+      <h3>📉 Sudden Losses</h3>
+      <p>
+        Unexpected crop or livestock losses should be investigated promptly.
+      </p>
+    </div>
+
+  </div>
+
+  <div class="notice">
+
+    <h3>Important Safety Notice</h3>
+
+    <p>
+      Do not use pesticides, veterinary medicines or other agricultural
+      chemicals based only on an internet description of symptoms. Correct
+      identification and professional guidance are important for safe and
+      effective control.
+    </p>
+
+  </div>
+
+</section>
+
+<section class="cta">
+
+  <h2>Protecting Agriculture Through Early Action</h2>
+
+  <p>
+    Awareness, regular monitoring, responsible farm management and timely
+    professional assistance can help farmers protect crops, livestock and
+    agricultural livelihoods.
+  </p>
+
+  <a href="extension-services.html" class="btn">
+    Extension Services
+  </a>
+
+</section>
+
+<footer>
+
+  <p>
+    <strong>Kogi State Ministry of Agriculture and Food Security</strong>
+  </p>
+
+  <p>
+    Office of the Honourable Commissioner, Hon. Timothy Ojomah
+  </p>
+
+  <p>
+    © 2026 Kogi State Ministry of Agriculture and Food Security.
+    All Rights Reserved.
+  </p>
+
+</footer>
+
+</body>
+</html>

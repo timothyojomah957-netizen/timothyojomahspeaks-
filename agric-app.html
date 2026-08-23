@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Agricultural Programme Application | Kogi State Ministry of Agriculture</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f5f5f5;
+      color: #222;
+    }
+
+    header {
+      background: #008000;
+      color: white;
+      text-align: center;
+      padding: 25px 6%;
+    }
+
+    header h1 {
+      margin-bottom: 8px;
+    }
+
+    header p {
+      margin-bottom: 18px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 8px 12px;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      background: white;
+      color: #008000;
+    }
+
+    .hero {
+      background: #006400;
+      color: white;
+      text-align: center;
+      padding: 75px 20px;
+    }
+
+    .hero h2 {
+      font-size: 40px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      max-width: 850px;
+      margin: auto;
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    section {
+      padding: 60px 7%;
+    }
+
+    .title {
+      text-align: center;
+      color: #008000;
+      font-size: 32px;
+      margin-bottom: 18px;
+    }
+
+    .intro {
+      max-width: 850px;
+      margin: auto;
+      text-align: center;
+      color: #555;
+      line-height: 1.8;
+    }
+
+    .application-section {
+      background: white;
+    }
+
+    .form-container {
+      max-width: 900px;
+      margin: 40px auto 0;
+      background: #f8fff8;
+      padding: 35px;
+      border-radius: 12px;
+      border-top: 6px solid #008000;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    }
+
+    .form-container h3 {
+      color: #008000;
+      margin-bottom: 25px;
+      font-size: 24px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 8px;
+      color: #333;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 13px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 16px;
+      outline: none;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: #008000;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    textarea {
+      min-height: 130px;
+      resize: vertical;
+    }
+
+    .submit-btn {
+      width: 100%;
+      padding: 15px;
+      background: #008000;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 17px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .submit-btn:hover {
+      background: #006400;
+    }
+
+    .note {
+      margin-top: 20px;
+      padding: 15px;
+      background: #eaf7ea;
+      border-left: 5px solid #008000;
+      color: #555;
+      line-height: 1.7;
+    }
+
+    .programme-section {
+      background: #f5f5f5;
+    }
+
+    .programme-grid {
+      max-width: 1000px;
+      margin: 40px auto 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 22px;
+    }
+
+    .programme-card {
+      background: white;
+      padding: 28px;
+      text-align: center;
+      border-radius: 10px;
+      border-top: 4px solid #008000;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.07);
+    }
+
+    .programme-card .icon {
+      font-size: 40px;
+      margin-bottom: 12px;
+    }
+
+    .programme-card h3 {
+      color: #008000;
+      margin-bottom: 10px;
+    }
+
+    .programme-card p {
+      color: #555;
+      line-height: 1.6;
+    }
+
+    .notice {
+      max-width: 900px;
+      margin: 40px auto 0;
+      background: white;
+      padding: 25px;
+      border: 2px solid #008000;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    .notice h3 {
+      color: #008000;
+      margin-bottom: 10px;
+    }
+
+    .notice p {
+      color: #555;
+      line-height: 1.8;
+    }
+
+    footer {
+      background: #004d00;
+      color: white;
+      text-align: center;
+      padding: 25px 15px;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 700px) {
+      .hero h2 {
+        font-size: 30px;
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+
+      .form-container {
+        padding: 22px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+
+  <h1>Kogi State Ministry of Agriculture and Food Security</h1>
+
+  <p>
+    Hon. Timothy Ojomah — Commissioner for Agriculture and Food Security
+  </p>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="biography.html">Biography</a>
+    <a href="mission.html">Mission & Vision</a>
+    <a href="projects.html">Projects</a>
+    <a href="services.html">Services</a>
+    <a href="farmers.html">Farmers</a>
+    <a href="farmer-information.html">Farmer Information</a>
+    <a href="agricultural-education.html">Agricultural Education</a>
+    <a href="extension-services.html">Extension Services</a>
+    <a href="modern-farming.html">Modern Farming</a>
+    <a href="field-demonstrations.html">Field Demonstrations</a>
+    <a href="crop-livestock-guidance.html">Crop & Livestock Guidance</a>
+    <a href="pest-disease-awareness.html">Pest & Disease Awareness</a>
+    <a href="climate-smart-advice.html">Climate-Smart Advice</a>
+    <a href="farmer-programmes.html">Farmer Programmes</a>
+    <a href="farmer-registration.html">Farmer Registration</a>
+    <a href="programme-application.html">Programme Application</a>
+    <a href="news.html">News</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+</header>
+
+<section class="hero">
+
+  <h2>Agricultural Programme Application</h2>
+
+  <p>
+    Apply for relevant agricultural programmes and provide information that
+    can help connect farmers with appropriate agricultural opportunities and
+    support.
+  </p>
+
+</section>
+
+<section class="application-section">
+
+  <h2 class="title">Programme Application Form</h2>
+
+  <p class="intro">
+    Complete the form below with accurate information. Fields marked with
+    an asterisk (*) are required.
+  </p>
+
+  <div class="form-container">
+
+    <h3>Applicant Information</h3>
+
+    <!-- APPLICATION FORM -->
+    <form action="#" method="POST">
+
+      <div class="form-row">
+
+        <div class="form-group">
+
+          <label for="fullname">Full Name *</label>
+
+          <input
+            type="text"
+            id="fullname"
+            name="fullname"
+            placeholder="Enter your full name"
+            required>
+
+        </div>
+
+        <div class="form-group">
+
+          <label for="phone">Phone Number *</label>
+
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            placeholder="Enter your phone number"
+            required>
+
+        </div>
+
+      </div>
+
+      <div class="form-row">
+
+        <div class="form-group">
+
+          <label for="email">Email Address</label>
+
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter your email address">
+
+        </div>
+
+        <div class="form-group">
+
+          <label for="gender">Gender *</label>
+
+          <select id="gender" name="gender" required>
+
+            <option value="">Select gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+
+          </select>
+
+        </div>
+
+      </div>
+
+      <div class="form-row">
+
+        <div class="form-group">
+
+          <label for="lga">Local Government Area *</label>
+
+          <select id="lga" name="lga" required>
+
+            <option value="">Select LGA</option>
+            <option>Adavi</option>
+            <option>Ajaokuta</option>
+            <option>Ankpa</option>
+            <option>Bassa</option>
+            <option>Ibaji</option>
+            <option>Idah</option>
+            <option>Igalamela/Odolu</option>
+            <option>Ijumu</option>
+            <option>Kogi</option>
+            <option>Kogi-Koton Karfe</option>
+            <option>Lokoja</option>
+            <option>Mopa-Muro</option>
+            <option>Ofu</option>
+            <option>Ogori/Magongo</option>
+            <option>Okehi</option>
+            <option>Okene</option>
+            <option>Olamaboro</option>
+            <option>Omala</option>
+            <option>Yagba East</option>
+            <option>Yagba West</option>
+
+          </select>
+
+        </div>
+
+        <div class="form-group">
+
+          <label for="farmtype">Type of Farming *</label>
+
+          <select id="farmtype" name="farmtype" required>
+
+            <option value="">Select farming type</option>
+            <option>Crop Farming</option>
+            <option>Livestock Farming</option>
+            <option>Poultry Farming</option>
+            <option>Fisheries & Aquaculture</option>
+            <option>Mixed Farming</option>
+            <option>Other</option>
+
+          </select>
+
+        </div>
+
+      </div>
+
+      <div class="form-row">
+
+        <div class="form-group">
+
+          <label for="farm_size">Farm Size</label>
+
+          <input
+            type="text"
+            id="farm_size"
+            name="farm_size"
+            placeholder="Example: 5 hectares">
+
+        </div>
+
+        <div class="form-group">
+
+          <label for="farm_years">Years in Farming</label>
+
+          <input
+            type="number"
+            id="farm_years"
+            name="farm_years"
+            min="0"
+            placeholder="Example: 5">
+
+        </div>
+
+      </div>
+
+      <div class="form-group">
+
+        <label for="products">
+          Main Crops / Livestock / Products *
+        </label>
+
+        <input
+          type="text"
+          id="products"
+          name="products"
+          placeholder="Example: Rice, Cassava, Maize, Poultry"
+          required>
+
+      </div>
+
+      <div class="form-group">
+
+        <label for="programme">
+          Select Agricultural Programme *
+        </label>
+
+        <select id="programme" name="programme" required>
+
+          <option value="">Choose programme</option>
+
+          <option>Crop Production Support</option>
+
+          <option>Livestock Development Programme</option>
+
+          <option>Poultry Development Programme</option>
+
+          <option>Fisheries & Aquaculture Programme</option>
+
+          <option>Farmer Training Programme</option>
+
+          <option>Climate-Smart Agriculture Programme</option>
+
+          <option>Farmer Cooperative Support</option>
+
+          <option>Youth Agricultural Programme</option>
+
+          <option>Women in Agriculture Programme</option>
+
+          <option>Farm Input Support</option>
+
+          <option>Other Agricultural Programme</option>
+
+        </select>
+
+      </div>
+
+      <div class="form-group">
+
+        <label for="support">
+          Type of Support Requested *
+        </label>
+
+        <select id="support" name="support" required>
+
+          <option value="">Select support</option>
+
+          <option>Training</option>
+          <option>Farm Inputs</option>
+          <option>Technical Advice</option>
+          <option>Extension Services</option>
+          <option>Livestock Support</option>
+          <option>Fisheries Support</option>
+          <option>Market Support</option>
+          <option>Financing Information</option>
+          <option>Other</option>
+
+        </select>
+
+      </div>
+
+      <div class="form-group">
+
+        <label for="address">Farm / Residential Address *</label>
+
+        <textarea
+          id="address"
+          name="address"
+          placeholder="Enter your farm or residential address"
+          required></textarea>
+
+      </div>
+
+      <div class="form-group">
+
+        <label for="reason">
+          Why are you applying for this programme? *
+        </label>
+
+        <textarea
+          id="reason"
+          name="reason"
+          placeholder="Explain briefly what you need the programme to help you achieve"
+          required></textarea>
+
+      </div>
+
+      <div class="form-group">
+
+        <label for="additional">
+          Additional Information
+        </label>
+
+        <textarea
+          id="additional"
+          name="additional"
+          placeholder="Enter any other relevant information"></textarea>
+
+      </div>
+
+      <button type="submit" class="submit-btn">
+        Submit Programme Application
+      </button>
+
+    </form>
+
+    <div class="note">
+
+      <strong>Important:</strong>
+      Submission of this form does not automatically guarantee acceptance
+      into any agricultural programme. Applications may be reviewed according
+      to the requirements and availability of the relevant programme.
+
+    </div>
+
+  </div>
+
+</section>
+
+<section class="programme-section">
+
+  <h2 class="title">Programme Areas</h2>
+
+  <p class="intro">
+    Farmers can apply for programmes that match their agricultural activities
+    and development needs.
+  </p>
+
+  <div class="programme-grid">
+
+    <div class="programme-card">
+      <div class="icon">🌾</div>
+      <h3>Crop Production</h3>
+      <p>
+        Support and training related to crop production and farm management.
+      </p>
+    </div>
+
+    <div class="programme-card">
+      <div class="icon">🐄</div>
+      <h3>Livestock</h3>
+      <p>
+        Agricultural opportunities focused on livestock production and
+        management.
+      </p>
+    </div>
+
+    <div class="programme-card">
+      <div class="icon">🐟</div>
+      <h3>Fisheries</h3>
+      <p>
+        Support and information for fisheries and aquaculture activities.
+      </p>
+    </div>
+
+    <div class="programme-card">
+      <div class="icon">🎓</div>
+      <h3>Training</h3>
+      <p>
+        Agricultural education, practical training and extension opportunities.
+      </p>
+    </div>
+
+    <div class="programme-card">
+      <div class="icon">🌱</div>
+      <h3>Climate-Smart Farming</h3>
+      <p>
+        Practices that support agricultural resilience and responsible
+        resource management.
+      </p>
+    </div>
+
+    <div class="programme-card">
+      <div class="icon">🤝</div>
+      <h3>Cooperative Support</h3>
+      <p>
+        Opportunities for organized farmers and agricultural cooperatives.
+      </p>
+    </div>
+
+  </div>
+
+  <div class="notice">
+
+    <h3>Farmer Information</h3>
+
+    <p>
+      Farmers should use official Ministry channels to confirm programme
+      availability, eligibility requirements and application deadlines.
+      Beware of anyone requesting unauthorized payments in exchange for
+      guaranteed programme acceptance.
+    </p>
+
+  </div>
+
+</section>
+
+<footer>
+
+  <p>
+    <strong>Kogi State Ministry of Agriculture and Food Security</strong>
+  </p>
+
+  <p>
+    Office of the Honourable Commissioner, Hon. Timothy Ojomah
+  </p>
+
+  <p>
+    © 2026 Kogi State Ministry of Agriculture and Food Security.
+    All Rights Reserved.
+  </p>
+
+</footer>
+
+</body>
+</html>

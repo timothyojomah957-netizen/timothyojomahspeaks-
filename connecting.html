@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Connecting Farmers with Buyers | Kogi State Ministry of Agriculture</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f5f5f5;
+      color: #222;
+    }
+
+    header {
+      background: #008000;
+      color: white;
+      text-align: center;
+      padding: 25px 6%;
+    }
+
+    header h1 {
+      margin-bottom: 10px;
+    }
+
+    header p {
+      margin-bottom: 18px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 8px 12px;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      background: white;
+      color: #008000;
+    }
+
+    .hero {
+      background: #006400;
+      color: white;
+      text-align: center;
+      padding: 75px 20px;
+    }
+
+    .hero h2 {
+      font-size: 42px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      max-width: 850px;
+      margin: auto;
+      line-height: 1.8;
+      font-size: 18px;
+    }
+
+    section {
+      padding: 60px 7%;
+    }
+
+    .title {
+      text-align: center;
+      color: #008000;
+      font-size: 32px;
+      margin-bottom: 15px;
+    }
+
+    .intro {
+      max-width: 850px;
+      margin: auto;
+      text-align: center;
+      color: #555;
+      line-height: 1.8;
+    }
+
+    .connection-grid {
+      max-width: 1000px;
+      margin: 40px auto 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: white;
+      padding: 30px 25px;
+      border-radius: 10px;
+      border-top: 5px solid #008000;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+      text-align: center;
+    }
+
+    .icon {
+      font-size: 45px;
+      margin-bottom: 15px;
+    }
+
+    .card h3 {
+      color: #008000;
+      margin-bottom: 12px;
+    }
+
+    .card p {
+      color: #555;
+      line-height: 1.7;
+    }
+
+    .process {
+      background: white;
+    }
+
+    .steps {
+      max-width: 900px;
+      margin: 40px auto 0;
+    }
+
+    .step {
+      background: #f1f8f1;
+      padding: 25px;
+      margin-bottom: 18px;
+      border-left: 5px solid #008000;
+      border-radius: 6px;
+    }
+
+    .step h3 {
+      color: #008000;
+      margin-bottom: 8px;
+    }
+
+    .step p {
+      color: #555;
+      line-height: 1.7;
+    }
+
+    .form-container {
+      max-width: 900px;
+      margin: 40px auto 0;
+      background: white;
+      padding: 35px;
+      border-radius: 10px;
+      border-top: 5px solid #008000;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 13px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .submit-btn {
+      width: 100%;
+      padding: 15px;
+      background: #008000;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 17px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .submit-btn:hover {
+      background: #006400;
+    }
+
+    .notice {
+      max-width: 900px;
+      margin: 30px auto 0;
+      padding: 20px;
+      background: #f1f8f1;
+      border-left: 5px solid #008000;
+      color: #555;
+      line-height: 1.7;
+    }
+
+    .cta {
+      background: #008000;
+      color: white;
+      text-align: center;
+    }
+
+    .cta h2 {
+      margin-bottom: 15px;
+    }
+
+    .cta p {
+      max-width: 850px;
+      margin: auto;
+      line-height: 1.8;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 25px;
+      background: white;
+      color: #008000;
+      padding: 12px 25px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    footer {
+      background: #004d00;
+      color: white;
+      text-align: center;
+      padding: 25px 15px;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 700px) {
+      .hero h2 {
+        font-size: 32px;
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+
+      .form-container {
+        padding: 22px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+
+  <h1>Kogi State Ministry of Agriculture and Food Security</h1>
+
+  <p>
+    Hon. Timothy Ojomah — Commissioner for Agriculture and Food Security
+  </p>
+
+  <nav>
+
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="biography.html">Biography</a>
+    <a href="mission.html">Mission & Vision</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="projects.html">Projects</a>
+    <a href="services.html">Services</a>
+    <a href="farmers.html">Farmers</a>
+    <a href="farmer-information.html">Farmer Information</a>
+    <a href="farmer-registration.html">Farmer Registration</a>
+    <a href="farmer-support.html">Farmer Support</a>
+    <a href="agricultural-loan.html">Agricultural Funding</a>
+    <a href="agricultural-education.html">Agricultural Education</a>
+    <a href="extension.html">Extension</a>
+    <a href="mechanization.html">Mechanization</a>
+    <a href="climate-smart.html">Climate-Smart</a>
+    <a href="water-management.html">Water Management</a>
+    <a href="food-security.html">Food Security</a>
+    <a href="markets.html">Markets</a>
+    <a href="farmer-buyer.html">Connect Farmer & Buyer</a>
+    <a href="irrigation.html">Irrigation</a>
+    <a href="inputs.html">Agricultural Inputs</a>
+    <a href="research.html">Research</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="video.html">Video</a>
+    <a href="news.html">News</a>
+    <a href="contact.html">Contact</a>
+
+  </nav>
+
+</header>
+
+
+<section class="hero">
+
+  <h2>Connecting Farmers with Buyers</h2>
+
+  <p>
+    Helping create opportunities for farmers and agricultural buyers to
+    connect, exchange information and explore legitimate agricultural
+    market opportunities across Kogi State.
+  </p>
+
+</section>
+
+
+<section>
+
+  <h2 class="title">Farmer–Buyer Connection</h2>
+
+  <p class="intro">
+    Connecting farmers with potential buyers can help improve access to
+    markets, strengthen agricultural value chains and create opportunities
+    for farmers to market their produce.
+  </p>
+
+  <div class="connection-grid">
+
+    <div class="card">
+
+      <div class="icon">👨‍🌾</div>
+
+      <h3>For Farmers</h3>
+
+      <p>
+        Farmers can provide information about their agricultural products,
+        production capacity and preferred markets.
+      </p>
+
+    </div>
+
+
+    <div class="card">
+
+      <div class="icon">🏪</div>
+
+      <h3>For Buyers</h3>
+
+      <p>
+        Buyers can indicate the agricultural products they are interested
+        in sourcing and provide their contact information.
+      </p>
+
+    </div>
+
+
+    <div class="card">
+
+      <div class="icon">🌾</div>
+
+      <h3>Agricultural Products</h3>
+
+      <p>
+        Produce may include crops, livestock products, fisheries products
+        and other legitimate agricultural commodities.
+      </p>
+
+    </div>
+
+
+    <div class="card">
+
+      <div class="icon">🤝</div>
+
+      <h3>Market Connections</h3>
+
+      <p>
+        Information can help farmers and buyers identify possible
+        opportunities for communication and business discussions.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="process">
+
+  <h2 class="title">How the Connection Works</h2>
+
+  <div class="steps">
+
+    <div class="step">
+
+      <h3>1. Farmer Provides Information</h3>
+
+      <p>
+        Farmers provide information about their products, location,
+        estimated quantity and preferred contact method.
+      </p>
+
+    </div>
+
+
+    <div class="step">
+
+      <h3>2. Buyer Provides Requirements</h3>
+
+      <p>
+        Buyers provide information about the products they are looking for,
+        quantity and preferred location.
+      </p>
+
+    </div>
+
+
+    <div class="step">
+
+      <h3>3. Information Is Reviewed</h3>
+
+      <p>
+        Submitted information should be reviewed for appropriate
+        agricultural and market-related purposes.
+      </p>
+
+    </div>
+
+
+    <div class="step">
+
+      <h3>4. Parties Communicate</h3>
+
+      <p>
+        Where appropriate, farmers and buyers may communicate directly to
+        discuss prices, quantities, quality, delivery and other terms.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section>
+
+  <h2 class="title">Farmer or Buyer Enquiry</h2>
+
+  <p class="intro">
+    Use the form below to submit an agricultural market enquiry.
+  </p>
+
+  <div class="form-container">
+
+    <form action="#" method="POST">
+
+      <div class="form-row">
+
+        <div class="form-group">
+
+          <label for="fullname">Full Name *</label>
+
+          <input
+            type="text"
+            id="fullname"
+            name="fullname"
+            placeholder="Enter your full name"
+            required>
+
+        </div>
+
+
+        <div class="form-group">
+
+          <label for="phone">Phone Number *</label>
+
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            placeholder="Enter your phone number"
+            required>
+
+        </div>
+
+      </div>
+
+
+      <div class="form-row">
+
+        <div class="form-group">
+
+          <label for="role">I Am A *</label>
+
+          <select id="role" name="role" required>
+
+            <option value="">Select option</option>
+
+            <option value="farmer">
+              Farmer
+            </option>
+
+            <option value="buyer">
+              Buyer
+            </option>
+
+            <option value="processor">
+              Agricultural Processor
+            </option>
+
+            <option value="business">
+              Agricultural Business
+            </option>
+
+          </select>
+
+        </div>
+
+
+        <div class="form-group">
+
+          <label for="product">Product *</label>
+
+          <input
+            type="text"
+            id="product"
+            name="product"
+            placeholder="Example: Rice, Cassava, Maize"
+            required>
+
+        </div>
+
+      </div>
+
+
+      <div class="form-row">
+
+        <div class="form-group">
+
+          <label for="location">Location *</label>
+
+          <input
+            type="text"
+            id="location"
+            name="location"
+            placeholder="Enter your LGA or location"
+            required>
+
+        </div>
+
+
+        <div class="form-group">
+
+          <label for="quantity">Quantity</label>
+
+          <input
+            type="text"
+            id="quantity"
+            name="quantity"
+            placeholder="Example: 20 bags">
+
+        </div>
+
+      </div>
+
+
+      <div class="form-group">
+
+        <label for="message">
+          Enquiry / Additional Information
+        </label>
+
+        <textarea
+          id="message"
+          name="message"
+          placeholder="Describe what you are looking for or what you want to sell"></textarea>
+
+      </div>
+
+
+      <button type="submit" class="submit-btn">
+        Submit Enquiry
+      </button>
+
+    </form>
+
+
+    <div class="notice">
+
+      <strong>Important:</strong>
+      This form is for agricultural market enquiries. Submission of an
+      enquiry does not guarantee a sale, payment or contract. Farmers and
+      buyers should independently verify products, prices, identities,
+      quantities and transaction terms before entering into any agreement.
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="cta">
+
+  <h2>Strengthening Agricultural Markets</h2>
+
+  <p>
+    Better connections between farmers, buyers, processors and agricultural
+    businesses can contribute to stronger value chains and improved market
+    opportunities.
+  </p>
+
+  <a href="contact.html" class="btn">
+    Contact the Ministry
+  </a>
+
+</section>
+
+
+<footer>
+
+  <p>
+    <strong>Kogi State Ministry of Agriculture and Food Security</strong>
+  </p>
+
+  <p>
+    Office of the Honourable Commissioner, Hon. Timothy Ojomah
+  </p>
+
+  <p>
+    © 2026 Kogi State Ministry of Agriculture and Food Security.
+    All Rights Reserved.
+  </p>
+
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Livestock Agriculture | Hon. Timothy Ojomah</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f5f5f5;
+      color: #222;
+    }
+
+    header {
+      background: #008000;
+      color: white;
+      text-align: center;
+      padding: 25px 6%;
+    }
+
+    header h1 {
+      margin-bottom: 8px;
+    }
+
+    header p {
+      margin-bottom: 18px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 8px 12px;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      background: white;
+      color: #008000;
+    }
+
+    .hero {
+      background: #006400;
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    .hero h2 {
+      font-size: 42px;
+      margin-bottom: 18px;
+    }
+
+    .hero p {
+      max-width: 900px;
+      margin: auto;
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    section {
+      padding: 60px 7%;
+    }
+
+    .title {
+      text-align: center;
+      color: #008000;
+      font-size: 32px;
+      margin-bottom: 18px;
+    }
+
+    .intro {
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+      color: #555;
+      line-height: 1.8;
+    }
+
+    .commissioner {
+      background: white;
+    }
+
+    .commissioner-box {
+      max-width: 950px;
+      margin: 40px auto 0;
+      background: #f1f8f1;
+      padding: 35px;
+      border-left: 6px solid #008000;
+      border-radius: 8px;
+    }
+
+    .commissioner-box h3 {
+      color: #008000;
+      font-size: 25px;
+      margin-bottom: 15px;
+    }
+
+    .commissioner-box p {
+      color: #555;
+      line-height: 1.9;
+    }
+
+    .livestock-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+      margin-top: 40px;
+    }
+
+    .card {
+      background: white;
+      padding: 30px 25px;
+      border-radius: 10px;
+      border-top: 5px solid #008000;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+    }
+
+    .icon {
+      font-size: 45px;
+      margin-bottom: 15px;
+    }
+
+    .card h3 {
+      color: #008000;
+      margin-bottom: 12px;
+    }
+
+    .card p {
+      color: #555;
+      line-height: 1.7;
+    }
+
+    .value-chains {
+      background: white;
+    }
+
+    .chain-grid {
+      max-width: 1000px;
+      margin: 40px auto 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .chain {
+      background: #f1f8f1;
+      padding: 25px;
+      text-align: center;
+      border-radius: 8px;
+    }
+
+    .chain h3 {
+      color: #008000;
+      margin-bottom: 10px;
+    }
+
+    .chain p {
+      color: #555;
+      line-height: 1.6;
+    }
+
+    .training {
+      max-width: 900px;
+      margin: 40px auto 0;
+    }
+
+    .training-item {
+      display: flex;
+      gap: 20px;
+      background: white;
+      padding: 22px;
+      margin-bottom: 18px;
+      border-left: 5px solid #008000;
+      border-radius: 6px;
+    }
+
+    .number {
+      min-width: 42px;
+      height: 42px;
+      background: #008000;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
+
+    .training-item h3 {
+      color: #008000;
+      margin-bottom: 8px;
+    }
+
+    .training-item p {
+      color: #555;
+      line-height: 1.7;
+    }
+
+    .resilience {
+      max-width: 950px;
+      margin: 40px auto 0;
+      padding: 30px;
+      background: #f1f8f1;
+      border: 2px solid #008000;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    .resilience h3 {
+      color: #008000;
+      margin-bottom: 12px;
+    }
+
+    .resilience p {
+      color: #555;
+      line-height: 1.8;
+    }
+
+    .cta {
+      background: #008000;
+      color: white;
+      text-align: center;
+    }
+
+    .cta h2 {
+      margin-bottom: 15px;
+    }
+
+    .cta p {
+      max-width: 850px;
+      margin: auto;
+      line-height: 1.8;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 25px;
+      background: white;
+      color: #008000;
+      padding: 12px 25px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    footer {
+      background: #004d00;
+      color: white;
+      text-align: center;
+      padding: 25px 15px;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 700px) {
+      .hero h2 {
+        font-size: 31px;
+      }
+
+      .training-item {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+
+  <h1>Kogi State Ministry of Agriculture and Food Security</h1>
+
+  <p>
+    Hon. Timothy Ojomah — Commissioner for Agriculture and Food Security
+  </p>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="biography.html">Biography</a>
+    <a href="mission.html">Mission & Vision</a>
+    <a href="achievements.html">Achievements</a>
+    <a href="projects.html">Projects</a>
+    <a href="services.html">Services</a>
+    <a href="farmers.html">Farmers</a>
+    <a href="farmer-information.html">Farmer Information</a>
+    <a href="agricultural-education.html">Agricultural Education</a>
+    <a href="livestock-agriculture.html">Livestock</a>
+    <a href="women.html">Women</a>
+    <a href="cooperatives.html">Cooperatives</a>
+    <a href="investment.html">Investment</a>
+    <a href="training.html">Training</a>
+    <a href="procurement.html">Procurement</a>
+    <a href="partnerships.html">Partnerships</a>
+    <a href="agricultural-announcements.html">Announcements</a>
+    <a href="news.html">News</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+</header>
+
+<section class="hero">
+
+  <h2>Livestock Agriculture</h2>
+
+  <p>
+    Supporting livestock farmers, improving productivity, strengthening
+    resilience and promoting sustainable livestock development across
+    Kogi State.
+  </p>
+
+</section>
+
+<section class="commissioner">
+
+  <h2 class="title">Hon. Timothy Ojomah and Livestock Development</h2>
+
+  <p class="intro">
+    Livestock development forms an important part of agricultural
+    transformation, food security, employment and rural economic development.
+  </p>
+
+  <div class="commissioner-box">
+
+    <h3>Leadership and Commitment</h3>
+
+    <p>
+      Hon. Timothy Ojomah, Commissioner for Agriculture and Food Security,
+      serves as Chairman of the Kogi State L-PRES State Steering Committee.
+      The project focuses on improving livestock productivity, resilience and
+      commercialization in selected value chains.
+    </p>
+
+    <br>
+
+    <p>
+      The Ministry has also supported capacity-building activities designed
+      to equip livestock farmers and extension agents with modern and
+      climate-resilient livestock production methods.
+    </p>
+
+  </div>
+
+</section>
+
+<section>
+
+  <h2 class="title">Livestock Development Areas</h2>
+
+  <p class="intro">
+    Livestock development requires coordinated support across production,
+    animal health, extension, markets, finance and value addition.
+  </p>
+
+  <div class="livestock-grid">
+
+    <div class="card">
+      <div class="icon">🐄</div>
+      <h3>Cattle Production</h3>
+      <p>
+        Supporting improved cattle production, management, productivity and
+        commercialization.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🐐</div>
+      <h3>Sheep & Goat</h3>
+      <p>
+        Promoting improved management and productive opportunities within
+        sheep and goat value chains.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🐔</div>
+      <h3>Poultry Farming</h3>
+      <p>
+        Supporting knowledge, productivity and business opportunities in
+        poultry production.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🥛</div>
+      <h3>Animal Products</h3>
+      <p>
+        Encouraging value addition and improved opportunities around
+        livestock products.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🩺</div>
+      <h3>Animal Health</h3>
+      <p>
+        Promoting responsible livestock management and awareness of animal
+        health practices.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🌍</div>
+      <h3>Climate Resilience</h3>
+      <p>
+        Encouraging livestock practices that can improve resilience to
+        climate-related challenges.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+<section class="value-chains">
+
+  <h2 class="title">Priority Livestock Value Chains</h2>
+
+  <p class="intro">
+    Kogi L-PRES identifies poultry, sheep and goat, and cattle value chains,
+    with emphasis on beef production, as priority areas.
+  </p>
+
+  <div class="chain-grid">
+
+    <div class="chain">
+      <h3>Poultry</h3>
+      <p>
+        Supporting poultry farmers and businesses across production and
+        related value-chain activities.
+      </p>
+    </div>
+
+    <div class="chain">
+      <h3>Sheep</h3>
+      <p>
+        Strengthening opportunities for sheep production and improved
+        livestock management.
+      </p>
+    </div>
+
+    <div class="chain">
+      <h3>Goat</h3>
+      <p>
+        Supporting goat production and the development of productive livestock
+        enterprises.
+      </p>
+    </div>
+
+    <div class="chain">
+      <h3>Cattle & Beef</h3>
+      <p>
+        Promoting improved cattle production and opportunities within the beef
+        value chain.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+<section>
+
+  <h2 class="title">Livestock Training & Capacity Building</h2>
+
+  <p class="intro">
+    Training helps livestock farmers and extension personnel acquire
+    practical knowledge for improved production and resilience.
+  </p>
+
+  <div class="training">
+
+    <div class="training-item">
+
+      <div class="number">1</div>
+
+      <div>
+        <h3>Modern Livestock Management</h3>
+        <p>
+          Promoting practical knowledge on improved livestock management and
+          production methods.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="training-item">
+
+      <div class="number">2</div>
+
+      <div>
+        <h3>Climate-Resilient Production</h3>
+        <p>
+          Building awareness and skills for managing livestock production
+          under changing climate conditions.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="training-item">
+
+      <div class="number">3</div>
+
+      <div>
+        <h3>Extension Support</h3>
+        <p>
+          Strengthening the ability of extension personnel to provide
+          practical advice and support to livestock farmers.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="training-item">
+
+      <div class="number">4</div>
+
+      <div>
+        <h3>Commercial Livestock Farming</h3>
+        <p>
+          Encouraging farmers to view livestock production as a sustainable
+          agricultural business and source of income.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="resilience">
+
+    <h3>Building a Resilient Livestock Sector</h3>
+
+    <p>
+      Kogi State's livestock development efforts aim to improve productivity,
+      strengthen resilience, expand market opportunities and support the
+      livelihoods of livestock farmers across the state.
+    </p>
+
+  </div>
+
+</section>
+
+<section class="cta">
+
+  <h2>Supporting Livestock Farmers</h2>
+
+  <p>
+    Farmers and livestock stakeholders are encouraged to follow official
+    Ministry announcements for verified programmes, training opportunities
+    and livestock development initiatives.
+  </p>
+
+  <a href="contact.html" class="btn">
+    Contact the Ministry
+  </a>
+
+</section>
+
+<footer>
+
+  <p>
+    <strong>Kogi State Ministry of Agriculture and Food Security</strong>
+  </p>
+
+  <p>
+    Office of the Honourable Commissioner, Hon. Timothy Ojomah
+  </p>
+
+  <p>
+    © 2026 Kogi State Ministry of Agriculture and Food Security.
+    All Rights Reserved.
+  </p>
+
+</footer>
+
+</body>
+</html>

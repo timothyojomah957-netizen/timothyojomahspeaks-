@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Agribusiness & Entrepreneurship | Kogi State Ministry of Agriculture</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f5f5f5;
+      color: #222;
+    }
+
+    header {
+      background: #008000;
+      color: white;
+      padding: 20px 6%;
+      text-align: center;
+    }
+
+    header h1 {
+      margin-bottom: 15px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 8px 12px;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      background: white;
+      color: #008000;
+    }
+
+    .hero {
+      background: #006400;
+      color: white;
+      text-align: center;
+      padding: 75px 20px;
+    }
+
+    .hero h2 {
+      font-size: 42px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      max-width: 850px;
+      margin: auto;
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    section {
+      padding: 60px 7%;
+    }
+
+    .title {
+      text-align: center;
+      color: #008000;
+      font-size: 32px;
+      margin-bottom: 15px;
+    }
+
+    .intro {
+      max-width: 850px;
+      margin: auto;
+      text-align: center;
+      color: #555;
+      line-height: 1.8;
+    }
+
+    .business-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+      margin-top: 40px;
+    }
+
+    .business-card {
+      background: white;
+      padding: 30px 25px;
+      border-radius: 10px;
+      border-top: 5px solid #008000;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+    }
+
+    .icon {
+      font-size: 45px;
+      margin-bottom: 15px;
+    }
+
+    .business-card h3 {
+      color: #008000;
+      margin-bottom: 12px;
+    }
+
+    .business-card p {
+      color: #555;
+      line-height: 1.7;
+    }
+
+    .opportunities {
+      background: white;
+    }
+
+    .opportunity-grid {
+      max-width: 950px;
+      margin: 35px auto 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .opportunity {
+      background: #f1f8f1;
+      padding: 25px;
+      border-left: 5px solid #008000;
+      border-radius: 5px;
+    }
+
+    .opportunity h3 {
+      color: #008000;
+      margin-bottom: 10px;
+    }
+
+    .opportunity p {
+      color: #555;
+      line-height: 1.7;
+    }
+
+    .steps {
+      max-width: 900px;
+      margin: 35px auto 0;
+    }
+
+    .step {
+      background: white;
+      padding: 23px;
+      margin-bottom: 18px;
+      border-left: 5px solid #008000;
+      border-radius: 5px;
+    }
+
+    .step h3 {
+      color: #008000;
+      margin-bottom: 8px;
+    }
+
+    .step p {
+      color: #555;
+      line-height: 1.7;
+    }
+
+    .cta {
+      background: #008000;
+      color: white;
+      text-align: center;
+    }
+
+    .cta .title {
+      color: white;
+    }
+
+    .cta p {
+      max-width: 850px;
+      margin: auto;
+      line-height: 1.8;
+      font-size: 17px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 25px;
+      background: white;
+      color: #008000;
+      padding: 12px 25px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    footer {
+      background: #004d00;
+      color: white;
+      text-align: center;
+      padding: 25px 15px;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 700px) {
+      .hero h2 {
+        font-size: 32px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+
+  <h1>Kogi State Ministry of Agriculture</h1>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="biography.html">Biography</a>
+    <a href="mission.html">Mission & Vision</a>
+    <a href="achievements.html">Achievements</a>
+    <a href="projects.html">Projects</a>
+    <a href="programs.html">Programs</a>
+    <a href="services.html">Services</a>
+    <a href="events.html">Events</a>
+    <a href="partners.html">Partners</a>
+    <a href="testimonials.html">Testimonials</a>
+    <a href="downloads.html">Downloads</a>
+    <a href="faq.html">FAQ</a>
+    <a href="leadership.html">Leadership</a>
+    <a href="departments.html">Departments</a>
+    <a href="press.html">Press Releases</a>
+    <a href="directory.html">Directory</a>
+    <a href="opportunities.html">Opportunities</a>
+    <a href="stakeholders.html">Stakeholders</a>
+    <a href="farmers.html">Farmers</a>
+    <a href="youth.html">Youth</a>
+    <a href="women.html">Women</a>
+    <a href="cooperatives.html">Cooperatives</a>
+    <a href="extension.html">Extension</a>
+    <a href="investment.html">Investment</a>
+    <a href="agriculture-data.html">Agriculture Data</a>
+    <a href="research.html">Research</a>
+    <a href="climate-smart.html">Climate-Smart</a>
+    <a href="food-security.html">Food Security</a>
+    <a href="markets.html">Markets</a>
+    <a href="irrigation.html">Irrigation</a>
+    <a href="inputs.html">Agricultural Inputs</a>
+    <a href="mechanization.html">Mechanization</a>
+    <a href="training.html">Training</a>
+    <a href="finance.html">Finance</a>
+    <a href="processing.html">Processing</a>
+    <a href="storage.html">Storage</a>
+    <a href="logistics.html">Logistics</a>
+    <a href="insurance.html">Insurance</a>
+    <a href="land-management.html">Land Management</a>
+    <a href="food-processing.html">Food Processing</a>
+    <a href="quality-control.html">Quality Control</a>
+    <a href="agribusiness.html">Agribusiness</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="video.html">Videos</a>
+    <a href="news.html">News</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+</header>
+
+
+<section class="hero">
+
+  <h2>Agribusiness & Entrepreneurship</h2>
+
+  <p>
+    Promoting agricultural entrepreneurship, private-sector participation
+    and profitable agribusiness opportunities across the agricultural value
+    chain in Kogi State.
+  </p>
+
+</section>
+
+
+<section>
+
+  <h2 class="title">Building Agricultural Businesses</h2>
+
+  <p class="intro">
+    Agriculture offers opportunities beyond farming. Agribusiness includes
+    production, processing, transportation, storage, marketing, finance,
+    technology and other services that support the agricultural value chain.
+  </p>
+
+  <div class="business-grid">
+
+    <div class="business-card">
+      <div class="icon">🌾</div>
+      <h3>Farm Enterprises</h3>
+      <p>
+        Supporting farmers to view agricultural production as a business
+        and improve planning, productivity and market orientation.
+      </p>
+    </div>
+
+    <div class="business-card">
+      <div class="icon">🏭</div>
+      <h3>Agro-Processing</h3>
+      <p>
+        Encouraging businesses that transform agricultural raw materials
+        into higher-value products.
+      </p>
+    </div>
+
+    <div class="business-card">
+      <div class="icon">🚛</div>
+      <h3>Logistics</h3>
+      <p>
+        Transportation and logistics businesses can support the movement of
+        agricultural inputs and products.
+      </p>
+    </div>
+
+    <div class="business-card">
+      <div class="icon">📦</div>
+      <h3>Storage & Warehousing</h3>
+      <p>
+        Storage businesses can help protect agricultural products and
+        support efficient market supply.
+      </p>
+    </div>
+
+    <div class="business-card">
+      <div class="icon">🛒</div>
+      <h3>Agricultural Marketing</h3>
+      <p>
+        Marketing enterprises can connect producers with consumers,
+        processors and commercial buyers.
+      </p>
+    </div>
+
+    <div class="business-card">
+      <div class="icon">💡</div>
+      <h3>Agricultural Innovation</h3>
+      <p>
+        Technology and innovative business models can improve productivity,
+        market access and agricultural services.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="opportunities">
+
+  <h2 class="title">Agribusiness Opportunities</h2>
+
+  <div class="opportunity-grid">
+
+    <div class="opportunity">
+      <h3>Crop Production</h3>
+      <p>
+        Commercial crop production can provide opportunities for farmers,
+        investors and agricultural entrepreneurs.
+      </p>
+    </div>
+
+    <div class="opportunity">
+      <h3>Livestock Enterprise</h3>
+      <p>
+        Livestock production and related businesses can contribute to
+        employment, food supply and income generation.
+      </p>
+    </div>
+
+    <div class="opportunity">
+      <h3>Input Supply</h3>
+      <p>
+        Businesses can provide farmers with appropriate agricultural inputs
+        and services through reliable channels.
+      </p>
+    </div>
+
+    <div class="opportunity">
+      <h3>Processing & Packaging</h3>
+      <p>
+        Value addition creates opportunities for businesses to process and
+        package agricultural products for different markets.
+      </p>
+    </div>
+
+    <div class="opportunity">
+      <h3>Digital Agriculture</h3>
+      <p>
+        Digital tools can create opportunities in agricultural information,
+        marketing, finance and farm management.
+      </p>
+    </div>
+
+    <div class="opportunity">
+      <h3>Agricultural Services</h3>
+      <p>
+        Equipment rental, consultancy, transportation and other services
+        can support farmers and agribusinesses.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+
+<section>
+
+  <h2 class="title">Starting an Agricultural Enterprise</h2>
+
+  <div class="steps">
+
+    <div class="step">
+      <h3>1. Identify an Opportunity</h3>
+      <p>
+        Identify a genuine agricultural need or market opportunity that can
+        support a sustainable business.
+      </p>
+    </div>
+
+    <div class="step">
+      <h3>2. Understand the Market</h3>
+      <p>
+        Research customers, competitors, prices, demand and other factors
+        that may affect the business.
+      </p>
+    </div>
+
+    <div class="step">
+      <h3>3. Develop a Business Plan</h3>
+      <p>
+        A clear business plan can help define objectives, resources,
+        expected costs, income and growth strategies.
+      </p>
+    </div>
+
+    <div class="step">
+      <h3>4. Access Appropriate Finance</h3>
+      <p>
+        Entrepreneurs should explore suitable and legitimate sources of
+        finance according to the needs of their enterprise.
+      </p>
+    </div>
+
+    <div class="step">
+      <h3>5. Build Strong Partnerships</h3>
+      <p>
+        Partnerships with farmers, cooperatives, processors, buyers and
+        service providers can strengthen agricultural businesses.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="cta">
+
+  <h2 class="title">Growing Agriculture Through Enterprise</h2>
+
+  <p>
+    Strong agribusinesses can create jobs, improve market access, encourage
+    investment and help transform agriculture into a more competitive
+    economic sector in Kogi State.
+  </p>
+
+  <a href="contact.html" class="btn">
+    Contact the Ministry
+  </a>
+
+</section>
+
+
+<footer>
+
+  <p>
+    <strong>Kogi State Ministry of Agriculture</strong>
+  </p>
+
+  <p>
+    Official Website of the Commissioner of Agriculture and Food Security
+  </p>
+
+  <p>
+    © 2026 Kogi State Ministry of Agriculture.
+    All Rights Reserved.
+  </p>
+
+</footer>
+
+</body>
+</html>

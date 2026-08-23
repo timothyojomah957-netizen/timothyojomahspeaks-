@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Agricultural Calendar | Kogi State Ministry of Agriculture</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f5f5f5;
+      color: #222;
+    }
+
+    header {
+      background: #008000;
+      color: white;
+      padding: 20px 6%;
+      text-align: center;
+    }
+
+    header h1 {
+      margin-bottom: 15px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 8px 12px;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      background: white;
+      color: #008000;
+    }
+
+    .hero {
+      background: #006400;
+      color: white;
+      text-align: center;
+      padding: 70px 20px;
+    }
+
+    .hero h2 {
+      font-size: 42px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      max-width: 850px;
+      margin: auto;
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    section {
+      padding: 60px 7%;
+    }
+
+    .title {
+      text-align: center;
+      color: #008000;
+      font-size: 32px;
+      margin-bottom: 15px;
+    }
+
+    .intro {
+      max-width: 850px;
+      margin: auto;
+      text-align: center;
+      color: #555;
+      line-height: 1.8;
+    }
+
+    .calendar {
+      max-width: 1100px;
+      margin: 40px auto 0;
+      overflow-x: auto;
+    }
+
+    table {
+      width: 100%;
+      min-width: 750px;
+      border-collapse: collapse;
+      background: white;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+    }
+
+    th {
+      background: #008000;
+      color: white;
+      padding: 16px;
+      text-align: left;
+    }
+
+    td {
+      padding: 16px;
+      border-bottom: 1px solid #ddd;
+      line-height: 1.6;
+    }
+
+    tr:hover {
+      background: #f1f8f1;
+    }
+
+    .season {
+      background: white;
+    }
+
+    .season-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      margin-top: 40px;
+    }
+
+    .card {
+      background: #f1f8f1;
+      padding: 30px 25px;
+      border-left: 5px solid #008000;
+      border-radius: 8px;
+    }
+
+    .card h3 {
+      color: #008000;
+      margin-bottom: 12px;
+    }
+
+    .card p {
+      color: #555;
+      line-height: 1.7;
+    }
+
+    .notice {
+      max-width: 900px;
+      margin: 35px auto 0;
+      background: white;
+      border: 2px solid #008000;
+      padding: 25px;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    .notice h3 {
+      color: #008000;
+      margin-bottom: 10px;
+    }
+
+    .notice p {
+      color: #555;
+      line-height: 1.7;
+    }
+
+    .cta {
+      background: #008000;
+      color: white;
+      text-align: center;
+    }
+
+    .cta h2 {
+      margin-bottom: 15px;
+    }
+
+    .cta p {
+      max-width: 850px;
+      margin: auto;
+      line-height: 1.8;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 25px;
+      background: white;
+      color: #008000;
+      padding: 12px 25px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    footer {
+      background: #004d00;
+      color: white;
+      text-align: center;
+      padding: 25px 15px;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 700px) {
+      .hero h2 {
+        font-size: 32px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+
+  <h1>Kogi State Ministry of Agriculture</h1>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="biography.html">Biography</a>
+    <a href="mission.html">Mission & Vision</a>
+    <a href="achievements.html">Achievements</a>
+    <a href="projects.html">Projects</a>
+    <a href="services.html">Services</a>
+    <a href="farmers.html">Farmers</a>
+    <a href="women.html">Women</a>
+    <a href="cooperatives.html">Cooperatives</a>
+    <a href="investment.html">Investment</a>
+    <a href="news.html">News</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+</header>
+
+<section class="hero">
+
+  <h2>Agricultural Calendar</h2>
+
+  <p>
+    A general guide to agricultural activities and seasonal planning for
+    farmers and agricultural stakeholders in Kogi State.
+  </p>
+
+</section>
+
+<section>
+
+  <h2 class="title">General Farming Calendar</h2>
+
+  <p class="intro">
+    Agricultural activities depend on rainfall, location, crop variety,
+    soil conditions and farming practices. The calendar below is a general
+    planning guide and should be adjusted according to local conditions.
+  </p>
+
+  <div class="calendar">
+
+    <table>
+
+      <tr>
+        <th>Period</th>
+        <th>Major Activity</th>
+        <th>Examples</th>
+        <th>Planning Focus</th>
+      </tr>
+
+      <tr>
+        <td>January – February</td>
+        <td>Farm Preparation</td>
+        <td>Land planning, equipment maintenance</td>
+        <td>Prepare inputs and farming plans</td>
+      </tr>
+
+      <tr>
+        <td>March – April</td>
+        <td>Early Season Preparation</td>
+        <td>Land clearing and seed preparation</td>
+        <td>Prepare for planting season</td>
+      </tr>
+
+      <tr>
+        <td>May – June</td>
+        <td>Planting</td>
+        <td>Crop planting and establishment</td>
+        <td>Timely planting and crop management</td>
+      </tr>
+
+      <tr>
+        <td>July – August</td>
+        <td>Crop Management</td>
+        <td>Weeding, pest monitoring and field management</td>
+        <td>Protect and maintain crops</td>
+      </tr>
+
+      <tr>
+        <td>September – October</td>
+        <td>Harvest Period</td>
+        <td>Harvesting and post-harvest handling</td>
+        <td>Reduce losses and maintain quality</td>
+      </tr>
+
+      <tr>
+        <td>November – December</td>
+        <td>Post-Harvest</td>
+        <td>Storage, marketing and farm evaluation</td>
+        <td>Prepare for the next production cycle</td>
+      </tr>
+
+    </table>
+
+  </div>
+
+</section>
+
+<section class="season">
+
+  <h2 class="title">Key Seasonal Activities</h2>
+
+  <div class="season-grid">
+
+    <div class="card">
+      <h3>🌱 Land Preparation</h3>
+      <p>
+        Farmers can use the pre-planting period to prepare farmland,
+        equipment, seeds and other necessary inputs.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>🌾 Planting</h3>
+      <p>
+        Planting should be planned according to rainfall patterns, crop type,
+        soil conditions and recommended agricultural practices.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>💧 Crop Management</h3>
+      <p>
+        Regular field monitoring, weed control, appropriate water management
+        and pest monitoring are important during crop development.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>🌽 Harvesting</h3>
+      <p>
+        Harvesting at the appropriate stage can help maintain product quality
+        and reduce agricultural losses.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>📦 Storage</h3>
+      <p>
+        Proper storage and handling can help protect harvested agricultural
+        products from damage and unnecessary losses.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>🛒 Marketing</h3>
+      <p>
+        Farmers can plan ahead for market opportunities, transportation and
+        sales of agricultural products.
+      </p>
+    </div>
+
+  </div>
+
+  <div class="notice">
+
+    <h3>Important Notice</h3>
+
+    <p>
+      This calendar is a general agricultural planning guide. Actual farming
+      dates may vary because of rainfall, climate, crop type and local
+      conditions. Farmers should seek current agricultural advice before
+      making production decisions.
+    </p>
+
+  </div>
+
+</section>
+
+<section class="cta">
+
+  <h2>Agricultural Planning Support</h2>
+
+  <p>
+    For agricultural information, extension support and current farming
+    guidance, contact the Kogi State Ministry of Agriculture.
+  </p>
+
+  <a href="contact-office.html" class="btn">
+    Contact Our Office
+  </a>
+
+</section>
+
+<footer>
+
+  <p>
+    <strong>Kogi State Ministry of Agriculture</strong>
+  </p>
+
+  <p>
+    Official Website of the Commissioner of Agriculture and Food Security
+  </p>
+
+  <p>
+    © 2026 Kogi State Ministry of Agriculture.
+    All Rights Reserved.
+  </p>
+
+</footer>
+
+</body>
+</html>

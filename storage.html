@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Agricultural Storage & Warehousing | Kogi State Ministry of Agriculture</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f5f5f5;
+      color: #222;
+    }
+
+    header {
+      background: #008000;
+      color: white;
+      padding: 20px 6%;
+      text-align: center;
+    }
+
+    header h1 {
+      margin-bottom: 15px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 8px 12px;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      background: white;
+      color: #008000;
+    }
+
+    .hero {
+      background: #006400;
+      color: white;
+      text-align: center;
+      padding: 75px 20px;
+    }
+
+    .hero h2 {
+      font-size: 42px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      max-width: 850px;
+      margin: auto;
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    section {
+      padding: 60px 7%;
+    }
+
+    .title {
+      text-align: center;
+      color: #008000;
+      font-size: 32px;
+      margin-bottom: 15px;
+    }
+
+    .intro {
+      max-width: 850px;
+      margin: auto;
+      text-align: center;
+      color: #555;
+      line-height: 1.8;
+    }
+
+    .storage-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+      margin-top: 40px;
+    }
+
+    .storage-card {
+      background: white;
+      padding: 30px 25px;
+      border-radius: 10px;
+      border-top: 5px solid #008000;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+    }
+
+    .icon {
+      font-size: 45px;
+      margin-bottom: 15px;
+    }
+
+    .storage-card h3 {
+      color: #008000;
+      margin-bottom: 12px;
+    }
+
+    .storage-card p {
+      color: #555;
+      line-height: 1.7;
+    }
+
+    .benefits {
+      background: white;
+    }
+
+    .benefit-grid {
+      max-width: 950px;
+      margin: 35px auto 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .benefit {
+      background: #f1f8f1;
+      padding: 25px;
+      border-left: 5px solid #008000;
+      border-radius: 5px;
+    }
+
+    .benefit h3 {
+      color: #008000;
+      margin-bottom: 10px;
+    }
+
+    .benefit p {
+      color: #555;
+      line-height: 1.7;
+    }
+
+    .guidelines {
+      max-width: 900px;
+      margin: 35px auto 0;
+    }
+
+    .guideline {
+      background: white;
+      padding: 23px;
+      margin-bottom: 18px;
+      border-left: 5px solid #008000;
+      border-radius: 5px;
+    }
+
+    .guideline h3 {
+      color: #008000;
+      margin-bottom: 8px;
+    }
+
+    .guideline p {
+      color: #555;
+      line-height: 1.7;
+    }
+
+    .notice {
+      max-width: 900px;
+      margin: 35px auto 0;
+      background: white;
+      border: 1px solid #ddd;
+      padding: 25px;
+      border-radius: 7px;
+      color: #555;
+      line-height: 1.7;
+    }
+
+    .notice strong {
+      color: #008000;
+    }
+
+    .cta {
+      background: #008000;
+      color: white;
+      text-align: center;
+    }
+
+    .cta .title {
+      color: white;
+    }
+
+    .cta p {
+      max-width: 850px;
+      margin: auto;
+      line-height: 1.8;
+      font-size: 17px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 25px;
+      background: white;
+      color: #008000;
+      padding: 12px 25px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    footer {
+      background: #004d00;
+      color: white;
+      text-align: center;
+      padding: 25px 15px;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 700px) {
+      .hero h2 {
+        font-size: 32px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+
+  <h1>Kogi State Ministry of Agriculture</h1>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="biography.html">Biography</a>
+    <a href="mission.html">Mission & Vision</a>
+    <a href="achievements.html">Achievements</a>
+    <a href="projects.html">Projects</a>
+    <a href="programs.html">Programs</a>
+    <a href="services.html">Services</a>
+    <a href="events.html">Events</a>
+    <a href="partners.html">Partners</a>
+    <a href="testimonials.html">Testimonials</a>
+    <a href="downloads.html">Downloads</a>
+    <a href="faq.html">FAQ</a>
+    <a href="leadership.html">Leadership</a>
+    <a href="departments.html">Departments</a>
+    <a href="press.html">Press Releases</a>
+    <a href="directory.html">Directory</a>
+    <a href="opportunities.html">Opportunities</a>
+    <a href="stakeholders.html">Stakeholders</a>
+    <a href="farmers.html">Farmers</a>
+    <a href="youth.html">Youth</a>
+    <a href="women.html">Women</a>
+    <a href="cooperatives.html">Cooperatives</a>
+    <a href="extension.html">Extension</a>
+    <a href="investment.html">Investment</a>
+    <a href="agriculture-data.html">Agriculture Data</a>
+    <a href="research.html">Research</a>
+    <a href="climate-smart.html">Climate-Smart</a>
+    <a href="food-security.html">Food Security</a>
+    <a href="markets.html">Markets</a>
+    <a href="irrigation.html">Irrigation</a>
+    <a href="inputs.html">Agricultural Inputs</a>
+    <a href="mechanization.html">Mechanization</a>
+    <a href="training.html">Training</a>
+    <a href="finance.html">Finance</a>
+    <a href="processing.html">Processing</a>
+    <a href="storage.html">Storage</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="video.html">Videos</a>
+    <a href="news.html">News</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+</header>
+
+
+<section class="hero">
+
+  <h2>Agricultural Storage & Warehousing</h2>
+
+  <p>
+    Promoting better storage, preservation and handling of agricultural
+    products to reduce post-harvest losses, protect food quality and
+    strengthen agricultural value chains across Kogi State.
+  </p>
+
+</section>
+
+
+<section>
+
+  <h2 class="title">Protecting Agricultural Products</h2>
+
+  <p class="intro">
+    Proper storage is an important part of agriculture. Good storage
+    practices can help farmers and businesses protect agricultural
+    commodities after harvest and maintain their quality until they reach
+    the market or consumers.
+  </p>
+
+  <div class="storage-grid">
+
+    <div class="storage-card">
+      <div class="icon">🏬</div>
+      <h3>Warehouses</h3>
+      <p>
+        Suitable warehouses can provide secure spaces for storing
+        agricultural commodities before distribution or sale.
+      </p>
+    </div>
+
+    <div class="storage-card">
+      <div class="icon">🌽</div>
+      <h3>Grain Storage</h3>
+      <p>
+        Proper grain storage can help protect crops from moisture, pests
+        and other factors that may reduce quality.
+      </p>
+    </div>
+
+    <div class="storage-card">
+      <div class="icon">🥔</div>
+      <h3>Crop Preservation</h3>
+      <p>
+        Appropriate preservation methods can help extend the useful life
+        of selected agricultural products.
+      </p>
+    </div>
+
+    <div class="storage-card">
+      <div class="icon">📦</div>
+      <h3>Packaging</h3>
+      <p>
+        Appropriate packaging can help protect agricultural products
+        during storage, transportation and marketing.
+      </p>
+    </div>
+
+    <div class="storage-card">
+      <div class="icon">❄️</div>
+      <h3>Cold Storage</h3>
+      <p>
+        Cold-storage systems can be useful for appropriate perishable
+        agricultural products where suitable facilities are available.
+      </p>
+    </div>
+
+    <div class="storage-card">
+      <div class="icon">🚛</div>
+      <h3>Post-Harvest Handling</h3>
+      <p>
+        Careful handling and transportation can reduce unnecessary damage
+        and losses after agricultural products are harvested.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="benefits">
+
+  <h2 class="title">Benefits of Proper Storage</h2>
+
+  <div class="benefit-grid">
+
+    <div class="benefit">
+      <h3>Reduce Post-Harvest Losses</h3>
+      <p>
+        Proper storage can help reduce losses caused by pests, moisture,
+        poor handling and unsuitable storage conditions.
+      </p>
+    </div>
+
+    <div class="benefit">
+      <h3>Maintain Quality</h3>
+      <p>
+        Good storage practices can help preserve the quality and condition
+        of agricultural products.
+      </p>
+    </div>
+
+    <div class="benefit">
+      <h3>Improve Food Availability</h3>
+      <p>
+        Effective storage can help agricultural products remain available
+        beyond the immediate harvest period.
+      </p>
+    </div>
+
+    <div class="benefit">
+      <h3>Better Market Timing</h3>
+      <p>
+        Suitable storage can give farmers and businesses more flexibility
+        when planning the marketing of their products.
+      </p>
+    </div>
+
+    <div class="benefit">
+      <h3>Support Food Security</h3>
+      <p>
+        Reducing post-harvest losses can contribute to stronger food
+        availability and agricultural resilience.
+      </p>
+    </div>
+
+    <div class="benefit">
+      <h3>Increase Economic Value</h3>
+      <p>
+        Proper storage can help protect the value of agricultural products
+        before they are sold or processed.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+
+<section>
+
+  <h2 class="title">Good Storage Practices</h2>
+
+  <div class="guidelines">
+
+    <div class="guideline">
+      <h3>1. Keep Storage Areas Clean</h3>
+      <p>
+        Storage facilities should be kept clean and properly maintained to
+        reduce contamination and pest problems.
+      </p>
+    </div>
+
+    <div class="guideline">
+      <h3>2. Control Moisture</h3>
+      <p>
+        Appropriate moisture management is important for many agricultural
+        commodities, especially grains and other dry products.
+      </p>
+    </div>
+
+    <div class="guideline">
+      <h3>3. Protect Against Pests</h3>
+      <p>
+        Appropriate pest-management practices should be used to protect
+        stored agricultural products.
+      </p>
+    </div>
+
+    <div class="guideline">
+      <h3>4. Use Suitable Packaging</h3>
+      <p>
+        Agricultural products should be stored in appropriate packaging
+        suitable for the commodity and storage conditions.
+      </p>
+    </div>
+
+    <div class="guideline">
+      <h3>5. Inspect Stored Products</h3>
+      <p>
+        Regular inspection can help identify problems early and reduce
+        potential losses.
+      </p>
+    </div>
+
+  </div>
+
+  <div class="notice">
+
+    <strong>Important Notice:</strong>
+    Storage requirements vary according to the type of agricultural
+    commodity. Farmers and businesses should follow appropriate technical
+    guidance for each product and facility.
+
+  </div>
+
+</section>
+
+
+<section class="cta">
+
+  <h2 class="title">Reducing Post-Harvest Losses</h2>
+
+  <p>
+    Better storage and warehousing systems can help protect farmers'
+    products, strengthen agricultural value chains and contribute to food
+    security and economic development across Kogi State.
+  </p>
+
+  <a href="contact.html" class="btn">
+    Contact the Ministry
+  </a>
+
+</section>
+
+
+<footer>
+
+  <p>
+    <strong>Kogi State Ministry of Agriculture</strong>
+  </p>
+
+  <p>
+    Official Website of the Commissioner of Agriculture and Food Security
+  </p>
+
+  <p>
+    © 2026 Kogi State Ministry of Agriculture.
+    All Rights Reserved.
+  </p>
+
+</footer>
+
+</body>
+</html>

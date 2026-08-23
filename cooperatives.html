@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Cooperatives | Kogi State Ministry of Agriculture</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f5f5f5;
+      color: #222;
+    }
+
+    header {
+      background: #008000;
+      color: white;
+      padding: 20px 6%;
+      text-align: center;
+    }
+
+    header h1 {
+      margin-bottom: 15px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 8px 12px;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      background: white;
+      color: #008000;
+    }
+
+    .hero {
+      background: #006400;
+      color: white;
+      text-align: center;
+      padding: 75px 20px;
+    }
+
+    .hero h2 {
+      font-size: 42px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      max-width: 850px;
+      margin: auto;
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    section {
+      padding: 60px 7%;
+    }
+
+    .title {
+      text-align: center;
+      color: #008000;
+      font-size: 32px;
+      margin-bottom: 15px;
+    }
+
+    .intro {
+      max-width: 850px;
+      margin: auto;
+      text-align: center;
+      color: #555;
+      line-height: 1.8;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 25px;
+      margin-top: 40px;
+    }
+
+    .card {
+      background: white;
+      padding: 30px 25px;
+      border-radius: 10px;
+      border-top: 5px solid #008000;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+    }
+
+    .icon {
+      font-size: 42px;
+      margin-bottom: 15px;
+    }
+
+    .card h3 {
+      color: #008000;
+      margin-bottom: 12px;
+      font-size: 21px;
+    }
+
+    .card p {
+      color: #555;
+      line-height: 1.7;
+    }
+
+    .benefits {
+      background: white;
+    }
+
+    .benefit-list {
+      max-width: 950px;
+      margin: 35px auto 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .benefit {
+      background: #f1f8f1;
+      padding: 25px;
+      border-left: 5px solid #008000;
+      border-radius: 5px;
+    }
+
+    .benefit h3 {
+      color: #008000;
+      margin-bottom: 10px;
+    }
+
+    .benefit p {
+      color: #555;
+      line-height: 1.7;
+    }
+
+    .steps {
+      max-width: 900px;
+      margin: 35px auto 0;
+    }
+
+    .step {
+      background: white;
+      margin-bottom: 18px;
+      padding: 23px;
+      border-left: 5px solid #008000;
+      border-radius: 5px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    .step h3 {
+      color: #008000;
+      margin-bottom: 8px;
+    }
+
+    .step p {
+      color: #555;
+      line-height: 1.7;
+    }
+
+    .notice {
+      max-width: 900px;
+      margin: 35px auto 0;
+      background: #fff;
+      padding: 25px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      color: #555;
+      line-height: 1.7;
+    }
+
+    .notice strong {
+      color: #008000;
+    }
+
+    .cta {
+      background: #008000;
+      color: white;
+      text-align: center;
+    }
+
+    .cta .title {
+      color: white;
+    }
+
+    .cta p {
+      max-width: 850px;
+      margin: auto;
+      line-height: 1.8;
+      font-size: 17px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 25px;
+      background: white;
+      color: #008000;
+      padding: 12px 25px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    .btn:hover {
+      background: #f1f1f1;
+    }
+
+    footer {
+      background: #004d00;
+      color: white;
+      text-align: center;
+      padding: 25px 15px;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 700px) {
+      .hero h2 {
+        font-size: 32px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+  <h1>Kogi State Ministry of Agriculture</h1>
+
+  <nav>
+
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="biography.html">Biography</a>
+    <a href="mission.html">Mission & Vision</a>
+    <a href="achievements.html">Achievements</a>
+    <a href="projects.html">Projects</a>
+    <a href="programs.html">Programs</a>
+    <a href="services.html">Services</a>
+    <a href="events.html">Events</a>
+    <a href="partners.html">Partners</a>
+    <a href="testimonials.html">Testimonials</a>
+    <a href="downloads.html">Downloads</a>
+    <a href="faq.html">FAQ</a>
+    <a href="leadership.html">Leadership</a>
+    <a href="media.html">Media Centre</a>
+    <a href="departments.html">Departments</a>
+    <a href="investments.html">Investment</a>
+    <a href="press.html">Press Releases</a>
+    <a href="resources.html">Resources</a>
+    <a href="directory.html">Directory</a>
+    <a href="opportunities.html">Opportunities</a>
+    <a href="stakeholders.html">Stakeholders</a>
+    <a href="feedback.html">Feedback</a>
+    <a href="farmers.html">Farmers</a>
+    <a href="youth.html">Youth</a>
+    <a href="women.html">Women</a>
+    <a href="cooperatives.html">Cooperatives</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="video.html">Videos</a>
+    <a href="news.html">News</a>
+    <a href="contact.html">Contact</a>
+
+  </nav>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+  <h2>Farmers Cooperatives</h2>
+
+  <p>
+    Promoting collaboration, collective action and stronger agricultural
+    value chains through farmer cooperatives and associations across
+    Kogi State.
+  </p>
+
+</section>
+
+
+<!-- INTRO -->
+
+<section>
+
+  <h2 class="title">About Agricultural Cooperatives</h2>
+
+  <p class="intro">
+    Agricultural cooperatives bring farmers and agricultural stakeholders
+    together to pursue common goals, improve productivity, strengthen
+    market access and support sustainable agricultural development.
+  </p>
+
+
+  <div class="cards">
+
+    <div class="card">
+
+      <div class="icon">🤝</div>
+
+      <h3>Collective Action</h3>
+
+      <p>
+        Cooperatives allow farmers to work together, share knowledge and
+        pursue common agricultural objectives.
+      </p>
+
+    </div>
+
+
+    <div class="card">
+
+      <div class="icon">🌾</div>
+
+      <h3>Production</h3>
+
+      <p>
+        Farmer groups can collaborate to improve agricultural production
+        and promote better farming practices.
+      </p>
+
+    </div>
+
+
+    <div class="card">
+
+      <div class="icon">🏪</div>
+
+      <h3>Market Access</h3>
+
+      <p>
+        Organized farmer groups can strengthen connections with buyers,
+        processors and other market participants.
+      </p>
+
+    </div>
+
+
+    <div class="card">
+
+      <div class="icon">💼</div>
+
+      <h3>Agribusiness</h3>
+
+      <p>
+        Cooperatives can create opportunities for members to participate
+        in agricultural businesses and value chains.
+      </p>
+
+    </div>
+
+
+    <div class="card">
+
+      <div class="icon">📚</div>
+
+      <h3>Knowledge Sharing</h3>
+
+      <p>
+        Members can share agricultural knowledge, experiences and
+        information about improved farming practices.
+      </p>
+
+    </div>
+
+
+    <div class="card">
+
+      <div class="icon">🚜</div>
+
+      <h3>Shared Resources</h3>
+
+      <p>
+        Organized groups may improve access to agricultural resources,
+        equipment and other services where available.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- BENEFITS -->
+
+<section class="benefits">
+
+  <h2 class="title">Benefits of Cooperatives</h2>
+
+  <div class="benefit-list">
+
+    <div class="benefit">
+
+      <h3>Stronger Farmer Voice</h3>
+
+      <p>
+        Organized groups can provide farmers with a stronger platform for
+        communication and collective engagement.
+      </p>
+
+    </div>
+
+
+    <div class="benefit">
+
+      <h3>Improved Market Connections</h3>
+
+      <p>
+        Cooperatives can help members connect with agricultural markets,
+        buyers and processors.
+      </p>
+
+    </div>
+
+
+    <div class="benefit">
+
+      <h3>Training Opportunities</h3>
+
+      <p>
+        Groups can make it easier to organize agricultural training,
+        knowledge sharing and capacity-building activities.
+      </p>
+
+    </div>
+
+
+    <div class="benefit">
+
+      <h3>Value Chain Development</h3>
+
+      <p>
+        Cooperatives can participate across agricultural value chains,
+        including production, processing and marketing.
+      </p>
+
+    </div>
+
+
+    <div class="benefit">
+
+      <h3>Community Development</h3>
+
+      <p>
+        Strong farmer organizations can contribute to economic activity
+        and development within agricultural communities.
+      </p>
+
+    </div>
+
+
+    <div class="benefit">
+
+      <h3>Partnership Opportunities</h3>
+
+      <p>
+        Organized farmer groups may be better positioned to engage with
+        government, private organizations and development partners.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- STARTING A COOPERATIVE -->
+
+<section>
+
+  <h2 class="title">Building a Strong Cooperative</h2>
+
+  <div class="steps">
+
+    <div class="step">
+
+      <h3>1. Identify Common Goals</h3>
+
+      <p>
+        Members should identify shared agricultural interests and clear
+        objectives for the cooperative.
+      </p>
+
+    </div>
+
+
+    <div class="step">
+
+      <h3>2. Organize Members</h3>
+
+      <p>
+        Farmers with common interests can come together and establish a
+        clear organizational structure.
+      </p>
+
+    </div>
+
+
+    <div class="step">
+
+      <h3>3. Establish Good Leadership</h3>
+
+      <p>
+        Effective leadership, transparency and accountability are important
+        for the sustainability of a cooperative.
+      </p>
+
+    </div>
+
+
+    <div class="step">
+
+      <h3>4. Develop a Practical Plan</h3>
+
+      <p>
+        Members should identify activities, resources, responsibilities and
+        goals for their cooperative.
+      </p>
+
+    </div>
+
+
+    <div class="step">
+
+      <h3>5. Follow Official Requirements</h3>
+
+      <p>
+        Cooperatives should follow applicable registration, operational and
+        regulatory requirements.
+      </p>
+
+    </div>
+
+  </div>
+
+
+  <div class="notice">
+
+    <strong>Important:</strong>
+    Specific registration procedures, eligibility requirements and support
+    opportunities may change. Please confirm current information through
+    the appropriate official government channels before taking action.
+
+  </div>
+
+</section>
+
+
+<!-- CTA -->
+
+<section class="cta">
+
+  <h2 class="title">Connect With the Ministry</h2>
+
+  <p>
+    Farmer cooperatives and agricultural associations can contact the
+    Ministry for information about agricultural programs, services,
+    opportunities and stakeholder engagement.
+  </p>
+
+  <a href="contact.html" class="btn">
+    Contact the Ministry
+  </a>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+  <p>
+    <strong>Kogi State Ministry of Agriculture</strong>
+  </p>
+
+  <p>
+    Official Website of the Commissioner of Agriculture and Food Security
+  </p>
+
+  <p>
+    © 2026 Kogi State Ministry of Agriculture.
+    All Rights Reserved.
+  </p>
+
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Fisheries & Aquaculture | Kogi State Ministry of Agriculture</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f5f5f5;
+      color: #222;
+    }
+
+    header {
+      background: #008000;
+      color: white;
+      text-align: center;
+      padding: 25px 6%;
+    }
+
+    header h1 {
+      margin-bottom: 8px;
+    }
+
+    header p {
+      margin-bottom: 18px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 8px 12px;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      background: white;
+      color: #008000;
+    }
+
+    .hero {
+      background: #006400;
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    .hero h2 {
+      font-size: 42px;
+      margin-bottom: 18px;
+    }
+
+    .hero p {
+      max-width: 900px;
+      margin: auto;
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    section {
+      padding: 60px 7%;
+    }
+
+    .title {
+      text-align: center;
+      color: #008000;
+      font-size: 32px;
+      margin-bottom: 18px;
+    }
+
+    .intro {
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+      color: #555;
+      line-height: 1.8;
+    }
+
+    .overview {
+      background: white;
+    }
+
+    .overview-box {
+      max-width: 950px;
+      margin: 40px auto 0;
+      background: #f1f8f1;
+      padding: 35px;
+      border-left: 6px solid #008000;
+      border-radius: 8px;
+    }
+
+    .overview-box h3 {
+      color: #008000;
+      font-size: 25px;
+      margin-bottom: 15px;
+    }
+
+    .overview-box p {
+      color: #555;
+      line-height: 1.9;
+    }
+
+    .fish-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+      margin-top: 40px;
+    }
+
+    .card {
+      background: white;
+      padding: 30px 25px;
+      border-radius: 10px;
+      border-top: 5px solid #008000;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+    }
+
+    .icon {
+      font-size: 45px;
+      margin-bottom: 15px;
+    }
+
+    .card h3 {
+      color: #008000;
+      margin-bottom: 12px;
+    }
+
+    .card p {
+      color: #555;
+      line-height: 1.7;
+    }
+
+    .opportunities {
+      background: white;
+    }
+
+    .opportunity-grid {
+      max-width: 1000px;
+      margin: 40px auto 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .opportunity {
+      background: #f1f8f1;
+      padding: 25px;
+      text-align: center;
+      border-radius: 8px;
+    }
+
+    .opportunity h3 {
+      color: #008000;
+      margin-bottom: 10px;
+    }
+
+    .opportunity p {
+      color: #555;
+      line-height: 1.6;
+    }
+
+    .steps {
+      max-width: 900px;
+      margin: 40px auto 0;
+    }
+
+    .step {
+      display: flex;
+      gap: 20px;
+      background: white;
+      padding: 22px;
+      margin-bottom: 18px;
+      border-left: 5px solid #008000;
+      border-radius: 6px;
+    }
+
+    .number {
+      min-width: 42px;
+      height: 42px;
+      background: #008000;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
+
+    .step h3 {
+      color: #008000;
+      margin-bottom: 8px;
+    }
+
+    .step p {
+      color: #555;
+      line-height: 1.7;
+    }
+
+    .notice {
+      max-width: 900px;
+      margin: 40px auto 0;
+      padding: 25px;
+      background: #f1f8f1;
+      border: 2px solid #008000;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    .notice h3 {
+      color: #008000;
+      margin-bottom: 10px;
+    }
+
+    .notice p {
+      color: #555;
+      line-height: 1.8;
+    }
+
+    .cta {
+      background: #008000;
+      color: white;
+      text-align: center;
+    }
+
+    .cta h2 {
+      margin-bottom: 15px;
+    }
+
+    .cta p {
+      max-width: 850px;
+      margin: auto;
+      line-height: 1.8;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 25px;
+      background: white;
+      color: #008000;
+      padding: 12px 25px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    footer {
+      background: #004d00;
+      color: white;
+      text-align: center;
+      padding: 25px 15px;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 700px) {
+      .hero h2 {
+        font-size: 31px;
+      }
+
+      .step {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+
+  <h1>Kogi State Ministry of Agriculture and Food Security</h1>
+
+  <p>
+    Hon. Timothy Ojomah — Commissioner for Agriculture and Food Security
+  </p>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="biography.html">Biography</a>
+    <a href="mission.html">Mission & Vision</a>
+    <a href="achievements.html">Achievements</a>
+    <a href="projects.html">Projects</a>
+    <a href="services.html">Services</a>
+    <a href="farmers.html">Farmers</a>
+    <a href="farmer-information.html">Farmer Information</a>
+    <a href="agricultural-education.html">Agricultural Education</a>
+    <a href="livestock-agriculture.html">Livestock</a>
+    <a href="fisheries-aquaculture.html">Fisheries</a>
+    <a href="women.html">Women</a>
+    <a href="cooperatives.html">Cooperatives</a>
+    <a href="investment.html">Investment</a>
+    <a href="training.html">Training</a>
+    <a href="procurement.html">Procurement</a>
+    <a href="partnerships.html">Partnerships</a>
+    <a href="agricultural-announcements.html">Announcements</a>
+    <a href="news.html">News</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+</header>
+
+<section class="hero">
+
+  <h2>Fisheries & Aquaculture</h2>
+
+  <p>
+    Promoting sustainable fish production, aquaculture development,
+    employment, food security and economic opportunities for fish farmers
+    across Kogi State.
+  </p>
+
+</section>
+
+<section class="overview">
+
+  <h2 class="title">Fisheries and Aquaculture Development</h2>
+
+  <p class="intro">
+    Fisheries and aquaculture can contribute to food security, nutrition,
+    employment and income generation while creating opportunities across
+    production, processing and marketing.
+  </p>
+
+  <div class="overview-box">
+
+    <h3>Supporting the Fisheries Value Chain</h3>
+
+    <p>
+      The Ministry encourages responsible agricultural development across
+      different value chains. Fisheries and aquaculture provide opportunities
+      for farmers and entrepreneurs to participate in fish production,
+      processing, storage and marketing.
+    </p>
+
+    <br>
+
+    <p>
+      The development of practical skills, improved production methods,
+      responsible water-resource management and access to markets can help
+      strengthen the fisheries sector.
+    </p>
+
+  </div>
+
+</section>
+
+<section>
+
+  <h2 class="title">Key Areas</h2>
+
+  <p class="intro">
+    Fisheries and aquaculture development covers several activities that
+    support fish farmers from production to the marketplace.
+  </p>
+
+  <div class="fish-grid">
+
+    <div class="card">
+      <div class="icon">🐟</div>
+      <h3>Fish Farming</h3>
+      <p>
+        Promoting responsible fish farming practices and improved aquaculture
+        management for sustainable production.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icon">💧</div>
+      <h3>Aquaculture</h3>
+      <p>
+        Supporting knowledge and practices that can improve controlled fish
+        production and farm productivity.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🌾</div>
+      <h3>Fish Feed & Nutrition</h3>
+      <p>
+        Encouraging proper fish nutrition and responsible feeding practices
+        for healthy and productive fish farming.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🏪</div>
+      <h3>Fish Marketing</h3>
+      <p>
+        Supporting opportunities for farmers to connect production with
+        consumers, traders and markets.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🔥</div>
+      <h3>Processing</h3>
+      <p>
+        Promoting appropriate fish handling, processing, preservation and
+        value-addition practices.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🎓</div>
+      <h3>Training</h3>
+      <p>
+        Encouraging practical training and knowledge-sharing for fish farmers
+        and other stakeholders.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+<section class="opportunities">
+
+  <h2 class="title">Opportunities in Aquaculture</h2>
+
+  <p class="intro">
+    Fish farming can create opportunities for individuals, families,
+    cooperatives and agricultural entrepreneurs.
+  </p>
+
+  <div class="opportunity-grid">
+
+    <div class="opportunity">
+      <h3>Production</h3>
+      <p>
+        Opportunities to establish and manage fish production enterprises.
+      </p>
+    </div>
+
+    <div class="opportunity">
+      <h3>Processing</h3>
+      <p>
+        Opportunities for fish processing, preservation and value addition.
+      </p>
+    </div>
+
+    <div class="opportunity">
+      <h3>Marketing</h3>
+      <p>
+        Opportunities to connect fish producers with local markets and buyers.
+      </p>
+    </div>
+
+    <div class="opportunity">
+      <h3>Employment</h3>
+      <p>
+        Aquaculture can support employment and income-generating activities.
+      </p>
+    </div>
+
+    <div class="opportunity">
+      <h3>Entrepreneurship</h3>
+      <p>
+        Young people can explore fish farming and related agribusiness
+        opportunities.
+      </p>
+    </div>
+
+    <div class="opportunity">
+      <h3>Food Security</h3>
+      <p>
+        Increased fish production can contribute to food and nutrition
+        security.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+<section>
+
+  <h2 class="title">Responsible Fish Farming</h2>
+
+  <p class="intro">
+    Sustainable aquaculture requires careful planning, proper management and
+    responsible use of resources.
+  </p>
+
+  <div class="steps">
+
+    <div class="step">
+
+      <div class="number">1</div>
+
+      <div>
+        <h3>Select a Suitable Location</h3>
+        <p>
+          Farmers should assess the suitability of the proposed location,
+          water availability and other important production requirements.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="step">
+
+      <div class="number">2</div>
+
+      <div>
+        <h3>Prepare the Production System</h3>
+        <p>
+          Ponds, tanks or other approved production systems should be properly
+          prepared and managed.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="step">
+
+      <div class="number">3</div>
+
+      <div>
+        <h3>Manage Fish Health</h3>
+        <p>
+          Farmers should maintain appropriate water quality, feeding and
+          general fish health management practices.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="step">
+
+      <div class="number">4</div>
+
+      <div>
+        <h3>Keep Farm Records</h3>
+        <p>
+          Production, feeding, expenses and sales records can help farmers
+          monitor their businesses and make informed decisions.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="step">
+
+      <div class="number">5</div>
+
+      <div>
+        <h3>Plan for the Market</h3>
+        <p>
+          Farmers should consider market demand, buyers, processing and
+          distribution before harvesting.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="notice">
+
+    <h3>Important Information</h3>
+
+    <p>
+      Farmers and prospective fish farmers should seek appropriate technical
+      guidance and verify official government programmes, training
+      opportunities and support initiatives through authorized Ministry
+      channels.
+    </p>
+
+  </div>
+
+</section>
+
+<section class="cta">
+
+  <h2>Grow the Fisheries Sector</h2>
+
+  <p>
+    Sustainable fisheries and aquaculture can create opportunities for
+    farmers, entrepreneurs, communities and the wider agricultural economy
+    of Kogi State.
+  </p>
+
+  <a href="contact.html" class="btn">
+    Contact the Ministry
+  </a>
+
+</section>
+
+<footer>
+
+  <p>
+    <strong>Kogi State Ministry of Agriculture and Food Security</strong>
+  </p>
+
+  <p>
+    Office of the Honourable Commissioner, Hon. Timothy Ojomah
+  </p>
+
+  <p>
+    © 2026 Kogi State Ministry of Agriculture and Food Security.
+    All Rights Reserved.
+  </p>
+
+</footer>
+
+</body>
+</html>

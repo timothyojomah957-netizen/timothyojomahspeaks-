@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Farmer Registration & Support | Kogi State Ministry of Agriculture</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f5f5f5;
+      color: #222;
+    }
+
+    header {
+      background: #008000;
+      color: white;
+      text-align: center;
+      padding: 25px 6%;
+    }
+
+    header h1 {
+      margin-bottom: 8px;
+    }
+
+    header p {
+      margin-bottom: 18px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 8px 12px;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      background: white;
+      color: #008000;
+    }
+
+    .hero {
+      background: #006400;
+      color: white;
+      text-align: center;
+      padding: 75px 20px;
+    }
+
+    .hero h2 {
+      font-size: 40px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      max-width: 850px;
+      margin: auto;
+      line-height: 1.8;
+      font-size: 18px;
+    }
+
+    section {
+      padding: 60px 7%;
+    }
+
+    .title {
+      text-align: center;
+      color: #008000;
+      font-size: 32px;
+      margin-bottom: 18px;
+    }
+
+    .intro {
+      max-width: 850px;
+      margin: auto;
+      text-align: center;
+      color: #555;
+      line-height: 1.8;
+    }
+
+    .registration-section {
+      background: white;
+    }
+
+    .form-container {
+      max-width: 900px;
+      margin: 40px auto 0;
+      background: #f8fff8;
+      padding: 35px;
+      border-radius: 12px;
+      border-top: 6px solid #008000;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    }
+
+    .form-container h3 {
+      color: #008000;
+      margin-bottom: 25px;
+      font-size: 24px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 8px;
+      color: #333;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 13px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 16px;
+      outline: none;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: #008000;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .submit-btn {
+      width: 100%;
+      padding: 15px;
+      background: #008000;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 17px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .submit-btn:hover {
+      background: #006400;
+    }
+
+    .form-note {
+      margin-top: 20px;
+      padding: 15px;
+      background: #eaf7ea;
+      border-left: 5px solid #008000;
+      color: #555;
+      line-height: 1.7;
+    }
+
+    .support-section {
+      background: #f5f5f5;
+    }
+
+    .support-grid {
+      max-width: 1000px;
+      margin: 40px auto 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 22px;
+    }
+
+    .support-card {
+      background: white;
+      padding: 28px;
+      text-align: center;
+      border-radius: 10px;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.07);
+      border-top: 4px solid #008000;
+    }
+
+    .support-card .icon {
+      font-size: 40px;
+      margin-bottom: 12px;
+    }
+
+    .support-card h3 {
+      color: #008000;
+      margin-bottom: 10px;
+    }
+
+    .support-card p {
+      color: #555;
+      line-height: 1.6;
+    }
+
+    .notice {
+      max-width: 900px;
+      margin: 40px auto 0;
+      background: white;
+      padding: 25px;
+      border: 2px solid #008000;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    .notice h3 {
+      color: #008000;
+      margin-bottom: 10px;
+    }
+
+    .notice p {
+      color: #555;
+      line-height: 1.8;
+    }
+
+    footer {
+      background: #004d00;
+      color: white;
+      text-align: center;
+      padding: 25px 15px;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 700px) {
+      .hero h2 {
+        font-size: 30px;
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+
+      .form-container {
+        padding: 22px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+
+  <h1>Kogi State Ministry of Agriculture and Food Security</h1>
+
+  <p>
+    Hon. Timothy Ojomah — Commissioner for Agriculture and Food Security
+  </p>
+
+  <!-- MAIN NAVIGATION -->
+  <nav>
+
+    <a href="index.html">Home</a>
+
+    <a href="about.html">About</a>
+
+    <a href="biography.html">Biography</a>
+
+    <a href="mission.html">Mission & Vision</a>
+
+    <a href="portfolio.html">Portfolio</a>
+
+    <a href="projects.html">Projects</a>
+
+    <a href="services.html">Services</a>
+
+    <a href="farmers.html">Farmers</a>
+
+    <a href="farmer-information.html">Farmer Information</a>
+
+    <a href="agricultural-education.html">Agricultural Education</a>
+
+    <a href="extension-services.html">Extension Services</a>
+
+    <a href="modern-farming.html">Modern Farming</a>
+
+    <a href="field-demonstrations.html">Field Demonstrations</a>
+
+    <a href="crop-livestock-guidance.html">
+      Crop & Livestock Guidance
+    </a>
+
+    <a href="pest-disease-awareness.html">
+      Pest & Disease Awareness
+    </a>
+
+    <a href="climate-smart-advice.html">
+      Climate-Smart Advice
+    </a>
+
+    <a href="farmer-programmes.html">
+      Farmer Programmes
+    </a>
+
+    <a href="farmer-registration.html">
+      Farmer Registration
+    </a>
+
+    <a href="programme-application.html">
+      Programme Application
+    </a>
+
+    <a href="farmer-support.html">
+      Farmer Support
+    </a>
+
+    <a href="agricultural-loan.html">
+      Agricultural Funding
+    </a>
+
+    <a href="farmer-funding-enquiry.html">
+      Funding Enquiry
+    </a>
+
+    <a href="women-youth-funding.html">
+      Women & Youth Funding
+    </a>
+
+    <a href="farmer-eligibility.html">
+      Farmer Eligibility
+    </a>
+
+    <a href="news.html">News</a>
+
+    <a href="gallery.html">Gallery</a>
+
+    <a href="video.html">Video</a>
+
+    <a href="contact.html">Contact</a>
+
+  </nav>
+
+</header>
+
+
+<section class="hero">
+
+  <h2>Farmer Registration</h2>
+
+  <p>
+    Register your agricultural information with the Ministry to help connect
+    farmers with relevant agricultural programmes, information, training and
+    support services.
+  </p>
+
+</section>
+
+
+<section class="registration-section">
+
+  <h2 class="title">Farmer Registration Form</h2>
+
+  <p class="intro">
+    Please provide accurate information in the form below. Fields marked with
+    an asterisk (*) should be completed.
+  </p>
+
+  <div class="form-container">
+
+    <h3>Enter Your Details</h3>
+
+    <form action="#" method="POST">
+
+      <div class="form-row">
+
+        <div class="form-group">
+          <label for="fullname">Full Name *</label>
+
+          <input
+            type="text"
+            id="fullname"
+            name="fullname"
+            placeholder="Enter your full name"
+            required>
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone Number *</label>
+
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            placeholder="Enter your phone number"
+            required>
+        </div>
+
+      </div>
+
+
+      <div class="form-row">
+
+        <div class="form-group">
+          <label for="email">Email Address</label>
+
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter your email address">
+        </div>
+
+        <div class="form-group">
+          <label for="gender">Gender *</label>
+
+          <select id="gender" name="gender" required>
+
+            <option value="">Select gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+
+          </select>
+
+        </div>
+
+      </div>
+
+
+      <div class="form-row">
+
+        <div class="form-group">
+
+          <label for="state">State *</label>
+
+          <select id="state" name="state" required>
+
+            <option value="">Select state</option>
+            <option value="Kogi">Kogi</option>
+            <option value="Other">Other</option>
+
+          </select>
+
+        </div>
+
+
+        <div class="form-group">
+
+          <label for="lga">Local Government Area *</label>
+
+          <select id="lga" name="lga" required>
+
+            <option value="">Select LGA</option>
+
+            <option>Adavi</option>
+            <option>Ajaokuta</option>
+            <option>Ankpa</option>
+            <option>Bassa</option>
+            <option>Cabba/Bunu</option>
+            <option>Dekina</option>
+            <option>Ibaji</option>
+            <option>Idah</option>
+            <option>Igalamela/Odolu</option>
+            <option>Ijumu</option>
+            <option>Kogi</option>
+            <option>Koton Karfe</option>
+            <option>Lokoja</option>
+            <option>Mopa-Muro</option>
+            <option>Ofu</option>
+            <option>Ogori/Magongo</option>
+            <option>Okehi</option>
+            <option>Okene</option>
+            <option>Olamaboro</option>
+            <option>Omala</option>
+            <option>Yagba East</option>
+            <option>Yagba West</option>
+
+          </select>
+
+        </div>
+
+      </div>
+
+
+      <div class="form-row">
+
+        <div class="form-group">
+
+          <label for="farmtype">Type of Farming *</label>
+
+          <select id="farmtype" name="farmtype" required>
+
+            <option value="">Select farming type</option>
+            <option value="crop">Crop Farming</option>
+            <option value="livestock">Livestock Farming</option>
+            <option value="poultry">Poultry Farming</option>
+            <option value="fisheries">Fisheries/Aquaculture</option>
+            <option value="mixed">Mixed Farming</option>
+            <option value="other">Other</option>
+
+          </select>
+
+        </div>
+
+
+        <div class="form-group">
+
+          <label for="farm_size">Farm Size</label>
+
+          <input
+            type="text"
+            id="farm_size"
+            name="farm_size"
+            placeholder="Example: 5 hectares">
+
+        </div>
+
+      </div>
+
+
+      <div class="form-group">
+
+        <label for="crops">
+          Main Crops / Agricultural Products
+        </label>
+
+        <input
+          type="text"
+          id="crops"
+          name="crops"
+          placeholder="Example: Rice, Cassava, Maize, Yam">
+
+      </div>
+
+
+      <div class="form-group">
+
+        <label for="programme">
+          Agricultural Programme of Interest *
+        </label>
+
+        <select id="programme" name="programme" required>
+
+          <option value="">Select programme</option>
+
+          <option value="crop-production">
+            Crop Production
+          </option>
+
+          <option value="livestock">
+            Livestock Development
+          </option>
+
+          <option value="fisheries">
+            Fisheries & Aquaculture
+          </option>
+
+          <option value="farmer-training">
+            Farmer Training
+          </option>
+
+          <option value="extension">
+            Agricultural Extension Services
+          </option>
+
+          <option value="climate-smart">
+            Climate-Smart Agriculture
+          </option>
+
+          <option value="cooperative">
+            Farmer Cooperative Support
+          </option>
+
+          <option value="youth">
+            Youth Agricultural Support
+          </option>
+
+          <option value="women">
+            Women in Agriculture
+          </option>
+
+          <option value="other">
+            Other Agricultural Programme
+          </option>
+
+        </select>
+
+      </div>
+
+
+      <div class="form-group">
+
+        <label for="address">
+          Farm / Residential Address *
+        </label>
+
+        <textarea
+          id="address"
+          name="address"
+          placeholder="Enter your farm or residential address"
+          required></textarea>
+
+      </div>
+
+
+      <div class="form-group">
+
+        <label for="message">
+          Additional Information
+        </label>
+
+        <textarea
+          id="message"
+          name="message"
+          placeholder="Tell us anything else about your farming needs or the support you require"></textarea>
+
+      </div>
+
+
+      <button type="submit" class="submit-btn">
+        Submit Farmer Registration
+      </button>
+
+    </form>
+
+
+    <div class="form-note">
+
+      <strong>Note:</strong>
+
+      Your information should be accurate. Programme eligibility and
+      participation are subject to applicable requirements and official
+      verification.
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="support-section">
+
+  <h2 class="title">
+    What Registration Can Help With
+  </h2>
+
+  <p class="intro">
+
+    Registered farmers may be easier to reach with relevant agricultural
+    information and programme announcements, subject to applicable
+    programme requirements.
+
+  </p>
+
+
+  <div class="support-grid">
+
+
+    <div class="support-card">
+
+      <div class="icon">📢</div>
+
+      <h3>Programme Updates</h3>
+
+      <p>
+        Receive information about relevant agricultural programmes and
+        activities.
+      </p>
+
+    </div>
+
+
+    <div class="support-card">
+
+      <div class="icon">🎓</div>
+
+      <h3>Training</h3>
+
+      <p>
+        Access information about agricultural training and extension
+        opportunities.
+      </p>
+
+    </div>
+
+
+    <div class="support-card">
+
+      <div class="icon">🌱</div>
+
+      <h3>Farm Guidance</h3>
+
+      <p>
+        Get connected with appropriate agricultural information and advisory
+        services.
+      </p>
+
+    </div>
+
+
+    <div class="support-card">
+
+      <div class="icon">🤝</div>
+
+      <h3>Farmer Support</h3>
+
+      <p>
+        Improve communication between farmers and relevant agricultural
+        support programmes.
+      </p>
+
+    </div>
+
+  </div>
+
+
+  <div class="notice">
+
+    <h3>Protect Your Personal Information</h3>
+
+    <p>
+
+      Only provide information that is necessary for legitimate agricultural
+      registration purposes. Do not enter passwords, bank PINs, ATM PINs or
+      other highly sensitive financial information into this form.
+
+    </p>
+
+  </div>
+
+</section>
+
+
+<footer>
+
+  <p>
+    <strong>Kogi State Ministry of Agriculture and Food Security</strong>
+  </p>
+
+  <p>
+    Office of the Honourable Commissioner, Hon. Timothy Ojomah
+  </p>
+
+  <p>
+    © 2026 Kogi State Ministry of Agriculture and Food Security.
+    All Rights Reserved.
+  </p>
+
+</footer>
+
+</body>
+</html>

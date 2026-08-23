@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Agricultural Awards | Kogi State Ministry of Agriculture</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f5f5f5;
+      color: #222;
+    }
+
+    header {
+      background: #008000;
+      color: white;
+      padding: 25px 6%;
+      text-align: center;
+    }
+
+    header h1 {
+      margin-bottom: 15px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 8px 12px;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      background: white;
+      color: #008000;
+    }
+
+    .hero {
+      background: #006400;
+      color: white;
+      text-align: center;
+      padding: 75px 20px;
+    }
+
+    .hero h2 {
+      font-size: 42px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      max-width: 850px;
+      margin: auto;
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    section {
+      padding: 60px 7%;
+    }
+
+    .title {
+      text-align: center;
+      color: #008000;
+      font-size: 32px;
+      margin-bottom: 15px;
+    }
+
+    .intro {
+      max-width: 850px;
+      margin: auto;
+      text-align: center;
+      color: #555;
+      line-height: 1.8;
+    }
+
+    .award-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+      margin-top: 40px;
+    }
+
+    .award-card {
+      background: white;
+      padding: 30px 25px;
+      text-align: center;
+      border-radius: 10px;
+      border-top: 5px solid #008000;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+    }
+
+    .award-icon {
+      font-size: 50px;
+      margin-bottom: 15px;
+    }
+
+    .award-card h3 {
+      color: #008000;
+      margin-bottom: 12px;
+      font-size: 21px;
+    }
+
+    .award-card p {
+      color: #555;
+      line-height: 1.7;
+    }
+
+    .criteria {
+      background: white;
+    }
+
+    .criteria-list {
+      max-width: 900px;
+      margin: 35px auto 0;
+    }
+
+    .criteria-item {
+      background: #f1f8f1;
+      margin-bottom: 18px;
+      padding: 22px;
+      border-left: 5px solid #008000;
+      border-radius: 5px;
+    }
+
+    .criteria-item h3 {
+      color: #008000;
+      margin-bottom: 8px;
+    }
+
+    .criteria-item p {
+      color: #555;
+      line-height: 1.7;
+    }
+
+    .recognition {
+      max-width: 900px;
+      margin: 40px auto 0;
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      text-align: center;
+      border: 2px solid #008000;
+    }
+
+    .recognition h3 {
+      color: #008000;
+      margin-bottom: 12px;
+    }
+
+    .recognition p {
+      color: #555;
+      line-height: 1.8;
+    }
+
+    .cta {
+      background: #008000;
+      color: white;
+      text-align: center;
+    }
+
+    .cta h2 {
+      margin-bottom: 15px;
+    }
+
+    .cta p {
+      max-width: 850px;
+      margin: auto;
+      line-height: 1.8;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 25px;
+      background: white;
+      color: #008000;
+      padding: 12px 25px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    footer {
+      background: #004d00;
+      color: white;
+      text-align: center;
+      padding: 25px 15px;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 700px) {
+      .hero h2 {
+        font-size: 32px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+
+  <h1>Kogi State Ministry of Agriculture</h1>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="biography.html">Biography</a>
+    <a href="mission.html">Mission & Vision</a>
+    <a href="achievements.html">Achievements</a>
+    <a href="projects.html">Projects</a>
+    <a href="services.html">Services</a>
+    <a href="farmers.html">Farmers</a>
+    <a href="women.html">Women</a>
+    <a href="cooperatives.html">Cooperatives</a>
+    <a href="investment.html">Investment</a>
+    <a href="publications.html">Publications</a>
+    <a href="calendar.html">Calendar</a>
+    <a href="news.html">News</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+</header>
+
+<section class="hero">
+
+  <h2>Agricultural Awards</h2>
+
+  <p>
+    Celebrating excellence, innovation, dedication and outstanding
+    contributions to agricultural development in Kogi State.
+  </p>
+
+</section>
+
+<section>
+
+  <h2 class="title">Award Categories</h2>
+
+  <p class="intro">
+    Agricultural awards can recognize individuals, organizations and
+    communities that make meaningful contributions to farming and
+    agricultural development.
+  </p>
+
+  <div class="award-grid">
+
+    <div class="award-card">
+      <div class="award-icon">🏆</div>
+      <h3>Outstanding Farmer</h3>
+      <p>
+        Recognition for farmers who demonstrate exceptional dedication,
+        productivity and responsible agricultural practices.
+      </p>
+    </div>
+
+    <div class="award-card">
+      <div class="award-icon">🌾</div>
+      <h3>Best Agricultural Producer</h3>
+      <p>
+        Recognition for outstanding performance in agricultural production
+        and value-chain development.
+      </p>
+    </div>
+
+    <div class="award-card">
+      <div class="award-icon">💡</div>
+      <h3>Agricultural Innovator</h3>
+      <p>
+        Recognition for innovative ideas, technologies and approaches that
+        contribute to agricultural development.
+      </p>
+    </div>
+
+    <div class="award-card">
+      <div class="award-icon">👩‍🌾</div>
+      <h3>Women in Agriculture</h3>
+      <p>
+        Recognition of outstanding contributions by women to farming,
+        agribusiness and agricultural development.
+      </p>
+    </div>
+
+    <div class="award-card">
+      <div class="award-icon">👨‍🌾</div>
+      <h3>Youth in Agriculture</h3>
+      <p>
+        Celebrating young people who demonstrate commitment and innovation
+        within the agricultural sector.
+      </p>
+    </div>
+
+    <div class="award-card">
+      <div class="award-icon">🤝</div>
+      <h3>Outstanding Cooperative</h3>
+      <p>
+        Recognition for cooperatives that demonstrate strong organization,
+        productivity and community impact.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+<section class="criteria">
+
+  <h2 class="title">Recognition Criteria</h2>
+
+  <div class="criteria-list">
+
+    <div class="criteria-item">
+      <h3>Productivity</h3>
+      <p>
+        Demonstrated achievement and positive results in agricultural
+        production or related activities.
+      </p>
+    </div>
+
+    <div class="criteria-item">
+      <h3>Innovation</h3>
+      <p>
+        Use of creative ideas, improved techniques or appropriate technology
+        to address agricultural challenges.
+      </p>
+    </div>
+
+    <div class="criteria-item">
+      <h3>Community Impact</h3>
+      <p>
+        Contribution to farmers, communities, employment, food production
+        or agricultural development.
+      </p>
+    </div>
+
+    <div class="criteria-item">
+      <h3>Sustainability</h3>
+      <p>
+        Commitment to responsible practices that support long-term
+        agricultural and environmental sustainability.
+      </p>
+    </div>
+
+    <div class="criteria-item">
+      <h3>Leadership</h3>
+      <p>
+        Demonstrated leadership, cooperation and positive contribution to
+        agricultural communities or organizations.
+      </p>
+    </div>
+
+  </div>
+
+  <div class="recognition">
+
+    <h3>Celebrating Agricultural Excellence</h3>
+
+    <p>
+      Recognition and awards can encourage farmers, young people, women,
+      cooperatives, businesses and other stakeholders to continue making
+      positive contributions to the agricultural sector.
+    </p>
+
+  </div>
+
+</section>
+
+<section class="cta">
+
+  <h2>Promoting Excellence in Agriculture</h2>
+
+  <p>
+    The Kogi State Ministry of Agriculture supports initiatives that
+    encourage productivity, innovation and sustainable agricultural
+    development.
+  </p>
+
+  <a href="contact-office.html" class="btn">
+    Contact Our Office
+  </a>
+
+</section>
+
+<footer>
+
+  <p>
+    <strong>Kogi State Ministry of Agriculture</strong>
+  </p>
+
+  <p>
+    Official Website of the Commissioner of Agriculture and Food Security
+  </p>
+
+  <p>
+    © 2026 Kogi State Ministry of Agriculture.
+    All Rights Reserved.
+  </p>
+
+</footer>
+
+</body>
+</html>

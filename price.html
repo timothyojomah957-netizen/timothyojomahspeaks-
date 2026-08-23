@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Market & Price Information | Kogi State Ministry of Agriculture</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #f5f5f5;
+  color: #222;
+  line-height: 1.7;
+}
+
+header {
+  background: #008000;
+  color: white;
+  text-align: center;
+  padding: 25px 6%;
+}
+
+header h1 {
+  margin-bottom: 8px;
+}
+
+header p {
+  margin-bottom: 18px;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+nav a:hover {
+  background: white;
+  color: #008000;
+}
+
+.hero {
+  background: #006400;
+  color: white;
+  text-align: center;
+  padding: 75px 20px;
+}
+
+.hero h2 {
+  font-size: 42px;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  max-width: 900px;
+  margin: auto;
+  font-size: 18px;
+}
+
+section {
+  padding: 60px 7%;
+}
+
+.title {
+  text-align: center;
+  color: #008000;
+  font-size: 32px;
+  margin-bottom: 18px;
+}
+
+.intro {
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+  color: #555;
+}
+
+/* PRICE TABLE */
+
+.price-section {
+  background: white;
+}
+
+.table-container {
+  max-width: 1100px;
+  margin: 40px auto 0;
+  overflow-x: auto;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.price-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 700px;
+}
+
+.price-table th {
+  background: #008000;
+  color: white;
+  padding: 16px;
+  text-align: left;
+}
+
+.price-table td {
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+.price-table tr:nth-child(even) {
+  background: #f7fff7;
+}
+
+.price-table tr:hover {
+  background: #eaf7ea;
+}
+
+.price-note {
+  max-width: 1100px;
+  margin: 20px auto 0;
+  padding: 18px;
+  background: #fff8df;
+  border-left: 5px solid #008000;
+  color: #555;
+}
+
+/* MARKET INFORMATION */
+
+.market-section {
+  background: #f5f5f5;
+}
+
+.market-grid {
+  max-width: 1100px;
+  margin: 40px auto 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px;
+}
+
+.market-card {
+  background: white;
+  padding: 30px 25px;
+  border-radius: 10px;
+  border-top: 5px solid #008000;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.07);
+}
+
+.market-card .icon {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.market-card h3 {
+  color: #008000;
+  margin-bottom: 10px;
+}
+
+.market-card p {
+  color: #555;
+}
+
+/* FORM */
+
+.form-section {
+  background: white;
+}
+
+.form-container {
+  max-width: 850px;
+  margin: 40px auto 0;
+  background: #f8fff8;
+  padding: 35px;
+  border-radius: 12px;
+  border-top: 6px solid #008000;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.form-container h3 {
+  color: #008000;
+  margin-bottom: 25px;
+  font-size: 24px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 15px;
+  background: #008000;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 17px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background: #006400;
+}
+
+/* FOOTER */
+
+footer {
+  background: #004d00;
+  color: white;
+  text-align: center;
+  padding: 25px 15px;
+}
+
+@media (max-width: 700px) {
+
+  .hero h2 {
+    font-size: 30px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .form-container {
+    padding: 22px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+<h1>Kogi State Ministry of Agriculture and Food Security</h1>
+
+<p>
+Hon. Timothy Ojomah — Commissioner for Agriculture and Food Security
+</p>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="biography.html">Biography</a>
+<a href="mission.html">Mission & Vision</a>
+<a href="projects.html">Projects</a>
+<a href="services.html">Services</a>
+<a href="farmers.html">Farmers</a>
+<a href="farmer-information.html">Farmer Information</a>
+<a href="agricultural-education.html">Agricultural Education</a>
+<a href="farmer-registration.html">Farmer Registration</a>
+<a href="farmer-support.html">Farmer Support</a>
+<a href="farmer-cooperatives.html">Farmer Cooperatives</a>
+<a href="women-agriculture.html">Women in Agriculture</a>
+<a href="youth-agriculture.html">Youth in Agriculture</a>
+<a href="training.html">Training</a>
+<a href="agricultural-market.html">Market Information</a>
+<a href="news.html">News</a>
+<a href="gallery.html">Gallery</a>
+<a href="contact.html">Contact</a>
+</nav>
+
+</header>
+
+
+<section class="hero">
+
+<h2>Market & Price Information</h2>
+
+<p>
+Access agricultural market information and keep up with commodity prices,
+market conditions and opportunities for farmers and agribusinesses.
+</p>
+
+</section>
+
+
+<section class="price-section">
+
+<h2 class="title">Commodity Price Information</h2>
+
+<p class="intro">
+Use this section to publish verified and regularly updated agricultural
+commodity prices for farmers, buyers and other agricultural stakeholders.
+</p>
+
+<div class="table-container">
+
+<table class="price-table">
+
+<thead>
+
+<tr>
+<th>Commodity</th>
+<th>Unit</th>
+<th>Market</th>
+<th>Current Price</th>
+<th>Date Updated</th>
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+<td>Rice</td>
+<td>50 kg Bag</td>
+<td>Lokoja</td>
+<td>Update Price</td>
+<td>Update Date</td>
+</tr>
+
+<tr>
+<td>Maize</td>
+<td>100 kg Bag</td>
+<td>Lokoja</td>
+<td>Update Price</td>
+<td>Update Date</td>
+</tr>
+
+<tr>
+<td>Cassava</td>
+<td>Per Bag</td>
+<td>Lokoja</td>
+<td>Update Price</td>
+<td>Update Date</td>
+</tr>
+
+<tr>
+<td>Beans</td>
+<td>100 kg Bag</td>
+<td>Lokoja</td>
+<td>Update Price</td>
+<td>Update Date</td>
+</tr>
+
+<tr>
+<td>Groundnut</td>
+<td>100 kg Bag</td>
+<td>Lokoja</td>
+<td>Update Price</td>
+<td>Update Date</td>
+</tr>
+
+<tr>
+<td>Fish</td>
+<td>Per Kg</td>
+<td>Lokoja</td>
+<td>Update Price</td>
+<td>Update Date</td>
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+<div class="price-note">
+
+<strong>Price Notice:</strong>
+Commodity prices change according to location, season, quality, quantity,
+market demand and other factors. Prices displayed on this page should be
+verified and updated by the responsible office before publication.
+
+</div>
+
+</section>
+
+
+<section class="market-section">
+
+<h2 class="title">Market Information for Farmers</h2>
+
+<p class="intro">
+Useful information to help farmers make better decisions when producing,
+storing and selling agricultural commodities.
+</p>
+
+<div class="market-grid">
+
+<div class="market-card">
+
+<div class="icon">📈</div>
+
+<h3>Market Trends</h3>
+
+<p>
+Information about changing demand, supply and market conditions for
+agricultural commodities.
+</p>
+
+</div>
+
+
+<div class="market-card">
+
+<div class="icon">🛒</div>
+
+<h3>Market Opportunities</h3>
+
+<p>
+Information about potential markets and opportunities for farmers to sell
+their agricultural products.
+</p>
+
+</div>
+
+
+<div class="market-card">
+
+<div class="icon">🤝</div>
+
+<h3>Connect With Buyers</h3>
+
+<p>
+Farmers and legitimate agricultural buyers can explore opportunities for
+responsible agricultural trade.
+</p>
+
+</div>
+
+
+<div class="market-card">
+
+<div class="icon">📦</div>
+
+<h3>Storage & Handling</h3>
+
+<p>
+Proper storage, sorting, packaging and transportation can help reduce
+post-harvest losses.
+</p>
+
+</div>
+
+
+<div class="market-card">
+
+<div class="icon">🌾</div>
+
+<h3>Commodity Information</h3>
+
+<p>
+Get useful information about major crops, livestock, fisheries and other
+agricultural commodities.
+</p>
+
+</div>
+
+
+<div class="market-card">
+
+<div class="icon">💼</div>
+
+<h3>Agribusiness Opportunities</h3>
+
+<p>
+Explore opportunities in agricultural processing, distribution, marketing
+and value addition.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="form-section">
+
+<h2 class="title">Market Information Request</h2>
+
+<p class="intro">
+Farmers, buyers and agricultural stakeholders can submit an enquiry about
+market or commodity information.
+</p>
+
+<div class="form-container">
+
+<h3>Submit Your Enquiry</h3>
+
+<form action="#" method="POST">
+
+<div class="form-row">
+
+<div class="form-group">
+
+<label for="name">Full Name *</label>
+
+<input
+type="text"
+id="name"
+name="name"
+placeholder="Enter your full name"
+required>
+
+</div>
+
+
+<div class="form-group">
+
+<label for="phone">Phone Number *</label>
+
+<input
+type="tel"
+id="phone"
+name="phone"
+placeholder="Enter your phone number"
+required>
+
+</div>
+
+</div>
+
+
+<div class="form-row">
+
+<div class="form-group">
+
+<label for="role">You Are A *</label>
+
+<select id="role" name="role" required>
+
+<option value="">Select one</option>
+<option>Farmer</option>
+<option>Buyer</option>
+<option>Processor</option>
+<option>Trader</option>
+<option>Cooperative</option>
+<option>Agribusiness Owner</option>
+<option>Other</option>
+
+</select>
+
+</div>
+
+
+<div class="form-group">
+
+<label for="commodity">Commodity</label>
+
+<select id="commodity" name="commodity">
+
+<option value="">Select commodity</option>
+<option>Rice</option>
+<option>Maize</option>
+<option>Cassava</option>
+<option>Beans</option>
+<option>Groundnut</option>
+<option>Fish</option>
+<option>Livestock</option>
+<option>Vegetables</option>
+<option>Other</option>
+
+</select>
+
+</div>
+
+</div>
+
+
+<div class="form-group">
+
+<label for="request">Your Request *</label>
+
+<textarea
+id="request"
+name="request"
+placeholder="Enter the market or price information you need"
+required></textarea>
+
+</div>
+
+
+<button type="submit" class="submit-btn">
+Submit Market Information Request
+</button>
+
+</form>
+
+</div>
+
+</section>
+
+
+<footer>
+
+<p>
+<strong>Kogi State Ministry of Agriculture and Food Security</strong>
+</p>
+
+<p>
+Office of the Honourable Commissioner, Hon. Timothy Ojomah
+</p>
+
+<p>
+© 2026 Kogi State Ministry of Agriculture and Food Security.
+All Rights Reserved.
+</p>
+
+</footer>
+
+</body>
+</html>

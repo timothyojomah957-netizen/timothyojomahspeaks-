@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Agricultural Funding & Loans | Kogi State Ministry of Agriculture</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f5f5f5;
+      color: #222;
+    }
+
+    header {
+      background: #008000;
+      color: white;
+      text-align: center;
+      padding: 25px 6%;
+    }
+
+    header h1 {
+      margin-bottom: 8px;
+    }
+
+    header p {
+      margin-bottom: 18px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 8px 12px;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      background: white;
+      color: #008000;
+    }
+
+    .hero {
+      background: #006400;
+      color: white;
+      text-align: center;
+      padding: 75px 20px;
+    }
+
+    .hero h2 {
+      font-size: 42px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      max-width: 850px;
+      margin: auto;
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    section {
+      padding: 60px 7%;
+    }
+
+    .title {
+      text-align: center;
+      color: #008000;
+      font-size: 32px;
+      margin-bottom: 15px;
+    }
+
+    .intro {
+      max-width: 850px;
+      margin: auto;
+      text-align: center;
+      color: #555;
+      line-height: 1.8;
+    }
+
+    .funding-grid {
+      max-width: 1100px;
+      margin: 40px auto 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
+
+    .funding-card {
+      background: white;
+      padding: 30px 25px;
+      border-radius: 10px;
+      border-top: 5px solid #008000;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+    }
+
+    .icon {
+      font-size: 45px;
+      margin-bottom: 15px;
+    }
+
+    .funding-card h3 {
+      color: #008000;
+      margin-bottom: 12px;
+    }
+
+    .funding-card p {
+      color: #555;
+      line-height: 1.7;
+    }
+
+    .requirements {
+      background: white;
+    }
+
+    .requirement-list {
+      max-width: 900px;
+      margin: 40px auto 0;
+    }
+
+    .requirement {
+      background: #f1f8f1;
+      margin-bottom: 18px;
+      padding: 22px;
+      border-left: 5px solid #008000;
+      border-radius: 6px;
+    }
+
+    .requirement h3 {
+      color: #008000;
+      margin-bottom: 8px;
+    }
+
+    .requirement p {
+      color: #555;
+      line-height: 1.7;
+    }
+
+    .steps {
+      max-width: 900px;
+      margin: 40px auto 0;
+    }
+
+    .step {
+      display: flex;
+      gap: 18px;
+      background: white;
+      padding: 23px;
+      margin-bottom: 18px;
+      border-radius: 7px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+
+    .number {
+      min-width: 45px;
+      height: 45px;
+      background: #008000;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    .step h3 {
+      color: #008000;
+      margin-bottom: 8px;
+    }
+
+    .step p {
+      color: #555;
+      line-height: 1.7;
+    }
+
+    .warning {
+      max-width: 900px;
+      margin: 40px auto 0;
+      background: #fff8e6;
+      border: 2px solid #d6a500;
+      padding: 25px;
+      border-radius: 8px;
+      line-height: 1.8;
+    }
+
+    .warning h3 {
+      color: #9a7200;
+      margin-bottom: 10px;
+    }
+
+    .warning p {
+      color: #555;
+    }
+
+    .cta {
+      background: #008000;
+      color: white;
+      text-align: center;
+    }
+
+    .cta h2 {
+      margin-bottom: 15px;
+    }
+
+    .cta p {
+      max-width: 850px;
+      margin: auto;
+      line-height: 1.8;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 25px;
+      margin-right: 8px;
+      background: white;
+      color: #008000;
+      padding: 12px 25px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    footer {
+      background: #004d00;
+      color: white;
+      text-align: center;
+      padding: 25px 15px;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 700px) {
+
+      .hero h2 {
+        font-size: 31px;
+      }
+
+      .step {
+        flex-direction: column;
+      }
+
+      .btn {
+        display: block;
+        margin: 15px auto 0;
+        max-width: 280px;
+      }
+
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+
+  <h1>Kogi State Ministry of Agriculture and Food Security</h1>
+
+  <p>
+    Hon. Timothy Ojomah — Commissioner for Agriculture and Food Security
+  </p>
+
+  <nav>
+
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="biography.html">Biography</a>
+    <a href="mission.html">Mission & Vision</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="projects.html">Projects</a>
+    <a href="services.html">Services</a>
+    <a href="farmers.html">Farmers</a>
+    <a href="farmer-information.html">Farmer Information</a>
+    <a href="agricultural-education.html">Agricultural Education</a>
+    <a href="extension.html">Extension Services</a>
+    <a href="modern-farming.html">Modern Farming</a>
+    <a href="mechanization.html">Mechanization</a>
+    <a href="farmer-registration.html">Farmer Registration</a>
+    <a href="farmer-support.html">Farmer Support</a>
+    <a href="agricultural-loan.html">Agricultural Funding</a>
+    <a href="market.html">Market</a>
+    <a href="enquiry.html">Enquiry</a>
+    <a href="news.html">News</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="video.html">Video</a>
+    <a href="contact.html">Contact</a>
+
+  </nav>
+
+</header>
+
+
+<section class="hero">
+
+  <h2>Agricultural Funding & Loans</h2>
+
+  <p>
+    Providing information about agricultural financing opportunities that
+    may help farmers, cooperatives, women and young people strengthen their
+    agricultural activities.
+  </p>
+
+</section>
+
+
+<section>
+
+  <h2 class="title">Agricultural Financing Opportunities</h2>
+
+  <p class="intro">
+    Access to appropriate financing can help farmers obtain inputs, improve
+    farm operations, expand production and develop agricultural businesses.
+    Available funding opportunities depend on the requirements of each
+    programme or financial institution.
+  </p>
+
+
+  <div class="funding-grid">
+
+    <div class="funding-card">
+
+      <div class="icon">🌾</div>
+
+      <h3>Crop Production Funding</h3>
+
+      <p>
+        Financing opportunities may support eligible farmers involved in crop
+        production, farm inputs and related agricultural activities.
+      </p>
+
+    </div>
+
+
+    <div class="funding-card">
+
+      <div class="icon">🐄</div>
+
+      <h3>Livestock Financing</h3>
+
+      <p>
+        Eligible livestock farmers may explore appropriate financing
+        opportunities for livestock production and farm development.
+      </p>
+
+    </div>
+
+
+    <div class="funding-card">
+
+      <div class="icon">🐟</div>
+
+      <h3>Fisheries & Aquaculture</h3>
+
+      <p>
+        Financing opportunities may be available for eligible fisheries,
+        fish farming and aquaculture activities.
+      </p>
+
+    </div>
+
+
+    <div class="funding-card">
+
+      <div class="icon">👩‍🌾</div>
+
+      <h3>Women in Agriculture</h3>
+
+      <p>
+        Women involved in agriculture can monitor relevant programmes and
+        financing opportunities for which they may qualify.
+      </p>
+
+    </div>
+
+
+    <div class="funding-card">
+
+      <div class="icon">👨‍🌾</div>
+
+      <h3>Youth Agriculture</h3>
+
+      <p>
+        Young agricultural entrepreneurs can explore legitimate financing
+        opportunities for farming and agribusiness activities.
+      </p>
+
+    </div>
+
+
+    <div class="funding-card">
+
+      <div class="icon">🤝</div>
+
+      <h3>Cooperative Financing</h3>
+
+      <p>
+        Farmer cooperatives may explore suitable financing opportunities
+        subject to the requirements of the relevant programme.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="requirements">
+
+  <h2 class="title">Possible Eligibility Requirements</h2>
+
+  <p class="intro">
+    Requirements differ from one financing programme to another. Applicants
+    should always confirm the official requirements before applying.
+  </p>
+
+
+  <div class="requirement-list">
+
+    <div class="requirement">
+
+      <h3>Farmer Identification</h3>
+
+      <p>
+        Applicants may be required to provide valid identification and
+        relevant personal information.
+      </p>
+
+    </div>
+
+
+    <div class="requirement">
+
+      <h3>Farming Information</h3>
+
+      <p>
+        Information about the farm, agricultural activity, production type
+        and location may be required.
+      </p>
+
+    </div>
+
+
+    <div class="requirement">
+
+      <h3>Business or Farm Plan</h3>
+
+      <p>
+        Some financing programmes may require an appropriate farm or
+        agribusiness plan explaining how the funds will be used.
+      </p>
+
+    </div>
+
+
+    <div class="requirement">
+
+      <h3>Cooperative Membership</h3>
+
+      <p>
+        Certain programmes may have requirements relating to farmer groups
+        or cooperative membership.
+      </p>
+
+    </div>
+
+
+    <div class="requirement">
+
+      <h3>Programme-Specific Requirements</h3>
+
+      <p>
+        Additional eligibility conditions may apply depending on the
+        particular funding programme or financial institution.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section>
+
+  <h2 class="title">How to Seek Agricultural Funding</h2>
+
+  <div class="steps">
+
+    <div class="step">
+
+      <div class="number">1</div>
+
+      <div>
+
+        <h3>Identify Your Funding Need</h3>
+
+        <p>
+          Determine what you need financing for, such as farm inputs,
+          equipment, livestock, production or agribusiness development.
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <div class="step">
+
+      <div class="number">2</div>
+
+      <div>
+
+        <h3>Check the Programme Requirements</h3>
+
+        <p>
+          Carefully review the eligibility conditions and application
+          requirements of the relevant financing opportunity.
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <div class="step">
+
+      <div class="number">3</div>
+
+      <div>
+
+        <h3>Prepare Your Information</h3>
+
+        <p>
+          Prepare accurate identification, farm information, business
+          information and other documents that may be required.
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <div class="step">
+
+      <div class="number">4</div>
+
+      <div>
+
+        <h3>Submit an Application</h3>
+
+        <p>
+          Apply through the official channel specified by the relevant
+          programme or financial institution.
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <div class="step">
+
+      <div class="number">5</div>
+
+      <div>
+
+        <h3>Await Verification</h3>
+
+        <p>
+          Applications may be reviewed and verified before any financing
+          decision is made.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <div class="warning">
+
+    <h3>⚠ Important Financial Safety Notice</h3>
+
+    <p>
+      Never pay money to an individual simply because they claim they can
+      guarantee an agricultural loan or government funding. Verify funding
+      opportunities through the appropriate official channels before making
+      payments or submitting sensitive information.
+    </p>
+
+  </div>
+
+</section>
+
+
+<section class="cta">
+
+  <h2>Interested in Agricultural Funding?</h2>
+
+  <p>
+    Farmers can register their agricultural information or submit an enquiry
+    to seek information about relevant agricultural opportunities.
+  </p>
+
+  <a href="farmer-registration.html" class="btn">
+    Register as a Farmer
+  </a>
+
+  <a href="enquiry.html" class="btn">
+    Submit an Enquiry
+  </a>
+
+</section>
+
+
+<footer>
+
+  <p>
+    <strong>Kogi State Ministry of Agriculture and Food Security</strong>
+  </p>
+
+  <p>
+    Office of the Honourable Commissioner, Hon. Timothy Ojomah
+  </p>
+
+  <p>
+    © 2026 Kogi State Ministry of Agriculture and Food Security.
+    All Rights Reserved.
+  </p>
+
+</footer>
+
+</body>
+</html>

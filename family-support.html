@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Youth & Family Farming Support | Kogi State Ministry of Agriculture</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f5f5f5;
+      color: #222;
+    }
+
+    header {
+      background: #008000;
+      color: white;
+      text-align: center;
+      padding: 25px 6%;
+    }
+
+    header h1 {
+      margin-bottom: 8px;
+    }
+
+    header p {
+      margin-bottom: 18px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 8px 12px;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      background: white;
+      color: #008000;
+    }
+
+    .hero {
+      background: #006400;
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    .hero h2 {
+      font-size: 42px;
+      margin-bottom: 18px;
+    }
+
+    .hero p {
+      max-width: 900px;
+      margin: auto;
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    section {
+      padding: 60px 7%;
+    }
+
+    .title {
+      text-align: center;
+      color: #008000;
+      font-size: 32px;
+      margin-bottom: 18px;
+    }
+
+    .intro {
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+      color: #555;
+      line-height: 1.8;
+    }
+
+    .support {
+      background: white;
+    }
+
+    .support-box {
+      max-width: 950px;
+      margin: 40px auto 0;
+      background: #f1f8f1;
+      padding: 35px;
+      border-left: 6px solid #008000;
+      border-radius: 8px;
+    }
+
+    .support-box h3 {
+      color: #008000;
+      font-size: 25px;
+      margin-bottom: 15px;
+    }
+
+    .support-box p {
+      color: #555;
+      line-height: 1.9;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+      margin-top: 40px;
+    }
+
+    .card {
+      background: white;
+      padding: 30px 25px;
+      border-radius: 10px;
+      border-top: 5px solid #008000;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+    }
+
+    .icon {
+      font-size: 45px;
+      margin-bottom: 15px;
+    }
+
+    .card h3 {
+      color: #008000;
+      margin-bottom: 12px;
+    }
+
+    .card p {
+      color: #555;
+      line-height: 1.7;
+    }
+
+    .family {
+      background: white;
+    }
+
+    .steps {
+      max-width: 950px;
+      margin: 40px auto 0;
+    }
+
+    .step {
+      display: flex;
+      gap: 20px;
+      background: #f1f8f1;
+      padding: 23px;
+      margin-bottom: 18px;
+      border-left: 5px solid #008000;
+      border-radius: 6px;
+    }
+
+    .number {
+      min-width: 42px;
+      height: 42px;
+      background: #008000;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+    }
+
+    .step h3 {
+      color: #008000;
+      margin-bottom: 8px;
+    }
+
+    .step p {
+      color: #555;
+      line-height: 1.7;
+    }
+
+    .opportunity {
+      max-width: 950px;
+      margin: 40px auto 0;
+      background: #f1f8f1;
+      padding: 30px;
+      border: 2px solid #008000;
+      border-radius: 8px;
+    }
+
+    .opportunity h3 {
+      color: #008000;
+      margin-bottom: 12px;
+      text-align: center;
+    }
+
+    .opportunity p {
+      color: #555;
+      line-height: 1.8;
+      text-align: center;
+    }
+
+    .cta {
+      background: #008000;
+      color: white;
+      text-align: center;
+    }
+
+    .cta h2 {
+      margin-bottom: 15px;
+    }
+
+    .cta p {
+      max-width: 850px;
+      margin: auto;
+      line-height: 1.8;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 25px;
+      background: white;
+      color: #008000;
+      padding: 12px 25px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    footer {
+      background: #004d00;
+      color: white;
+      text-align: center;
+      padding: 25px 15px;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 700px) {
+      .hero h2 {
+        font-size: 31px;
+      }
+
+      .step {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+
+  <h1>Kogi State Ministry of Agriculture and Food Security</h1>
+
+  <p>
+    Hon. Timothy Ojomah — Commissioner for Agriculture and Food Security
+  </p>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="biography.html">Biography</a>
+    <a href="mission.html">Mission & Vision</a>
+    <a href="achievements.html">Achievements</a>
+    <a href="projects.html">Projects</a>
+    <a href="services.html">Services</a>
+    <a href="farmers.html">Farmers</a>
+    <a href="farmer-information.html">Farmer Information</a>
+    <a href="agricultural-education.html">Agricultural Education</a>
+    <a href="livestock-agriculture.html">Livestock</a>
+    <a href="fisheries-aquaculture.html">Fisheries</a>
+    <a href="food-security.html">Food Security</a>
+    <a href="farmer-cooperatives.html">Cooperatives</a>
+    <a href="women-in-agriculture.html">Women in Agriculture</a>
+    <a href="youth-family-farming.html">Youth & Family Farming</a>
+    <a href="investment.html">Investment</a>
+    <a href="training.html">Training</a>
+    <a href="partnerships.html">Partnerships</a>
+    <a href="agricultural-announcements.html">Announcements</a>
+    <a href="news.html">News</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+</header>
+
+<section class="hero">
+
+  <h2>Youth & Family Farming Support</h2>
+
+  <p>
+    Encouraging young people and families to participate in agriculture,
+    develop practical skills and build sustainable farming and agribusiness
+    opportunities across Kogi State.
+  </p>
+
+</section>
+
+<section class="support">
+
+  <h2 class="title">Supporting the Next Generation of Farmers</h2>
+
+  <p class="intro">
+    Young people and farming families are important to the future of food
+    production, rural development and agricultural transformation.
+  </p>
+
+  <div class="support-box">
+
+    <h3>Building Skills and Opportunities</h3>
+
+    <p>
+      Agricultural education and practical training can help young people
+      understand modern farming, agribusiness, technology and opportunities
+      across agricultural value chains.
+    </p>
+
+    <br>
+
+    <p>
+      Family farming can also provide an important foundation for passing
+      agricultural knowledge from one generation to another while creating
+      opportunities for food production, income generation and
+      entrepreneurship.
+    </p>
+
+  </div>
+
+</section>
+
+<section>
+
+  <h2 class="title">Youth Farming Opportunities</h2>
+
+  <p class="intro">
+    Agriculture provides opportunities beyond traditional crop production.
+    Young people can participate in different parts of the agricultural
+    value chain.
+  </p>
+
+  <div class="grid">
+
+    <div class="card">
+      <div class="icon">🌱</div>
+      <h3>Crop Production</h3>
+      <p>
+        Young farmers can develop skills in modern crop production and farm
+        management.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🐄</div>
+      <h3>Livestock</h3>
+      <p>
+        Opportunities exist in livestock production, management and related
+        agribusiness activities.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🐟</div>
+      <h3>Aquaculture</h3>
+      <p>
+        Fish farming can provide opportunities for young entrepreneurs in
+        production, processing and marketing.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icon">📱</div>
+      <h3>Agri-Tech</h3>
+      <p>
+        Technology can help young people develop innovative solutions for
+        modern agriculture.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🏭</div>
+      <h3>Agro-Processing</h3>
+      <p>
+        Young entrepreneurs can participate in processing, packaging and
+        value addition.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🛒</div>
+      <h3>Marketing</h3>
+      <p>
+        Agricultural marketing and distribution provide additional
+        opportunities throughout the value chain.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+<section class="family">
+
+  <h2 class="title">Family Farming Support</h2>
+
+  <p class="intro">
+    Family farms can combine traditional knowledge with modern agricultural
+    practices to improve productivity and create sustainable livelihoods.
+  </p>
+
+  <div class="steps">
+
+    <div class="step">
+
+      <div class="number">1</div>
+
+      <div>
+        <h3>Share Agricultural Knowledge</h3>
+        <p>
+          Families can pass farming knowledge between generations while
+          adopting improved production techniques.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="step">
+
+      <div class="number">2</div>
+
+      <div>
+        <h3>Encourage Youth Participation</h3>
+        <p>
+          Parents and farming communities can encourage young people to view
+          agriculture as a productive career and business opportunity.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="step">
+
+      <div class="number">3</div>
+
+      <div>
+        <h3>Adopt Modern Practices</h3>
+        <p>
+          Families can improve farm productivity through appropriate
+          technology, better farm management and sustainable practices.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="step">
+
+      <div class="number">4</div>
+
+      <div>
+        <h3>Build Family Agribusinesses</h3>
+        <p>
+          Farming families can develop enterprises around production,
+          processing, storage, transportation and marketing.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="step">
+
+      <div class="number">5</div>
+
+      <div>
+        <h3>Plan for the Future</h3>
+        <p>
+          Long-term planning can help families maintain productive farms and
+          create opportunities for future generations.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section>
+
+  <h2 class="title">Building the Future Through Agriculture</h2>
+
+  <div class="opportunity">
+
+    <h3>Agriculture as a Career and Business</h3>
+
+    <p>
+      Young people can contribute to the transformation of agriculture by
+      combining farming knowledge with education, entrepreneurship,
+      technology and innovation. Family farms can provide a practical
+      environment where agricultural skills are developed and passed to the
+      next generation.
+    </p>
+
+  </div>
+
+</section>
+
+<section class="cta">
+
+  <h2>Empowering Young Farmers and Families</h2>
+
+  <p>
+    A strong agricultural future depends on skilled young people, productive
+    families and communities that see agriculture as an important pathway to
+    food security and economic opportunity.
+  </p>
+
+  <a href="agricultural-education.html" class="btn">
+    Agricultural Education
+  </a>
+
+</section>
+
+<footer>
+
+  <p>
+    <strong>Kogi State Ministry of Agriculture and Food Security</strong>
+  </p>
+
+  <p>
+    Office of the Honourable Commissioner, Hon. Timothy Ojomah
+  </p>
+
+  <p>
+    © 2026 Kogi State Ministry of Agriculture and Food Security.
+    All Rights Reserved.
+  </p>
+
+</footer>
+
+</body>
+</html>

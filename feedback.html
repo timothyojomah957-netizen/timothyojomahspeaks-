@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Feedback | Kogi State Ministry of Agriculture</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f5f5f5;
+      color: #222;
+    }
+
+    header {
+      background: #008000;
+      color: white;
+      padding: 20px 6%;
+      text-align: center;
+    }
+
+    header h1 {
+      margin-bottom: 15px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 8px 12px;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      background: white;
+      color: #008000;
+    }
+
+    .hero {
+      background: #006400;
+      color: white;
+      text-align: center;
+      padding: 75px 20px;
+    }
+
+    .hero h2 {
+      font-size: 42px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      max-width: 850px;
+      margin: auto;
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    section {
+      padding: 60px 7%;
+    }
+
+    .title {
+      text-align: center;
+      color: #008000;
+      font-size: 32px;
+      margin-bottom: 15px;
+    }
+
+    .intro {
+      max-width: 800px;
+      margin: auto;
+      text-align: center;
+      color: #555;
+      line-height: 1.8;
+    }
+
+    .feedback-area {
+      max-width: 850px;
+      margin: 40px auto;
+      background: white;
+      padding: 35px;
+      border-radius: 10px;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+      border-top: 5px solid #008000;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      color: #333;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      padding: 13px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 15px;
+      outline: none;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      border-color: #008000;
+    }
+
+    textarea {
+      min-height: 150px;
+      resize: vertical;
+    }
+
+    button {
+      width: 100%;
+      padding: 14px;
+      border: none;
+      border-radius: 5px;
+      background: #008000;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #006400;
+    }
+
+    .note {
+      margin-top: 20px;
+      padding: 18px;
+      background: #f1f8f1;
+      border-left: 5px solid #008000;
+      color: #555;
+      line-height: 1.7;
+    }
+
+    .feedback-types {
+      background: white;
+    }
+
+    .type-list {
+      max-width: 950px;
+      margin: 35px auto 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+    }
+
+    .type {
+      background: #f1f8f1;
+      padding: 25px;
+      border-radius: 6px;
+      border-left: 5px solid #008000;
+    }
+
+    .type h3 {
+      color: #008000;
+      margin-bottom: 10px;
+    }
+
+    .type p {
+      color: #555;
+      line-height: 1.7;
+    }
+
+    .contact {
+      background: #008000;
+      color: white;
+      text-align: center;
+    }
+
+    .contact .title {
+      color: white;
+    }
+
+    .contact p {
+      max-width: 800px;
+      margin: auto;
+      line-height: 1.8;
+    }
+
+    .contact-btn {
+      display: inline-block;
+      margin-top: 25px;
+      background: white;
+      color: #008000;
+      padding: 12px 25px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    footer {
+      background: #004d00;
+      color: white;
+      text-align: center;
+      padding: 25px 15px;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 700px) {
+      .hero h2 {
+        font-size: 32px;
+      }
+
+      .feedback-area {
+        padding: 25px 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+  <h1>Kogi State Ministry of Agriculture</h1>
+
+  <nav>
+
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="biography.html">Biography</a>
+    <a href="mission.html">Mission & Vision</a>
+    <a href="achievements.html">Achievements</a>
+    <a href="projects.html">Projects</a>
+    <a href="programs.html">Programs</a>
+    <a href="services.html">Services</a>
+    <a href="events.html">Events</a>
+    <a href="partners.html">Partners</a>
+    <a href="testimonials.html">Testimonials</a>
+    <a href="downloads.html">Downloads</a>
+    <a href="faq.html">FAQ</a>
+    <a href="leadership.html">Leadership</a>
+    <a href="media.html">Media Centre</a>
+    <a href="departments.html">Departments</a>
+    <a href="investments.html">Investment</a>
+    <a href="press.html">Press Releases</a>
+    <a href="resources.html">Resources</a>
+    <a href="directory.html">Directory</a>
+    <a href="opportunities.html">Opportunities</a>
+    <a href="stakeholders.html">Stakeholders</a>
+    <a href="feedback.html">Feedback</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="video.html">Videos</a>
+    <a href="news.html">News</a>
+    <a href="contact.html">Contact</a>
+
+  </nav>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+  <h2>Feedback & Suggestions</h2>
+
+  <p>
+    Your comments, suggestions and feedback can help improve agricultural
+    services and engagement with farmers and stakeholders.
+  </p>
+
+</section>
+
+
+<!-- FORM -->
+
+<section>
+
+  <h2 class="title">Send Us Your Feedback</h2>
+
+  <p class="intro">
+    Use the form below to share your experience, suggestion, question or
+    general feedback with the Ministry.
+  </p>
+
+  <div class="feedback-area">
+
+    <form action="#" method="post">
+
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Enter your full name"
+          required
+        >
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Enter your email address"
+          required
+        >
+      </div>
+
+      <div class="form-group">
+        <label for="category">Feedback Category</label>
+
+        <select id="category" name="category" required>
+
+          <option value="">Select a category</option>
+
+          <option value="suggestion">
+            Suggestion
+          </option>
+
+          <option value="service">
+            Agricultural Service
+          </option>
+
+          <option value="program">
+            Program or Project
+          </option>
+
+          <option value="farmer">
+            Farmer Support
+          </option>
+
+          <option value="website">
+            Website Feedback
+          </option>
+
+          <option value="complaint">
+            Complaint
+          </option>
+
+          <option value="other">
+            Other
+          </option>
+
+        </select>
+
+      </div>
+
+      <div class="form-group">
+
+        <label for="message">
+          Your Feedback
+        </label>
+
+        <textarea
+          id="message"
+          name="message"
+          placeholder="Write your feedback here..."
+          required
+        ></textarea>
+
+      </div>
+
+      <button type="submit">
+        Submit Feedback
+      </button>
+
+    </form>
+
+    <div class="note">
+      <strong>Note:</strong>
+      This form is currently a website interface. To receive submissions
+      electronically, it will need to be connected to an email service,
+      form service or website backend.
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- FEEDBACK TYPES -->
+
+<section class="feedback-types">
+
+  <h2 class="title">What You Can Tell Us</h2>
+
+  <div class="type-list">
+
+    <div class="type">
+
+      <h3>Suggestions</h3>
+
+      <p>
+        Share ideas that could improve agricultural services, programs or
+        communication with stakeholders.
+      </p>
+
+    </div>
+
+    <div class="type">
+
+      <h3>Farmer Experience</h3>
+
+      <p>
+        Tell us about your experience accessing agricultural information,
+        programs or services.
+      </p>
+
+    </div>
+
+    <div class="type">
+
+      <h3>Website Feedback</h3>
+
+      <p>
+        Report broken links, missing information or other issues you
+        experience while using the website.
+      </p>
+
+    </div>
+
+    <div class="type">
+
+      <h3>General Enquiries</h3>
+
+      <p>
+        Ask questions or provide comments about agricultural activities and
+        Ministry services.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section class="contact">
+
+  <h2 class="title">Need Direct Assistance?</h2>
+
+  <p>
+    For enquiries that require direct communication with the Ministry,
+    please use the official contact page.
+  </p>
+
+  <a href="contact.html" class="contact-btn">
+    Contact the Ministry
+  </a>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+  <p>
+    <strong>Kogi State Ministry of Agriculture</strong>
+  </p>
+
+  <p>
+    Official Website of the Commissioner of Agriculture and Food Security
+  </p>
+
+  <p>
+    © 2026 Kogi State Ministry of Agriculture.
+    All Rights Reserved.
+  </p>
+
+</footer>
+
+</body>
+</html>

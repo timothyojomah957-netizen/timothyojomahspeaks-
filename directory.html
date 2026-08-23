@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Ministry Directory | Kogi State Ministry of Agriculture</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f5f5f5;
+      color: #222;
+    }
+
+    header {
+      background: #008000;
+      color: white;
+      padding: 20px 6%;
+      text-align: center;
+    }
+
+    header h1 {
+      margin-bottom: 15px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 8px 12px;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      background: white;
+      color: #008000;
+    }
+
+    .hero {
+      background: #006400;
+      color: white;
+      text-align: center;
+      padding: 75px 20px;
+    }
+
+    .hero h2 {
+      font-size: 42px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      max-width: 850px;
+      margin: auto;
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    section {
+      padding: 60px 7%;
+    }
+
+    .title {
+      text-align: center;
+      color: #008000;
+      font-size: 32px;
+      margin-bottom: 15px;
+    }
+
+    .intro {
+      max-width: 850px;
+      margin: auto;
+      text-align: center;
+      color: #555;
+      line-height: 1.8;
+    }
+
+    .directory {
+      max-width: 1000px;
+      margin: 40px auto 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    .directory-card {
+      background: white;
+      padding: 30px 25px;
+      border-radius: 10px;
+      border-top: 5px solid #008000;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+    }
+
+    .directory-card h3 {
+      color: #008000;
+      margin-bottom: 15px;
+      font-size: 21px;
+    }
+
+    .directory-card p {
+      color: #555;
+      line-height: 1.8;
+      margin-bottom: 8px;
+    }
+
+    .label {
+      font-weight: bold;
+      color: #333;
+    }
+
+    .departments {
+      background: white;
+    }
+
+    .department-list {
+      max-width: 1000px;
+      margin: 35px auto 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 18px;
+    }
+
+    .department {
+      background: #f1f8f1;
+      padding: 20px;
+      border-left: 5px solid #008000;
+      border-radius: 5px;
+    }
+
+    .department h3 {
+      color: #008000;
+      margin-bottom: 8px;
+    }
+
+    .department p {
+      color: #555;
+      line-height: 1.6;
+    }
+
+    .leadership {
+      background: #008000;
+      color: white;
+      text-align: center;
+    }
+
+    .leadership .title {
+      color: white;
+    }
+
+    .leadership p {
+      max-width: 850px;
+      margin: auto;
+      line-height: 1.8;
+      font-size: 17px;
+    }
+
+    .contact-btn {
+      display: inline-block;
+      margin-top: 25px;
+      background: white;
+      color: #008000;
+      padding: 12px 25px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    footer {
+      background: #004d00;
+      color: white;
+      text-align: center;
+      padding: 25px 15px;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 700px) {
+      .hero h2 {
+        font-size: 32px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+
+<!-- HEADER -->
+
+<header>
+
+  <h1>Kogi State Ministry of Agriculture</h1>
+
+  <nav>
+
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="biography.html">Biography</a>
+    <a href="mission.html">Mission & Vision</a>
+    <a href="achievements.html">Achievements</a>
+    <a href="projects.html">Projects</a>
+    <a href="programs.html">Programs</a>
+    <a href="services.html">Services</a>
+    <a href="events.html">Events</a>
+    <a href="partners.html">Partners</a>
+    <a href="testimonials.html">Testimonials</a>
+    <a href="downloads.html">Downloads</a>
+    <a href="faq.html">FAQ</a>
+    <a href="leadership.html">Leadership</a>
+    <a href="media.html">Media Centre</a>
+    <a href="departments.html">Departments</a>
+    <a href="investments.html">Investment</a>
+    <a href="press.html">Press Releases</a>
+    <a href="resources.html">Resources</a>
+    <a href="directory.html">Directory</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="video.html">Videos</a>
+    <a href="news.html">News</a>
+    <a href="contact.html">Contact</a>
+
+  </nav>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+  <h2>Ministry Directory</h2>
+
+  <p>
+    Find information about the leadership, departments and administrative
+    areas of the Kogi State Ministry of Agriculture and Food Security.
+  </p>
+
+</section>
+
+
+<!-- DIRECTORY -->
+
+<section>
+
+  <h2 class="title">Key Offices</h2>
+
+  <p class="intro">
+    The Ministry's offices and departments work together to coordinate
+    agricultural policies, programs, projects and services across Kogi State.
+  </p>
+
+
+  <div class="directory">
+
+
+    <!-- COMMISSIONER -->
+
+    <div class="directory-card">
+
+      <h3>Office of the Commissioner</h3>
+
+      <p>
+        <span class="label">Office:</span>
+        Commissioner of Agriculture and Food Security
+      </p>
+
+      <p>
+        <span class="label">Commissioner:</span>
+        HON. TIMOTHY OJOMAH
+      </p>
+
+      <p>
+        Provides political leadership and strategic direction for the
+        Ministry.
+      </p>
+
+    </div>
+
+
+    <!-- PERMANENT SECRETARY -->
+
+    <div class="directory-card">
+
+      <h3>Office of the Permanent Secretary</h3>
+
+      <p>
+        <span class="label">Office:</span>
+        Permanent Secretary
+      </p>
+
+      <p>
+        Provides administrative and professional coordination for the
+        Ministry.
+      </p>
+
+    </div>
+
+
+    <!-- ADMINISTRATION -->
+
+    <div class="directory-card">
+
+      <h3>Administration & Human Resources</h3>
+
+      <p>
+        Responsible for administrative coordination, personnel matters and
+        internal organizational support.
+      </p>
+
+    </div>
+
+
+    <!-- PLANNING -->
+
+    <div class="directory-card">
+
+      <h3>Planning & Statistics</h3>
+
+      <p>
+        Supports agricultural planning, data management, monitoring,
+        evaluation and statistical activities.
+      </p>
+
+    </div>
+
+
+    <!-- AGRICULTURAL SERVICES -->
+
+    <div class="directory-card">
+
+      <h3>Agricultural Services</h3>
+
+      <p>
+        Supports agricultural production, extension services, farmer
+        development and improved farming practices.
+      </p>
+
+    </div>
+
+
+    <!-- INVESTMENT -->
+
+    <div class="directory-card">
+
+      <h3>Agricultural Investment</h3>
+
+      <p>
+        Supports investment opportunities, partnerships and development of
+        agricultural value chains.
+      </p>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+<!-- DEPARTMENTS -->
+
+<section class="departments">
+
+  <h2 class="title">Departmental Directory</h2>
+
+  <div class="department-list">
+
+
+    <div class="department">
+
+      <h3>Crop Production</h3>
+
+      <p>
+        Crop farming and agricultural production development.
+      </p>
+
+    </div>
+
+
+    <div class="department">
+
+      <h3>Livestock Development</h3>
+
+      <p>
+        Livestock production and animal husbandry development.
+      </p>
+
+    </div>
+
+
+    <div class="department">
+
+      <h3>Fisheries & Aquaculture</h3>
+
+      <p>
+        Fisheries, fish production and aquaculture development.
+      </p>
+
+    </div>
+
+
+    <div class="department">
+
+      <h3>Agricultural Mechanization</h3>
+
+      <p>
+        Agricultural machinery, equipment and mechanization services.
+      </p>
+
+    </div>
+
+
+    <div class="department">
+
+      <h3>Extension Services</h3>
+
+      <p>
+        Farmer education, training and agricultural extension.
+      </p>
+
+    </div>
+
+
+    <div class="department">
+
+      <h3>Agro-Processing</h3>
+
+      <p>
+        Agricultural processing and value addition.
+      </p>
+
+    </div>
+
+
+    <div class="department">
+
+      <h3>Agricultural Investment</h3>
+
+      <p>
+        Investment promotion and agricultural partnerships.
+      </p>
+
+    </div>
+
+
+    <div class="department">
+
+      <h3>Planning & Statistics</h3>
+
+      <p>
+        Planning, agricultural data, monitoring and evaluation.
+      </p>
+
+    </div>
+
+
+    <div class="department">
+
+      <h3>Administration</h3>
+
+      <p>
+        Human resources and administrative coordination.
+      </p>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+<!-- LEADERSHIP -->
+
+<section class="leadership">
+
+  <h2 class="title">Ministry Leadership</h2>
+
+  <p>
+    The Kogi State Ministry of Agriculture and Food Security is led by
+    <strong>HON. TIMOTHY OJOMAH</strong>, Commissioner of Agriculture and
+    Food Security, working with the Permanent Secretary, Directors,
+    department heads and professional staff to advance agricultural
+    development across the State.
+  </p>
+
+  <a href="leadership.html" class="contact-btn">
+    View Leadership
+  </a>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+  <p>
+    <strong>Kogi State Ministry of Agriculture</strong>
+  </p>
+
+  <p>
+    Official Website of the Commissioner of Agriculture and Food Security
+  </p>
+
+  <p>
+    © 2026 Kogi State Ministry of Agriculture.
+    All Rights Reserved.
+  </p>
+
+</footer>
+
+
+</body>
+</html>

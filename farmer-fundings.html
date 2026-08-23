@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Farmer Funding Enquiry | Kogi State Agriculture</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f4fff7;
+      color: #333;
+      line-height: 1.7;
+    }
+
+    /* HEADER */
+    header {
+      background: #008000;
+      color: white;
+      text-align: center;
+      padding: 25px 15px;
+    }
+
+    header h1 {
+      margin-bottom: 8px;
+    }
+
+    header p {
+      margin-bottom: 20px;
+    }
+
+    /* MENU */
+    nav {
+      background: white;
+      padding: 15px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      border-radius: 6px;
+    }
+
+    nav a {
+      color: #008000;
+      text-decoration: none;
+      padding: 8px 10px;
+      font-size: 14px;
+      border-radius: 5px;
+    }
+
+    nav a:hover {
+      background: #008000;
+      color: white;
+    }
+
+    /* PAGE TITLE */
+    .page-title {
+      background: #006400;
+      color: white;
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .page-title h2 {
+      font-size: 38px;
+      margin-bottom: 10px;
+    }
+
+    .page-title p {
+      font-size: 18px;
+    }
+
+    /* FORM SECTION */
+    .form-section {
+      padding: 45px 15px;
+    }
+
+    .form-container {
+      max-width: 900px;
+      margin: auto;
+      background: white;
+      padding: 35px;
+      border-radius: 10px;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+    }
+
+    .form-container h2 {
+      color: #008000;
+      text-align: center;
+      margin-bottom: 15px;
+    }
+
+    .intro {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #555;
+    }
+
+    .form-container h3 {
+      color: #008000;
+      margin-top: 25px;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #008000;
+      padding-bottom: 5px;
+    }
+
+    label {
+      font-weight: bold;
+      display: block;
+      margin-top: 15px;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      padding: 13px;
+      margin-top: 7px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      outline: none;
+      border-color: #008000;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    /* CONSENT */
+    .consent {
+      background: #f0f8f0;
+      border-left: 5px solid #008000;
+      padding: 15px;
+      margin: 25px 0;
+    }
+
+    .consent label {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      margin: 0;
+      font-weight: normal;
+    }
+
+    .consent input {
+      width: auto;
+      margin-top: 5px;
+    }
+
+    /* BUTTON */
+    .submit-btn {
+      width: 100%;
+      background: #008000;
+      color: white;
+      border: none;
+      padding: 15px;
+      font-size: 17px;
+      font-weight: bold;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .submit-btn:hover {
+      background: #006400;
+    }
+
+    /* BACK BUTTON */
+    .back-section {
+      text-align: center;
+      padding: 30px;
+    }
+
+    .back-btn {
+      display: inline-block;
+      background: #006400;
+      color: white;
+      padding: 12px 25px;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    .back-btn:hover {
+      background: #004d00;
+    }
+
+    /* NOTICE */
+    .notice {
+      max-width: 900px;
+      margin: 0 auto 40px;
+      background: #e8f5e9;
+      border-left: 5px solid #008000;
+      padding: 20px;
+      color: #555;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #004d00;
+      color: white;
+      text-align: center;
+      padding: 25px 15px;
+    }
+
+    footer p {
+      margin: 6px;
+    }
+
+    /* MOBILE */
+    @media (max-width: 700px) {
+
+      .page-title h2 {
+        font-size: 28px;
+      }
+
+      .form-container {
+        padding: 22px;
+      }
+
+      nav a {
+        font-size: 13px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+
+  <h1>KOGI STATE MINISTRY OF AGRICULTURE AND FOOD SECURITY</h1>
+
+  <p>
+    Hon. Timothy Ojomah — Commissioner for Agriculture and Food Security
+  </p>
+
+  <!-- MAIN MENU -->
+  <nav>
+
+    <a href="index.html">Home</a>
+
+    <a href="about.html">About</a>
+
+    <a href="biography.html">Biography</a>
+
+    <a href="mission.html">Mission & Vision</a>
+
+    <a href="portfolio.html">Portfolio</a>
+
+    <a href="projects.html">Projects</a>
+
+    <a href="services.html">Services</a>
+
+    <a href="farmers.html">Farmers</a>
+
+    <a href="farmer-support.html">Farmer Support</a>
+
+    <a href="farmer-registration.html">Farmer Registration</a>
+
+    <a href="programme-application.html">Programme Application</a>
+
+    <a href="agricultural-loan.html">Agricultural Funding</a>
+
+    <a href="farmer-funding-enquiry.html">Funding Enquiry</a>
+
+    <a href="news.html">News</a>
+
+    <a href="gallery.html">Gallery</a>
+
+    <a href="video.html">Videos</a>
+
+    <a href="contact.html">Contact</a>
+
+  </nav>
+
+</header>
+
+
+<!-- PAGE TITLE -->
+<section class="page-title">
+
+  <h2>Farmer Funding Enquiry</h2>
+
+  <p>
+    Find out about agricultural loans, grants, equipment support
+    and other funding opportunities.
+  </p>
+
+</section>
+
+
+<!-- FORM -->
+<section class="form-section">
+
+  <div class="form-container">
+
+    <h2>Funding Enquiry Form</h2>
+
+    <p class="intro">
+      Are you a farmer looking for funding, grants, loans, equipment
+      support or other agricultural opportunities? Complete this form
+      and provide details about your farming activities.
+    </p>
+
+
+    <form action="#" method="post">
+
+      <!-- PERSONAL INFORMATION -->
+      <h3>Personal Information</h3>
+
+      <label for="full_name">Full Name *</label>
+
+      <input
+        type="text"
+        id="full_name"
+        name="full_name"
+        placeholder="Enter your full name"
+        required
+      >
+
+
+      <label for="phone">Phone Number *</label>
+
+      <input
+        type="tel"
+        id="phone"
+        name="phone"
+        placeholder="Enter your phone number"
+        required
+      >
+
+
+      <label for="email">Email Address</label>
+
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="Enter your email address"
+      >
+
+
+      <!-- LOCATION -->
+      <h3>Location</h3>
+
+      <label for="state">State *</label>
+
+      <input
+        type="text"
+        id="state"
+        name="state"
+        value="Kogi State"
+        required
+      >
+
+
+      <label for="lga">Local Government Area *</label>
+
+      <select id="lga" name="lga" required>
+
+        <option value="">Select LGA</option>
+
+        <option>Adavi</option>
+        <option>Ajaokuta</option>
+        <option>Ankpa</option>
+        <option>Bassa</option>
+        <option>Dekina</option>
+        <option>Ibaji</option>
+        <option>Idah</option>
+        <option>Igalamela/Odolu</option>
+        <option>Ijumu</option>
+        <option>Kogi</option>
+        <option>Kogi-Koton Karfe</option>
+        <option>Lokoja</option>
+        <option>Mopa-Muro</option>
+        <option>Ofu</option>
+        <option>Ogori/Magongo</option>
+        <option>Okehi</option>
+        <option>Okene</option>
+        <option>Olamaboro</option>
+        <option>Omala</option>
+        <option>Yagba East</option>
+        <option>Yagba West</option>
+
+      </select>
+
+
+      <label for="community">Community / Town</label>
+
+      <input
+        type="text"
+        id="community"
+        name="community"
+        placeholder="Enter your community or town"
+      >
+
+
+      <!-- FARMING INFORMATION -->
+      <h3>Farming Information</h3>
+
+      <label for="farming_type">Type of Farming *</label>
+
+      <select id="farming_type" name="farming_type" required>
+
+        <option value="">Select Farming Type</option>
+
+        <option>Crop Farming</option>
+        <option>Livestock Farming</option>
+        <option>Poultry Farming</option>
+        <option>Fish Farming</option>
+        <option>Rice Farming</option>
+        <option>Cassava Farming</option>
+        <option>Maize Farming</option>
+        <option>Vegetable Farming</option>
+        <option>Agro Processing</option>
+        <option>Mixed Farming</option>
+        <option>Other</option>
+
+      </select>
+
+
+      <label for="farm_size">Farm Size</label>
+
+      <input
+        type="text"
+        id="farm_size"
+        name="farm_size"
+        placeholder="Example: 5 hectares"
+      >
+
+
+      <label for="years_farming">Years in Farming</label>
+
+      <input
+        type="number"
+        id="years_farming"
+        name="years_farming"
+        min="0"
+        placeholder="Example: 5"
+      >
+
+
+      <!-- FUNDING INFORMATION -->
+      <h3>Funding Information</h3>
+
+      <label for="funding_type">
+        What Type of Funding Are You Looking For? *
+      </label>
+
+      <select id="funding_type" name="funding_type" required>
+
+        <option value="">Select Funding Type</option>
+
+        <option>Agricultural Loan</option>
+        <option>Government Grant</option>
+        <option>Farmer Grant</option>
+        <option>Women Agricultural Funding</option>
+        <option>Youth Agricultural Funding</option>
+        <option>Farm Equipment Support</option>
+        <option>Input Support</option>
+        <option>Cooperative Funding</option>
+        <option>Business Expansion Funding</option>
+        <option>Other</option>
+
+      </select>
+
+
+      <label for="funding_amount">
+        Amount of Funding Needed (₦)
+      </label>
+
+      <input
+        type="number"
+        id="funding_amount"
+        name="funding_amount"
+        min="0"
+        placeholder="Enter estimated amount"
+      >
+
+
+      <label for="funding_purpose">
+        Purpose of Funding *
+      </label>
+
+      <textarea
+        id="funding_purpose"
+        name="funding_purpose"
+        placeholder="Explain what you need the funding for"
+        required
+      ></textarea>
+
+
+      <!-- PREVIOUS FUNDING -->
+      <label for="previous_funding">
+        Have You Received Agricultural Funding Before?
+      </label>
+
+      <select
+        id="previous_funding"
+        name="previous_funding"
+      >
+
+        <option value="">Select Option</option>
+
+        <option>Yes</option>
+        <option>No</option>
+
+      </select>
+
+
+      <label for="previous_funding_details">
+        If Yes, Briefly Explain
+      </label>
+
+      <textarea
+        id="previous_funding_details"
+        name="previous_funding_details"
+        rows="4"
+        placeholder="Provide details if applicable"
+      ></textarea>
+
+
+      <!-- COOPERATIVE -->
+      <label for="cooperative">
+        Are You a Member of a Farmers' Cooperative?
+      </label>
+
+      <select id="cooperative" name="cooperative">
+
+        <option value="">Select Option</option>
+
+        <option>Yes</option>
+        <option>No</option>
+
+      </select>
+
+
+      <label for="cooperative_name">
+        Cooperative Name
+      </label>
+
+      <input
+        type="text"
+        id="cooperative_name"
+        name="cooperative_name"
+        placeholder="Enter cooperative name if applicable"
+      >
+
+
+      <!-- ENQUIRY -->
+      <h3>Your Enquiry</h3>
+
+      <label for="enquiry">
+        What Would You Like to Know? *
+      </label>
+
+      <textarea
+        id="enquiry"
+        name="enquiry"
+        rows="6"
+        placeholder="Enter your question or funding enquiry..."
+        required
+      ></textarea>
+
+
+      <!-- CONTACT METHOD -->
+      <label for="contact_method">
+        Preferred Method of Contact *
+      </label>
+
+      <select
+        id="contact_method"
+        name="contact_method"
+        required
+      >
+
+        <option value="">Select Contact Method</option>
+
+        <option>Phone Call</option>
+        <option>SMS</option>
+        <option>WhatsApp</option>
+        <option>Email</option>
+
+      </select>
+
+
+      <!-- CONSENT -->
+      <div class="consent">
+
+        <label>
+
+          <input
+            type="checkbox"
+            name="consent"
+            required
+          >
+
+          <span>
+            I confirm that the information provided is accurate and I agree
+            to be contacted regarding agricultural funding opportunities.
+          </span>
+
+        </label>
+
+      </div>
+
+
+      <!-- SUBMIT -->
+      <button
+        type="submit"
+        class="submit-btn"
+      >
+        SUBMIT FUNDING ENQUIRY
+      </button>
+
+    </form>
+
+  </div>
+
+</section>
+
+
+<!-- NOTICE -->
+<div class="notice">
+
+  <strong>Important:</strong>
+
+  Submitting this enquiry does not automatically guarantee financial,
+  material or programme assistance. Requests may be reviewed according
+  to applicable requirements and available programmes.
+
+</div>
+
+
+<!-- BACK BUTTON -->
+<section class="back-section">
+
+  <a
+    href="agricultural-loan.html"
+    class="back-btn"
+  >
+    ← Back to Agricultural Funding
+  </a>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+
+  <p>
+    <strong>
+      Kogi State Ministry of Agriculture and Food Security
+    </strong>
+  </p>
+
+  <p>
+    Office of the Honourable Commissioner, Hon. Timothy Ojomah
+  </p>
+
+  <p>
+    Agriculture • Food Security • Farmer Empowerment
+  </p>
+
+  <p>
+    © 2026 Kogi State Ministry of Agriculture and Food Security.
+    All Rights Reserved.
+  </p>
+
+</footer>
+
+</body>
+</html>

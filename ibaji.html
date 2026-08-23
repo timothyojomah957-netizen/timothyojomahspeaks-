@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Ibaji – The Land of Agriculture</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4fff4;
+      color: #222;
+    }
+
+    header {
+      background: #087830;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 32px;
+    }
+
+    header p {
+      font-size: 17px;
+      margin-top: 8px;
+    }
+
+    nav {
+      background: white;
+      padding: 15px;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #087830;
+      font-weight: bold;
+      margin: 0 10px;
+    }
+
+    .hero {
+      background: linear-gradient(rgba(0,80,30,0.65), rgba(0,80,30,0.65)),
+                  url("images/ibaji-farm.jpg");
+      background-size: cover;
+      background-position: center;
+      min-height: 430px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      padding: 20px;
+    }
+
+    .hero-content {
+      max-width: 850px;
+    }
+
+    .hero h2 {
+      font-size: 45px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 20px;
+      line-height: 1.7;
+    }
+
+    .section {
+      padding: 50px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .section h2 {
+      text-align: center;
+      color: #087830;
+      font-size: 30px;
+      margin-bottom: 20px;
+    }
+
+    .section p {
+      line-height: 1.8;
+      font-size: 17px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      text-align: center;
+      border-top: 5px solid #087830;
+    }
+
+    .card h3 {
+      color: #087830;
+    }
+
+    .icon {
+      font-size: 45px;
+    }
+
+    .commissioner {
+      background: #e8f7e8;
+      padding: 45px 20px;
+      text-align: center;
+    }
+
+    .commissioner h2 {
+      color: #087830;
+    }
+
+    .quote {
+      max-width: 800px;
+      margin: auto;
+      font-size: 20px;
+      font-style: italic;
+      line-height: 1.7;
+    }
+
+    .cta {
+      background: #087830;
+      color: white;
+      text-align: center;
+      padding: 50px 20px;
+    }
+
+    .cta h2 {
+      font-size: 30px;
+    }
+
+    .button {
+      display: inline-block;
+      background: white;
+      color: #087830;
+      padding: 14px 25px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 15px;
+    }
+
+    footer {
+      background: #064d20;
+      color: white;
+      text-align: center;
+      padding: 25px;
+    }
+
+    @media(max-width:600px) {
+      .hero h2 {
+        font-size: 32px;
+      }
+
+      .hero p {
+        font-size: 17px;
+      }
+
+      nav a {
+        display: inline-block;
+        margin: 7px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>IBAJI</h1>
+    <p>The Land of Agriculture</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="agriculture.html">Agriculture</a>
+    <a href="projects.html">Projects</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Ibaji – The Land of Agriculture</h2>
+
+      <p>
+        A land blessed with fertile soil, hardworking farmers,
+        abundant natural resources and enormous agricultural potential.
+      </p>
+
+      <a href="#agriculture" class="button">
+        Explore Ibaji Agriculture
+      </a>
+    </div>
+  </section>
+
+  <section class="section">
+
+    <h2>About Ibaji</h2>
+
+    <p>
+      Ibaji is a Local Government Area of Kogi State with a strong
+      connection to agriculture and rural livelihoods. The communities
+      are blessed with land and natural resources that provide
+      opportunities for crop production, livestock farming, fishing
+      and other agricultural activities.
+    </p>
+
+    <p>
+      Agriculture remains an important source of livelihood for many
+      families in Ibaji. The hardworking farmers of the area contribute
+      to food production while creating opportunities for economic
+      development and rural empowerment.
+    </p>
+
+  </section>
+
+  <section class="section" id="agriculture">
+
+    <h2>What Makes Ibaji an Agricultural Land?</h2>
+
+    <div class="cards">
+
+      <div class="card">
+        <div class="icon">🌾</div>
+        <h3>Crop Production</h3>
+        <p>
+          Ibaji has agricultural land suitable for the production
+          of different food and cash crops.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">🐄</div>
+        <h3>Livestock Farming</h3>
+        <p>
+          Livestock production provides food, employment and income
+          opportunities for farming families.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">🐟</div>
+        <h3>Fishing</h3>
+        <p>
+          Water resources around the area provide opportunities for
+          fishing and other aquatic agricultural activities.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">👨‍🌾</div>
+        <h3>Hardworking Farmers</h3>
+        <p>
+          Ibaji farmers remain an important part of the agricultural
+          economy of Kogi State.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <section class="section">
+
+    <h2>Our Agricultural Vision for Ibaji</h2>
+
+    <p>
+      The vision is to promote modern and sustainable agriculture,
+      improve farmers' access to agricultural inputs and financing,
+      create better markets for farm produce and encourage young
+      people and women to participate actively in agriculture.
+    </p>
+
+    <p>
+      By strengthening farmers and connecting them with markets,
+      technology, financing and government agricultural programmes,
+      Ibaji can further develop its agricultural potential and
+      contribute significantly to food security in Kogi State.
+    </p>
+
+  </section>
+
+  <section class="commissioner">
+
+    <h2>Agricultural Leadership</h2>
+
+    <p class="quote">
+      "The future of agriculture depends on empowering our farmers,
+      supporting our young people and creating opportunities that
+      make farming more productive and profitable."
+    </p>
+
+    <h3>
+      Hon. Timothy Ojomah
+    </h3>
+
+    <p>
+      Commissioner for Agriculture and Food Security,
+      Kogi State
+    </p>
+
+  </section>
+
+  <section class="cta">
+
+    <h2>Join the Agricultural Development of Ibaji</h2>
+
+    <p>
+      Farmers, investors, youths and agricultural stakeholders
+      can be part of the journey towards a stronger agricultural
+      economy.
+    </p>
+
+    <a href="farmer-registration.html" class="button">
+      Register as a Farmer
+    </a>
+
+  </section>
+
+  <footer>
+
+    <p>
+      © 2026 Ibaji – The Land of Agriculture
+    </p>
+
+    <p>
+      Kogi State Ministry of Agriculture and Food Security
+    </p>
+
+  </footer>
+
+</body>
+</html>

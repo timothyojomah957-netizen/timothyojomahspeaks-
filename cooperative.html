@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Farmer Cooperative & Association Support | Kogi State Ministry of Agriculture</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f5f5f5;
+      color: #222;
+      line-height: 1.7;
+    }
+
+    header {
+      background: #008000;
+      color: white;
+      text-align: center;
+      padding: 25px 6%;
+    }
+
+    header h1 {
+      margin-bottom: 8px;
+    }
+
+    header p {
+      margin-bottom: 18px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 8px 12px;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      background: white;
+      color: #008000;
+    }
+
+    .hero {
+      background: #006400;
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    .hero h2 {
+      font-size: 42px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      max-width: 900px;
+      margin: auto;
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    section {
+      padding: 60px 7%;
+    }
+
+    .title {
+      text-align: center;
+      color: #008000;
+      font-size: 32px;
+      margin-bottom: 18px;
+    }
+
+    .intro {
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+      color: #555;
+      line-height: 1.8;
+    }
+
+    .benefits {
+      background: white;
+    }
+
+    .grid {
+      max-width: 1100px;
+      margin: 40px auto 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: #f8fff8;
+      padding: 30px 25px;
+      border-radius: 10px;
+      border-top: 5px solid #008000;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+      text-align: center;
+    }
+
+    .icon {
+      font-size: 45px;
+      margin-bottom: 15px;
+    }
+
+    .card h3 {
+      color: #008000;
+      margin-bottom: 12px;
+    }
+
+    .card p {
+      color: #555;
+    }
+
+    .steps-section {
+      background: #f5f5f5;
+    }
+
+    .steps {
+      max-width: 900px;
+      margin: 40px auto 0;
+    }
+
+    .step {
+      display: flex;
+      gap: 20px;
+      background: white;
+      padding: 25px;
+      margin-bottom: 18px;
+      border-left: 5px solid #008000;
+      border-radius: 8px;
+    }
+
+    .number {
+      min-width: 45px;
+      height: 45px;
+      background: #008000;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
+
+    .step h3 {
+      color: #008000;
+      margin-bottom: 7px;
+    }
+
+    .form-section {
+      background: white;
+    }
+
+    .form-container {
+      max-width: 900px;
+      margin: 40px auto 0;
+      background: #f8fff8;
+      padding: 35px;
+      border-radius: 12px;
+      border-top: 6px solid #008000;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    }
+
+    .form-container h3 {
+      color: #008000;
+      margin-bottom: 25px;
+      font-size: 24px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 13px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 16px;
+      outline: none;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: #008000;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .submit-btn {
+      width: 100%;
+      padding: 15px;
+      background: #008000;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 17px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .submit-btn:hover {
+      background: #006400;
+    }
+
+    .note {
+      margin-top: 20px;
+      padding: 15px;
+      background: #eaf7ea;
+      border-left: 5px solid #008000;
+      color: #555;
+    }
+
+    .cta {
+      background: #008000;
+      color: white;
+      text-align: center;
+    }
+
+    .cta h2 {
+      margin-bottom: 15px;
+    }
+
+    .cta p {
+      max-width: 850px;
+      margin: auto;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 25px;
+      background: white;
+      color: #008000;
+      padding: 13px 25px;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+    }
+
+    footer {
+      background: #004d00;
+      color: white;
+      text-align: center;
+      padding: 25px 15px;
+    }
+
+    @media (max-width: 700px) {
+      .hero h2 {
+        font-size: 30px;
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+
+      .step {
+        flex-direction: column;
+      }
+
+      .form-container {
+        padding: 22px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+
+  <h1>Kogi State Ministry of Agriculture and Food Security</h1>
+
+  <p>
+    Hon. Timothy Ojomah — Commissioner for Agriculture and Food Security
+  </p>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="biography.html">Biography</a>
+    <a href="mission.html">Mission & Vision</a>
+    <a href="projects.html">Projects</a>
+    <a href="services.html">Services</a>
+    <a href="farmers.html">Farmers</a>
+    <a href="farmer-information.html">Farmer Information</a>
+    <a href="agricultural-education.html">Agricultural Education</a>
+    <a href="extension-services.html">Extension Services</a>
+    <a href="modern-farming.html">Modern Farming</a>
+    <a href="field-demonstrations.html">Field Demonstrations</a>
+    <a href="crop-livestock-guidance.html">Crop & Livestock Guidance</a>
+    <a href="pest-disease-awareness.html">Pest & Disease Awareness</a>
+    <a href="climate-smart-advice.html">Climate-Smart Advice</a>
+    <a href="farmer-programmes.html">Farmer Programmes</a>
+    <a href="farmer-registration.html">Farmer Registration</a>
+    <a href="programme-application.html">Programme Application</a>
+    <a href="farmer-support.html">Farmer Support</a>
+    <a href="farmer-cooperatives.html">Farmer Cooperatives</a>
+    <a href="news.html">News</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+</header>
+
+<section class="hero">
+
+  <h2>Farmer Cooperative & Association Support</h2>
+
+  <p>
+    Supporting farmers to work together, share knowledge, strengthen
+    agricultural activities and connect with relevant cooperative
+    opportunities.
+  </p>
+
+</section>
+
+<section class="benefits">
+
+  <h2 class="title">Why Farmer Cooperatives Matter</h2>
+
+  <p class="intro">
+    Organized farmer groups can help members improve communication,
+    cooperation and access to agricultural information and opportunities.
+  </p>
+
+  <div class="grid">
+
+    <div class="card">
+      <div class="icon">🤝</div>
+      <h3>Collective Action</h3>
+      <p>
+        Farmers can work together to address common agricultural challenges
+        and pursue shared objectives.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icon">📚</div>
+      <h3>Knowledge Sharing</h3>
+      <p>
+        Members can exchange farming experiences, practical knowledge and
+        useful agricultural information.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🌾</div>
+      <h3>Farm Development</h3>
+      <p>
+        Cooperatives can help members coordinate activities and improve farm
+        management practices.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icon">📢</div>
+      <h3>Information Access</h3>
+      <p>
+        Organized groups can make it easier to share agricultural programme
+        announcements and training information.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🛒</div>
+      <h3>Market Opportunities</h3>
+      <p>
+        Farmer groups can explore opportunities for better coordination of
+        agricultural production and marketing.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icon">👨‍🌾</div>
+      <h3>Farmer Representation</h3>
+      <p>
+        Cooperatives can provide a structured way for farmers to communicate
+        common concerns and development needs.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+<section class="steps-section">
+
+  <h2 class="title">How to Organize a Farmer Association</h2>
+
+  <div class="steps">
+
+    <div class="step">
+
+      <div class="number">1</div>
+
+      <div>
+        <h3>Identify Common Interests</h3>
+
+        <p>
+          Bring together farmers who share similar agricultural activities,
+          challenges or development objectives.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="step">
+
+      <div class="number">2</div>
+
+      <div>
+        <h3>Choose Responsible Leaders</h3>
+
+        <p>
+          Members can agree on responsible persons to coordinate the activities
+          of the association.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="step">
+
+      <div class="number">3</div>
+
+      <div>
+        <h3>Define Your Objectives</h3>
+
+        <p>
+          Clearly state what the group wants to achieve, such as training,
+          production support, marketing or information sharing.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="step">
+
+      <div class="number">4</div>
+
+      <div>
+        <h3>Keep Proper Records</h3>
+
+        <p>
+          Maintain accurate records of members, meetings, activities and
+          relevant cooperative documents.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="step">
+
+      <div class="number">5</div>
+
+      <div>
+        <h3>Seek Official Guidance</h3>
+
+        <p>
+          Contact the appropriate agricultural office or authorized cooperative
+          authority for information about applicable registration procedures.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section class="form-section">
+
+  <h2 class="title">Cooperative Support Request</h2>
+
+  <p class="intro">
+    Farmer groups can use this form to indicate their interest in cooperative
+    support and agricultural group activities.
+  </p>
+
+  <div class="form-container">
+
+    <h3>Enter Cooperative Information</h3>
+
+    <form action="#" method="POST">
+
+      <div class="form-row">
+
+        <div class="form-group">
+
+          <label for="groupname">
+            Cooperative / Association Name *
+          </label>
+
+          <input
+            type="text"
+            id="groupname"
+            name="groupname"
+            placeholder="Enter group name"
+            required>
+
+        </div>
+
+        <div class="form-group">
+
+          <label for="leader">
+            Group Leader / Contact Person *
+          </label>
+
+          <input
+            type="text"
+            id="leader"
+            name="leader"
+            placeholder="Enter contact person's name"
+            required>
+
+        </div>
+
+      </div>
+
+      <div class="form-row">
+
+        <div class="form-group">
+
+          <label for="phone">Phone Number *</label>
+
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            placeholder="Enter phone number"
+            required>
+
+        </div>
+
+        <div class="form-group">
+
+          <label for="members">
+            Number of Members *
+          </label>
+
+          <input
+            type="number"
+            id="members"
+            name="members"
+            min="1"
+            placeholder="Example: 25"
+            required>
+
+        </div>
+
+      </div>
+
+      <div class="form-row">
+
+        <div class="form-group">
+
+          <label for="lga">Local Government Area *</label>
+
+          <select id="lga" name="lga" required>
+
+            <option value="">Select LGA</option>
+            <option>Adavi</option>
+            <option>Ajaokuta</option>
+            <option>Ankpa</option>
+            <option>Bassa</option>
+            <option>Dekina</option>
+            <option>Ibaji</option>
+            <option>Idah</option>
+            <option>Igalamela/Odolu</option>
+            <option>Ijumu</option>
+            <option>Kogi</option>
+            <option>Kogi-Koton Karfe</option>
+            <option>Lokoja</option>
+            <option>Mopa-Muro</option>
+            <option>Ofu</option>
+            <option>Ogori/Magongo</option>
+            <option>Okehi</option>
+            <option>Okene</option>
+            <option>Olamaboro</option>
+            <option>Omala</option>
+            <option>Yagba East</option>
+            <option>Yagba West</option>
+
+          </select>
+
+        </div>
+
+        <div class="form-group">
+
+          <label for="activity">
+            Main Agricultural Activity *
+          </label>
+
+          <select id="activity" name="activity" required>
+
+            <option value="">Select activity</option>
+            <option>Crop Farming</option>
+            <option>Livestock Farming</option>
+            <option>Poultry Farming</option>
+            <option>Fisheries & Aquaculture</option>
+            <option>Mixed Farming</option>
+            <option>Agro-processing</option>
+            <option>Other</option>
+
+          </select>
+
+        </div>
+
+      </div>
+
+      <div class="form-group">
+
+        <label for="support">
+          Type of Cooperative Support Needed *
+        </label>
+
+        <select id="support" name="support" required>
+
+          <option value="">Select support</option>
+          <option>Cooperative Information</option>
+          <option>Training</option>
+          <option>Farmer Group Development</option>
+          <option>Agricultural Programme Information</option>
+          <option>Technical Guidance</option>
+          <option>Market Information</option>
+          <option>Other</option>
+
+        </select>
+
+      </div>
+
+      <div class="form-group">
+
+        <label for="description">
+          Describe Your Request *
+        </label>
+
+        <textarea
+          id="description"
+          name="description"
+          placeholder="Explain the support or information your group needs"
+          required></textarea>
+
+      </div>
+
+      <button type="submit" class="submit-btn">
+        Submit Cooperative Support Request
+      </button>
+
+    </form>
+
+    <div class="note">
+
+      <strong>Important:</strong>
+      This form is an expression of interest and does not by itself constitute
+      official cooperative registration or guarantee any form of assistance.
+      Follow the applicable official procedures for formal registration.
+
+    </div>
+
+  </div>
+
+</section>
+
+<section class="cta">
+
+  <h2>Need Agricultural Programme Support?</h2>
+
+  <p>
+    Farmers and organized groups can also use the agricultural programme
+    application page to indicate their interest in relevant opportunities.
+  </p>
+
+  <a href="programme-application.html" class="btn">
+    Agricultural Programme Application
+  </a>
+
+</section>
+
+<footer>
+
+  <p>
+    <strong>Kogi State Ministry of Agriculture and Food Security</strong>
+  </p>
+
+  <p>
+    Office of the Honourable Commissioner, Hon. Timothy Ojomah
+  </p>
+
+  <p>
+    © 2026 Kogi State Ministry of Agriculture and Food Security.
+    All Rights Reserved.
+  </p>
+
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Agricultural Education | Kogi State Ministry of Agriculture</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f5f5f5;
+      color: #222;
+      line-height: 1.7;
+    }
+
+    header {
+      background: #008000;
+      color: white;
+      text-align: center;
+      padding: 25px 6%;
+    }
+
+    header h1 {
+      margin-bottom: 8px;
+    }
+
+    header p {
+      margin-bottom: 18px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 8px 12px;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      background: white;
+      color: #008000;
+    }
+
+    .hero {
+      background: #006400;
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    .hero h2 {
+      font-size: 42px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      max-width: 900px;
+      margin: auto;
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    section {
+      padding: 60px 7%;
+    }
+
+    .title {
+      text-align: center;
+      color: #008000;
+      font-size: 32px;
+      margin-bottom: 18px;
+    }
+
+    .intro {
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+      color: #555;
+      line-height: 1.8;
+    }
+
+    .education-section {
+      background: white;
+    }
+
+    .education-grid {
+      max-width: 1100px;
+      margin: 40px auto 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
+
+    .education-card {
+      background: #f8fff8;
+      padding: 30px 25px;
+      border-radius: 10px;
+      border-top: 5px solid #008000;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+    }
+
+    .icon {
+      font-size: 45px;
+      margin-bottom: 15px;
+    }
+
+    .education-card h3 {
+      color: #008000;
+      margin-bottom: 12px;
+    }
+
+    .education-card p {
+      color: #555;
+    }
+
+    .training-section {
+      background: #f5f5f5;
+    }
+
+    .training-list {
+      max-width: 950px;
+      margin: 40px auto 0;
+    }
+
+    .training-item {
+      background: white;
+      margin-bottom: 20px;
+      padding: 25px;
+      border-left: 6px solid #008000;
+      border-radius: 8px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+    }
+
+    .training-item h3 {
+      color: #008000;
+      margin-bottom: 8px;
+    }
+
+    .training-item p {
+      color: #555;
+    }
+
+    .benefits-section {
+      background: white;
+    }
+
+    .benefits {
+      max-width: 950px;
+      margin: 40px auto 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .benefit {
+      background: #eaf7ea;
+      padding: 25px;
+      border-radius: 8px;
+      border-bottom: 4px solid #008000;
+    }
+
+    .benefit h3 {
+      color: #008000;
+      margin-bottom: 8px;
+    }
+
+    .benefit p {
+      color: #555;
+    }
+
+    .youth-section {
+      background: #f5f5f5;
+    }
+
+    .youth-box {
+      max-width: 950px;
+      margin: 40px auto 0;
+      background: white;
+      padding: 35px;
+      border-radius: 10px;
+      border-top: 6px solid #008000;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+    }
+
+    .youth-box h3 {
+      color: #008000;
+      margin-bottom: 12px;
+    }
+
+    .youth-box p {
+      color: #555;
+      margin-bottom: 15px;
+    }
+
+    .notice {
+      max-width: 900px;
+      margin: 40px auto 0;
+      background: #eaf7ea;
+      padding: 25px;
+      border-left: 5px solid #008000;
+      text-align: center;
+    }
+
+    .notice h3 {
+      color: #008000;
+      margin-bottom: 10px;
+    }
+
+    .notice p {
+      color: #555;
+    }
+
+    .cta {
+      background: #008000;
+      color: white;
+      text-align: center;
+    }
+
+    .cta h2 {
+      margin-bottom: 15px;
+    }
+
+    .cta p {
+      max-width: 850px;
+      margin: auto;
+      line-height: 1.8;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 25px;
+      background: white;
+      color: #008000;
+      padding: 13px 25px;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+    }
+
+    .btn:hover {
+      background: #eeeeee;
+    }
+
+    footer {
+      background: #004d00;
+      color: white;
+      text-align: center;
+      padding: 25px 15px;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 700px) {
+
+      .hero h2 {
+        font-size: 30px;
+      }
+
+      section {
+        padding: 45px 5%;
+      }
+
+      nav a {
+        font-size: 13px;
+      }
+
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+  <h1>Kogi State Ministry of Agriculture and Food Security</h1>
+
+  <p>
+    Hon. Timothy Ojomah — Commissioner for Agriculture and Food Security
+  </p>
+
+  <nav>
+
+    <a href="index.html">Home</a>
+
+    <a href="about.html">About</a>
+
+    <a href="biography.html">Biography</a>
+
+    <a href="mission.html">Mission & Vision</a>
+
+    <a href="portfolio.html">Portfolio</a>
+
+    <a href="projects.html">Projects</a>
+
+    <a href="services.html">Services</a>
+
+    <a href="farmers.html">Farmers</a>
+
+    <a href="farmer-information.html">Farmer Information</a>
+
+    <a href="agricultural-education.html">Agricultural Education</a>
+
+    <a href="extension-services.html">Extension Services</a>
+
+    <a href="modern-farming.html">Modern Farming</a>
+
+    <a href="field-demonstrations.html">Field Demonstrations</a>
+
+    <a href="crop-livestock-guidance.html">Crop & Livestock Guidance</a>
+
+    <a href="pest-disease-awareness.html">Pest & Disease Awareness</a>
+
+    <a href="climate-smart-advice.html">Climate-Smart Advice</a>
+
+    <a href="farmer-programmes.html">Farmer Programmes</a>
+
+    <a href="farmer-registration.html">Farmer Registration</a>
+
+    <a href="programme-application.html">Programme Application</a>
+
+    <a href="farmer-support.html">Farmer Support</a>
+
+    <a href="agricultural-loan.html">Agricultural Funding</a>
+
+    <a href="news.html">News</a>
+
+    <a href="gallery.html">Gallery</a>
+
+    <a href="video.html">Video</a>
+
+    <a href="contact.html">Contact</a>
+
+  </nav>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+  <h2>Agricultural Education</h2>
+
+  <p>
+    Promoting agricultural knowledge, practical farming skills and
+    continuous learning to support farmers, young people and agricultural
+    communities across Kogi State.
+  </p>
+
+</section>
+
+
+<!-- EDUCATION AREAS -->
+
+<section class="education-section">
+
+  <h2 class="title">Agricultural Education Areas</h2>
+
+  <p class="intro">
+    Agricultural education helps farmers and other participants in the
+    agricultural sector develop knowledge and skills for productive,
+    responsible and sustainable farming.
+  </p>
+
+  <div class="education-grid">
+
+    <div class="education-card">
+
+      <div class="icon">🌱</div>
+
+      <h3>Crop Production Education</h3>
+
+      <p>
+        Learning about crop selection, land preparation, planting,
+        crop management, harvesting and responsible farm practices.
+      </p>
+
+    </div>
+
+
+    <div class="education-card">
+
+      <div class="icon">🐄</div>
+
+      <h3>Livestock Education</h3>
+
+      <p>
+        Providing knowledge about animal husbandry, livestock management,
+        feeding, housing and responsible livestock production.
+      </p>
+
+    </div>
+
+
+    <div class="education-card">
+
+      <div class="icon">🐟</div>
+
+      <h3>Fisheries & Aquaculture</h3>
+
+      <p>
+        Promoting knowledge about fish farming, aquaculture management,
+        water management and responsible fisheries practices.
+      </p>
+
+    </div>
+
+
+    <div class="education-card">
+
+      <div class="icon">🚜</div>
+
+      <h3>Farm Mechanisation</h3>
+
+      <p>
+        Introducing farmers to appropriate agricultural machinery,
+        equipment and modern farming methods.
+      </p>
+
+    </div>
+
+
+    <div class="education-card">
+
+      <div class="icon">🌍</div>
+
+      <h3>Sustainable Agriculture</h3>
+
+      <p>
+        Encouraging farming practices that protect soil, water and other
+        agricultural resources for future generations.
+      </p>
+
+    </div>
+
+
+    <div class="education-card">
+
+      <div class="icon">☀️</div>
+
+      <h3>Climate-Smart Agriculture</h3>
+
+      <p>
+        Promoting agricultural knowledge that can help farmers respond
+        to changing weather and climate conditions.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- TRAINING -->
+
+<section class="training-section">
+
+  <h2 class="title">Farmer Training & Learning</h2>
+
+  <p class="intro">
+    Practical learning can help farmers improve their knowledge,
+    productivity and ability to make informed agricultural decisions.
+  </p>
+
+  <div class="training-list">
+
+    <div class="training-item">
+
+      <h3>01. Practical Farm Training</h3>
+
+      <p>
+        Practical learning on farming activities can help farmers understand
+        improved production methods and farm management practices.
+      </p>
+
+    </div>
+
+
+    <div class="training-item">
+
+      <h3>02. Agricultural Workshops</h3>
+
+      <p>
+        Workshops can provide opportunities for farmers and agricultural
+        stakeholders to learn about relevant agricultural practices and
+        developments.
+      </p>
+
+    </div>
+
+
+    <div class="training-item">
+
+      <h3>03. Field Demonstrations</h3>
+
+      <p>
+        Demonstration activities can allow farmers to observe agricultural
+        techniques and practices in practical farming environments.
+      </p>
+
+    </div>
+
+
+    <div class="training-item">
+
+      <h3>04. Extension-Based Learning</h3>
+
+      <p>
+        Agricultural extension services can help communicate useful
+        information and practical advice to farmers within their communities.
+      </p>
+
+    </div>
+
+
+    <div class="training-item">
+
+      <h3>05. Agricultural Entrepreneurship</h3>
+
+      <p>
+        Farmers and young people can learn about agribusiness, value chains,
+        farm records, marketing and other aspects of agricultural enterprise.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- BENEFITS -->
+
+<section class="benefits-section">
+
+  <h2 class="title">Benefits of Agricultural Education</h2>
+
+  <div class="benefits">
+
+    <div class="benefit">
+
+      <h3>Improved Knowledge</h3>
+
+      <p>
+        Helps farmers understand better agricultural practices and make
+        informed farming decisions.
+      </p>
+
+    </div>
+
+
+    <div class="benefit">
+
+      <h3>Better Farm Management</h3>
+
+      <p>
+        Knowledge can support better planning, record keeping and management
+        of farm resources.
+      </p>
+
+    </div>
+
+
+    <div class="benefit">
+
+      <h3>Higher Productivity</h3>
+
+      <p>
+        Improved farming knowledge can contribute to more efficient
+        agricultural production.
+      </p>
+
+    </div>
+
+
+    <div class="benefit">
+
+      <h3>Food Security</h3>
+
+      <p>
+        Strong agricultural knowledge can contribute to sustainable food
+        production and food security.
+      </p>
+
+    </div>
+
+
+    <div class="benefit">
+
+      <h3>Youth Participation</h3>
+
+      <p>
+        Agricultural education can encourage young people to explore
+        agriculture and agribusiness opportunities.
+      </p>
+
+    </div>
+
+
+    <div class="benefit">
+
+      <h3>Sustainable Farming</h3>
+
+      <p>
+        Education encourages responsible management of agricultural
+        resources and sustainable farming practices.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- YOUTH -->
+
+<section class="youth-section">
+
+  <h2 class="title">Agricultural Education for Youth</h2>
+
+  <div class="youth-box">
+
+    <h3>Building the Next Generation of Farmers</h3>
+
+    <p>
+      Young people have an important role to play in the future of
+      agriculture. Agricultural education can provide young people with
+      practical knowledge, entrepreneurial skills and an understanding of
+      modern agricultural opportunities.
+    </p>
+
+    <p>
+      Areas of learning may include

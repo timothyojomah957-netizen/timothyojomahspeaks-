@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Farmer Support | Kogi State Ministry of Agriculture</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f5f5f5;
+      color: #222;
+    }
+
+    header {
+      background: #008000;
+      color: white;
+      text-align: center;
+      padding: 25px 6%;
+    }
+
+    header h1 {
+      margin-bottom: 8px;
+    }
+
+    header p {
+      margin-bottom: 18px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 8px 12px;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      background: white;
+      color: #008000;
+    }
+
+    .hero {
+      background: #006400;
+      color: white;
+      text-align: center;
+      padding: 75px 20px;
+    }
+
+    .hero h2 {
+      font-size: 42px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      max-width: 850px;
+      margin: auto;
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    section {
+      padding: 60px 7%;
+    }
+
+    .title {
+      text-align: center;
+      color: #008000;
+      font-size: 32px;
+      margin-bottom: 15px;
+    }
+
+    .intro {
+      max-width: 850px;
+      margin: auto;
+      text-align: center;
+      color: #555;
+      line-height: 1.8;
+    }
+
+    .support-grid {
+      max-width: 1100px;
+      margin: 40px auto 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
+
+    .support-card {
+      background: white;
+      padding: 30px 25px;
+      border-radius: 10px;
+      border-top: 5px solid #008000;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+      text-align: center;
+    }
+
+    .icon {
+      font-size: 45px;
+      margin-bottom: 15px;
+    }
+
+    .support-card h3 {
+      color: #008000;
+      margin-bottom: 12px;
+    }
+
+    .support-card p {
+      color: #555;
+      line-height: 1.7;
+    }
+
+    .services {
+      background: white;
+    }
+
+    .service-list {
+      max-width: 950px;
+      margin: 40px auto 0;
+    }
+
+    .service {
+      background: #f1f8f1;
+      margin-bottom: 18px;
+      padding: 23px;
+      border-left: 5px solid #008000;
+      border-radius: 6px;
+    }
+
+    .service h3 {
+      color: #008000;
+      margin-bottom: 8px;
+    }
+
+    .service p {
+      color: #555;
+      line-height: 1.7;
+    }
+
+    .steps {
+      max-width: 900px;
+      margin: 40px auto 0;
+    }
+
+    .step {
+      display: flex;
+      gap: 18px;
+      background: white;
+      margin-bottom: 18px;
+      padding: 23px;
+      border-radius: 7px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+
+    .number {
+      min-width: 45px;
+      height: 45px;
+      background: #008000;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    .step h3 {
+      color: #008000;
+      margin-bottom: 8px;
+    }
+
+    .step p {
+      color: #555;
+      line-height: 1.7;
+    }
+
+    .notice {
+      max-width: 900px;
+      margin: 40px auto 0;
+      background: #eaf7ea;
+      border: 2px solid #008000;
+      padding: 25px;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    .notice h3 {
+      color: #008000;
+      margin-bottom: 10px;
+    }
+
+    .notice p {
+      color: #555;
+      line-height: 1.8;
+    }
+
+    .cta {
+      background: #008000;
+      color: white;
+      text-align: center;
+    }
+
+    .cta h2 {
+      margin-bottom: 15px;
+    }
+
+    .cta p {
+      max-width: 850px;
+      margin: auto;
+      line-height: 1.8;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 25px;
+      background: white;
+      color: #008000;
+      padding: 12px 25px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    footer {
+      background: #004d00;
+      color: white;
+      text-align: center;
+      padding: 25px 15px;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 700px) {
+
+      .hero h2 {
+        font-size: 31px;
+      }
+
+      .step {
+        flex-direction: column;
+      }
+
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+
+  <h1>Kogi State Ministry of Agriculture and Food Security</h1>
+
+  <p>
+    Hon. Timothy Ojomah — Commissioner for Agriculture and Food Security
+  </p>
+
+  <nav>
+
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="biography.html">Biography</a>
+    <a href="mission.html">Mission & Vision</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="projects.html">Projects</a>
+    <a href="services.html">Services</a>
+    <a href="farmers.html">Farmers</a>
+    <a href="farmer-information.html">Farmer Information</a>
+    <a href="agricultural-education.html">Agricultural Education</a>
+    <a href="extension.html">Extension Services</a>
+    <a href="modern-farming.html">Modern Farming</a>
+    <a href="mechanization.html">Mechanization</a>
+    <a href="farmer-registration.html">Farmer Registration</a>
+    <a href="farmer-support.html">Farmer Support</a>
+    <a href="agricultural-loan.html">Agricultural Funding</a>
+    <a href="market.html">Market</a>
+    <a href="enquiry.html">Enquiry</a>
+    <a href="news.html">News</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="video.html">Video</a>
+    <a href="contact.html">Contact</a>
+
+  </nav>
+
+</header>
+
+
+<section class="hero">
+
+  <h2>Farmer Support</h2>
+
+  <p>
+    Providing farmers with information, guidance and access to relevant
+    agricultural support opportunities across Kogi State.
+  </p>
+
+</section>
+
+
+<section>
+
+  <h2 class="title">How We Support Farmers</h2>
+
+  <p class="intro">
+    Farmer support involves connecting farmers with useful agricultural
+    information, training, extension services, programmes and other
+    opportunities that can contribute to improved agricultural activities.
+  </p>
+
+
+  <div class="support-grid">
+
+    <div class="support-card">
+
+      <div class="icon">🌱</div>
+
+      <h3>Crop Support</h3>
+
+      <p>
+        Information and guidance relating to crop production, farm management,
+        planting, harvesting and responsible agricultural practices.
+      </p>
+
+    </div>
+
+
+    <div class="support-card">
+
+      <div class="icon">🐄</div>
+
+      <h3>Livestock Support</h3>
+
+      <p>
+        Information on livestock production, animal management and appropriate
+        husbandry practices.
+      </p>
+
+    </div>
+
+
+    <div class="support-card">
+
+      <div class="icon">🎓</div>
+
+      <h3>Training</h3>
+
+      <p>
+        Information about agricultural training, workshops, demonstrations
+        and farmer capacity-building activities.
+      </p>
+
+    </div>
+
+
+    <div class="support-card">
+
+      <div class="icon">🚜</div>
+
+      <h3>Mechanization</h3>
+
+      <p>
+        Information about appropriate agricultural machinery, equipment and
+        modern farming technologies.
+      </p>
+
+    </div>
+
+
+    <div class="support-card">
+
+      <div class="icon">💰</div>
+
+      <h3>Funding Information</h3>
+
+      <p>
+        Information about relevant agricultural financing and funding
+        opportunities, subject to programme requirements.
+      </p>
+
+    </div>
+
+
+    <div class="support-card">
+
+      <div class="icon">🛒</div>
+
+      <h3>Market Support</h3>
+
+      <p>
+        Information that can help farmers understand buyers, markets,
+        agricultural value chains and marketing opportunities.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="services">
+
+  <h2 class="title">Available Support Areas</h2>
+
+  <div class="service-list">
+
+    <div class="service">
+
+      <h3>Agricultural Extension Services</h3>
+
+      <p>
+        Farmers can seek appropriate agricultural information and technical
+        guidance through relevant extension services.
+      </p>
+
+    </div>
+
+
+    <div class="service">
+
+      <h3>Farmer Registration</h3>
+
+      <p>
+        Farmers can register their agricultural information to help connect
+        them with relevant programmes and agricultural information.
+      </p>
+
+    </div>
+
+
+    <div class="service">
+
+      <h3>Agricultural Education</h3>
+
+      <p>
+        Farmers can access useful educational information about modern
+        farming practices, farm management and agricultural technologies.
+      </p>
+
+    </div>
+
+
+    <div class="service">
+
+      <h3>Farmer and Buyer Connection</h3>
+
+      <p>
+        Farmers and buyers can submit enquiries concerning agricultural
+        products, buying and selling opportunities.
+      </p>
+
+    </div>
+
+
+    <div class="service">
+
+      <h3>Women and Youth Agriculture</h3>
+
+      <p>
+        Relevant agricultural opportunities and programmes may support
+        participation by women and young people in agriculture.
+      </p>
+
+    </div>
+
+
+    <div class="service">
+
+      <h3>Climate-Smart Agriculture</h3>
+
+      <p>
+        Farmers can learn about agricultural practices that promote
+        responsible management of farm resources and climate-related risks.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section>
+
+  <h2 class="title">How Farmers Can Request Support</h2>
+
+  <div class="steps">
+
+    <div class="step">
+
+      <div class="number">1</div>
+
+      <div>
+        <h3>Identify Your Need</h3>
+
+        <p>
+          Determine the type of agricultural information, training, funding,
+          market or technical support you require.
+        </p>
+      </div>
+
+    </div>
+
+
+    <div class="step">
+
+      <div class="number">2</div>
+
+      <div>
+        <h3>Register or Submit an Enquiry</h3>
+
+        <p>
+          Use the farmer registration or enquiry page to provide the
+          information required for your request.
+        </p>
+      </div>
+
+    </div>
+
+
+    <div class="step">
+
+      <div class="number">3</div>
+
+      <div>
+        <h3>Provide Accurate Information</h3>
+
+        <p>
+          Ensure that your contact and agricultural information is accurate
+          so that relevant communication can reach you.
+        </p>
+      </div>
+
+    </div>
+
+
+    <div class="step">
+
+      <div class="number">4</div>
+
+      <div>
+        <h3>Follow Official Updates</h3>
+
+        <p>
+          Check official agricultural announcements and programme information
+          for available opportunities and requirements.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <div class="notice">
+
+    <h3>Important Notice</h3>
+
+    <p>
+      Registration or submission of an enquiry does not automatically mean
+      that a farmer qualifies for a particular programme or financial
+      opportunity. Eligibility is subject to the requirements of the
+      relevant programme.
+    </p>
+
+  </div>
+
+</section>
+
+
+<section class="cta">
+
+  <h2>Need Farmer Support?</h2>
+
+  <p>
+    Farmers can use the available registration and enquiry channels to
+    communicate their agricultural needs and seek relevant information.
+  </p>
+
+  <a href="farmer-registration.html" class="btn">
+    Register as a Farmer
+  </a>
+
+  <a href="enquiry.html" class="btn">
+    Submit an Enquiry
+  </a>
+
+</section>
+
+
+<footer>
+
+  <p>
+    <strong>Kogi State Ministry of Agriculture and Food Security</strong>
+  </p>
+
+  <p>
+    Office of the Honourable Commissioner, Hon. Timothy Ojomah
+  </p>
+
+  <p>
+    © 2026 Kogi State Ministry of Agriculture and Food Security.
+    All Rights Reserved.
+  </p>
+
+</footer>
+
+</body>
+</html>

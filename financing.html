@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Farming Financing Opportunities | Kogi State Ministry of Agriculture</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #f5f5f5;
+  color: #222;
+  line-height: 1.7;
+}
+
+header {
+  background: #008000;
+  color: white;
+  text-align: center;
+  padding: 25px 6%;
+}
+
+header h1 {
+  margin-bottom: 8px;
+}
+
+header p {
+  margin-bottom: 18px;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+nav a:hover {
+  background: white;
+  color: #008000;
+}
+
+.hero {
+  background: #006400;
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.hero h2 {
+  font-size: 42px;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  max-width: 900px;
+  margin: auto;
+  font-size: 18px;
+}
+
+section {
+  padding: 60px 7%;
+}
+
+.title {
+  text-align: center;
+  color: #008000;
+  font-size: 32px;
+  margin-bottom: 18px;
+}
+
+.intro {
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+  color: #555;
+}
+
+/* FINANCING OPTIONS */
+
+.finance-section {
+  background: white;
+}
+
+.finance-grid {
+  max-width: 1100px;
+  margin: 40px auto 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px;
+}
+
+.finance-card {
+  background: #f8fff8;
+  padding: 30px 25px;
+  border-radius: 10px;
+  border-top: 5px solid #008000;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+  text-align: center;
+}
+
+.finance-card .icon {
+  font-size: 45px;
+  margin-bottom: 12px;
+}
+
+.finance-card h3 {
+  color: #008000;
+  margin-bottom: 10px;
+}
+
+.finance-card p {
+  color: #555;
+}
+
+/* HOW TO GET FINANCING */
+
+.steps-section {
+  background: #f5f5f5;
+}
+
+.steps {
+  max-width: 900px;
+  margin: 40px auto 0;
+}
+
+.step {
+  display: flex;
+  gap: 20px;
+  background: white;
+  padding: 23px;
+  margin-bottom: 18px;
+  border-left: 5px solid #008000;
+  border-radius: 8px;
+}
+
+.number {
+  min-width: 45px;
+  height: 45px;
+  background: #008000;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+.step h3 {
+  color: #008000;
+  margin-bottom: 6px;
+}
+
+/* REQUIREMENTS */
+
+.requirements {
+  background: white;
+}
+
+.requirement-box {
+  max-width: 900px;
+  margin: 35px auto 0;
+  background: #f8fff8;
+  padding: 30px;
+  border-radius: 10px;
+  border-left: 5px solid #008000;
+}
+
+.requirement-box ul {
+  padding-left: 25px;
+}
+
+.requirement-box li {
+  margin-bottom: 10px;
+}
+
+/* FORM */
+
+.form-section {
+  background: #f5f5f5;
+}
+
+.form-container {
+  max-width: 900px;
+  margin: 40px auto 0;
+  background: white;
+  padding: 35px;
+  border-radius: 12px;
+  border-top: 6px solid #008000;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.form-container h3 {
+  color: #008000;
+  font-size: 24px;
+  margin-bottom: 25px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  outline: none;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #008000;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 15px;
+  background: #008000;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 17px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background: #006400;
+}
+
+.notice {
+  margin-top: 25px;
+  padding: 18px;
+  background: #fff8df;
+  border-left: 5px solid #008000;
+  color: #555;
+}
+
+/* FOOTER */
+
+footer {
+  background: #004d00;
+  color: white;
+  text-align: center;
+  padding: 25px 15px;
+}
+
+@media (max-width: 700px) {
+
+  .hero h2 {
+    font-size: 30px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .step {
+    flex-direction: column;
+  }
+
+  .form-container {
+    padding: 22px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+<h1>Kogi State Ministry of Agriculture and Food Security</h1>
+
+<p>
+Hon. Timothy Ojomah — Commissioner for Agriculture and Food Security
+</p>
+
+<nav>
+
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="biography.html">Biography</a>
+<a href="mission.html">Mission & Vision</a>
+<a href="projects.html">Projects</a>
+<a href="services.html">Services</a>
+<a href="farmers.html">Farmers</a>
+<a href="farmer-information.html">Farmer Information</a>
+<a href="agricultural-education.html">Agricultural Education</a>
+<a href="farmer-registration.html">Farmer Registration</a>
+<a href="farmer-support.html">Farmer Support</a>
+<a href="training.html">Training</a>
+<a href="agricultural-market.html">Market Information</a>
+<a href="sell-produce.html">Sell Your Produce</a>
+<a href="buyer-farmer.html">Connect Buyer & Farmer</a>
+<a href="farmer-buyer-enquiry.html">Farmer / Buyer Enquiry</a>
+<a href="grants-funding.html">Grants & Funding</a>
+<a href="farming-finance.html">Farming Finance</a>
+<a href="news.html">News</a>
+<a href="gallery.html">Gallery</a>
+<a href="contact.html">Contact</a>
+
+</nav>
+
+</header>
+
+
+<section class="hero">
+
+<h2>Farming Financing Opportunities</h2>
+
+<p>
+Information and guidance on legitimate financing options that can help
+farmers, cooperatives and agribusinesses improve agricultural production,
+processing, storage and marketing.
+</p>
+
+</section>
+
+
+<section class="finance-section">
+
+<h2 class="title">Financing Opportunities</h2>
+
+<p class="intro">
+Farm financing may be available through agricultural credit schemes,
+development finance institutions, commercial lenders, cooperatives and
+approved agricultural programmes. Availability, eligibility, interest rates
+and repayment conditions depend on the specific programme.
+</p>
+
+<div class="finance-grid">
+
+<div class="finance-card">
+
+<div class="icon">🏦</div>
+
+<h3>Agricultural Loans</h3>
+
+<p>
+Farmers may explore agricultural loans through approved financial
+institutions for eligible farming and agribusiness activities.
+</p>
+
+</div>
+
+
+<div class="finance-card">
+
+<div class="icon">🌾</div>
+
+<h3>Production Finance</h3>
+
+<p>
+Financing may support activities such as land preparation, seeds, inputs,
+labour and other approved production costs.
+</p>
+
+</div>
+
+
+<div class="finance-card">
+
+<div class="icon">🚜</div>
+
+<h3>Farm Equipment Finance</h3>
+
+<p>
+Eligible farmers and agricultural businesses may explore financing options
+for machinery, equipment and mechanisation services.
+</p>
+
+</div>
+
+
+<div class="finance-card">
+
+<div class="icon">🏭</div>
+
+<h3>Agro-Processing Finance</h3>
+
+<p>
+Financing opportunities may support processing, packaging, storage and
+other agricultural value-addition activities.
+</p>
+
+</div>
+
+
+<div class="finance-card">
+
+<div class="icon">👩‍🌾</div>
+
+<h3>Women in Agriculture</h3>
+
+<p>
+Women farmers and women-led agribusinesses may benefit from targeted
+financing initiatives when programmes are officially available.
+</p>
+
+</div>
+
+
+<div class="finance-card">
+
+<div class="icon">👨‍🌾</div>
+
+<h3>Youth Agribusiness Finance</h3>
+
+<p>
+Young farmers and agricultural entrepreneurs can explore financing
+opportunities designed to support productive agribusiness activities.
+</p>
+
+</div>
+
+
+<div class="finance-card">
+
+<div class="icon">🤝</div>
+
+<h3>Cooperative Financing</h3>
+
+<p>
+Registered farmer groups and cooperatives may explore suitable financing
+arrangements for collective agricultural activities.
+</p>
+
+</div>
+
+
+<div class="finance-card">
+
+<div class="icon">📈</div>
+
+<h3>Value Chain Finance</h3>
+
+<p>
+Financing can support different stages of agricultural value chains,
+including production, aggregation, processing and marketing.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="steps-section">
+
+<h2 class="title">How Farmers Can Prepare for Financing</h2>
+
+<div class="steps">
+
+<div class="step">
+
+<div class="number">1</div>
+
+<div>
+
+<h3>Identify Your Financing Need</h3>
+
+<p>
+Determine what you need the money for, such as farm inputs, equipment,
+production, processing, storage or marketing.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="step">
+
+<div class="number">2</div>
+
+<div>
+
+<h3>Prepare a Farm or Business Plan</h3>
+
+<p>
+Clearly explain your agricultural activity, expected production, costs,
+market and how the financing will be used.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="step">
+
+<div class="number">3</div>
+
+<div>
+
+<h3>Check the Financing Conditions</h3>
+
+<p>
+Review eligibility requirements, interest rate, repayment period,
+collateral requirements and other conditions before applying.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="step">
+
+<div class="number">4</div>
+
+<div>
+
+<h3>Prepare Required Documents</h3>
+
+<p>
+Keep your identification, farmer information, business documents and
+other documents requested by the financing institution ready.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="step">
+
+<div class="number">5</div>
+
+<div>
+
+<h3>Apply Through the Official Channel</h3>
+
+<p>
+Submit your application directly through the verified institution or
+official programme responsible for the financing.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="requirements">
+
+<h2 class="title">Common Financing Requirements</h2>
+
+<div class="requirement-box">
+
+<p>
+Requirements differ between financing programmes. Applicants may be asked
+to provide:
+</p>
+
+<br>
+
+<ul>
+
+<li>Valid identification and contact information.</li>
+
+<li>Farmer registration or agricultural business information.</li>
+
+<li>Details of the farm or agricultural enterprise.</li>
+
+<li>Information about the proposed use of the financing.</li>
+
+<li>Estimated production and expected revenue.</li>
+
+<li>Business or farm plan where required.</li>
+
+<li>Bank or financial information where applicable.</li>
+
+<li>Collateral, guarantees or other security where required by the lender.</li>
+
+<li>Any additional documents specified by the official programme.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+
+<section class="form-section">
+
+<h2 class="title">Farming Finance Enquiry</h2>
+
+<p class="intro">
+Farmers and agricultural businesses can use this form to enquire about
+financing opportunities.
+</p>
+
+<div class="form-container">
+
+<h3>Submit Financing Enquiry</h3>
+
+<form action="#" method="POST">
+
+<div class="form-row">
+
+<div class="form-group">
+
+<label for="name">Full Name *</label>
+
+<input
+type="text"
+id="name"
+name="name"
+placeholder="Enter your full name"
+required>
+
+</div>
+
+
+<div class="form-group">
+
+<label for="phone">Phone Number *</label>
+
+<input
+type="tel"
+id="phone"
+name="phone"
+placeholder="Enter your phone number"
+required>
+
+</div>
+
+</div>
+
+
+<div class="form-row">
+
+<div class="form-group">
+
+<label for="email">Email Address</label>
+
+<input
+type="email"
+id="email"
+name="email"
+placeholder="Enter email address">
+
+</div>
+
+
+<div class="form-group">
+
+<label for="applicant">Applicant Type *</label>
+
+<select id="applicant" name="applicant" required>
+
+<option value="">Select type</option>
+<option>Individual Farmer</option>
+<option>Farmer Cooperative</option>
+<option>Youth Farmer</option>
+<option>Women Farmer</option>
+<option>Agribusiness Owner</option>
+<option>Processor</option>
+<option>Other</option>
+
+</select>
+
+</div>
+
+</div>
+
+
+<div class="form-row">
+
+<div class="form-group">
+
+<label for="lga">Local Government Area *</label>
+
+<select id="lga" name="lga" required>
+
+<option value="">Select LGA</option>
+<option>Adavi</option>
+<option>Ajaokuta</option>
+<option>Ankpa</option>
+<option>Bassa</option>
+<option>Dekina</option>
+<option>Ibaji</option>
+<option>Idah</option>
+<option>Igalamela/Odolu</option>
+<option>Ijumu</option>
+<option>Kogi</option>
+<option>Kogi-Koton Karfe</option>
+<option>Lokoja</option>
+<option>Mopa-Muro</option>
+<option>Ofu</option>
+<option>Ogori/Magongo</option>
+<option>Okehi</option>
+<option>Okene</option>
+<option>Olamaboro</option>
+<option>Omala</option>
+<option>Yagba East</option>
+<option>Yagba West</option>
+
+</select>
+
+</div>
+
+
+<div class="form-group">
+
+<label for="finance">Financing Needed *</label>
+
+<select id="finance" name="finance" required>
+
+<option value="">Select financing type</option>
+<option>Farm Production</option>
+<option>Farm Equipment</option>
+<option>Livestock</option>
+<option>Poultry</option>
+<option>Fisheries</option>
+<option>Agro-Processing</option>
+<option>Storage</option>
+<option>Transportation</option>
+<option>Marketing</option>
+<option>Other</option>
+
+</select>
+
+</div>
+
+</div>
+
+
+<div class="form-group">
+
+<label for="amount">Estimated Amount Needed</label>
+
+<input
+type="text"
+id="amount"
+name="amount"
+placeholder="Example: ₦2,000,000">
+
+</div>
+
+
+<div class="form-group">
+
+<label for="message">Describe Your Financing Need *</label>
+
+<textarea
+id="message"
+name="message"
+placeholder="Tell us about your farm or agricultural business, what the financing will be used for and any other relevant information."
+required></textarea>
+
+</div>
+
+
+<button type="submit" class="submit-btn">
+Submit Financing Enquiry
+</button>
+
+</form>
+
+
+<div class="notice">
+
+<strong>Important:</strong>
+This enquiry form does not guarantee approval for a loan, grant or other
+financing. Financing decisions are made by the relevant financial
+institution or programme according to its requirements. Farmers should
+verify all financing offers through official channels and avoid paying
+unauthorized persons for access to agricultural finance.
+
+</div>
+
+</div>
+
+</section>
+
+
+<footer>
+
+<p>
+<strong>Kogi State Ministry of Agriculture and Food Security</strong>
+</p>
+
+<p>
+Office of the Honourable Commissioner, Hon. Timothy Ojomah
+</p>
+
+<p>
+© 2026 Kogi State Ministry of Agriculture and Food Security.
+All Rights Reserved.
+</p>
+
+</footer>
+
+</body>
+</html>

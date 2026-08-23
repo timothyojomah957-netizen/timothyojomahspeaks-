@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Training & Capacity Building | Kogi State Ministry of Agriculture</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f5f5f5;
+      color: #222;
+    }
+
+    header {
+      background: #008000;
+      color: white;
+      padding: 20px 6%;
+      text-align: center;
+    }
+
+    header h1 {
+      margin-bottom: 15px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 8px 12px;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      background: white;
+      color: #008000;
+    }
+
+    .hero {
+      background: #006400;
+      color: white;
+      text-align: center;
+      padding: 75px 20px;
+    }
+
+    .hero h2 {
+      font-size: 42px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      max-width: 850px;
+      margin: auto;
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    section {
+      padding: 60px 7%;
+    }
+
+    .title {
+      text-align: center;
+      color: #008000;
+      font-size: 32px;
+      margin-bottom: 15px;
+    }
+
+    .intro {
+      max-width: 850px;
+      margin: auto;
+      text-align: center;
+      color: #555;
+      line-height: 1.8;
+    }
+
+    .training-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+      margin-top: 40px;
+    }
+
+    .training-card {
+      background: white;
+      padding: 30px 25px;
+      border-radius: 10px;
+      border-top: 5px solid #008000;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+    }
+
+    .icon {
+      font-size: 45px;
+      margin-bottom: 15px;
+    }
+
+    .training-card h3 {
+      color: #008000;
+      margin-bottom: 12px;
+    }
+
+    .training-card p {
+      color: #555;
+      line-height: 1.7;
+    }
+
+    .audience {
+      background: white;
+    }
+
+    .audience-grid {
+      max-width: 950px;
+      margin: 35px auto 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+    }
+
+    .audience-box {
+      background: #f1f8f1;
+      padding: 25px;
+      border-left: 5px solid #008000;
+      border-radius: 5px;
+    }
+
+    .audience-box h3 {
+      color: #008000;
+      margin-bottom: 10px;
+    }
+
+    .audience-box p {
+      color: #555;
+      line-height: 1.7;
+    }
+
+    .areas {
+      max-width: 900px;
+      margin: 35px auto 0;
+    }
+
+    .area {
+      background: white;
+      padding: 23px;
+      margin-bottom: 18px;
+      border-left: 5px solid #008000;
+      border-radius: 5px;
+    }
+
+    .area h3 {
+      color: #008000;
+      margin-bottom: 8px;
+    }
+
+    .area p {
+      color: #555;
+      line-height: 1.7;
+    }
+
+    .cta {
+      background: #008000;
+      color: white;
+      text-align: center;
+    }
+
+    .cta .title {
+      color: white;
+    }
+
+    .cta p {
+      max-width: 850px;
+      margin: auto;
+      line-height: 1.8;
+      font-size: 17px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 25px;
+      background: white;
+      color: #008000;
+      padding: 12px 25px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    footer {
+      background: #004d00;
+      color: white;
+      text-align: center;
+      padding: 25px 15px;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 700px) {
+      .hero h2 {
+        font-size: 32px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+
+  <h1>Kogi State Ministry of Agriculture</h1>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="biography.html">Biography</a>
+    <a href="mission.html">Mission & Vision</a>
+    <a href="achievements.html">Achievements</a>
+    <a href="projects.html">Projects</a>
+    <a href="programs.html">Programs</a>
+    <a href="services.html">Services</a>
+    <a href="events.html">Events</a>
+    <a href="partners.html">Partners</a>
+    <a href="testimonials.html">Testimonials</a>
+    <a href="downloads.html">Downloads</a>
+    <a href="faq.html">FAQ</a>
+    <a href="leadership.html">Leadership</a>
+    <a href="departments.html">Departments</a>
+    <a href="press.html">Press Releases</a>
+    <a href="directory.html">Directory</a>
+    <a href="opportunities.html">Opportunities</a>
+    <a href="stakeholders.html">Stakeholders</a>
+    <a href="farmers.html">Farmers</a>
+    <a href="youth.html">Youth</a>
+    <a href="women.html">Women</a>
+    <a href="cooperatives.html">Cooperatives</a>
+    <a href="extension.html">Extension</a>
+    <a href="investment.html">Investment</a>
+    <a href="agriculture-data.html">Agriculture Data</a>
+    <a href="research.html">Research</a>
+    <a href="climate-smart.html">Climate-Smart</a>
+    <a href="food-security.html">Food Security</a>
+    <a href="markets.html">Markets</a>
+    <a href="irrigation.html">Irrigation</a>
+    <a href="inputs.html">Agricultural Inputs</a>
+    <a href="mechanization.html">Mechanization</a>
+    <a href="training.html">Training</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="video.html">Videos</a>
+    <a href="news.html">News</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+</header>
+
+
+<section class="hero">
+
+  <h2>Training & Capacity Building</h2>
+
+  <p>
+    Developing agricultural knowledge, practical skills and professional
+    capacity for farmers, young people, women, cooperatives and other
+    participants in Kogi State's agricultural sector.
+  </p>
+
+</section>
+
+
+<section>
+
+  <h2 class="title">Building Agricultural Skills</h2>
+
+  <p class="intro">
+    Training and capacity-building initiatives can help farmers and
+    agricultural stakeholders improve their knowledge, adopt better
+    practices and take advantage of emerging opportunities.
+  </p>
+
+  <div class="training-grid">
+
+    <div class="training-card">
+      <div class="icon">🌾</div>
+      <h3>Farmer Training</h3>
+      <p>
+        Practical training on crop production, farm management and improved
+        agricultural practices.
+      </p>
+    </div>
+
+    <div class="training-card">
+      <div class="icon">👨‍🌾</div>
+      <h3>Young Farmers</h3>
+      <p>
+        Building the skills and knowledge of young people interested in
+        agriculture and agribusiness.
+      </p>
+    </div>
+
+    <div class="training-card">
+      <div class="icon">👩‍🌾</div>
+      <h3>Women in Agriculture</h3>
+      <p>
+        Supporting women with practical agricultural knowledge and
+        entrepreneurship skills.
+      </p>
+    </div>
+
+    <div class="training-card">
+      <div class="icon">🤝</div>
+      <h3>Cooperative Training</h3>
+      <p>
+        Strengthening the management, leadership and business skills of
+        agricultural cooperatives.
+      </p>
+    </div>
+
+    <div class="training-card">
+      <div class="icon">🚜</div>
+      <h3>Mechanization Skills</h3>
+      <p>
+        Promoting safe and appropriate use of agricultural machinery and
+        modern farm equipment.
+      </p>
+    </div>
+
+    <div class="training-card">
+      <div class="icon">💼</div>
+      <h3>Agribusiness Skills</h3>
+      <p>
+        Supporting knowledge in agricultural marketing, value addition,
+        business planning and entrepreneurship.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="audience">
+
+  <h2 class="title">Who Can Participate?</h2>
+
+  <div class="audience-grid">
+
+    <div class="audience-box">
+      <h3>Farmers</h3>
+      <p>
+        Farmers seeking improved production knowledge and practical skills.
+      </p>
+    </div>
+
+    <div class="audience-box">
+      <h3>Youth</h3>
+      <p>
+        Young people interested in farming, agribusiness and agricultural
+        entrepreneurship.
+      </p>
+    </div>
+
+    <div class="audience-box">
+      <h3>Women</h3>
+      <p>
+        Women participating in crop production, livestock, processing and
+        other agricultural activities.
+      </p>
+    </div>
+
+    <div class="audience-box">
+      <h3>Cooperatives</h3>
+      <p>
+        Farmer groups and cooperatives seeking stronger organizational and
+        business skills.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+
+<section>
+
+  <h2 class="title">Key Training Areas</h2>
+
+  <div class="areas">
+
+    <div class="area">
+      <h3>Modern Farming Practices</h3>
+      <p>
+        Training on appropriate and improved methods for crop and livestock
+        production.
+      </p>
+    </div>
+
+    <div class="area">
+      <h3>Climate-Smart Agriculture</h3>
+      <p>
+        Building awareness of agricultural practices that can improve
+        resilience to changing climate conditions.
+      </p>
+    </div>
+
+    <div class="area">
+      <h3>Post-Harvest Management</h3>
+      <p>
+        Improving knowledge of storage, handling, processing and reduction
+        of post-harvest losses.
+      </p>
+    </div>
+
+    <div class="area">
+      <h3>Marketing & Value Addition</h3>
+      <p>
+        Helping participants understand agricultural markets, processing,
+        packaging and value-chain opportunities.
+      </p>
+    </div>
+
+    <div class="area">
+      <h3>Farm Business Management</h3>
+      <p>
+        Developing skills in planning, record keeping, budgeting and
+        managing agricultural enterprises.
+      </p>
+    </div>
+
+    <div class="area">
+      <h3>Digital Agriculture</h3>
+      <p>
+        Introducing farmers and agricultural stakeholders to appropriate
+        digital tools and information resources.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="cta">
+
+  <h2 class="title">Empowering People Through Knowledge</h2>
+
+  <p>
+    Strong agricultural skills and knowledge can help create more productive
+    farms, stronger agribusinesses and better opportunities for communities
+    across Kogi State.
+  </p>
+
+  <a href="contact.html" class="btn">
+    Contact the Ministry
+  </a>
+
+</section>
+
+
+<footer>
+
+  <p>
+    <strong>Kogi State Ministry of Agriculture</strong>
+  </p>
+
+  <p>
+    Official Website of the Commissioner of Agriculture and Food Security
+  </p>
+
+  <p>
+    © 2026 Kogi State Ministry of Agriculture.
+    All Rights Reserved.
+  </p>
+
+</footer>
+
+</body>
+</html>

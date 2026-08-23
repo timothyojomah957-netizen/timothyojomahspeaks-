@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Publications | Kogi State Ministry of Agriculture</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f5f5f5;
+      color: #222;
+    }
+
+    header {
+      background: #008000;
+      color: white;
+      padding: 20px 6%;
+      text-align: center;
+    }
+
+    header h1 {
+      margin-bottom: 15px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 8px 12px;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      background: white;
+      color: #008000;
+    }
+
+    .hero {
+      background: #006400;
+      color: white;
+      text-align: center;
+      padding: 70px 20px;
+    }
+
+    .hero h2 {
+      font-size: 42px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      max-width: 850px;
+      margin: auto;
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    section {
+      padding: 60px 7%;
+    }
+
+    .title {
+      text-align: center;
+      color: #008000;
+      font-size: 32px;
+      margin-bottom: 15px;
+    }
+
+    .intro {
+      max-width: 850px;
+      margin: auto;
+      text-align: center;
+      color: #555;
+      line-height: 1.8;
+    }
+
+    .publication-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 25px;
+      margin-top: 40px;
+    }
+
+    .publication {
+      background: white;
+      padding: 30px 25px;
+      border-radius: 10px;
+      border-top: 5px solid #008000;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+    }
+
+    .publication-icon {
+      font-size: 42px;
+      margin-bottom: 15px;
+    }
+
+    .publication h3 {
+      color: #008000;
+      margin-bottom: 12px;
+    }
+
+    .publication p {
+      color: #555;
+      line-height: 1.7;
+    }
+
+    .publication span {
+      display: inline-block;
+      margin-top: 15px;
+      background: #e8f5e8;
+      color: #008000;
+      padding: 6px 10px;
+      border-radius: 4px;
+      font-size: 13px;
+      font-weight: bold;
+    }
+
+    .info {
+      background: white;
+    }
+
+    .info-box {
+      max-width: 900px;
+      margin: 35px auto 0;
+      background: #f1f8f1;
+      padding: 30px;
+      border-left: 5px solid #008000;
+      border-radius: 6px;
+    }
+
+    .info-box h3 {
+      color: #008000;
+      margin-bottom: 12px;
+    }
+
+    .info-box p {
+      color: #555;
+      line-height: 1.8;
+    }
+
+    .cta {
+      background: #008000;
+      color: white;
+      text-align: center;
+    }
+
+    .cta h2 {
+      margin-bottom: 15px;
+    }
+
+    .cta p {
+      max-width: 850px;
+      margin: auto;
+      line-height: 1.8;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 25px;
+      background: white;
+      color: #008000;
+      padding: 12px 25px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    footer {
+      background: #004d00;
+      color: white;
+      text-align: center;
+      padding: 25px 15px;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 700px) {
+      .hero h2 {
+        font-size: 32px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+
+  <h1>Kogi State Ministry of Agriculture</h1>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="biography.html">Biography</a>
+    <a href="mission.html">Mission & Vision</a>
+    <a href="achievements.html">Achievements</a>
+    <a href="projects.html">Projects</a>
+    <a href="services.html">Services</a>
+    <a href="farmers.html">Farmers</a>
+    <a href="women.html">Women</a>
+    <a href="cooperatives.html">Cooperatives</a>
+    <a href="investment.html">Investment</a>
+    <a href="calendar.html">Calendar</a>
+    <a href="publications.html">Publications</a>
+    <a href="news.html">News</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+</header>
+
+<section class="hero">
+
+  <h2>Agricultural Publications</h2>
+
+  <p>
+    Access agricultural information, reports, guides and other publications
+    supporting farmers, stakeholders and agricultural development in Kogi State.
+  </p>
+
+</section>
+
+<section>
+
+  <h2 class="title">Publications & Resources</h2>
+
+  <p class="intro">
+    This section provides a central place for agricultural publications and
+    information that can support planning, research, farming and development.
+  </p>
+
+  <div class="publication-grid">
+
+    <div class="publication">
+
+      <div class="publication-icon">📘</div>
+
+      <h3>Agricultural Guides</h3>
+
+      <p>
+        Practical agricultural information and guidance covering farming
+        activities, production practices and agricultural development.
+      </p>
+
+      <span>GUIDES</span>
+
+    </div>
+
+    <div class="publication">
+
+      <div class="publication-icon">📊</div>
+
+      <h3>Annual Reports</h3>
+
+      <p>
+        Reports providing information about agricultural programmes,
+        activities, projects and developments.
+      </p>
+
+      <span>REPORTS</span>
+
+    </div>
+
+    <div class="publication">
+
+      <div class="publication-icon">📑</div>
+
+      <h3>Policy Documents</h3>
+
+      <p>
+        Agricultural policies, strategies and planning documents supporting
+        the development of the agricultural sector.
+      </p>
+
+      <span>POLICY</span>
+
+    </div>
+
+    <div class="publication">
+
+      <div class="publication-icon">🔬</div>
+
+      <h3>Research Materials</h3>
+
+      <p>
+        Agricultural research information and materials that can support
+        knowledge sharing and evidence-based decision-making.
+      </p>
+
+      <span>RESEARCH</span>
+
+    </div>
+
+    <div class="publication">
+
+      <div class="publication-icon">🌾</div>
+
+      <h3>Farmer Information</h3>
+
+      <p>
+        Educational materials designed to provide farmers with useful
+        agricultural knowledge and information.
+      </p>
+
+      <span>FARMERS</span>
+
+    </div>
+
+    <div class="publication">
+
+      <div class="publication-icon">📋</div>
+
+      <h3>Programme Documents</h3>
+
+      <p>
+        Information and documents relating to agricultural programmes and
+        initiatives implemented in the state.
+      </p>
+
+      <span>PROGRAMMES</span>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section class="info">
+
+  <h2 class="title">Access to Official Information</h2>
+
+  <div class="info-box">
+
+    <h3>Official Publications</h3>
+
+    <p>
+      Publications placed on this website should be treated as official only
+      when released or approved through the appropriate government channel.
+      Users should confirm the latest version of any document before relying
+      on it for official purposes.
+    </p>
+
+  </div>
+
+  <div class="info-box">
+
+    <h3>Farmers and Stakeholders</h3>
+
+    <p>
+      Farmers, cooperatives, researchers, investors and other stakeholders
+      can use agricultural publications to improve access to useful knowledge
+      and information.
+    </p>
+
+  </div>
+
+</section>
+
+<section class="cta">
+
+  <h2>Need More Information?</h2>
+
+  <p>
+    Contact the Kogi State Ministry of Agriculture for information about
+    available agricultural publications, reports and official documents.
+  </p>
+
+  <a href="contact-office.html" class="btn">
+    Contact Our Office
+  </a>
+
+</section>
+
+<footer>
+
+  <p>
+    <strong>Kogi State Ministry of Agriculture</strong>
+  </p>
+
+  <p>
+    Official Website of the Commissioner of Agriculture and Food Security
+  </p>
+
+  <p>
+    © 2026 Kogi State Ministry of Agriculture.
+    All Rights Reserved.
+  </p>
+
+</footer>
+
+</body>
+</html>

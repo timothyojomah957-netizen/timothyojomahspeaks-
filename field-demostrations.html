@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Field Demonstrations | Kogi State Ministry of Agriculture</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f5f5f5;
+      color: #222;
+    }
+
+    header {
+      background: #008000;
+      color: white;
+      text-align: center;
+      padding: 25px 6%;
+    }
+
+    header h1 {
+      margin-bottom: 8px;
+    }
+
+    header p {
+      margin-bottom: 18px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 8px 12px;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      background: white;
+      color: #008000;
+    }
+
+    .hero {
+      background: #006400;
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    .hero h2 {
+      font-size: 42px;
+      margin-bottom: 18px;
+    }
+
+    .hero p {
+      max-width: 900px;
+      margin: auto;
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    section {
+      padding: 60px 7%;
+    }
+
+    .title {
+      text-align: center;
+      color: #008000;
+      font-size: 32px;
+      margin-bottom: 18px;
+    }
+
+    .intro {
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+      color: #555;
+      line-height: 1.8;
+    }
+
+    .overview {
+      background: white;
+    }
+
+    .overview-box {
+      max-width: 950px;
+      margin: 40px auto 0;
+      background: #f1f8f1;
+      padding: 35px;
+      border-left: 6px solid #008000;
+      border-radius: 8px;
+    }
+
+    .overview-box h3 {
+      color: #008000;
+      font-size: 25px;
+      margin-bottom: 15px;
+    }
+
+    .overview-box p {
+      color: #555;
+      line-height: 1.9;
+    }
+
+    .demo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+      margin-top: 40px;
+    }
+
+    .card {
+      background: white;
+      padding: 30px 25px;
+      border-radius: 10px;
+      border-top: 5px solid #008000;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+    }
+
+    .icon {
+      font-size: 45px;
+      margin-bottom: 15px;
+    }
+
+    .card h3 {
+      color: #008000;
+      margin-bottom: 12px;
+    }
+
+    .card p {
+      color: #555;
+      line-height: 1.7;
+    }
+
+    .process {
+      background: white;
+    }
+
+    .steps {
+      max-width: 950px;
+      margin: 40px auto 0;
+    }
+
+    .step {
+      display: flex;
+      gap: 20px;
+      background: #f1f8f1;
+      padding: 23px;
+      margin-bottom: 18px;
+      border-left: 5px solid #008000;
+      border-radius: 6px;
+    }
+
+    .number {
+      min-width: 42px;
+      height: 42px;
+      background: #008000;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+    }
+
+    .step h3 {
+      color: #008000;
+      margin-bottom: 8px;
+    }
+
+    .step p {
+      color: #555;
+      line-height: 1.7;
+    }
+
+    .learning {
+      max-width: 1000px;
+      margin: 40px auto 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .learning-box {
+      background: white;
+      padding: 25px;
+      text-align: center;
+      border-radius: 8px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+    }
+
+    .learning-box h3 {
+      color: #008000;
+      margin-bottom: 10px;
+    }
+
+    .learning-box p {
+      color: #555;
+      line-height: 1.6;
+    }
+
+    .notice {
+      max-width: 900px;
+      margin: 40px auto 0;
+      padding: 25px;
+      background: #f1f8f1;
+      border: 2px solid #008000;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    .notice h3 {
+      color: #008000;
+      margin-bottom: 10px;
+    }
+
+    .notice p {
+      color: #555;
+      line-height: 1.8;
+    }
+
+    .cta {
+      background: #008000;
+      color: white;
+      text-align: center;
+    }
+
+    .cta h2 {
+      margin-bottom: 15px;
+    }
+
+    .cta p {
+      max-width: 850px;
+      margin: auto;
+      line-height: 1.8;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 25px;
+      background: white;
+      color: #008000;
+      padding: 12px 25px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    footer {
+      background: #004d00;
+      color: white;
+      text-align: center;
+      padding: 25px 15px;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 700px) {
+      .hero h2 {
+        font-size: 31px;
+      }
+
+      .step {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+
+  <h1>Kogi State Ministry of Agriculture and Food Security</h1>
+
+  <p>
+    Hon. Timothy Ojomah — Commissioner for Agriculture and Food Security
+  </p>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="biography.html">Biography</a>
+    <a href="mission.html">Mission & Vision</a>
+    <a href="achievements.html">Achievements</a>
+    <a href="projects.html">Projects</a>
+    <a href="services.html">Services</a>
+    <a href="farmers.html">Farmers</a>
+    <a href="farmer-information.html">Farmer Information</a>
+    <a href="agricultural-education.html">Agricultural Education</a>
+    <a href="extension-services.html">Extension Services</a>
+    <a href="modern-farming.html">Modern Farming</a>
+    <a href="field-demonstrations.html">Field Demonstrations</a>
+    <a href="livestock-agriculture.html">Livestock</a>
+    <a href="fisheries-aquaculture.html">Fisheries</a>
+    <a href="food-security.html">Food Security</a>
+    <a href="farmer-cooperatives.html">Cooperatives</a>
+    <a href="women-in-agriculture.html">Women in Agriculture</a>
+    <a href="youth-family-farming.html">Youth & Family Farming</a>
+    <a href="investment.html">Investment</a>
+    <a href="training.html">Training</a>
+    <a href="partnerships.html">Partnerships</a>
+    <a href="agricultural-announcements.html">Announcements</a>
+    <a href="news.html">News</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+</header>
+
+<section class="hero">
+
+  <h2>Field Demonstrations</h2>
+
+  <p>
+    Practical agricultural learning through demonstration farms, field
+    activities and hands-on training for farmers and agricultural communities
+    across Kogi State.
+  </p>
+
+</section>
+
+<section class="overview">
+
+  <h2 class="title">Learning Through Demonstration</h2>
+
+  <p class="intro">
+    Field demonstrations allow farmers to see agricultural practices in
+    real farm conditions and understand how improved techniques can be
+    applied.
+  </p>
+
+  <div class="overview-box">
+
+    <h3>Practical Knowledge for Farmers</h3>
+
+    <p>
+      Demonstration activities can help farmers compare production methods,
+      observe improved practices and ask questions directly during practical
+      agricultural sessions.
+    </p>
+
+    <br>
+
+    <p>
+      Depending on the programme and local conditions, demonstrations may
+      focus on crops, livestock, soil management, irrigation, climate-smart
+      agriculture, post-harvest handling or other agricultural activities.
+    </p>
+
+  </div>
+
+</section>
+
+<section>
+
+  <h2 class="title">Field Demonstration Areas</h2>
+
+  <p class="intro">
+    Demonstrations can cover different areas of agricultural production and
+    farm management.
+  </p>
+
+  <div class="demo-grid">
+
+    <div class="card">
+      <div class="icon">🌾</div>
+      <h3>Crop Production</h3>
+      <p>
+        Demonstrating appropriate planting, crop management, harvesting and
+        other production practices.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🌱</div>
+      <h3>Soil Management</h3>
+      <p>
+        Showing practical approaches to soil conservation, soil improvement
+        and responsible land management.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icon">💧</div>
+      <h3>Water Management</h3>
+      <p>
+        Demonstrating appropriate irrigation and water conservation practices
+        where suitable.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🐄</div>
+      <h3>Livestock</h3>
+      <p>
+        Practical demonstrations can introduce responsible livestock
+        management and production practices.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🐟</div>
+      <h3>Aquaculture</h3>
+      <p>
+        Demonstrations can support learning in fish production, management
+        and related activities.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icon">📦</div>
+      <h3>Post-Harvest</h3>
+      <p>
+        Practical sessions can show appropriate harvesting, handling, storage
+        and processing methods.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+<section class="process">
+
+  <h2 class="title">How Field Demonstrations Work</h2>
+
+  <div class="steps">
+
+    <div class="step">
+
+      <div class="number">1</div>
+
+      <div>
+        <h3>Select a Demonstration Area</h3>
+        <p>
+          A suitable farm, field or agricultural site can be selected for
+          practical learning activities.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="step">
+
+      <div class="number">2</div>
+
+      <div>
+        <h3>Introduce the Practice</h3>
+        <p>
+          Agricultural professionals explain the technique, its purpose and
+          the conditions under which it may be appropriate.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="step">
+
+      <div class="number">3</div>
+
+      <div>
+        <h3>Demonstrate the Process</h3>
+        <p>
+          Farmers observe practical steps and can ask questions during the
+          demonstration.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="step">
+
+      <div class="number">4</div>
+
+      <div>
+        <h3>Farmer Participation</h3>
+        <p>
+          Where appropriate, participants can take part in practical
+          activities to improve their understanding.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="step">
+
+      <div class="number">5</div>
+
+      <div>
+        <h3>Follow-Up</h3>
+        <p>
+          Continued extension support can help farmers understand how to
+          apply appropriate lessons on their own farms.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section>
+
+  <h2 class="title">What Farmers Can Learn</h2>
+
+  <div class="learning">
+
+    <div class="learning-box">
+      <h3>🌱 Better Practices</h3>
+      <p>
+        Farmers can observe improved production methods in practical settings.
+      </p>
+    </div>
+
+    <div class="learning-box">
+      <h3>🚜 Equipment Use</h3>
+      <p>
+        Demonstrations can show appropriate use of agricultural tools and
+        equipment.
+      </p>
+    </div>
+
+    <div class="learning-box">
+      <h3>💧 Resource Management</h3>
+      <p>
+        Farmers can learn practical approaches to managing soil and water
+        resources.
+      </p>
+    </div>
+
+    <div class="learning-box">
+      <h3>📊 Farm Records</h3>
+      <p>
+        Practical sessions can encourage farmers to monitor farm activities,
+        costs and production.
+      </p>
+    </div>
+
+    <div class="learning-box">
+      <h3>🌦️ Climate Resilience</h3>
+      <p>
+        Farmers can learn about practices that may improve resilience to
+        changing weather conditions.
+      </p>
+    </div>
+
+    <div class="learning-box">
+      <h3>🤝 Cooperation</h3>
+      <p>
+        Field activities can encourage farmers to learn and work together.
+      </p>
+    </div>
+
+  </div>
+
+  <div class="notice">
+
+    <h3>Farmer Information</h3>
+
+    <p>
+      Demonstration activities and agricultural programmes may vary by
+      location and season. Farmers should obtain programme details through
+      authorized Ministry channels and qualified agricultural extension
+      personnel.
+    </p>
+
+  </div>
+
+</section>
+
+<section class="cta">
+
+  <h2>Learning by Doing</h2>
+
+  <p>
+    Field demonstrations bring agricultural knowledge closer to farmers by
+    turning lessons into practical experiences that can be observed, discussed
+    and applied appropriately.
+  </p>
+
+  <a href="extension-services.html" class="btn">
+    Extension Services
+  </a>
+
+</section>
+
+<footer>
+
+  <p>
+    <strong>Kogi State Ministry of Agriculture and Food Security</strong>
+  </p>
+
+  <p>
+    Office of the Honourable Commissioner, Hon. Timothy Ojomah
+  </p>
+
+  <p>
+    © 2026 Kogi State Ministry of Agriculture and Food Security.
+    All Rights Reserved.
+  </p>
+
+</footer>
+
+</body>
+</html>

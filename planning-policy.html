@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Planning & Policy | Kogi State Ministry of Agriculture</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f5f5f5;
+      color: #222;
+    }
+
+    header {
+      background: #008000;
+      color: white;
+      padding: 20px 6%;
+      text-align: center;
+    }
+
+    header h1 {
+      margin-bottom: 15px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 8px 12px;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      background: white;
+      color: #008000;
+    }
+
+    .hero {
+      background: #006400;
+      color: white;
+      text-align: center;
+      padding: 75px 20px;
+    }
+
+    .hero h2 {
+      font-size: 42px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      max-width: 850px;
+      margin: auto;
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    section {
+      padding: 60px 7%;
+    }
+
+    .title {
+      text-align: center;
+      color: #008000;
+      font-size: 32px;
+      margin-bottom: 15px;
+    }
+
+    .intro {
+      max-width: 850px;
+      margin: auto;
+      text-align: center;
+      color: #555;
+      line-height: 1.8;
+    }
+
+    .planning-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+      margin-top: 40px;
+    }
+
+    .planning-card {
+      background: white;
+      padding: 30px 25px;
+      border-radius: 10px;
+      border-top: 5px solid #008000;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+    }
+
+    .icon {
+      font-size: 45px;
+      margin-bottom: 15px;
+    }
+
+    .planning-card h3 {
+      color: #008000;
+      margin-bottom: 12px;
+    }
+
+    .planning-card p {
+      color: #555;
+      line-height: 1.7;
+    }
+
+    .policy {
+      background: white;
+    }
+
+    .policy-grid {
+      max-width: 950px;
+      margin: 35px auto 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .policy-box {
+      background: #f1f8f1;
+      padding: 25px;
+      border-left: 5px solid #008000;
+      border-radius: 5px;
+    }
+
+    .policy-box h3 {
+      color: #008000;
+      margin-bottom: 10px;
+    }
+
+    .policy-box p {
+      color: #555;
+      line-height: 1.7;
+    }
+
+    .process {
+      max-width: 900px;
+      margin: 35px auto 0;
+    }
+
+    .process-item {
+      background: white;
+      padding: 23px;
+      margin-bottom: 18px;
+      border-left: 5px solid #008000;
+      border-radius: 5px;
+    }
+
+    .process-item h3 {
+      color: #008000;
+      margin-bottom: 8px;
+    }
+
+    .process-item p {
+      color: #555;
+      line-height: 1.7;
+    }
+
+    .cta {
+      background: #008000;
+      color: white;
+      text-align: center;
+    }
+
+    .cta .title {
+      color: white;
+    }
+
+    .cta p {
+      max-width: 850px;
+      margin: auto;
+      line-height: 1.8;
+      font-size: 17px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 25px;
+      background: white;
+      color: #008000;
+      padding: 12px 25px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    footer {
+      background: #004d00;
+      color: white;
+      text-align: center;
+      padding: 25px 15px;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 700px) {
+      .hero h2 {
+        font-size: 32px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+
+  <h1>Kogi State Ministry of Agriculture</h1>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="biography.html">Biography</a>
+    <a href="mission.html">Mission & Vision</a>
+    <a href="achievements.html">Achievements</a>
+    <a href="projects.html">Projects</a>
+    <a href="programs.html">Programs</a>
+    <a href="services.html">Services</a>
+    <a href="events.html">Events</a>
+    <a href="partners.html">Partners</a>
+    <a href="testimonials.html">Testimonials</a>
+    <a href="downloads.html">Downloads</a>
+    <a href="faq.html">FAQ</a>
+    <a href="leadership.html">Leadership</a>
+    <a href="departments.html">Departments</a>
+    <a href="press.html">Press Releases</a>
+    <a href="directory.html">Directory</a>
+    <a href="opportunities.html">Opportunities</a>
+    <a href="stakeholders.html">Stakeholders</a>
+    <a href="farmers.html">Farmers</a>
+    <a href="youth.html">Youth</a>
+    <a href="women.html">Women</a>
+    <a href="cooperatives.html">Cooperatives</a>
+    <a href="extension.html">Extension</a>
+    <a href="investment.html">Investment</a>
+    <a href="agriculture-data.html">Agriculture Data</a>
+    <a href="research.html">Research</a>
+    <a href="climate-smart.html">Climate-Smart</a>
+    <a href="food-security.html">Food Security</a>
+    <a href="markets.html">Markets</a>
+    <a href="irrigation.html">Irrigation</a>
+    <a href="inputs.html">Agricultural Inputs</a>
+    <a href="mechanization.html">Mechanization</a>
+    <a href="training.html">Training</a>
+    <a href="finance.html">Finance</a>
+    <a href="processing.html">Processing</a>
+    <a href="storage.html">Storage</a>
+    <a href="logistics.html">Logistics</a>
+    <a href="insurance.html">Insurance</a>
+    <a href="land-management.html">Land Management</a>
+    <a href="food-processing.html">Food Processing</a>
+    <a href="quality-control.html">Quality Control</a>
+    <a href="agribusiness.html">Agribusiness</a>
+    <a href="statistics.html">Statistics</a>
+    <a href="innovation.html">Innovation</a>
+    <a href="risk-management.html">Risk Management</a>
+    <a href="environment.html">Environment</a>
+    <a href="youth-empowerment.html">Youth Empowerment</a>
+    <a href="community.html">Community</a>
+    <a href="agricultural-information.html">Agricultural Information</a>
+    <a href="monitoring.html">Monitoring</a>
+    <a href="planning-policy.html">Planning & Policy</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="video.html">Videos</a>
+    <a href="news.html">News</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+</header>
+
+<section class="hero">
+
+  <h2>Agricultural Planning & Policy</h2>
+
+  <p>
+    Supporting strategic planning, policy development and coordinated
+    agricultural initiatives for sustainable development and food security
+    in Kogi State.
+  </p>
+
+</section>
+
+<section>
+
+  <h2 class="title">Agricultural Planning</h2>
+
+  <p class="intro">
+    Effective planning helps identify agricultural priorities, allocate
+    resources appropriately and coordinate programs that support farmers,
+    agribusinesses and communities.
+  </p>
+
+  <div class="planning-grid">
+
+    <div class="planning-card">
+      <div class="icon">📋</div>
+      <h3>Strategic Planning</h3>
+      <p>
+        Developing agricultural priorities and strategies that support
+        long-term sector development.
+      </p>
+    </div>
+
+    <div class="planning-card">
+      <div class="icon">🎯</div>
+      <h3>Target Setting</h3>
+      <p>
+        Establishing clear objectives and measurable targets for agricultural
+        programs and development initiatives.
+      </p>
+    </div>
+
+    <div class="planning-card">
+      <div class="icon">📊</div>
+      <h3>Resource Planning</h3>
+      <p>
+        Supporting effective planning and allocation of resources for
+        agricultural programs and projects.
+      </p>
+    </div>
+
+    <div class="planning-card">
+      <div class="icon">🤝</div>
+      <h3>Stakeholder Coordination</h3>
+      <p>
+        Promoting coordination among government institutions, farmers,
+        businesses, communities and development partners.
+      </p>
+    </div>
+
+    <div class="planning-card">
+      <div class="icon">🌾</div>
+      <h3>Sector Development</h3>
+      <p>
+        Supporting initiatives aimed at improving agricultural productivity,
+        value chains and rural livelihoods.
+      </p>
+    </div>
+
+    <div class="planning-card">
+      <div class="icon">📈</div>
+      <h3>Performance Planning</h3>
+      <p>
+        Using appropriate information and indicators to support effective
+        agricultural program planning and implementation.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+<section class="policy">
+
+  <h2 class="title">Policy Priorities</h2>
+
+  <div class="policy-grid">
+
+    <div class="policy-box">
+      <h3>Food Security</h3>
+      <p>
+        Supporting policies and programs that increase agricultural
+        production and improve food availability.
+      </p>
+    </div>
+
+    <div class="policy-box">
+      <h3>Farmer Empowerment</h3>
+      <p>
+        Promoting initiatives that improve opportunities, knowledge,
+        productivity and livelihoods for farmers.
+      </p>
+    </div>
+
+    <div class="policy-box">
+      <h3>Youth & Women</h3>
+      <p>
+        Encouraging inclusive policies that expand agricultural opportunities
+        for young people and women.
+      </p>
+    </div>
+
+    <div class="policy-box">
+      <h3>Agribusiness</h3>
+      <p>
+        Supporting policies that encourage investment, processing,
+        marketing and value addition within agriculture.
+      </p>
+    </div>
+
+    <div class="policy-box">
+      <h3>Innovation</h3>
+      <p>
+        Promoting appropriate technology, research and innovation to improve
+        agricultural productivity and competitiveness.
+      </p>
+    </div>
+
+    <div class="policy-box">
+      <h3>Sustainability</h3>
+      <p>
+        Encouraging responsible agricultural practices that support long-term
+        environmental and economic sustainability.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+<section>
+
+  <h2 class="title">Planning & Policy Process</h2>
+
+  <div class="process">
+
+    <div class="process-item">
+      <h3>1. Identify Priorities</h3>
+      <p>
+        Identify major agricultural needs, challenges and opportunities that
+        require policy attention.
+      </p>
+    </div>
+
+    <div class="process-item">
+      <h3>2. Gather Evidence</h3>
+      <p>
+        Use agricultural data, research, consultations and other relevant
+        information to support planning decisions.
+      </p>
+    </div>
+
+    <div class="process-item">
+      <h3>3. Consult Stakeholders</h3>
+      <p>
+        Engage farmers, communities, businesses, experts and relevant
+        institutions in agricultural planning.
+      </p>
+    </div>
+
+    <div class="process-item">
+      <h3>4. Develop Strategies</h3>
+      <p>
+        Develop practical strategies, programs and initiatives that respond
+        to identified agricultural priorities.
+      </p>
+    </div>
+
+    <div class="process-item">
+      <h3>5. Monitor Results</h3>
+      <p>
+        Review implementation and results to identify lessons and improve
+        future agricultural policies and programs.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+<section class="cta">
+
+  <h2 class="title">Planning for a Stronger Agricultural Future</h2>
+
+  <p>
+    Effective agricultural planning and sound policy development provide a
+    foundation for sustainable agricultural growth, stronger livelihoods and
+    improved food security across Kogi State.
+  </p>
+
+  <a href="contact.html" class="btn">
+    Contact the Ministry
+  </a>
+
+</section>
+
+<footer>
+
+  <p>
+    <strong>Kogi State Ministry of Agriculture</strong>
+  </p>
+
+  <p>
+    Official Website of the Commissioner of Agriculture and Food Security
+  </p>
+
+  <p>
+    © 2026 Kogi State Ministry of Agriculture.
+    All Rights Reserved.
+  </p>
+
+</footer>
+
+</body>
+</html>

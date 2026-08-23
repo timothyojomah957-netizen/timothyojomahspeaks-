@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Crop & Livestock Guidance | Kogi State Ministry of Agriculture</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f5f5f5;
+      color: #222;
+    }
+
+    header {
+      background: #008000;
+      color: white;
+      text-align: center;
+      padding: 25px 6%;
+    }
+
+    header h1 {
+      margin-bottom: 8px;
+    }
+
+    header p {
+      margin-bottom: 18px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 8px 12px;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      background: white;
+      color: #008000;
+    }
+
+    .hero {
+      background: #006400;
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    .hero h2 {
+      font-size: 42px;
+      margin-bottom: 18px;
+    }
+
+    .hero p {
+      max-width: 900px;
+      margin: auto;
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    section {
+      padding: 60px 7%;
+    }
+
+    .title {
+      text-align: center;
+      color: #008000;
+      font-size: 32px;
+      margin-bottom: 18px;
+    }
+
+    .intro {
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+      color: #555;
+      line-height: 1.8;
+    }
+
+    .overview {
+      background: white;
+    }
+
+    .overview-box {
+      max-width: 950px;
+      margin: 40px auto 0;
+      background: #f1f8f1;
+      padding: 35px;
+      border-left: 6px solid #008000;
+      border-radius: 8px;
+    }
+
+    .overview-box h3 {
+      color: #008000;
+      font-size: 25px;
+      margin-bottom: 15px;
+    }
+
+    .overview-box p {
+      color: #555;
+      line-height: 1.9;
+    }
+
+    .guidance-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 25px;
+      margin-top: 40px;
+    }
+
+    .card {
+      background: white;
+      padding: 30px 25px;
+      border-radius: 10px;
+      border-top: 5px solid #008000;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+    }
+
+    .icon {
+      font-size: 45px;
+      margin-bottom: 15px;
+    }
+
+    .card h3 {
+      color: #008000;
+      margin-bottom: 12px;
+    }
+
+    .card p {
+      color: #555;
+      line-height: 1.7;
+    }
+
+    .crop-section {
+      background: white;
+    }
+
+    .livestock-section {
+      background: #f5f5f5;
+    }
+
+    .list {
+      max-width: 950px;
+      margin: 40px auto 0;
+    }
+
+    .item {
+      display: flex;
+      gap: 20px;
+      background: #f1f8f1;
+      padding: 23px;
+      margin-bottom: 18px;
+      border-left: 5px solid #008000;
+      border-radius: 6px;
+    }
+
+    .number {
+      min-width: 42px;
+      height: 42px;
+      background: #008000;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
+
+    .item h3 {
+      color: #008000;
+      margin-bottom: 8px;
+    }
+
+    .item p {
+      color: #555;
+      line-height: 1.7;
+    }
+
+    .notice {
+      max-width: 900px;
+      margin: 40px auto 0;
+      padding: 25px;
+      background: white;
+      border: 2px solid #008000;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    .notice h3 {
+      color: #008000;
+      margin-bottom: 10px;
+    }
+
+    .notice p {
+      color: #555;
+      line-height: 1.8;
+    }
+
+    .cta {
+      background: #008000;
+      color: white;
+      text-align: center;
+    }
+
+    .cta h2 {
+      margin-bottom: 15px;
+    }
+
+    .cta p {
+      max-width: 850px;
+      margin: auto;
+      line-height: 1.8;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 25px;
+      background: white;
+      color: #008000;
+      padding: 12px 25px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    footer {
+      background: #004d00;
+      color: white;
+      text-align: center;
+      padding: 25px 15px;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 700px) {
+      .hero h2 {
+        font-size: 31px;
+      }
+
+      .item {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+
+  <h1>Kogi State Ministry of Agriculture and Food Security</h1>
+
+  <p>
+    Hon. Timothy Ojomah — Commissioner for Agriculture and Food Security
+  </p>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="biography.html">Biography</a>
+    <a href="mission.html">Mission & Vision</a>
+    <a href="achievements.html">Achievements</a>
+    <a href="projects.html">Projects</a>
+    <a href="services.html">Services</a>
+    <a href="farmers.html">Farmers</a>
+    <a href="farmer-information.html">Farmer Information</a>
+    <a href="agricultural-education.html">Agricultural Education</a>
+    <a href="extension-services.html">Extension Services</a>
+    <a href="modern-farming.html">Modern Farming</a>
+    <a href="field-demonstrations.html">Field Demonstrations</a>
+    <a href="crop-livestock-guidance.html">Crop & Livestock Guidance</a>
+    <a href="livestock-agriculture.html">Livestock</a>
+    <a href="fisheries-aquaculture.html">Fisheries</a>
+    <a href="food-security.html">Food Security</a>
+    <a href="farmer-cooperatives.html">Cooperatives</a>
+    <a href="women-in-agriculture.html">Women in Agriculture</a>
+    <a href="youth-family-farming.html">Youth & Family Farming</a>
+    <a href="investment.html">Investment</a>
+    <a href="training.html">Training</a>
+    <a href="partnerships.html">Partnerships</a>
+    <a href="agricultural-announcements.html">Announcements</a>
+    <a href="news.html">News</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+</header>
+
+<section class="hero">
+
+  <h2>Crop & Livestock Guidance</h2>
+
+  <p>
+    Practical agricultural guidance to help farmers improve crop production,
+    livestock management, farm planning and sustainable agricultural
+    practices across Kogi State.
+  </p>
+
+</section>
+
+<section class="overview">
+
+  <h2 class="title">Agricultural Guidance for Farmers</h2>
+
+  <p class="intro">
+    Farmers need timely and appropriate information to make informed
+    decisions about crops, livestock, soil, water, inputs, farm management
+    and agricultural markets.
+  </p>
+
+  <div class="overview-box">
+
+    <h3>Supporting Better Farm Decisions</h3>
+
+    <p>
+      Agricultural extension and advisory services can help farmers identify
+      appropriate production practices, recognize potential challenges and
+      connect with qualified agricultural professionals.
+    </p>
+
+    <br>
+
+    <p>
+      The guidance provided on this page is general information. Specific
+      recommendations should take into account local conditions, farm size,
+      crop variety, livestock species, weather, soil conditions and other
+      relevant factors.
+    </p>
+
+  </div>
+
+</section>
+
+<section class="crop-section">
+
+  <h2 class="title">Crop Production Guidance</h2>
+
+  <p class="intro">
+    Good crop management begins before planting and continues through
+    harvesting and post-harvest handling.
+  </p>
+
+  <div class="guidance-grid">
+
+    <div class="card">
+      <div class="icon">🌱</div>
+      <h3>Land Preparation</h3>
+      <p>
+        Encourage appropriate land preparation while protecting soil structure
+        and reducing unnecessary degradation.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🌾</div>
+      <h3>Quality Planting Materials</h3>
+      <p>
+        Farmers should use suitable and reliable seeds or planting materials
+        appropriate for their production conditions.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icon">💧</div>
+      <h3>Water Management</h3>
+      <p>
+        Efficient water management can support crop growth and help farmers
+        use available water resources responsibly.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🌿</div>
+      <h3>Weed Management</h3>
+      <p>
+        Timely and appropriate weed management can reduce competition between
+        unwanted plants and crops.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🐛</div>
+      <h3>Pest Awareness</h3>
+      <p>
+        Farmers should regularly monitor crops and seek professional advice
+        when pests or unusual crop damage are observed.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icon">📦</div>
+      <h3>Harvest & Storage</h3>
+      <p>
+        Appropriate harvesting, handling and storage practices can help
+        maintain product quality and reduce losses.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+<section class="livestock-section">
+
+  <h2 class="title">Livestock Guidance</h2>
+
+  <p class="intro">
+    Good livestock management involves appropriate housing, feeding, hygiene,
+    observation and access to qualified veterinary support.
+  </p>
+
+  <div class="guidance-grid">
+
+    <div class="card">
+      <div class="icon">🐄</div>
+      <h3>Cattle Management</h3>
+      <p>
+        Proper housing, nutrition, hygiene and routine observation are
+        important aspects of responsible cattle management.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🐐</div>
+      <h3>Goat & Sheep Farming</h3>
+      <p>
+        Small ruminants require suitable housing, nutrition, clean water and
+        appropriate health management.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🐔</div>
+      <h3>Poultry Farming</h3>
+      <p>
+        Poultry production benefits from appropriate housing, feeding,
+        biosecurity and good flock management.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🐖</div>
+      <h3>Pig Farming</h3>
+      <p>
+        Responsible pig production includes proper housing, feeding, hygiene
+        and disease prevention practices.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icon">💧</div>
+      <h3>Clean Water</h3>
+      <p>
+        Livestock should have reliable access to clean and suitable drinking
+        water as part of good farm management.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🩺</div>
+      <h3>Animal Health</h3>
+      <p>
+        Farmers should consult qualified veterinary professionals when
+        animals show signs of illness or unusual behaviour.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+<section>
+
+  <h2 class="title">Good Farm Management Practices</h2>
+
+  <div class="list">
+
+    <div class="item">
+
+      <div class="number">1</div>
+
+      <div>
+        <h3>Keep Farm Records</h3>
+        <p>
+          Record production, expenses, inputs, sales and important farm
+          activities to support better planning.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="item">
+
+      <div class="number">2</div>
+
+      <div>
+        <h3>Monitor the Farm Regularly</h3>
+        <p>
+          Regular observation can help farmers identify crop, livestock,
+          soil or water problems early.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="item">
+
+      <div class="number">3</div>
+
+      <div>
+        <h3>Use Inputs Responsibly</h3>
+        <p>
+          Agricultural inputs should be selected and used according to
+          appropriate technical recommendations.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="item">
+
+      <div class="number">4</div>
+
+      <div>
+        <h3>Protect Farm Resources</h3>
+        <p>
+          Responsible management of soil, water, vegetation and other natural
+          resources helps support long-term agricultural production.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="item">
+
+      <div class="number">5</div>
+
+      <div>
+        <h3>Seek Professional Advice</h3>
+        <p>
+          Farmers should contact qualified agricultural extension or
+          veterinary professionals when specialized technical assistance is
+          required.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="notice">
+
+    <h3>Important Farmer Notice</h3>
+
+    <p>
+      This page provides general agricultural information and does not replace
+      professional crop or veterinary advice. For serious crop diseases,
+      livestock illness, pesticide use or other technical problems, seek
+      guidance from qualified professionals or authorized agricultural
+      extension services.
+    </p>
+
+  </div>
+
+</section>
+
+<section class="cta">
+
+  <h2>Better Guidance, Better Farming</h2>
+
+  <p>
+    Access to appropriate agricultural knowledge can help farmers make better
+    decisions and build productive, resilient and sustainable farms.
+  </p>
+
+  <a href="extension-services.html" class="btn">
+    Extension Services
+  </a>
+
+</section>
+
+<footer>
+
+  <p>
+    <strong>Kogi State Ministry of Agriculture and Food Security</strong>
+  </p>
+
+  <p>
+    Office of the Honourable Commissioner, Hon. Timothy Ojomah
+  </p>
+
+  <p>
+    © 2026 Kogi State Ministry of Agriculture and Food Security.
+    All Rights Reserved.
+  </p>
+
+</footer>
+
+</body>
+</html>

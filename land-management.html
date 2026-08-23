@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Land & Environmental Management | Kogi State Ministry of Agriculture</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f5f5f5;
+      color: #222;
+    }
+
+    header {
+      background: #008000;
+      color: white;
+      padding: 20px 6%;
+      text-align: center;
+    }
+
+    header h1 {
+      margin-bottom: 15px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 8px 12px;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      background: white;
+      color: #008000;
+    }
+
+    .hero {
+      background: #006400;
+      color: white;
+      text-align: center;
+      padding: 75px 20px;
+    }
+
+    .hero h2 {
+      font-size: 42px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      max-width: 850px;
+      margin: auto;
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    section {
+      padding: 60px 7%;
+    }
+
+    .title {
+      text-align: center;
+      color: #008000;
+      font-size: 32px;
+      margin-bottom: 15px;
+    }
+
+    .intro {
+      max-width: 850px;
+      margin: auto;
+      text-align: center;
+      color: #555;
+      line-height: 1.8;
+    }
+
+    .land-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+      margin-top: 40px;
+    }
+
+    .land-card {
+      background: white;
+      padding: 30px 25px;
+      border-radius: 10px;
+      border-top: 5px solid #008000;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+    }
+
+    .icon {
+      font-size: 45px;
+      margin-bottom: 15px;
+    }
+
+    .land-card h3 {
+      color: #008000;
+      margin-bottom: 12px;
+    }
+
+    .land-card p {
+      color: #555;
+      line-height: 1.7;
+    }
+
+    .environment {
+      background: white;
+    }
+
+    .environment-grid {
+      max-width: 950px;
+      margin: 35px auto 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .environment-box {
+      background: #f1f8f1;
+      padding: 25px;
+      border-left: 5px solid #008000;
+      border-radius: 5px;
+    }
+
+    .environment-box h3 {
+      color: #008000;
+      margin-bottom: 10px;
+    }
+
+    .environment-box p {
+      color: #555;
+      line-height: 1.7;
+    }
+
+    .practices {
+      max-width: 900px;
+      margin: 35px auto 0;
+    }
+
+    .practice {
+      background: white;
+      padding: 23px;
+      margin-bottom: 18px;
+      border-left: 5px solid #008000;
+      border-radius: 5px;
+    }
+
+    .practice h3 {
+      color: #008000;
+      margin-bottom: 8px;
+    }
+
+    .practice p {
+      color: #555;
+      line-height: 1.7;
+    }
+
+    .cta {
+      background: #008000;
+      color: white;
+      text-align: center;
+    }
+
+    .cta .title {
+      color: white;
+    }
+
+    .cta p {
+      max-width: 850px;
+      margin: auto;
+      line-height: 1.8;
+      font-size: 17px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 25px;
+      background: white;
+      color: #008000;
+      padding: 12px 25px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    footer {
+      background: #004d00;
+      color: white;
+      text-align: center;
+      padding: 25px 15px;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 700px) {
+      .hero h2 {
+        font-size: 32px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+
+  <h1>Kogi State Ministry of Agriculture</h1>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="biography.html">Biography</a>
+    <a href="mission.html">Mission & Vision</a>
+    <a href="achievements.html">Achievements</a>
+    <a href="projects.html">Projects</a>
+    <a href="programs.html">Programs</a>
+    <a href="services.html">Services</a>
+    <a href="events.html">Events</a>
+    <a href="partners.html">Partners</a>
+    <a href="testimonials.html">Testimonials</a>
+    <a href="downloads.html">Downloads</a>
+    <a href="faq.html">FAQ</a>
+    <a href="leadership.html">Leadership</a>
+    <a href="departments.html">Departments</a>
+    <a href="press.html">Press Releases</a>
+    <a href="directory.html">Directory</a>
+    <a href="opportunities.html">Opportunities</a>
+    <a href="stakeholders.html">Stakeholders</a>
+    <a href="farmers.html">Farmers</a>
+    <a href="youth.html">Youth</a>
+    <a href="women.html">Women</a>
+    <a href="cooperatives.html">Cooperatives</a>
+    <a href="extension.html">Extension</a>
+    <a href="investment.html">Investment</a>
+    <a href="agriculture-data.html">Agriculture Data</a>
+    <a href="research.html">Research</a>
+    <a href="climate-smart.html">Climate-Smart</a>
+    <a href="food-security.html">Food Security</a>
+    <a href="markets.html">Markets</a>
+    <a href="irrigation.html">Irrigation</a>
+    <a href="inputs.html">Agricultural Inputs</a>
+    <a href="mechanization.html">Mechanization</a>
+    <a href="training.html">Training</a>
+    <a href="finance.html">Finance</a>
+    <a href="processing.html">Processing</a>
+    <a href="storage.html">Storage</a>
+    <a href="logistics.html">Logistics</a>
+    <a href="insurance.html">Insurance</a>
+    <a href="land-management.html">Land Management</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="video.html">Videos</a>
+    <a href="news.html">News</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+</header>
+
+
+<section class="hero">
+
+  <h2>Land & Environmental Management</h2>
+
+  <p>
+    Promoting responsible use of agricultural land and natural resources
+    while encouraging sustainable farming practices that protect the
+    environment and support future agricultural productivity.
+  </p>
+
+</section>
+
+
+<section>
+
+  <h2 class="title">Sustainable Agricultural Land Management</h2>
+
+  <p class="intro">
+    Healthy soil, responsible land use and a protected environment are
+    important foundations for productive agriculture. Sustainable land
+    management helps maintain agricultural resources for present and future
+    generations.
+  </p>
+
+  <div class="land-grid">
+
+    <div class="land-card">
+      <div class="icon">🌱</div>
+      <h3>Soil Conservation</h3>
+      <p>
+        Encouraging practices that protect soil quality and reduce
+        degradation caused by unsuitable agricultural practices.
+      </p>
+    </div>
+
+    <div class="land-card">
+      <div class="icon">🌳</div>
+      <h3>Tree & Vegetation Protection</h3>
+      <p>
+        Promoting responsible management of vegetation and natural resources
+        within agricultural landscapes.
+      </p>
+    </div>
+
+    <div class="land-card">
+      <div class="icon">💧</div>
+      <h3>Water Conservation</h3>
+      <p>
+        Encouraging responsible use and conservation of water resources
+        important to agricultural production.
+      </p>
+    </div>
+
+    <div class="land-card">
+      <div class="icon">🌾</div>
+      <h3>Sustainable Farming</h3>
+      <p>
+        Supporting farming practices that maintain productivity while
+        protecting land and natural resources.
+      </p>
+    </div>
+
+    <div class="land-card">
+      <div class="icon">♻️</div>
+      <h3>Waste Management</h3>
+      <p>
+        Encouraging appropriate management of agricultural waste and
+        responsible use of farm resources.
+      </p>
+    </div>
+
+    <div class="land-card">
+      <div class="icon">🌍</div>
+      <h3>Environmental Protection</h3>
+      <p>
+        Promoting awareness of environmental protection within agricultural
+        communities and production systems.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="environment">
+
+  <h2 class="title">Environmental Benefits</h2>
+
+  <div class="environment-grid">
+
+    <div class="environment-box">
+      <h3>Protect Soil</h3>
+      <p>
+        Good land management can help maintain soil structure, fertility
+        and long-term agricultural productivity.
+      </p>
+    </div>
+
+    <div class="environment-box">
+      <h3>Reduce Erosion</h3>
+      <p>
+        Appropriate land management practices can help reduce soil erosion
+        and the loss of productive farmland.
+      </p>
+    </div>
+
+    <div class="environment-box">
+      <h3>Protect Water Resources</h3>
+      <p>
+        Responsible agricultural practices can help protect water resources
+        from unnecessary pollution and degradation.
+      </p>
+    </div>
+
+    <div class="environment-box">
+      <h3>Support Biodiversity</h3>
+      <p>
+        Responsible land use can contribute to the protection of useful
+        plants, animals and other natural resources.
+      </p>
+    </div>
+
+    <div class="environment-box">
+      <h3>Build Resilience</h3>
+      <p>
+        Sustainable land practices can help agricultural communities become
+        more resilient to environmental challenges.
+      </p>
+    </div>
+
+    <div class="environment-box">
+      <h3>Protect Future Agriculture</h3>
+      <p>
+        Responsible management today helps preserve agricultural resources
+        for future generations.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+
+<section>
+
+  <h2 class="title">Good Land Management Practices</h2>
+
+  <div class="practices">
+
+    <div class="practice">
+      <h3>1. Prevent Soil Erosion</h3>
+      <p>
+        Farmers should consider appropriate soil and water conservation
+        practices suited to their farms and local conditions.
+      </p>
+    </div>
+
+    <div class="practice">
+      <h3>2. Maintain Soil Fertility</h3>
+      <p>
+        Appropriate soil management and responsible use of agricultural
+        inputs can help maintain productive farmland.
+      </p>
+    </div>
+
+    <div class="practice">
+      <h3>3. Protect Water Sources</h3>
+      <p>
+        Agricultural activities should be managed responsibly around rivers,
+        streams, wetlands and other water resources.
+      </p>
+    </div>
+
+    <div class="practice">
+      <h3>4. Manage Farm Waste</h3>
+      <p>
+        Agricultural waste should be handled responsibly to reduce
+        environmental pollution and health risks.
+      </p>
+    </div>
+
+    <div class="practice">
+      <h3>5. Encourage Sustainable Production</h3>
+      <p>
+        Farmers and agricultural businesses should adopt practices that
+        balance productivity with responsible resource management.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="cta">
+
+  <h2 class="title">Protecting Kogi's Agricultural Resources</h2>
+
+  <p>
+    Responsible land and environmental management can help protect
+    agricultural resources, strengthen farm productivity and support a
+    sustainable future for agriculture in Kogi State.
+  </p>
+
+  <a href="contact.html" class="btn">
+    Contact the Ministry
+  </a>
+
+</section>
+
+
+<footer>
+
+  <p>
+    <strong>Kogi State Ministry of Agriculture</strong>
+  </p>
+
+  <p>
+    Official Website of the Commissioner of Agriculture and Food Security
+  </p>
+
+  <p>
+    © 2026 Kogi State Ministry of Agriculture.
+    All Rights Reserved.
+  </p>
+
+</footer>
+
+</body>
+</html>

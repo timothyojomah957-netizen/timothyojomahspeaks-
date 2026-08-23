@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Agricultural Markets | Kogi State Ministry of Agriculture</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f5f5f5;
+      color: #222;
+    }
+
+    header {
+      background: #008000;
+      color: white;
+      padding: 20px 6%;
+      text-align: center;
+    }
+
+    header h1 {
+      margin-bottom: 15px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 8px 12px;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      background: white;
+      color: #008000;
+    }
+
+    .hero {
+      background: #006400;
+      color: white;
+      text-align: center;
+      padding: 75px 20px;
+    }
+
+    .hero h2 {
+      font-size: 42px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      max-width: 850px;
+      margin: auto;
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    section {
+      padding: 60px 7%;
+    }
+
+    .title {
+      text-align: center;
+      color: #008000;
+      font-size: 32px;
+      margin-bottom: 15px;
+    }
+
+    .intro {
+      max-width: 850px;
+      margin: auto;
+      text-align: center;
+      color: #555;
+      line-height: 1.8;
+    }
+
+    .market-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+      margin-top: 40px;
+    }
+
+    .market-card {
+      background: white;
+      padding: 30px 25px;
+      border-radius: 10px;
+      border-top: 5px solid #008000;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+    }
+
+    .icon {
+      font-size: 45px;
+      margin-bottom: 15px;
+    }
+
+    .market-card h3 {
+      color: #008000;
+      margin-bottom: 12px;
+    }
+
+    .market-card p {
+      color: #555;
+      line-height: 1.7;
+    }
+
+    .value-chain {
+      background: white;
+    }
+
+    .chain {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 15px;
+      max-width: 1000px;
+      margin: 40px auto 0;
+    }
+
+    .chain-item {
+      background: #f1f8f1;
+      padding: 25px 15px;
+      text-align: center;
+      border-bottom: 5px solid #008000;
+      border-radius: 7px;
+    }
+
+    .chain-item h3 {
+      color: #008000;
+      margin-bottom: 8px;
+    }
+
+    .chain-item p {
+      color: #555;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .support {
+      max-width: 950px;
+      margin: 35px auto 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+
+    .support-box {
+      background: white;
+      padding: 25px;
+      border-left: 5px solid #008000;
+      border-radius: 5px;
+    }
+
+    .support-box h3 {
+      color: #008000;
+      margin-bottom: 10px;
+    }
+
+    .support-box p {
+      color: #555;
+      line-height: 1.7;
+    }
+
+    .notice {
+      max-width: 900px;
+      margin: 40px auto 0;
+      background: #fff;
+      border: 1px solid #ddd;
+      padding: 25px;
+      border-radius: 7px;
+      color: #555;
+      line-height: 1.7;
+    }
+
+    .notice strong {
+      color: #008000;
+    }
+
+    .cta {
+      background: #008000;
+      color: white;
+      text-align: center;
+    }
+
+    .cta .title {
+      color: white;
+    }
+
+    .cta p {
+      max-width: 850px;
+      margin: auto;
+      line-height: 1.8;
+      font-size: 17px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 25px;
+      background: white;
+      color: #008000;
+      padding: 12px 25px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    footer {
+      background: #004d00;
+      color: white;
+      text-align: center;
+      padding: 25px 15px;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 700px) {
+      .hero h2 {
+        font-size: 32px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+  <h1>Kogi State Ministry of Agriculture</h1>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="biography.html">Biography</a>
+    <a href="mission.html">Mission & Vision</a>
+    <a href="achievements.html">Achievements</a>
+    <a href="projects.html">Projects</a>
+    <a href="programs.html">Programs</a>
+    <a href="services.html">Services</a>
+    <a href="events.html">Events</a>
+    <a href="partners.html">Partners</a>
+    <a href="testimonials.html">Testimonials</a>
+    <a href="downloads.html">Downloads</a>
+    <a href="faq.html">FAQ</a>
+    <a href="leadership.html">Leadership</a>
+    <a href="departments.html">Departments</a>
+    <a href="press.html">Press Releases</a>
+    <a href="directory.html">Directory</a>
+    <a href="opportunities.html">Opportunities</a>
+    <a href="stakeholders.html">Stakeholders</a>
+    <a href="farmers.html">Farmers</a>
+    <a href="youth.html">Youth</a>
+    <a href="women.html">Women</a>
+    <a href="cooperatives.html">Cooperatives</a>
+    <a href="extension.html">Extension</a>
+    <a href="investment.html">Investment</a>
+    <a href="agriculture-data.html">Agriculture Data</a>
+    <a href="research.html">Research</a>
+    <a href="climate-smart.html">Climate-Smart</a>
+    <a href="food-security.html">Food Security</a>
+    <a href="markets.html">Markets</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="video.html">Videos</a>
+    <a href="news.html">News</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+  <h2>Agricultural Markets</h2>
+
+  <p>
+    Supporting stronger agricultural markets, value chains and opportunities
+    for farmers, processors, traders and other participants across Kogi State.
+  </p>
+
+</section>
+
+
+<!-- INTRO -->
+
+<section>
+
+  <h2 class="title">Connecting Farmers to Markets</h2>
+
+  <p class="intro">
+    Effective agricultural markets help farmers sell their products,
+    connect with buyers, improve value addition and participate more
+    effectively in agricultural value chains.
+  </p>
+
+  <div class="market-grid">
+
+    <div class="market-card">
+      <div class="icon">🌾</div>
+      <h3>Crop Markets</h3>
+      <p>
+        Supporting the marketing and distribution of agricultural crops
+        produced by farmers across the state.
+      </p>
+    </div>
+
+    <div class="market-card">
+      <div class="icon">🐄</div>
+      <h3>Livestock Markets</h3>
+      <p>
+        Supporting the livestock value chain and connections between
+        producers, traders and consumers.
+      </p>
+    </div>
+
+    <div class="market-card">
+      <div class="icon">🐟</div>
+      <h3>Fish Markets</h3>
+      <p>
+        Supporting the marketing and distribution of fish and other
+        aquaculture products.
+      </p>
+    </div>
+
+    <div class="market-card">
+      <div class="icon">🏭</div>
+      <h3>Processing</h3>
+      <p>
+        Encouraging agricultural processing and value addition to improve
+        the market potential of agricultural products.
+      </p>
+    </div>
+
+    <div class="market-card">
+      <div class="icon">🚚</div>
+      <h3>Distribution</h3>
+      <p>
+        Supporting efficient movement of agricultural products from farms
+        to markets and consumers.
+      </p>
+    </div>
+
+    <div class="market-card">
+      <div class="icon">🤝</div>
+      <h3>Market Partnerships</h3>
+      <p>
+        Encouraging partnerships among farmers, businesses, processors,
+        traders and development organizations.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- VALUE CHAIN -->
+
+<section class="value-chain">
+
+  <h2 class="title">Agricultural Value Chain</h2>
+
+  <p class="intro">
+    Agricultural products pass through several stages before reaching the
+    final consumer.
+  </p>
+
+  <div class="chain">
+
+    <div class="chain-item">
+      <h3>Production</h3>
+      <p>Farmers produce crops, livestock and fish.</p>
+    </div>
+
+    <div class="chain-item">
+      <h3>Aggregation</h3>
+      <p>Products are collected from individual producers.</p>
+    </div>
+
+    <div class="chain-item">
+      <h3>Processing</h3>
+      <p>Raw products can be processed and transformed.</p>
+    </div>
+
+    <div class="chain-item">
+      <h3>Transportation</h3>
+      <p>Products are moved between farms, markets and businesses.</p>
+    </div>
+
+    <div class="chain-item">
+      <h3>Marketing</h3>
+      <p>Products are promoted and connected with buyers.</p>
+    </div>
+
+    <div class="chain-item">
+      <h3>Consumers</h3>
+      <p>Finished products reach consumers and communities.</p>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- SUPPORT -->
+
+<section>
+
+  <h2 class="title">Market Development Support</h2>
+
+  <div class="support">
+
+    <div class="support-box">
+      <h3>Farmer Market Access</h3>
+      <p>
+        Supporting opportunities that can help farmers connect with
+        buyers and agricultural markets.
+      </p>
+    </div>
+
+    <div class="support-box">
+      <h3>Value Addition</h3>
+      <p>
+        Encouraging processing, packaging and other activities that can
+        increase the value of agricultural products.
+      </p>
+    </div>
+
+    <div class="support-box">
+      <h3>Market Information</h3>
+      <p>
+        Promoting access to useful information that can assist farmers
+        and businesses in making market decisions.
+      </p>
+    </div>
+
+    <div class="support-box">
+      <h3>Private Sector Participation</h3>
+      <p>
+        Encouraging private businesses and investors to participate in
+        agricultural value chains.
+      </p>
+    </div>
+
+    <div class="support-box">
+      <h3>Cooperative Marketing</h3>
+      <p>
+        Supporting farmer groups and cooperatives to strengthen collective
+        production and marketing activities.
+      </p>
+    </div>
+
+    <div class="support-box">
+      <h3>Market Infrastructure</h3>
+      <p>
+        Supporting improved infrastructure and systems that can facilitate
+        agricultural trade and distribution.
+      </p>
+    </div>
+
+  </div>
+
+
+  <div class="notice">
+
+    <strong>Market Information Notice:</strong>
+    Agricultural prices and market statistics should be updated with
+    verified and current information before publication. Unverified prices
+    should not be presented as official market prices.
+
+  </div>
+
+</section>
+
+
+<!-- CTA -->
+
+<section class="cta">
+
+  <h2 class="title">Strengthening Agricultural Markets</h2>
+
+  <p>
+    Strong agricultural markets can create opportunities for farmers,
+    businesses and communities while contributing to agricultural growth
+    and food security.
+  </p>
+
+  <a href="contact.html" class="btn">
+    Contact the Ministry
+  </a>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+  <p>
+    <strong>Kogi State Ministry of Agriculture</strong>
+  </p>
+
+  <p>
+    Official Website of the Commissioner of Agriculture and Food Security
+  </p>
+
+  <p>
+    © 2026 Kogi State Ministry of Agriculture.
+    All Rights Reserved.
+  </p>
+
+</footer>
+
+</body>
+</html>

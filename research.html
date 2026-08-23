@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Agricultural Research | Kogi State Ministry of Agriculture</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f5f5f5;
+      color: #222;
+    }
+
+    header {
+      background: #008000;
+      color: white;
+      text-align: center;
+      padding: 25px 6%;
+    }
+
+    header h1 {
+      margin-bottom: 8px;
+    }
+
+    header p {
+      margin-bottom: 18px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 8px 12px;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      background: white;
+      color: #008000;
+    }
+
+    .hero {
+      background: #006400;
+      color: white;
+      text-align: center;
+      padding: 75px 20px;
+    }
+
+    .hero h2 {
+      font-size: 42px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      max-width: 900px;
+      margin: auto;
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    section {
+      padding: 60px 7%;
+    }
+
+    .title {
+      text-align: center;
+      color: #008000;
+      font-size: 32px;
+      margin-bottom: 15px;
+    }
+
+    .intro {
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+      color: #555;
+      line-height: 1.8;
+    }
+
+    .research-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+      margin-top: 40px;
+    }
+
+    .research-card {
+      background: white;
+      padding: 30px 25px;
+      border-radius: 10px;
+      border-top: 5px solid #008000;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+    }
+
+    .icon {
+      font-size: 45px;
+      margin-bottom: 15px;
+    }
+
+    .research-card h3 {
+      color: #008000;
+      margin-bottom: 12px;
+    }
+
+    .research-card p {
+      color: #555;
+      line-height: 1.7;
+    }
+
+    .focus {
+      background: white;
+    }
+
+    .focus-list {
+      max-width: 950px;
+      margin: 40px auto 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .focus-box {
+      background: #f1f8f1;
+      padding: 25px;
+      border-left: 5px solid #008000;
+      border-radius: 6px;
+    }
+
+    .focus-box h3 {
+      color: #008000;
+      margin-bottom: 10px;
+    }
+
+    .focus-box p {
+      color: #555;
+      line-height: 1.7;
+    }
+
+    .process {
+      max-width: 900px;
+      margin: 40px auto 0;
+    }
+
+    .step {
+      background: white;
+      padding: 24px;
+      margin-bottom: 18px;
+      border-left: 5px solid #008000;
+      border-radius: 6px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    .step h3 {
+      color: #008000;
+      margin-bottom: 8px;
+    }
+
+    .step p {
+      color: #555;
+      line-height: 1.7;
+    }
+
+    .notice {
+      max-width: 900px;
+      margin: 40px auto 0;
+      padding: 25px;
+      background: #f1f8f1;
+      border: 2px solid #008000;
+      border-radius: 8px;
+      color: #555;
+      line-height: 1.8;
+    }
+
+    .notice strong {
+      color: #008000;
+    }
+
+    .cta {
+      background: #008000;
+      color: white;
+      text-align: center;
+    }
+
+    .cta h2 {
+      margin-bottom: 15px;
+    }
+
+    .cta p {
+      max-width: 850px;
+      margin: auto;
+      line-height: 1.8;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 25px;
+      background: white;
+      color: #008000;
+      padding: 12px 25px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    .btn:hover {
+      background: #f1f1f1;
+    }
+
+    footer {
+      background: #004d00;
+      color: white;
+      text-align: center;
+      padding: 25px 15px;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 700px) {
+      .hero h2 {
+        font-size: 31px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+
+  <h1>Kogi State Ministry of Agriculture and Food Security</h1>
+
+  <p>
+    Hon. Timothy Ojomah — Commissioner for Agriculture and Food Security
+  </p>
+
+  <nav>
+
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="biography.html">Biography</a>
+    <a href="mission.html">Mission & Vision</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="projects.html">Projects</a>
+    <a href="services.html">Services</a>
+    <a href="farmers.html">Farmers</a>
+    <a href="farmer-information.html">Farmer Information</a>
+    <a href="farmer-registration.html">Farmer Registration</a>
+    <a href="farmer-support.html">Farmer Support</a>
+    <a href="agricultural-loan.html">Agricultural Funding</a>
+    <a href="agricultural-education.html">Agricultural Education</a>
+    <a href="extension.html">Extension</a>
+    <a href="mechanization.html">Mechanization</a>
+    <a href="agriculture-data.html">Agriculture Data</a>
+    <a href="research.html">Research</a>
+    <a href="climate-smart.html">Climate-Smart</a>
+    <a href="food-security.html">Food Security</a>
+    <a href="markets.html">Markets</a>
+    <a href="irrigation.html">Irrigation</a>
+    <a href="inputs.html">Agricultural Inputs</a>
+    <a href="news.html">News</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="video.html">Video</a>
+    <a href="contact.html">Contact</a>
+
+  </nav>
+
+</header>
+
+
+<section class="hero">
+
+  <h2>Agricultural Research</h2>
+
+  <p>
+    Promoting agricultural research, knowledge and innovation to support
+    productive, sustainable and resilient agriculture across Kogi State.
+  </p>
+
+</section>
+
+
+<section>
+
+  <h2 class="title">Why Agricultural Research Matters</h2>
+
+  <p class="intro">
+    Agricultural research can help identify better farming practices,
+    improve productivity, address agricultural challenges and support
+    evidence-based decisions within the agricultural sector.
+  </p>
+
+
+  <div class="research-grid">
+
+    <div class="research-card">
+
+      <div class="icon">🌱</div>
+
+      <h3>Crop Research</h3>
+
+      <p>
+        Research can support improved crop production practices, crop
+        management and responsible use of agricultural resources.
+      </p>
+
+    </div>
+
+
+    <div class="research-card">
+
+      <div class="icon">🐄</div>
+
+      <h3>Livestock Research</h3>
+
+      <p>
+        Research can contribute to improved livestock management,
+        animal production and sustainable husbandry practices.
+      </p>
+
+    </div>
+
+
+    <div class="research-card">
+
+      <div class="icon">🌾</div>
+
+      <h3>Soil Research</h3>
+
+      <p>
+        Soil research can help improve understanding of soil conditions,
+        fertility management and sustainable agricultural practices.
+      </p>
+
+    </div>
+
+
+    <div class="research-card">
+
+      <div class="icon">💧</div>
+
+      <h3>Water & Irrigation</h3>
+
+      <p>
+        Research can support efficient water management and appropriate
+        irrigation practices for agricultural production.
+      </p>
+
+    </div>
+
+
+    <div class="research-card">
+
+      <div class="icon">🌦️</div>
+
+      <h3>Climate Research</h3>
+
+      <p>
+        Agricultural research can help farmers and planners understand
+        climate-related risks and opportunities.
+      </p>
+
+    </div>
+
+
+    <div class="research-card">
+
+      <div class="icon">🚜</div>
+
+      <h3>Farm Technology</h3>
+
+      <p>
+        Research and innovation can support the adoption of appropriate
+        agricultural technologies and mechanization.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="focus">
+
+  <h2 class="title">Research Focus Areas</h2>
+
+  <div class="focus-list">
+
+    <div class="focus-box">
+
+      <h3>Food Production</h3>
+
+      <p>
+        Supporting research that can contribute to improved food production
+        and agricultural productivity.
+      </p>
+
+    </div>
+
+
+    <div class="focus-box">
+
+      <h3>Food Security</h3>
+
+      <p>
+        Research can help identify practical approaches to strengthening
+        food availability and sustainable production.
+      </p>
+
+    </div>
+
+
+    <div class="focus-box">
+
+      <h3>Climate-Smart Agriculture</h3>
+
+      <p>
+        Research can contribute to farming practices that respond to
+        changing environmental and climatic conditions.
+      </p>
+
+    </div>
+
+
+    <div class="focus-box">
+
+      <h3>Post-Harvest Management</h3>
+
+      <p>
+        Research can help identify ways of reducing losses and improving
+        storage, handling and processing of agricultural products.
+      </p>
+
+    </div>
+
+
+    <div class="focus-box">
+
+      <h3>Agricultural Value Chains</h3>
+
+      <p>
+        Research can support better understanding of production,
+        processing, transportation, marketing and other value-chain activities.
+      </p>
+
+    </div>
+
+
+    <div class="focus-box">
+
+      <h3>Innovation</h3>
+
+      <p>
+        New ideas and technologies can be studied and assessed for their
+        suitability to local agricultural conditions.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section>
+
+  <h2 class="title">From Research to Farming Practice</h2>
+
+  <div class="process">
+
+    <div class="step">
+
+      <h3>1. Identify an Agricultural Challenge</h3>
+
+      <p>
+        Farmers, agricultural officers and researchers can identify
+        important challenges affecting agricultural production.
+      </p>
+
+    </div>
+
+
+    <div class="step">
+
+      <h3>2. Study the Challenge</h3>
+
+      <p>
+        Appropriate research and data collection can be used to better
+        understand the causes and possible solutions.
+      </p>
+
+    </div>
+
+
+    <div class="step">
+
+      <h3>3. Test Appropriate Solutions</h3>
+
+      <p>
+        Potential farming practices, technologies or approaches can be
+        evaluated under suitable conditions.
+      </p>
+
+    </div>
+
+
+    <div class="step">
+
+      <h3>4. Share Useful Findings</h3>
+
+      <p>
+        Relevant research findings can be communicated through extension
+        services, training, demonstrations and agricultural education.
+      </p>
+
+    </div>
+
+
+    <div class="step">
+
+      <h3>5. Apply Suitable Practices</h3>
+
+      <p>
+        Farmers can consider appropriate recommendations based on their
+        specific farming conditions and available resources.
+      </p>
+
+    </div>
+
+  </div>
+
+
+  <div class="notice">
+
+    <strong>Important Notice:</strong>
+
+    Agricultural research findings and recommendations should be properly
+    verified and interpreted by qualified professionals before being used
+    for major production, financial or policy decisions.
+
+  </div>
+
+</section>
+
+
+<section class="cta">
+
+  <h2>Agricultural Research and Innovation</h2>
+
+  <p>
+    Research, reliable agricultural information and innovation can help
+    strengthen farming, improve productivity and support the long-term
+    development of agriculture in Kogi State.
+  </p>
+
+  <a href="contact.html" class="btn">
+    Contact the Ministry
+  </a>
+
+</section>
+
+
+<footer>
+
+  <p>
+    <strong>Kogi State Ministry of Agriculture and Food Security</strong>
+  </p>
+
+  <p>
+    Office of the Honourable Commissioner, Hon. Timothy Ojomah
+  </p>
+
+  <p>
+    © 2026 Kogi State Ministry of Agriculture and Food Security.
+    All Rights Reserved.
+  </p>
+
+</footer>
+
+</body>
+</html>

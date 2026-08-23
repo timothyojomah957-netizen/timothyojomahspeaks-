@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Partnerships & Collaborations | Kogi State Ministry of Agriculture</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f5f5f5;
+      color: #222;
+    }
+
+    header {
+      background: #008000;
+      color: white;
+      text-align: center;
+      padding: 25px 6%;
+    }
+
+    header h1 {
+      margin-bottom: 15px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 8px 12px;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      background: white;
+      color: #008000;
+    }
+
+    .hero {
+      background: #006400;
+      color: white;
+      text-align: center;
+      padding: 75px 20px;
+    }
+
+    .hero h2 {
+      font-size: 42px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      max-width: 850px;
+      margin: auto;
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    section {
+      padding: 60px 7%;
+    }
+
+    .title {
+      text-align: center;
+      color: #008000;
+      font-size: 32px;
+      margin-bottom: 15px;
+    }
+
+    .intro {
+      max-width: 850px;
+      margin: auto;
+      text-align: center;
+      color: #555;
+      line-height: 1.8;
+    }
+
+    .partner-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+      margin-top: 40px;
+    }
+
+    .partner-card {
+      background: white;
+      padding: 30px 25px;
+      border-radius: 10px;
+      border-top: 5px solid #008000;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+      text-align: center;
+    }
+
+    .icon {
+      font-size: 45px;
+      margin-bottom: 15px;
+    }
+
+    .partner-card h3 {
+      color: #008000;
+      margin-bottom: 12px;
+    }
+
+    .partner-card p {
+      color: #555;
+      line-height: 1.7;
+    }
+
+    .benefits {
+      background: white;
+    }
+
+    .benefit-grid {
+      max-width: 1000px;
+      margin: 40px auto 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .benefit {
+      background: #f1f8f1;
+      padding: 25px;
+      border-left: 5px solid #008000;
+      border-radius: 6px;
+    }
+
+    .benefit h3 {
+      color: #008000;
+      margin-bottom: 10px;
+    }
+
+    .benefit p {
+      color: #555;
+      line-height: 1.7;
+    }
+
+    .process {
+      max-width: 900px;
+      margin: 40px auto 0;
+    }
+
+    .step {
+      display: flex;
+      gap: 20px;
+      background: white;
+      padding: 22px;
+      margin-bottom: 18px;
+      border-left: 5px solid #008000;
+      border-radius: 6px;
+    }
+
+    .number {
+      min-width: 42px;
+      height: 42px;
+      background: #008000;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
+
+    .step h3 {
+      color: #008000;
+      margin-bottom: 8px;
+    }
+
+    .step p {
+      color: #555;
+      line-height: 1.7;
+    }
+
+    .opportunity {
+      max-width: 900px;
+      margin: 40px auto 0;
+      padding: 30px;
+      background: #f1f8f1;
+      border: 2px solid #008000;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    .opportunity h3 {
+      color: #008000;
+      margin-bottom: 12px;
+    }
+
+    .opportunity p {
+      color: #555;
+      line-height: 1.8;
+    }
+
+    .cta {
+      background: #008000;
+      color: white;
+      text-align: center;
+    }
+
+    .cta h2 {
+      margin-bottom: 15px;
+    }
+
+    .cta p {
+      max-width: 850px;
+      margin: auto;
+      line-height: 1.8;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 25px;
+      background: white;
+      color: #008000;
+      padding: 12px 25px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    footer {
+      background: #004d00;
+      color: white;
+      text-align: center;
+      padding: 25px 15px;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 700px) {
+      .hero h2 {
+        font-size: 31px;
+      }
+
+      .step {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+
+  <h1>Kogi State Ministry of Agriculture</h1>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="biography.html">Biography</a>
+    <a href="mission.html">Mission & Vision</a>
+    <a href="achievements.html">Achievements</a>
+    <a href="projects.html">Projects</a>
+    <a href="services.html">Services</a>
+    <a href="farmers.html">Farmers</a>
+    <a href="women.html">Women</a>
+    <a href="cooperatives.html">Cooperatives</a>
+    <a href="investment.html">Investment</a>
+    <a href="publications.html">Publications</a>
+    <a href="calendar.html">Calendar</a>
+    <a href="agricultural-awards.html">Awards</a>
+    <a href="agricultural-emergency.html">Emergency</a>
+    <a href="training.html">Training</a>
+    <a href="procurement.html">Procurement</a>
+    <a href="partnerships.html">Partnerships</a>
+    <a href="news.html">News</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+</header>
+
+<section class="hero">
+
+  <h2>Partnerships & Collaborations</h2>
+
+  <p>
+    Building strong relationships with government institutions, private
+    organizations, development partners, farmers and communities to support
+    agricultural development in Kogi State.
+  </p>
+
+</section>
+
+<section>
+
+  <h2 class="title">Our Partnership Areas</h2>
+
+  <p class="intro">
+    Collaboration brings together knowledge, resources, experience and
+    opportunities to strengthen agricultural programmes and improve
+    outcomes for farmers and communities.
+  </p>
+
+  <div class="partner-grid">
+
+    <div class="partner-card">
+      <div class="icon">🏛️</div>
+      <h3>Government Institutions</h3>
+      <p>
+        Collaboration with relevant government institutions to coordinate
+        agricultural programmes, policies and development initiatives.
+      </p>
+    </div>
+
+    <div class="partner-card">
+      <div class="icon">🏢</div>
+      <h3>Private Sector</h3>
+      <p>
+        Partnerships with businesses and investors can support agricultural
+        value chains, technology, processing and market development.
+      </p>
+    </div>
+
+    <div class="partner-card">
+      <div class="icon">🌍</div>
+      <h3>Development Partners</h3>
+      <p>
+        Cooperation with development organizations can support agricultural
+        programmes, capacity building and community development.
+      </p>
+    </div>
+
+    <div class="partner-card">
+      <div class="icon">👨‍🌾</div>
+      <h3>Farmer Organizations</h3>
+      <p>
+        Working with farmer groups and associations helps ensure that
+        agricultural programmes respond to farmers' needs.
+      </p>
+    </div>
+
+    <div class="partner-card">
+      <div class="icon">🎓</div>
+      <h3>Research Institutions</h3>
+      <p>
+        Collaboration with research and educational institutions can support
+        innovation, knowledge sharing and agricultural research.
+      </p>
+    </div>
+
+    <div class="partner-card">
+      <div class="icon">🏘️</div>
+      <h3>Communities</h3>
+      <p>
+        Community participation helps strengthen local ownership and
+        sustainability of agricultural development initiatives.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+<section class="benefits">
+
+  <h2 class="title">Benefits of Collaboration</h2>
+
+  <div class="benefit-grid">
+
+    <div class="benefit">
+      <h3>Shared Knowledge</h3>
+      <p>
+        Partners can exchange experience, technical knowledge and useful
+        agricultural information.
+      </p>
+    </div>
+
+    <div class="benefit">
+      <h3>Resource Mobilization</h3>
+      <p>
+        Strategic partnerships can help mobilize resources for approved
+        agricultural programmes and projects.
+      </p>
+    </div>
+
+    <div class="benefit">
+      <h3>Innovation</h3>
+      <p>
+        Collaboration can encourage new ideas, technologies and approaches
+        to agricultural challenges.
+      </p>
+    </div>
+
+    <div class="benefit">
+      <h3>Market Opportunities</h3>
+      <p>
+        Partnerships can help strengthen connections between producers,
+        processors, businesses and markets.
+      </p>
+    </div>
+
+    <div class="benefit">
+      <h3>Capacity Building</h3>
+      <p>
+        Joint initiatives can provide training and skills development for
+        farmers and agricultural stakeholders.
+      </p>
+    </div>
+
+    <div class="benefit">
+      <h3>Community Development</h3>
+      <p>
+        Strong collaboration can contribute to sustainable agricultural
+        livelihoods and community development.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+<section>
+
+  <h2 class="title">How Partnerships Can Work</h2>
+
+  <div class="process">
+
+    <div class="step">
+
+      <div class="number">1</div>
+
+      <div>
+        <h3>Identify a Common Goal</h3>
+        <p>
+          Potential partners identify agricultural challenges or development
+          objectives that can benefit from collaboration.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="step">
+
+      <div class="number">2</div>
+
+      <div>
+        <h3>Engage Relevant Stakeholders</h3>
+        <p>
+          Appropriate institutions, organizations, businesses and community
+          representatives can be brought together for discussion.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="step">
+
+      <div class="number">3</div>
+
+      <div>
+        <h3>Develop a Partnership Framework</h3>
+        <p>
+          Where appropriate, partners can agree on responsibilities,
+          objectives, activities and expected outcomes.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="step">
+
+      <div class="number">4</div>
+
+      <div>
+        <h3>Implement Activities</h3>
+        <p>
+          Approved programmes and initiatives can then be implemented in
+          accordance with agreed arrangements.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="step">
+
+      <div class="number">5</div>
+
+      <div>
+        <h3>Monitor Results</h3>
+        <p>
+          Progress can be reviewed to determine whether partnership
+          objectives are being achieved effectively.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="opportunity">
+
+    <h3>Partnership Opportunities</h3>
+
+    <p>
+      Organizations interested in supporting agricultural development,
+      farmer empowerment, technology, value addition, research or community
+      initiatives may contact the Ministry through its official channels.
+    </p>
+
+  </div>
+
+</section>
+
+<section class="cta">
+
+  <h2>Let's Work Together</h2>
+
+  <p>
+    Strong partnerships can help create new opportunities and contribute to
+    sustainable agricultural development across Kogi State.
+  </p>
+
+  <a href="contact-office.html" class="btn">
+    Contact Our Office
+  </a>
+
+</section>
+
+<footer>
+
+  <p>
+    <strong>Kogi State Ministry of Agriculture</strong>
+  </p>
+
+  <p>
+    Official Website of the Commissioner of Agriculture and Food Security
+  </p>
+
+  <p>
+    © 2026 Kogi State Ministry of Agriculture.
+    All Rights Reserved.
+  </p>
+
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Agricultural Markets | Kogi State Ministry of Agriculture</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f5f5f5;
+      color: #222;
+    }
+
+    header {
+      background: #008000;
+      color: white;
+      text-align: center;
+      padding: 22px 6%;
+    }
+
+    header h1 {
+      margin-bottom: 8px;
+    }
+
+    header p {
+      margin-bottom: 15px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 8px 12px;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      background: white;
+      color: #008000;
+    }
+
+    .hero {
+      background: #006400;
+      color: white;
+      text-align: center;
+      padding: 75px 20px;
+    }
+
+    .hero h2 {
+      font-size: 42px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      max-width: 850px;
+      margin: auto;
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    section {
+      padding: 60px 7%;
+    }
+
+    .title {
+      text-align: center;
+      color: #008000;
+      font-size: 32px;
+      margin-bottom: 15px;
+    }
+
+    .intro {
+      max-width: 850px;
+      margin: auto;
+      text-align: center;
+      color: #555;
+      line-height: 1.8;
+    }
+
+    .market-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+      margin-top: 40px;
+    }
+
+    .card {
+      background: white;
+      padding: 30px 25px;
+      border-radius: 10px;
+      border-top: 5px solid #008000;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+    }
+
+    .icon {
+      font-size: 45px;
+      margin-bottom: 15px;
+    }
+
+    .card h3 {
+      color: #008000;
+      margin-bottom: 12px;
+    }
+
+    .card p {
+      color: #555;
+      line-height: 1.7;
+    }
+
+    .value-chain {
+      background: white;
+    }
+
+    .chain-list {
+      max-width: 900px;
+      margin: 35px auto 0;
+    }
+
+    .chain-item {
+      background: #f1f8f1;
+      padding: 23px;
+      margin-bottom: 18px;
+      border-left: 5px solid #008000;
+      border-radius: 5px;
+    }
+
+    .chain-item h3 {
+      color: #008000;
+      margin-bottom: 8px;
+    }
+
+    .chain-item p {
+      color: #555;
+      line-height: 1.7;
+    }
+
+    .tips {
+      max-width: 900px;
+      margin: 35px auto 0;
+    }
+
+    .tip {
+      background: white;
+      padding: 22px;
+      margin-bottom: 18px;
+      border-left: 5px solid #008000;
+      border-radius: 5px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    .tip h3 {
+      color: #008000;
+      margin-bottom: 8px;
+    }
+
+    .tip p {
+      color: #555;
+      line-height: 1.7;
+    }
+
+    .notice {
+      max-width: 900px;
+      margin: 35px auto 0;
+      background: #f1f8f1;
+      border: 2px solid #008000;
+      padding: 25px;
+      border-radius: 8px;
+      color: #555;
+      line-height: 1.8;
+    }
+
+    .notice strong {
+      color: #008000;
+    }
+
+    .cta {
+      background: #008000;
+      color: white;
+      text-align: center;
+    }
+
+    .cta h2 {
+      margin-bottom: 15px;
+    }
+
+    .cta p {
+      max-width: 850px;
+      margin: auto;
+      line-height: 1.8;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 25px;
+      background: white;
+      color: #008000;
+      padding: 12px 25px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    footer {
+      background: #004d00;
+      color: white;
+      text-align: center;
+      padding: 25px 15px;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 700px) {
+      .hero h2 {
+        font-size: 32px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+
+  <h1>Kogi State Ministry of Agriculture and Food Security</h1>
+
+  <p>
+    Hon. Timothy Ojomah — Commissioner for Agriculture and Food Security
+  </p>
+
+  <nav>
+
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="biography.html">Biography</a>
+    <a href="mission.html">Mission & Vision</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="projects.html">Projects</a>
+    <a href="services.html">Services</a>
+    <a href="farmers.html">Farmers</a>
+    <a href="farmer-information.html">Farmer Information</a>
+    <a href="farmer-registration.html">Farmer Registration</a>
+    <a href="farmer-support.html">Farmer Support</a>
+    <a href="agricultural-loan.html">Agricultural Funding</a>
+    <a href="agricultural-education.html">Agricultural Education</a>
+    <a href="extension.html">Extension</a>
+    <a href="investment.html">Investment</a>
+    <a href="agriculture-data.html">Agriculture Data</a>
+    <a href="research.html">Research</a>
+    <a href="climate-smart.html">Climate-Smart</a>
+    <a href="food-security.html">Food Security</a>
+
+    <a href="markets.html">Markets</a>
+
+    <a href="irrigation.html">Irrigation</a>
+    <a href="inputs.html">Agricultural Inputs</a>
+    <a href="mechanization.html">Mechanization</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="video.html">Videos</a>
+    <a href="news.html">News</a>
+    <a href="contact.html">Contact</a>
+
+  </nav>
+
+</header>
+
+
+<section class="hero">
+
+  <h2>Agricultural Markets</h2>
+
+  <p>
+    Supporting farmers with useful information about agricultural markets,
+    buyers, value chains, marketing opportunities and responsible trading.
+  </p>
+
+</section>
+
+
+<section>
+
+  <h2 class="title">Understanding Agricultural Markets</h2>
+
+  <p class="intro">
+    Agricultural markets connect farmers with consumers, traders,
+    processors and other businesses. Good market information can help
+    farmers make better production and marketing decisions.
+  </p>
+
+  <div class="market-grid">
+
+    <div class="card">
+      <div class="icon">🌾</div>
+      <h3>Crop Markets</h3>
+      <p>
+        Information about the marketing of crops such as rice, cassava,
+        maize, yam and other agricultural products.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🐄</div>
+      <h3>Livestock Markets</h3>
+      <p>
+        Agricultural markets also provide opportunities for farmers involved
+        in livestock production and related value-chain activities.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🐟</div>
+      <h3>Fisheries Markets</h3>
+      <p>
+        Fisheries and aquaculture products can reach consumers through
+        appropriate marketing and distribution channels.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🏪</div>
+      <h3>Local Markets</h3>
+      <p>
+        Local markets provide opportunities for farmers to sell agricultural
+        products to consumers, traders and businesses.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🚚</div>
+      <h3>Distribution</h3>
+      <p>
+        Efficient transportation, storage and distribution can help move
+        agricultural products from farms to markets.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🤝</div>
+      <h3>Buyer Connections</h3>
+      <p>
+        Strong relationships between farmers, buyers, processors and traders
+        can support agricultural value chains.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="value-chain">
+
+  <h2 class="title">Agricultural Value Chain</h2>
+
+  <div class="chain-list">
+
+    <div class="chain-item">
+      <h3>1. Production</h3>
+      <p>
+        Farmers produce crops, livestock, fish and other agricultural
+        products for consumption or further processing.
+      </p>
+    </div>
+
+    <div class="chain-item">
+      <h3>2. Storage</h3>
+      <p>
+        Appropriate storage can help protect agricultural products and
+        maintain their quality before sale.
+      </p>
+    </div>
+
+    <div class="chain-item">
+      <h3>3. Processing</h3>
+      <p>
+        Processing can add value to agricultural products and create
+        additional business opportunities.
+      </p>
+    </div>
+
+    <div class="chain-item">
+      <h3>4. Transportation</h3>
+      <p>
+        Reliable transportation helps agricultural products move from farms
+        and processing locations to markets.
+      </p>
+    </div>
+
+    <div class="chain-item">
+      <h3>5. Marketing</h3>
+      <p>
+        Farmers and agricultural businesses can identify suitable buyers
+        and markets for their products.
+      </p>
+    </div>
+
+    <div class="chain-item">
+      <h3>6. Consumers</h3>
+      <p>
+        Agricultural products ultimately reach consumers through different
+        market and distribution channels.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+
+<section>
+
+  <h2 class="title">Useful Marketing Tips for Farmers</h2>
+
+  <div class="tips">
+
+    <div class="tip">
+      <h3>Know Your Market</h3>
+      <p>
+        Farmers should understand the type of buyers interested in their
+        products and the requirements of their target market.
+      </p>
+    </div>
+
+    <div class="tip">
+      <h3>Compare Prices</h3>
+      <p>
+        Comparing available market information can help farmers make
+        informed decisions about where and when to sell.
+      </p>
+    </div>
+
+    <div class="tip">
+      <h3>Maintain Product Quality</h3>
+      <p>
+        Proper harvesting, handling, storage and transportation can help
+        preserve agricultural product quality.
+      </p>
+    </div>
+
+    <div class="tip">
+      <h3>Keep Records</h3>
+      <p>
+        Farmers should keep records of production costs, quantities sold,
+        buyers and sales revenue.
+      </p>
+    </div>
+
+    <div class="tip">
+      <h3>Work With Cooperatives</h3>
+      <p>
+        Farmer groups and cooperatives may help members improve bargaining,
+        marketing and access to buyers.
+      </p>
+    </div>
+
+  </div>
+
+
+  <div class="notice">
+
+    <strong>Important Notice:</strong>
+    Market prices can change according to location, season, supply, demand,
+    quality and other factors. Farmers should verify current prices and
+    buyer information before making important financial decisions.
+
+  </div>
+
+</section>
+
+
+<section class="cta">
+
+  <h2>Connecting Farmers With Markets</h2>
+
+  <p>
+    Strong agricultural markets can create opportunities for farmers,
+    processors, traders, investors and consumers across Kogi State.
+  </p>
+
+  <a href="contact.html" class="btn">
+    Contact the Ministry
+  </a>
+
+</section>
+
+
+<footer>
+
+  <p>
+    <strong>Kogi State Ministry of Agriculture and Food Security</strong>
+  </p>
+
+  <p>
+    Office of the Honourable Commissioner, Hon. Timothy Ojomah
+  </p>
+
+  <p>
+    © 2026 Kogi State Ministry of Agriculture and Food Security.
+    All Rights Reserved.
+  </p>
+
+</footer>
+
+</body>
+</html>

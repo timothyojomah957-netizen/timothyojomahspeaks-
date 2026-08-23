@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Food Security | Kogi State Ministry of Agriculture</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f5f5f5;
+      color: #222;
+    }
+
+    header {
+      background: #008000;
+      color: white;
+      text-align: center;
+      padding: 25px 6%;
+    }
+
+    header h1 {
+      margin-bottom: 8px;
+    }
+
+    header p {
+      margin-bottom: 18px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 8px 12px;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      background: white;
+      color: #008000;
+    }
+
+    .hero {
+      background: #006400;
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    .hero h2 {
+      font-size: 42px;
+      margin-bottom: 18px;
+    }
+
+    .hero p {
+      max-width: 900px;
+      margin: auto;
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    section {
+      padding: 60px 7%;
+    }
+
+    .title {
+      text-align: center;
+      color: #008000;
+      font-size: 32px;
+      margin-bottom: 18px;
+    }
+
+    .intro {
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+      color: #555;
+      line-height: 1.8;
+    }
+
+    .leadership {
+      background: white;
+    }
+
+    .leadership-box {
+      max-width: 950px;
+      margin: 40px auto 0;
+      background: #f1f8f1;
+      padding: 35px;
+      border-left: 6px solid #008000;
+      border-radius: 8px;
+    }
+
+    .leadership-box h3 {
+      color: #008000;
+      font-size: 25px;
+      margin-bottom: 15px;
+    }
+
+    .leadership-box p {
+      color: #555;
+      line-height: 1.9;
+    }
+
+    .security-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+      margin-top: 40px;
+    }
+
+    .card {
+      background: white;
+      padding: 30px 25px;
+      border-radius: 10px;
+      border-top: 5px solid #008000;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+    }
+
+    .icon {
+      font-size: 45px;
+      margin-bottom: 15px;
+    }
+
+    .card h3 {
+      color: #008000;
+      margin-bottom: 12px;
+    }
+
+    .card p {
+      color: #555;
+      line-height: 1.7;
+    }
+
+    .pillars {
+      background: white;
+    }
+
+    .pillar-list {
+      max-width: 950px;
+      margin: 40px auto 0;
+    }
+
+    .pillar {
+      display: flex;
+      gap: 20px;
+      background: #f1f8f1;
+      padding: 23px;
+      margin-bottom: 18px;
+      border-left: 5px solid #008000;
+      border-radius: 6px;
+    }
+
+    .number {
+      min-width: 42px;
+      height: 42px;
+      background: #008000;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+    }
+
+    .pillar h3 {
+      color: #008000;
+      margin-bottom: 8px;
+    }
+
+    .pillar p {
+      color: #555;
+      line-height: 1.7;
+    }
+
+    .food-value {
+      max-width: 1000px;
+      margin: 40px auto 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .value-box {
+      background: white;
+      padding: 25px;
+      text-align: center;
+      border-radius: 8px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+    }
+
+    .value-box h3 {
+      color: #008000;
+      margin-bottom: 10px;
+    }
+
+    .value-box p {
+      color: #555;
+      line-height: 1.6;
+    }
+
+    .vision {
+      max-width: 950px;
+      margin: 40px auto 0;
+      padding: 30px;
+      background: #f1f8f1;
+      border: 2px solid #008000;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    .vision h3 {
+      color: #008000;
+      margin-bottom: 12px;
+    }
+
+    .vision p {
+      color: #555;
+      line-height: 1.8;
+    }
+
+    .cta {
+      background: #008000;
+      color: white;
+      text-align: center;
+    }
+
+    .cta h2 {
+      margin-bottom: 15px;
+    }
+
+    .cta p {
+      max-width: 850px;
+      margin: auto;
+      line-height: 1.8;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 25px;
+      background: white;
+      color: #008000;
+      padding: 12px 25px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    footer {
+      background: #004d00;
+      color: white;
+      text-align: center;
+      padding: 25px 15px;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 700px) {
+      .hero h2 {
+        font-size: 31px;
+      }
+
+      .pillar {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+
+  <h1>Kogi State Ministry of Agriculture and Food Security</h1>
+
+  <p>
+    Hon. Timothy Ojomah — Commissioner for Agriculture and Food Security
+  </p>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="biography.html">Biography</a>
+    <a href="mission.html">Mission & Vision</a>
+    <a href="achievements.html">Achievements</a>
+    <a href="projects.html">Projects</a>
+    <a href="services.html">Services</a>
+    <a href="farmers.html">Farmers</a>
+    <a href="farmer-information.html">Farmer Information</a>
+    <a href="agricultural-education.html">Agricultural Education</a>
+    <a href="livestock-agriculture.html">Livestock</a>
+    <a href="fisheries-aquaculture.html">Fisheries</a>
+    <a href="food-security.html">Food Security</a>
+    <a href="women.html">Women</a>
+    <a href="cooperatives.html">Cooperatives</a>
+    <a href="investment.html">Investment</a>
+    <a href="training.html">Training</a>
+    <a href="procurement.html">Procurement</a>
+    <a href="partnerships.html">Partnerships</a>
+    <a href="agricultural-announcements.html">Announcements</a>
+    <a href="news.html">News</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+</header>
+
+<section class="hero">
+
+  <h2>Food Security</h2>
+
+  <p>
+    Building a stronger agricultural sector that supports food production,
+    farmer livelihoods, nutrition and sustainable food security across
+    Kogi State.
+  </p>
+
+</section>
+
+<section class="leadership">
+
+  <h2 class="title">Agriculture and Food Security</h2>
+
+  <p class="intro">
+    Food security depends on productive farmers, sustainable agricultural
+    practices, functioning markets, responsible resource management and
+    effective support across the food system.
+  </p>
+
+  <div class="leadership-box">
+
+    <h3>Leadership for Food Security</h3>
+
+    <p>
+      Under the leadership of Hon. Timothy Ojomah, Commissioner for
+      Agriculture and Food Security, the Ministry's agricultural development
+      agenda places food production, farmer empowerment and sustainable
+      agricultural development at the centre of its activities.
+    </p>
+
+    <br>
+
+    <p>
+      Strengthening crop production, livestock, fisheries, agricultural
+      education, value chains and farmer support can contribute to a more
+      resilient food system for communities across Kogi State.
+    </p>
+
+  </div>
+
+</section>
+
+<section>
+
+  <h2 class="title">Key Areas of Food Security</h2>
+
+  <p class="intro">
+    A strong food system requires action across production, storage,
+    processing, distribution and access to nutritious food.
+  </p>
+
+  <div class="security-grid">
+
+    <div class="card">
+      <div class="icon">🌾</div>
+      <h3>Food Production</h3>
+      <p>
+        Supporting farmers to increase responsible and sustainable production
+        of food crops and other agricultural products.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icon">👨‍🌾</div>
+      <h3>Farmer Empowerment</h3>
+      <p>
+        Improving access to agricultural knowledge, skills, opportunities and
+        relevant support for farmers.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🚜</div>
+      <h3>Modern Agriculture</h3>
+      <p>
+        Encouraging modern agricultural practices, technology and improved
+        production methods.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icon">📦</div>
+      <h3>Storage</h3>
+      <p>
+        Promoting appropriate storage and handling practices that can help
+        reduce food losses after harvest.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🏭</div>
+      <h3>Processing</h3>
+      <p>
+        Supporting agricultural processing and value addition to improve the
+        usefulness and marketability of farm products.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🛒</div>
+      <h3>Food Markets</h3>
+      <p>
+        Strengthening connections between farmers, traders, processors and
+        consumers within agricultural value chains.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+<section class="pillars">
+
+  <h2 class="title">Pillars of Food Security</h2>
+
+  <div class="pillar-list">
+
+    <div class="pillar">
+
+      <div class="number">1</div>
+
+      <div>
+        <h3>Availability</h3>
+        <p>
+          Supporting agricultural production so that sufficient food can be
+          produced and supplied to communities.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="pillar">
+
+      <div class="number">2</div>
+
+      <div>
+        <h3>Access</h3>
+        <p>
+          Supporting farmers, markets and economic opportunities that can
+          improve people's ability to access food.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="pillar">
+
+      <div class="number">3</div>
+
+      <div>
+        <h3>Utilization</h3>
+        <p>
+          Promoting awareness of safe food handling, nutrition and responsible
+          use of agricultural products.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="pillar">
+
+      <div class="number">4</div>
+
+      <div>
+        <h3>Stability</h3>
+        <p>
+          Building resilient agricultural systems capable of responding to
+          climate, market and other challenges.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section>
+
+  <h2 class="title">From Farm to Table</h2>
+
+  <p class="intro">
+    Food security requires cooperation across the entire agricultural value
+    chain.
+  </p>
+
+  <div class="food-value">
+
+    <div class="value-box">
+      <h3>🌱 Production</h3>
+      <p>
+        Farmers produce crops, livestock and fish for food and economic
+        activities.
+      </p>
+    </div>
+
+    <div class="value-box">
+      <h3>📦 Storage</h3>
+      <p>
+        Proper handling and storage help protect agricultural products after
+        harvest.
+      </p>
+    </div>
+
+    <div class="value-box">
+      <h3>🏭 Processing</h3>
+      <p>
+        Processing can improve shelf life, quality and value of agricultural
+        products.
+      </p>
+    </div>
+
+    <div class="value-box">
+      <h3>🚚 Distribution</h3>
+      <p>
+        Efficient movement of food products helps connect producers with
+        markets and consumers.
+      </p>
+    </div>
+
+    <div class="value-box">
+      <h3>🛒 Markets</h3>
+      <p>
+        Strong markets provide opportunities for farmers to sell their
+        products.
+      </p>
+    </div>
+
+    <div class="value-box">
+      <h3>🍲 Nutrition</h3>
+      <p>
+        Access to diverse and safe food supports healthy communities.
+      </p>
+    </div>
+
+  </div>
+
+  <div class="vision">
+
+    <h3>Our Food Security Vision</h3>
+
+    <p>
+      To contribute to a Kogi State where farmers are productive, agricultural
+      value chains are strengthened, food losses are reduced and communities
+      have improved access to safe and nutritious food.
+    </p>
+
+  </div>
+
+</section>
+
+<section class="cta">
+
+  <h2>Working Towards Food Security</h2>
+
+  <p>
+    Strong agriculture requires the participation of farmers, communities,
+    businesses, development partners and government institutions.
+  </p>
+
+  <a href="farmer-information.html" class="btn">
+    Farmer Information
+  </a>
+
+</section>
+
+<footer>
+
+  <p>
+    <strong>Kogi State Ministry of Agriculture and Food Security</strong>
+  </p>
+
+  <p>
+    Office of the Honourable Commissioner, Hon. Timothy Ojomah
+  </p>
+
+  <p>
+    © 2026 Kogi State Ministry of Agriculture and Food Security.
+    All Rights Reserved.
+  </p>
+
+</footer>
+
+</body>
+</html>

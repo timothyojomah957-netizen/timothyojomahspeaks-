@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Climate-Smart Agriculture | Kogi State Ministry of Agriculture</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f5f5f5;
+      color: #222;
+    }
+
+    header {
+      background: #008000;
+      color: white;
+      text-align: center;
+      padding: 25px 6%;
+    }
+
+    header h1 {
+      margin-bottom: 8px;
+    }
+
+    header p {
+      margin-bottom: 18px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 8px 12px;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      background: white;
+      color: #008000;
+    }
+
+    .hero {
+      background: #006400;
+      color: white;
+      text-align: center;
+      padding: 75px 20px;
+    }
+
+    .hero h2 {
+      font-size: 42px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      max-width: 900px;
+      margin: auto;
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    section {
+      padding: 60px 7%;
+    }
+
+    .title {
+      text-align: center;
+      color: #008000;
+      font-size: 32px;
+      margin-bottom: 15px;
+    }
+
+    .intro {
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+      color: #555;
+      line-height: 1.8;
+    }
+
+    .smart-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+      margin-top: 40px;
+    }
+
+    .smart-card {
+      background: white;
+      padding: 30px 25px;
+      border-radius: 10px;
+      border-top: 5px solid #008000;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+    }
+
+    .icon {
+      font-size: 45px;
+      margin-bottom: 15px;
+    }
+
+    .smart-card h3 {
+      color: #008000;
+      margin-bottom: 12px;
+    }
+
+    .smart-card p {
+      color: #555;
+      line-height: 1.7;
+    }
+
+    .practices {
+      background: white;
+    }
+
+    .practice-list {
+      max-width: 950px;
+      margin: 40px auto 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .practice {
+      background: #f1f8f1;
+      padding: 25px;
+      border-left: 5px solid #008000;
+      border-radius: 6px;
+    }
+
+    .practice h3 {
+      color: #008000;
+      margin-bottom: 10px;
+    }
+
+    .practice p {
+      color: #555;
+      line-height: 1.7;
+    }
+
+    .benefits {
+      max-width: 900px;
+      margin: 40px auto 0;
+    }
+
+    .benefit {
+      background: white;
+      padding: 24px;
+      margin-bottom: 18px;
+      border-left: 5px solid #008000;
+      border-radius: 6px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    .benefit h3 {
+      color: #008000;
+      margin-bottom: 8px;
+    }
+
+    .benefit p {
+      color: #555;
+      line-height: 1.7;
+    }
+
+    .notice {
+      max-width: 900px;
+      margin: 40px auto 0;
+      background: #f1f8f1;
+      border: 2px solid #008000;
+      padding: 25px;
+      border-radius: 8px;
+      color: #555;
+      line-height: 1.8;
+    }
+
+    .notice strong {
+      color: #008000;
+    }
+
+    .cta {
+      background: #008000;
+      color: white;
+      text-align: center;
+    }
+
+    .cta h2 {
+      margin-bottom: 15px;
+    }
+
+    .cta p {
+      max-width: 850px;
+      margin: auto;
+      line-height: 1.8;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 25px;
+      background: white;
+      color: #008000;
+      padding: 12px 25px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    footer {
+      background: #004d00;
+      color: white;
+      text-align: center;
+      padding: 25px 15px;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 700px) {
+      .hero h2 {
+        font-size: 31px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+
+  <h1>Kogi State Ministry of Agriculture and Food Security</h1>
+
+  <p>
+    Hon. Timothy Ojomah — Commissioner for Agriculture and Food Security
+  </p>
+
+  <nav>
+
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="biography.html">Biography</a>
+    <a href="mission.html">Mission & Vision</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="projects.html">Projects</a>
+    <a href="services.html">Services</a>
+    <a href="farmers.html">Farmers</a>
+    <a href="farmer-information.html">Farmer Information</a>
+    <a href="farmer-registration.html">Farmer Registration</a>
+    <a href="farmer-support.html">Farmer Support</a>
+    <a href="agricultural-loan.html">Agricultural Funding</a>
+    <a href="agricultural-education.html">Agricultural Education</a>
+    <a href="extension.html">Extension</a>
+    <a href="mechanization.html">Mechanization</a>
+    <a href="agriculture-data.html">Agriculture Data</a>
+    <a href="research.html">Research</a>
+    <a href="climate-smart.html">Climate-Smart</a>
+    <a href="food-security.html">Food Security</a>
+    <a href="markets.html">Markets</a>
+    <a href="irrigation.html">Irrigation</a>
+    <a href="inputs.html">Agricultural Inputs</a>
+    <a href="news.html">News</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="video.html">Video</a>
+    <a href="contact.html">Contact</a>
+
+  </nav>
+
+</header>
+
+
+<section class="hero">
+
+  <h2>Climate-Smart Agriculture</h2>
+
+  <p>
+    Promoting farming practices that help farmers manage climate-related
+    challenges, protect agricultural resources and build resilient
+    production systems.
+  </p>
+
+</section>
+
+
+<section>
+
+  <h2 class="title">What Is Climate-Smart Agriculture?</h2>
+
+  <p class="intro">
+    Climate-smart agriculture focuses on practical approaches that can help
+    farmers maintain or improve agricultural productivity while managing
+    climate-related risks and protecting natural resources.
+  </p>
+
+  <div class="smart-grid">
+
+    <div class="smart-card">
+
+      <div class="icon">🌦️</div>
+
+      <h3>Climate Information</h3>
+
+      <p>
+        Farmers can use reliable weather and climate information to support
+        decisions about planting, farm management and harvesting.
+      </p>
+
+    </div>
+
+
+    <div class="smart-card">
+
+      <div class="icon">🌱</div>
+
+      <h3>Healthy Soils</h3>
+
+      <p>
+        Good soil management can help maintain soil productivity and improve
+        the ability of farms to withstand environmental pressures.
+      </p>
+
+    </div>
+
+
+    <div class="smart-card">
+
+      <div class="icon">💧</div>
+
+      <h3>Water Management</h3>
+
+      <p>
+        Efficient use and management of water can help farmers respond to
+        periods of water shortage and changing rainfall patterns.
+      </p>
+
+    </div>
+
+
+    <div class="smart-card">
+
+      <div class="icon">🌾</div>
+
+      <h3>Resilient Crops</h3>
+
+      <p>
+        Farmers can consider suitable crop varieties and production
+        practices that are appropriate for local conditions.
+      </p>
+
+    </div>
+
+
+    <div class="smart-card">
+
+      <div class="icon">🌳</div>
+
+      <h3>Environmental Protection</h3>
+
+      <p>
+        Responsible management of land, vegetation, soil and water can
+        support sustainable agricultural production.
+      </p>
+
+    </div>
+
+
+    <div class="smart-card">
+
+      <div class="icon">🚜</div>
+
+      <h3>Efficient Technology</h3>
+
+      <p>
+        Appropriate technologies and improved farming methods can help
+        farmers use available resources more efficiently.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="practices">
+
+  <h2 class="title">Climate-Smart Farming Practices</h2>
+
+  <div class="practice-list">
+
+    <div class="practice">
+
+      <h3>Crop Rotation</h3>
+
+      <p>
+        Rotating suitable crops can support soil management and help reduce
+        some production risks.
+      </p>
+
+    </div>
+
+
+    <div class="practice">
+
+      <h3>Mulching</h3>
+
+      <p>
+        Appropriate mulching can help conserve soil moisture and protect
+        soil from erosion.
+      </p>
+
+    </div>
+
+
+    <div class="practice">
+
+      <h3>Water Conservation</h3>
+
+      <p>
+        Efficient water-use practices can help farmers manage available
+        water resources responsibly.
+      </p>
+
+    </div>
+
+
+    <div class="practice">
+
+      <h3>Agroforestry</h3>
+
+      <p>
+        Appropriate integration of trees with farming systems can contribute
+        to soil protection and sustainable land management.
+      </p>
+
+    </div>
+
+
+    <div class="practice">
+
+      <h3>Soil Conservation</h3>
+
+      <p>
+        Practices that reduce erosion and maintain soil quality can support
+        long-term agricultural productivity.
+      </p>
+
+    </div>
+
+
+    <div class="practice">
+
+      <h3>Improved Farm Planning</h3>
+
+      <p>
+        Farmers can use available climate and agricultural information when
+        planning seasonal farm activities.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section>
+
+  <h2 class="title">Benefits to Farmers</h2>
+
+  <div class="benefits">
+
+    <div class="benefit">
+
+      <h3>Better Risk Management</h3>
+
+      <p>
+        Climate-smart practices can help farmers prepare for weather-related
+        challenges and reduce avoidable production risks.
+      </p>
+
+    </div>
+
+
+    <div class="benefit">
+
+      <h3>Improved Resource Management</h3>
+
+      <p>
+        Responsible use of soil, water and other farm resources can support
+        sustainable production.
+      </p>
+
+    </div>
+
+
+    <div class="benefit">
+
+      <h3>Farm Resilience</h3>
+
+      <p>
+        Appropriate farming practices can help agricultural systems become
+        more resilient to changing environmental conditions.
+      </p>
+
+    </div>
+
+
+    <div class="benefit">
+
+      <h3>Sustainable Production</h3>
+
+      <p>
+        Climate-smart agriculture encourages farming approaches that
+        consider both current production and future agricultural needs.
+      </p>
+
+    </div>
+
+  </div>
+
+
+  <div class="notice">
+
+    <strong>Important Notice:</strong>
+
+    Farmers should seek advice from qualified agricultural extension
+    personnel when selecting climate-smart practices. The most suitable
+    approach may differ depending on location, soil, crop, water availability
+    and other local conditions.
+
+  </div>
+
+</section>
+
+
+<section class="cta">
+
+  <h2>Building Climate-Resilient Agriculture</h2>
+
+  <p>
+    Climate-smart agriculture can help strengthen the resilience of farmers
+    and agricultural communities while supporting sustainable food
+    production in Kogi State.
+  </p>
+
+  <a href="contact.html" class="btn">
+    Contact the Ministry
+  </a>
+
+</section>
+
+
+<footer>
+
+  <p>
+    <strong>Kogi State Ministry of Agriculture and Food Security</strong>
+  </p>
+
+  <p>
+    Office of the Honourable Commissioner, Hon. Timothy Ojomah
+  </p>
+
+  <p>
+    © 2026 Kogi State Ministry of Agriculture and Food Security.
+    All Rights Reserved.
+  </p>
+
+</footer>
+
+</body>
+</html>

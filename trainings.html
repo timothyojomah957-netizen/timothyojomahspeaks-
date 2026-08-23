@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Agricultural Training | Kogi State Ministry of Agriculture</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f5f5f5;
+      color: #222;
+    }
+
+    header {
+      background: #008000;
+      color: white;
+      text-align: center;
+      padding: 25px 6%;
+    }
+
+    header h1 {
+      margin-bottom: 15px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 8px 12px;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      background: white;
+      color: #008000;
+    }
+
+    .hero {
+      background: #006400;
+      color: white;
+      text-align: center;
+      padding: 75px 20px;
+    }
+
+    .hero h2 {
+      font-size: 42px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      max-width: 850px;
+      margin: auto;
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    section {
+      padding: 60px 7%;
+    }
+
+    .title {
+      text-align: center;
+      color: #008000;
+      font-size: 32px;
+      margin-bottom: 15px;
+    }
+
+    .intro {
+      max-width: 850px;
+      margin: auto;
+      text-align: center;
+      color: #555;
+      line-height: 1.8;
+    }
+
+    .training-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+      margin-top: 40px;
+    }
+
+    .training-card {
+      background: white;
+      padding: 30px 25px;
+      border-radius: 10px;
+      border-top: 5px solid #008000;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+    }
+
+    .icon {
+      font-size: 45px;
+      margin-bottom: 15px;
+    }
+
+    .training-card h3 {
+      color: #008000;
+      margin-bottom: 12px;
+    }
+
+    .training-card p {
+      color: #555;
+      line-height: 1.7;
+    }
+
+    .training-card ul {
+      margin-top: 15px;
+      padding-left: 20px;
+      color: #555;
+      line-height: 1.8;
+    }
+
+    .audience {
+      background: white;
+    }
+
+    .audience-grid {
+      max-width: 1000px;
+      margin: 40px auto 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .audience-card {
+      background: #f1f8f1;
+      padding: 25px;
+      text-align: center;
+      border-radius: 8px;
+    }
+
+    .audience-card h3 {
+      color: #008000;
+      margin-bottom: 10px;
+    }
+
+    .audience-card p {
+      color: #555;
+      line-height: 1.6;
+    }
+
+    .process {
+      max-width: 900px;
+      margin: 40px auto 0;
+    }
+
+    .step {
+      background: white;
+      padding: 22px;
+      margin-bottom: 18px;
+      border-left: 5px solid #008000;
+      border-radius: 5px;
+      box-shadow: 0 2px 7px rgba(0,0,0,0.05);
+    }
+
+    .step h3 {
+      color: #008000;
+      margin-bottom: 8px;
+    }
+
+    .step p {
+      color: #555;
+      line-height: 1.7;
+    }
+
+    .notice {
+      max-width: 850px;
+      margin: 35px auto 0;
+      background: #f1f8f1;
+      padding: 25px;
+      border: 2px solid #008000;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    .notice h3 {
+      color: #008000;
+      margin-bottom: 10px;
+    }
+
+    .notice p {
+      color: #555;
+      line-height: 1.7;
+    }
+
+    .cta {
+      background: #008000;
+      color: white;
+      text-align: center;
+    }
+
+    .cta h2 {
+      margin-bottom: 15px;
+    }
+
+    .cta p {
+      max-width: 850px;
+      margin: auto;
+      line-height: 1.8;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 25px;
+      background: white;
+      color: #008000;
+      padding: 12px 25px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    footer {
+      background: #004d00;
+      color: white;
+      text-align: center;
+      padding: 25px 15px;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 700px) {
+      .hero h2 {
+        font-size: 32px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+
+  <h1>Kogi State Ministry of Agriculture</h1>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="biography.html">Biography</a>
+    <a href="mission.html">Mission & Vision</a>
+    <a href="achievements.html">Achievements</a>
+    <a href="projects.html">Projects</a>
+    <a href="services.html">Services</a>
+    <a href="farmers.html">Farmers</a>
+    <a href="women.html">Women</a>
+    <a href="cooperatives.html">Cooperatives</a>
+    <a href="investment.html">Investment</a>
+    <a href="publications.html">Publications</a>
+    <a href="calendar.html">Calendar</a>
+    <a href="agricultural-awards.html">Awards</a>
+    <a href="agricultural-emergency.html">Emergency</a>
+    <a href="news.html">News</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+</header>
+
+<section class="hero">
+
+  <h2>Agricultural Training & Capacity Building</h2>
+
+  <p>
+    Building the knowledge, skills and capacity of farmers, young people,
+    women, cooperatives and agricultural stakeholders across Kogi State.
+  </p>
+
+</section>
+
+<section>
+
+  <h2 class="title">Training Areas</h2>
+
+  <p class="intro">
+    Agricultural training helps farmers and stakeholders improve production,
+    management, processing, marketing and other activities across the
+    agricultural value chain.
+  </p>
+
+  <div class="training-grid">
+
+    <div class="training-card">
+      <div class="icon">🌱</div>
+      <h3>Crop Production</h3>
+      <p>
+        Training on improved farming practices and responsible crop
+        production.
+      </p>
+      <ul>
+        <li>Land preparation</li>
+        <li>Planting practices</li>
+        <li>Crop management</li>
+        <li>Harvesting</li>
+      </ul>
+    </div>
+
+    <div class="training-card">
+      <div class="icon">🐄</div>
+      <h3>Livestock Management</h3>
+      <p>
+        Capacity building for farmers involved in livestock production.
+      </p>
+      <ul>
+        <li>Animal management</li>
+        <li>Feeding practices</li>
+        <li>Animal health awareness</li>
+        <li>Farm hygiene</li>
+      </ul>
+    </div>
+
+    <div class="training-card">
+      <div class="icon">🏭</div>
+      <h3>Processing & Value Addition</h3>
+      <p>
+        Training designed to help stakeholders improve the handling and
+        processing of agricultural products.
+      </p>
+      <ul>
+        <li>Processing</li>
+        <li>Packaging</li>
+        <li>Storage</li>
+        <li>Quality improvement</li>
+      </ul>
+    </div>
+
+    <div class="training-card">
+      <div class="icon">💼</div>
+      <h3>Agribusiness</h3>
+      <p>
+        Practical knowledge for individuals and groups interested in
+        agricultural businesses.
+      </p>
+      <ul>
+        <li>Business planning</li>
+        <li>Record keeping</li>
+        <li>Market planning</li>
+        <li>Financial awareness</li>
+      </ul>
+    </div>
+
+    <div class="training-card">
+      <div class="icon">📱</div>
+      <h3>Agricultural Technology</h3>
+      <p>
+        Promoting awareness of appropriate technologies that can support
+        modern agricultural activities.
+      </p>
+      <ul>
+        <li>Farm technology</li>
+        <li>Digital information</li>
+        <li>Modern techniques</li>
+        <li>Information sharing</li>
+      </ul>
+    </div>
+
+    <div class="training-card">
+      <div class="icon">🌍</div>
+      <h3>Sustainable Agriculture</h3>
+      <p>
+        Encouraging farming approaches that support long-term productivity
+        and responsible resource use.
+      </p>
+      <ul>
+        <li>Soil management</li>
+        <li>Resource conservation</li>
+        <li>Environmental awareness</li>
+        <li>Climate-smart practices</li>
+      </ul>
+    </div>
+
+  </div>
+
+</section>
+
+<section class="audience">
+
+  <h2 class="title">Who Can Benefit?</h2>
+
+  <div class="audience-grid">
+
+    <div class="audience-card">
+      <h3>Farmers</h3>
+      <p>
+        Practical knowledge to improve agricultural production.
+      </p>
+    </div>
+
+    <div class="audience-card">
+      <h3>Youth</h3>
+      <p>
+        Skills and knowledge for participation in agriculture and agribusiness.
+      </p>
+    </div>
+
+    <div class="audience-card">
+      <h3>Women</h3>
+      <p>
+        Capacity building for women participating in agricultural activities.
+      </p>
+    </div>
+
+    <div class="audience-card">
+      <h3>Cooperatives</h3>
+      <p>
+        Training that can strengthen group organization and productivity.
+      </p>
+    </div>
+
+    <div class="audience-card">
+      <h3>Agribusinesses</h3>
+      <p>
+        Knowledge to improve agricultural business activities and value chains.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+<section>
+
+  <h2 class="title">How Training Can Work</h2>
+
+  <div class="process">
+
+    <div class="step">
+      <h3>1. Identify Training Needs</h3>
+      <p>
+        Agricultural training should respond to the needs and challenges
+        experienced by farmers and stakeholders.
+      </p>
+    </div>
+
+    <div class="step">
+      <h3>2. Select Appropriate Topics</h3>
+      <p>
+        Training topics can be selected according to farming activities,
+        agricultural value chains and local requirements.
+      </p>
+    </div>
+
+    <div class="step">
+      <h3>3. Practical Learning</h3>
+      <p>
+        Practical demonstrations and field-based learning can help
+        participants understand agricultural techniques.
+      </p>
+    </div>
+
+    <div class="step">
+      <h3>4. Follow-Up Support</h3>
+      <p>
+        Continued communication and agricultural extension support can help
+        participants apply what they have learned.
+      </p>
+    </div>
+
+  </div>
+
+  <div class="notice">
+
+    <h3>Training Information</h3>
+
+    <p>
+      Details of specific training programmes, dates, venues and registration
+      requirements should be confirmed through official Ministry channels.
+    </p>
+
+  </div>
+
+</section>
+
+<section class="cta">
+
+  <h2>Interested in Agricultural Training?</h2>
+
+  <p>
+    Contact the Kogi State Ministry of Agriculture for information about
+    available agricultural training and capacity-building programmes.
+  </p>
+
+  <a href="contact-office.html" class="btn">
+    Contact Our Office
+  </a>
+
+</section>
+
+<footer>
+
+  <p>
+    <strong>Kogi State Ministry of Agriculture</strong>
+  </p>
+
+  <p>
+    Official Website of the Commissioner of Agriculture and Food Security
+  </p>
+
+  <p>
+    © 2026 Kogi State Ministry of Agriculture.
+    All Rights Reserved.
+  </p>
+
+</footer>
+
+</body>
+</html>
