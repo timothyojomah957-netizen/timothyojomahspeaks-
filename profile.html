@@ -21,10 +21,10 @@
     }
 
     header {
-      background: #006b35;
+      background: #008000;
       color: white;
+      padding: 25px 15px;
       text-align: center;
-      padding: 30px 15px;
     }
 
     header h1 {
@@ -37,97 +37,108 @@
     }
 
     .container {
-      width: 95%;
+      width: 94%;
       max-width: 1000px;
-      margin: 30px auto;
+      margin: 35px auto;
     }
 
-    .top-button {
-      margin-bottom: 20px;
-    }
-
-    .button {
+    .back {
       display: inline-block;
-      background: #006b35;
+      background: #008000;
       color: white;
       text-decoration: none;
-      padding: 12px 18px;
+      padding: 11px 18px;
       border-radius: 6px;
+      margin-bottom: 25px;
       font-weight: bold;
     }
 
-    .button:hover {
-      background: #004d26;
+    .back:hover {
+      background: #005c00;
     }
 
     .profile-card {
       background: white;
-      padding: 30px;
       border-radius: 12px;
+      padding: 30px;
       box-shadow: 0 3px 15px rgba(0,0,0,0.10);
     }
 
-    .profile-photo {
+    .profile-image {
       text-align: center;
-      margin-bottom: 25px;
+      margin-bottom: 30px;
     }
 
-    .profile-photo img {
-      width: 220px;
-      height: 260px;
+    .profile-image img {
+      width: 100%;
+      max-width: 500px;
+      max-height: 550px;
       object-fit: cover;
-      border-radius: 10px;
-      border: 5px solid #006b35;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.18);
     }
 
-    .photo-placeholder {
-      width: 220px;
-      height: 260px;
-      margin: auto;
-      background: #e9f3ec;
-      border: 3px dashed #006b35;
-      border-radius: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    .name {
       text-align: center;
-      color: #006b35;
-      font-weight: bold;
-      padding: 20px;
+      color: #008000;
+      font-size: 30px;
+      margin-bottom: 8px;
     }
 
-    .profile-card h2 {
-      color: #006b35;
-      margin-top: 25px;
-      margin-bottom: 12px;
+    .position {
+      text-align: center;
+      font-size: 18px;
+      font-weight: bold;
+      color: #555;
+      margin-bottom: 30px;
+    }
+
+    .section {
+      margin-top: 30px;
+    }
+
+    .section h2 {
+      color: #008000;
       font-size: 24px;
+      margin-bottom: 12px;
+      border-bottom: 2px solid #008000;
+      padding-bottom: 7px;
     }
 
-    .profile-card p {
+    .section p {
+      color: #444;
       margin-bottom: 15px;
-      font-size: 16px;
     }
 
-    .intro {
-      font-size: 18px !important;
-      font-weight: bold;
+    .highlights {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      margin-top: 25px;
     }
 
     .highlight {
-      background: #eef7f0;
-      border-left: 5px solid #006b35;
-      padding: 18px;
-      margin: 25px 0;
-      border-radius: 5px;
+      background: #f5faf5;
+      padding: 22px;
+      border-left: 5px solid #008000;
+      border-radius: 7px;
+    }
+
+    .highlight h3 {
+      color: #008000;
+      margin-bottom: 8px;
     }
 
     footer {
       margin-top: 40px;
-      background: #006b35;
+      background: #004d00;
       color: white;
       text-align: center;
-      padding: 20px;
-      font-size: 14px;
+      padding: 25px 15px;
+    }
+
+    footer p {
+      margin: 5px 0;
     }
 
     @media (max-width: 600px) {
@@ -140,12 +151,16 @@
         padding: 20px;
       }
 
-      .profile-card h2 {
-        font-size: 21px;
+      .name {
+        font-size: 24px;
       }
 
-      .profile-card p {
-        font-size: 15px;
+      .position {
+        font-size: 16px;
+      }
+
+      .section h2 {
+        font-size: 21px;
       }
 
     }
@@ -154,198 +169,134 @@
 
 <body>
 
-<header>
+  <header>
+    <h1>Profile</h1>
+    <p>Kogi State Ministry of Agriculture</p>
+  </header>
 
-  <h1>Hon. Timothy Ojomah</h1>
+  <div class="container">
 
-  <p>
-    Commissioner for Agriculture and Food Security, Kogi State
-  </p>
-
-</header>
-
-
-<div class="container">
-
-  <div class="top-button">
-
-    <a
-      href="index.html"
-      class="button"
-    >
+    <a href="index.html" class="back">
       ← Back to Home
     </a>
 
-  </div>
+    <div class="profile-card">
 
+      <div class="profile-image">
+        <img
+          src="https://i.ibb.co/QvR2mBTc/IMG-20260814-WA0168.jpg"
+          alt="Hon. Timothy Ojomah"
+        >
+      </div>
 
-  <div class="profile-card">
+      <h1 class="name">
+        Hon. Timothy Ojomah
+      </h1>
 
-    <div class="profile-photo">
+      <p class="position">
+        Commissioner of Agriculture and Food Security, Kogi State
+      </p>
 
-      <div class="photo-placeholder">
+      <div class="section">
 
-        Hon. Timothy Ojomah<br>
-        Commissioner for Agriculture<br>
-        and Food Security
+        <h2>
+          About the Commissioner
+        </h2>
+
+        <p>
+          Hon. Timothy Ojomah is the Commissioner of Agriculture and Food
+          Security in Kogi State. He is committed to the advancement of
+          agriculture, farmer empowerment and food security across the state.
+        </p>
+
+        <p>
+          His work focuses on strengthening agricultural development,
+          supporting farmers, encouraging youth participation in agriculture
+          and promoting initiatives that contribute to sustainable food
+          production.
+        </p>
+
+      </div>
+
+      <div class="section">
+
+        <h2>
+          Vision and Commitment
+        </h2>
+
+        <p>
+          His vision is to contribute to a stronger and more productive
+          agricultural sector in Kogi State by supporting farmers, promoting
+          modern agricultural practices and creating opportunities within the
+          agricultural value chain.
+        </p>
+
+      </div>
+
+      <div class="section">
+
+        <h2>
+          Key Areas of Focus
+        </h2>
+
+        <div class="highlights">
+
+          <div class="highlight">
+            <h3>Farmer Empowerment</h3>
+            <p>
+              Supporting farmers with opportunities, knowledge and resources
+              to improve agricultural productivity.
+            </p>
+          </div>
+
+          <div class="highlight">
+            <h3>Food Security</h3>
+            <p>
+              Promoting agricultural initiatives that can increase food
+              production and strengthen food security.
+            </p>
+          </div>
+
+          <div class="highlight">
+            <h3>Youth in Agriculture</h3>
+            <p>
+              Encouraging young people to participate in agriculture and
+              develop sustainable agricultural enterprises.
+            </p>
+          </div>
+
+          <div class="highlight">
+            <h3>Agricultural Development</h3>
+            <p>
+              Promoting sustainable agricultural development and improved
+              opportunities across Kogi State.
+            </p>
+          </div>
+
+        </div>
 
       </div>
 
     </div>
 
-
-    <h2>About Hon. Timothy Ojomah</h2>
-
-    <p class="intro">
-
-      Hon. Timothy Ojomah is a public servant and
-      agricultural development advocate serving as the
-      Commissioner for Agriculture and Food Security in
-      Kogi State.
-
-    </p>
-
-
-    <p>
-
-      He is committed to strengthening the agricultural
-      sector, improving food production, empowering
-      farmers and creating opportunities for young people
-      to participate meaningfully in agriculture.
-
-    </p>
-
-
-    <div class="highlight">
-
-      <strong>
-        His focus is on agriculture as a driver of
-        food security, employment creation, rural
-        development and economic growth in Kogi State.
-      </strong>
-
-    </div>
-
-
-    <h2>
-      Agricultural Development
-    </h2>
-
-    <p>
-
-      Under his leadership at the Ministry of Agriculture
-      and Food Security, emphasis has been placed on
-      modern agricultural practices, farmer support,
-      agricultural mechanisation, youth empowerment and
-      initiatives aimed at improving food security across
-      Kogi State.
-
-    </p>
-
-
-    <h2>
-      Youth Empowerment
-    </h2>
-
-    <p>
-
-      One of the areas receiving attention is the
-      development of young people through modern
-      agribusiness. Training initiatives have exposed
-      Kogi youths to emerging agricultural practices
-      including greenhouse management, hydroponics and
-      aeroponics.
-
-    </p>
-
-    <p>
-
-      These initiatives are designed to help young people
-      acquire practical agricultural skills that can
-      translate into employment opportunities and
-      sustainable livelihoods.
-
-    </p>
-
-
-    <h2>
-      Supporting Farmers
-    </h2>
-
-    <p>
-
-      Hon. Ojomah has also been involved in efforts to
-      expand agricultural production and strengthen
-      support for farmers across the state.
-
-    </p>
-
-    <p>
-
-      His approach recognises agriculture not only as a
-      means of producing food, but also as an important
-      avenue for employment creation, rural development
-      and economic growth.
-
-    </p>
-
-
-    <h2>
-      Agricultural Value Chains
-    </h2>
-
-    <p>
-
-      The ministry has also focused attention on important
-      agricultural value chains, including rice, maize,
-      cassava and cashew, while seeking stronger
-      connections between farmers, markets, investors and
-      other stakeholders in the agricultural sector.
-
-    </p>
-
-
-    <h2>
-      Vision for Kogi Agriculture
-    </h2>
-
-    <p>
-
-      His vision for Kogi agriculture is centred on a more
-      productive and commercially viable agricultural
-      sector where farmers have better access to
-      opportunities, young people can build careers in
-      agribusiness, and the state can make meaningful
-      progress towards food security.
-
-    </p>
-
-
-    <h2>
-      Commitment to Service
-    </h2>
-
-    <p>
-
-      Through his service as Commissioner, Hon. Timothy
-      Ojomah continues to champion the idea that
-      agriculture can be a major driver of Kogi State's
-      economic transformation and a pathway to greater
-      prosperity for its people.
-
-    </p>
-
   </div>
 
-</div>
+  <footer>
 
+    <p>
+      <strong>Kogi State Ministry of Agriculture</strong>
+    </p>
 
-<footer>
+    <p>
+      Official Website of the Commissioner of Agriculture
+    </p>
 
-  © 2026 Commissioner for Agriculture and Food Security,
-  Kogi State
+    <p>
+      © 2026 Kogi State Ministry of Agriculture.
+      All Rights Reserved.
+    </p>
 
-</footer>
+  </footer>
 
 </body>
 </html>
