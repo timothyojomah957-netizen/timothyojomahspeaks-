@@ -3,43 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Profile - Hon. Timothy Ojomah</title>
 
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-    }
-
     body {
+      margin: 0;
+      font-family: Arial, sans-serif;
       background: #f4f7f4;
       color: #222;
-      line-height: 1.7;
     }
 
     header {
       background: #008000;
       color: white;
-      padding: 25px 15px;
       text-align: center;
-    }
-
-    header h1 {
-      font-size: 30px;
-      margin-bottom: 8px;
-    }
-
-    header p {
-      font-size: 16px;
+      padding: 25px 15px;
     }
 
     .container {
       width: 94%;
-      max-width: 1000px;
-      margin: 35px auto;
+      max-width: 900px;
+      margin: 30px auto;
     }
 
     .back {
@@ -47,86 +31,44 @@
       background: #008000;
       color: white;
       text-decoration: none;
-      padding: 11px 18px;
+      padding: 12px 18px;
       border-radius: 6px;
       margin-bottom: 25px;
-      font-weight: bold;
     }
 
-    .back:hover {
-      background: #005c00;
-    }
-
-    .profile-card {
+    .profile {
       background: white;
+      padding: 25px;
       border-radius: 12px;
-      padding: 30px;
-      box-shadow: 0 3px 15px rgba(0,0,0,0.10);
-    }
-
-    .profile-image {
       text-align: center;
-      margin-bottom: 30px;
+      box-shadow: 0 3px 15px rgba(0,0,0,0.12);
     }
 
-    .profile-image img {
+    .profile img {
+      display: block;
       width: 100%;
       max-width: 500px;
-      max-height: 550px;
-      object-fit: cover;
+      height: auto;
+      margin: 0 auto 25px auto;
       border-radius: 12px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.18);
     }
 
-    .name {
-      text-align: center;
+    h1 {
       color: #008000;
-      font-size: 30px;
-      margin-bottom: 8px;
     }
 
-    .position {
-      text-align: center;
-      font-size: 18px;
-      font-weight: bold;
-      color: #555;
-      margin-bottom: 30px;
-    }
-
-    .section {
+    h2 {
+      color: #008000;
       margin-top: 30px;
     }
 
-    .section h2 {
-      color: #008000;
-      font-size: 24px;
-      margin-bottom: 12px;
-      border-bottom: 2px solid #008000;
-      padding-bottom: 7px;
+    p {
+      line-height: 1.8;
+      text-align: left;
     }
 
-    .section p {
-      color: #444;
-      margin-bottom: 15px;
-    }
-
-    .highlights {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-      margin-top: 25px;
-    }
-
-    .highlight {
-      background: #f5faf5;
-      padding: 22px;
-      border-left: 5px solid #008000;
-      border-radius: 7px;
-    }
-
-    .highlight h3 {
-      color: #008000;
-      margin-bottom: 8px;
+    .center {
+      text-align: center;
     }
 
     footer {
@@ -136,167 +78,97 @@
       text-align: center;
       padding: 25px 15px;
     }
-
-    footer p {
-      margin: 5px 0;
-    }
-
-    @media (max-width: 600px) {
-
-      header h1 {
-        font-size: 24px;
-      }
-
-      .profile-card {
-        padding: 20px;
-      }
-
-      .name {
-        font-size: 24px;
-      }
-
-      .position {
-        font-size: 16px;
-      }
-
-      .section h2 {
-        font-size: 21px;
-      }
-
-    }
   </style>
 </head>
 
 <body>
 
-  <header>
-    <h1>Profile</h1>
-    <p>Kogi State Ministry of Agriculture</p>
-  </header>
+<header>
+  <h1>Profile</h1>
+  <p class="center">Kogi State Ministry of Agriculture</p>
+</header>
 
-  <div class="container">
+<div class="container">
 
-    <a href="index.html" class="back">
-      ← Back to Home
-    </a>
+  <a href="index.html" class="back">
+    ← Back to Home
+  </a>
 
-    <div class="profile-card">
+  <div class="profile">
 
-      <div class="profile-image">
-        <img
-          src="https://i.ibb.co/QvR2mBTc/IMG-20260814-WA0168.jpg"
-          alt="Hon. Timothy Ojomah"
-        >
-      </div>
+    <img
+      src="https://i.ibb.co/QvR2mBTc/IMG-20260814-WA0168.jpg"
+      alt="Hon. Timothy Ojomah">
 
-      <h1 class="name">
-        Hon. Timothy Ojomah
-      </h1>
+    <h1>Hon. Timothy Ojomah</h1>
 
-      <p class="position">
-        Commissioner of Agriculture and Food Security, Kogi State
-      </p>
+    <h3>
+      Commissioner of Agriculture and Food Security, Kogi State
+    </h3>
 
-      <div class="section">
+    <h2>About the Commissioner</h2>
 
-        <h2>
-          About the Commissioner
-        </h2>
+    <p>
+      Hon. Timothy Ojomah is the Commissioner of Agriculture and Food
+      Security in Kogi State. He is committed to advancing agriculture,
+      supporting farmers and promoting food security across the state.
+    </p>
 
-        <p>
-          Hon. Timothy Ojomah is the Commissioner of Agriculture and Food
-          Security in Kogi State. He is committed to the advancement of
-          agriculture, farmer empowerment and food security across the state.
-        </p>
+    <p>
+      His focus includes farmer empowerment, agricultural development,
+      youth participation in agriculture and initiatives aimed at
+      strengthening food production and the agricultural value chain.
+    </p>
 
-        <p>
-          His work focuses on strengthening agricultural development,
-          supporting farmers, encouraging youth participation in agriculture
-          and promoting initiatives that contribute to sustainable food
-          production.
-        </p>
+    <h2>Vision and Commitment</h2>
 
-      </div>
+    <p>
+      His vision is to contribute to a stronger and more productive
+      agricultural sector in Kogi State by supporting farmers, encouraging
+      modern agricultural practices and creating opportunities within
+      the agricultural sector.
+    </p>
 
-      <div class="section">
+    <h2>Key Areas of Focus</h2>
 
-        <h2>
-          Vision and Commitment
-        </h2>
+    <p>
+      <strong>Farmer Empowerment:</strong> Supporting farmers with
+      opportunities, knowledge and resources.
+    </p>
 
-        <p>
-          His vision is to contribute to a stronger and more productive
-          agricultural sector in Kogi State by supporting farmers, promoting
-          modern agricultural practices and creating opportunities within the
-          agricultural value chain.
-        </p>
+    <p>
+      <strong>Food Security:</strong> Promoting agricultural initiatives
+      that contribute to increased food production.
+    </p>
 
-      </div>
+    <p>
+      <strong>Youth in Agriculture:</strong> Encouraging young people
+      to participate in agriculture and agricultural businesses.
+    </p>
 
-      <div class="section">
-
-        <h2>
-          Key Areas of Focus
-        </h2>
-
-        <div class="highlights">
-
-          <div class="highlight">
-            <h3>Farmer Empowerment</h3>
-            <p>
-              Supporting farmers with opportunities, knowledge and resources
-              to improve agricultural productivity.
-            </p>
-          </div>
-
-          <div class="highlight">
-            <h3>Food Security</h3>
-            <p>
-              Promoting agricultural initiatives that can increase food
-              production and strengthen food security.
-            </p>
-          </div>
-
-          <div class="highlight">
-            <h3>Youth in Agriculture</h3>
-            <p>
-              Encouraging young people to participate in agriculture and
-              develop sustainable agricultural enterprises.
-            </p>
-          </div>
-
-          <div class="highlight">
-            <h3>Agricultural Development</h3>
-            <p>
-              Promoting sustainable agricultural development and improved
-              opportunities across Kogi State.
-            </p>
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
+    <p>
+      <strong>Agricultural Development:</strong> Promoting sustainable
+      agricultural development throughout Kogi State.
+    </p>
 
   </div>
 
-  <footer>
+</div>
 
-    <p>
-      <strong>Kogi State Ministry of Agriculture</strong>
-    </p>
+<footer>
+  <p class="center">
+    <strong>Kogi State Ministry of Agriculture</strong>
+  </p>
 
-    <p>
-      Official Website of the Commissioner of Agriculture
-    </p>
+  <p class="center">
+    Official Website of the Commissioner of Agriculture
+  </p>
 
-    <p>
-      © 2026 Kogi State Ministry of Agriculture.
-      All Rights Reserved.
-    </p>
-
-  </footer>
+  <p class="center">
+    © 2026 Kogi State Ministry of Agriculture.
+    All Rights Reserved.
+  </p>
+</footer>
 
 </body>
 </html>
