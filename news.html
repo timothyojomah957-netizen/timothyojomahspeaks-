@@ -57,12 +57,6 @@
       padding: 12px 18px;
       border-radius: 6px;
       font-weight: bold;
-      border: none;
-      cursor: pointer;
-    }
-
-    .button:hover {
-      background: #004d26;
     }
 
     .news-card {
@@ -99,20 +93,23 @@
       white-space: pre-line;
     }
 
-    .share-button {
-      display: inline-block;
-      margin-top: 18px;
+    /* SHARE BUTTON */
+
+    .share-btn {
+      display: block;
+      width: 100%;
+      margin-top: 20px;
+      padding: 15px;
       background: #006b35;
       color: white;
       border: none;
-      padding: 12px 20px;
-      border-radius: 6px;
-      font-size: 15px;
+      border-radius: 7px;
+      font-size: 17px;
       font-weight: bold;
       cursor: pointer;
     }
 
-    .share-button:hover {
+    .share-btn:hover {
       background: #004d26;
     }
 
@@ -121,7 +118,6 @@
       padding: 30px;
       text-align: center;
       border-radius: 10px;
-      box-shadow: 0 3px 12px rgba(0,0,0,0.10);
     }
 
     .empty h2 {
@@ -148,10 +144,6 @@
         font-size: 20px;
       }
 
-      .share-button {
-        width: 100%;
-      }
-
     }
   </style>
 </head>
@@ -163,29 +155,26 @@
   <p>Commissioner of Agriculture - Kogi State</p>
 </header>
 
+
 <div class="container">
 
   <div class="top-buttons">
 
-    <a
-      href="index.html"
-      class="button"
-    >
+    <a href="index.html" class="button">
       ← Home
     </a>
 
-    <a
-      href="admin-news.html"
-      class="button"
-    >
+    <a href="admin-news.html" class="button">
       + Publish News
     </a>
 
   </div>
 
+
   <div id="newsContainer"></div>
 
 </div>
+
 
 <footer>
   © 2026 Commissioner of Agriculture - Kogi State
@@ -196,11 +185,10 @@
 
 function displayNews() {
 
-  const newsContainer =
+  const container =
     document.getElementById("newsContainer");
 
-
-  let newsList =
+  const newsList =
     JSON.parse(
       localStorage.getItem("kogiNews")
     ) || [];
@@ -208,7 +196,7 @@ function displayNews() {
 
   if (newsList.length === 0) {
 
-    newsContainer.innerHTML = `
+    container.innerHTML = `
 
       <div class="empty">
 
@@ -227,41 +215,34 @@ function displayNews() {
   }
 
 
-  newsContainer.innerHTML = "";
+  container.innerHTML = "";
 
 
   newsList.forEach(function(news, index) {
 
-    let imageHTML = "";
+    const article =
+      document.createElement("article");
+
+    article.className = "news-card";
 
 
-    if (
-      news.image &&
-      news.image.trim() !== ""
-    ) {
+    let image = "";
 
-      imageHTML = `
+    if (news.image) {
 
+      image = `
         <img
           src="${news.image}"
-          alt="${escapeHTML(news.title)}"
+          alt="News Image"
         >
-
       `;
 
     }
 
 
-    const newsItem =
-      document.createElement("article");
+    article.innerHTML = `
 
-
-    newsItem.className = "news-card";
-
-
-    newsItem.innerHTML = `
-
-      ${imageHTML}
+      ${image}
 
       <h2>
         ${escapeHTML(news.title)}
@@ -276,25 +257,25 @@ function displayNews() {
       </div>
 
       <button
-        class="share-button"
+        class="share-btn"
         onclick="shareNews(${index})"
       >
-        📤 Share News
+        📤 SHARE THIS NEWS
       </button>
 
     `;
 
 
-    newsContainer.appendChild(newsItem);
+    container.appendChild(article);
 
   });
 
 }
 
 
-/* SHARE NEWS */
+/* SHARE FUNCTION */
 
-async function shareNews(index) {
+function shareNews(index) {
 
   const newsList =
     JSON.parse(
@@ -306,82 +287,61 @@ async function shareNews(index) {
 
 
   if (!news) {
+
+    alert("News could not be found.");
+
     return;
+
   }
 
 
-  const shareText =
+  const text =
     news.title +
     "\n\n" +
-    news.content;
+    news.content +
+    "\n\n" +
+    window.location.href;
 
 
-  const shareData = {
+  if (navigator.share) {
 
-    title: news.title,
+    navigator.share({
 
-    text: shareText,
+      title: news.title,
 
-    url: window.location.href
+      text: news.content,
 
-  };
+      url: window.location.href
 
+    })
 
-  try {
+    .catch(function(error) {
 
-    if (
-      navigator.share &&
-      navigator.canShare &&
-      navigator.canShare(shareData)
-    ) {
+      console.log(error);
 
-      await navigator.share(shareData);
-
-    }
-
-    else if (navigator.share) {
-
-      await navigator.share({
-
-        title: news.title,
-
-        text: shareText,
-
-        url: window.location.href
-
-      });
-
-    }
-
-    else {
-
-      await navigator.clipboard.writeText(
-
-        news.title +
-        "\n\n" +
-        news.content +
-        "\n\n" +
-        window.location.href
-
-      );
-
-      alert(
-        "News link and story copied. You can now paste it into WhatsApp or another app."
-      );
-
-    }
+    });
 
   }
 
-  catch (error) {
+  else {
 
-    if (error.name !== "AbortError") {
+    navigator.clipboard.writeText(text)
 
-      alert(
-        "Unable to open the sharing menu."
-      );
+      .then(function() {
 
-    }
+        alert(
+          "News copied. You can paste it on WhatsApp, Facebook or another platform."
+        );
+
+      })
+
+      .catch(function() {
+
+        alert(
+          "Sharing is not supported on this browser."
+        );
+
+      });
 
   }
 
