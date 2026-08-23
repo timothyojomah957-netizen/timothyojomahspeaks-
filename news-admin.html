@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>News Admin - Commissioner of Agriculture</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f4f7f4;
+      color: #222;
+    }
+
+    header {
+      background: #0b6b35;
+      color: white;
+      padding: 25px 15px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 25px;
+      margin-bottom: 8px;
+    }
+
+    header p {
+      font-size: 15px;
+    }
+
+    .container {
+      width: 95%;
+      max-width: 800px;
+      margin: 30px auto;
+      background: white;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      color: #0b6b35;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      margin-bottom: 7px;
+      font-weight: bold;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 13px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 15px;
+    }
+
+    textarea {
+      min-height: 180px;
+      resize: vertical;
+    }
+
+    button {
+      width: 100%;
+      margin-top: 20px;
+      padding: 14px;
+      border: none;
+      border-radius: 6px;
+      background: #0b6b35;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #084d27;
+    }
+
+    .back {
+      display: block;
+      text-align: center;
+      margin-top: 20px;
+      color: #0b6b35;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .preview {
+      margin-top: 30px;
+      padding-top: 20px;
+      border-top: 2px solid #eee;
+    }
+
+    .preview h3 {
+      color: #0b6b35;
+      margin-bottom: 10px;
+    }
+
+    .news-card {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 15px;
+      margin-top: 15px;
+      background: #fafafa;
+    }
+
+    .news-card img {
+      width: 100%;
+      max-height: 300px;
+      object-fit: cover;
+      border-radius: 6px;
+      margin-bottom: 12px;
+    }
+
+    .news-card h3 {
+      margin-bottom: 8px;
+      color: #0b6b35;
+    }
+
+    .date {
+      color: #777;
+      font-size: 13px;
+      margin-bottom: 10px;
+    }
+
+    .message {
+      margin-top: 15px;
+      padding: 12px;
+      border-radius: 5px;
+      background: #e8f5e9;
+      color: #176b2f;
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>News Publishing Page</h1>
+  <p>Commissioner of Agriculture - Kogi State</p>
+</header>
+
+<div class="container">
+
+  <h2>Add News</h2>
+
+  <label for="title">News Title</label>
+  <input
+    type="text"
+    id="title"
+    placeholder="Enter the news title"
+  >
+
+  <label for="image">News Image URL</label>
+  <input
+    type="text"
+    id="image"
+    placeholder="Paste image URL here"
+  >
+
+  <label for="content">News Story</label>
+  <textarea
+    id="content"
+    placeholder="Write the full news story here..."
+  ></textarea>
+
+  <button onclick="publishNews()">Publish News</button>
+
+  <div class="message" id="message">
+    News has been saved successfully.
+  </div>
+
+  <div class="preview">
+    <h2>News Preview</h2>
+    <div id="previewArea">
+      Your news preview will appear here.
+    </div>
+  </div>
+
+  <a class="back" href="news.html">← Back to News Page</a>
+
+</div>
+
+<script>
+
+function publishNews() {
+
+  const title = document.getElementById("title").value.trim();
+  const image = document.getElementById("image").value.trim();
+  const content = document.getElementById("content").value.trim();
+
+  if (title === "" || content === "") {
+    alert("Please enter the news title and story.");
+    return;
+  }
+
+  const news = {
+    title: title,
+    image: image,
+    content: content,
+    date: new Date().toLocaleDateString()
+  };
+
+  let newsList = JSON.parse(localStorage.getItem("kogiNews")) || [];
+
+  newsList.unshift(news);
+
+  localStorage.setItem("kogiNews", JSON.stringify(newsList));
+
+  document.getElementById("message").style.display = "block";
+
+  showPreview(news);
+
+  document.getElementById("title").value = "";
+  document.getElementById("image").value = "";
+  document.getElementById("content").value = "";
+}
+
+
+function showPreview(news) {
+
+  let imageHTML = "";
+
+  if (news.image !== "") {
+    imageHTML =
+      '<img src="' +
+      news.image +
+      '" alt="News Image">';
+  }
+
+  document.getElementById("previewArea").innerHTML = `
+    <div class="news-card">
+
+      ${imageHTML}
+
+      <h3>${escapeHTML(news.title)}</h3>
+
+      <div class="date">
+        Published: ${news.date}
+      </div>
+
+      <p>
+        ${escapeHTML(news.content).replace(/\n/g, "<br>")}
+      </p>
+
+    </div>
+  `;
+}
+
+
+function escapeHTML(text) {
+
+  return text
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
+
+}
+
+</script>
+
+</body>
+</html>
