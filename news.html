@@ -1,12 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
 
   <title>Latest News - Kogi State Agriculture</title>
 
+
   <style>
+
     * {
       box-sizing: border-box;
       margin: 0;
@@ -14,10 +21,12 @@
       font-family: Arial, sans-serif;
     }
 
+
     body {
       background: #f4f7f4;
       color: #222;
     }
+
 
     header {
       background: #008000;
@@ -26,20 +35,24 @@
       padding: 28px 15px;
     }
 
+
     header h1 {
       font-size: 30px;
       margin-bottom: 8px;
     }
 
+
     header p {
       font-size: 15px;
     }
+
 
     .container {
       width: 95%;
       max-width: 1000px;
       margin: 30px auto;
     }
+
 
     .top-buttons {
       display: flex;
@@ -48,6 +61,7 @@
       margin-bottom: 25px;
       flex-wrap: wrap;
     }
+
 
     .button {
       display: inline-block;
@@ -59,17 +73,25 @@
       font-weight: bold;
     }
 
+
     .button:hover {
       background: #005c00;
     }
+
+
+    /* =========================
+       NEWS CARD
+    ========================== */
 
     .news-card {
       background: white;
       margin-bottom: 30px;
       padding: 22px;
       border-radius: 12px;
-      box-shadow: 0 3px 15px rgba(0,0,0,0.10);
+      box-shadow:
+        0 3px 15px rgba(0,0,0,0.10);
     }
+
 
     .news-card img {
       display: block;
@@ -80,6 +102,7 @@
       margin-bottom: 18px;
     }
 
+
     .news-card h2 {
       color: #008000;
       font-size: 25px;
@@ -87,11 +110,13 @@
       margin-bottom: 8px;
     }
 
+
     .date {
       color: #777;
       font-size: 14px;
       margin-bottom: 16px;
     }
+
 
     .summary {
       line-height: 1.8;
@@ -99,6 +124,11 @@
       margin-bottom: 18px;
       white-space: pre-line;
     }
+
+
+    /* =========================
+       READ FULL STORY BUTTON
+    ========================== */
 
     .read-button {
       display: inline-block;
@@ -108,21 +138,26 @@
       padding: 12px 18px;
       border-radius: 6px;
       font-weight: bold;
-      margin-bottom: 15px;
+      margin-top: 5px;
     }
+
 
     .read-button:hover {
       background: #005c00;
     }
 
-    /* SHARE BUTTONS */
+
+    /* =========================
+       SHARE BUTTONS
+    ========================== */
 
     .share-buttons {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
-      margin-top: 5px;
+      margin-top: 15px;
     }
+
 
     .share-btn {
       border: none;
@@ -134,29 +169,40 @@
       cursor: pointer;
     }
 
+
     .copy-btn {
       background: #008000;
     }
+
 
     .copy-btn:hover {
       background: #005c00;
     }
 
+
     .whatsapp-btn {
       background: #25D366;
     }
+
 
     .whatsapp-btn:hover {
       background: #1da851;
     }
 
+
     .facebook-btn {
       background: #1877F2;
     }
 
+
     .facebook-btn:hover {
       background: #0d65d9;
     }
+
+
+    /* =========================
+       PUBLISH NOTE
+    ========================== */
 
     .publish-note {
       background: #fff;
@@ -167,18 +213,10 @@
       line-height: 1.7;
     }
 
-    footer {
-      margin-top: 40px;
-      background: #004d00;
-      color: white;
-      text-align: center;
-      padding: 25px 15px;
-      font-size: 14px;
-    }
 
-    footer p {
-      margin: 5px;
-    }
+    /* =========================
+       NO NEWS
+    ========================== */
 
     .no-news {
       background: white;
@@ -189,27 +227,56 @@
       margin-bottom: 25px;
     }
 
+
+    /* =========================
+       FOOTER
+    ========================== */
+
+    footer {
+      margin-top: 40px;
+      background: #004d00;
+      color: white;
+      text-align: center;
+      padding: 25px 15px;
+      font-size: 14px;
+    }
+
+
+    footer p {
+      margin: 5px;
+    }
+
+
+    /* =========================
+       MOBILE
+    ========================== */
+
     @media (max-width: 600px) {
 
       header h1 {
         font-size: 24px;
       }
 
+
       .news-card h2 {
         font-size: 21px;
       }
+
 
       .top-buttons {
         flex-direction: column;
       }
 
+
       .button {
         text-align: center;
       }
 
+
       .share-buttons {
         flex-direction: column;
       }
+
 
       .share-btn,
       .read-button {
@@ -218,14 +285,25 @@
       }
 
     }
+
   </style>
+
 </head>
+
 
 <body>
 
+
+<!-- =========================
+     HEADER
+========================== -->
+
 <header>
 
-  <h1>Latest News</h1>
+  <h1>
+    Latest News
+  </h1>
+
 
   <p>
     Commissioner of Agriculture and Food Security - Kogi State
@@ -236,57 +314,83 @@
 
 <div class="container">
 
+
+  <!-- =========================
+       TOP BUTTONS
+  ========================== -->
+
   <div class="top-buttons">
 
-    <a href="index.html" class="button">
+    <a
+      href="index.html"
+      class="button"
+    >
       ← Home
     </a>
 
-    <a href="admin.html" class="button">
+
+    <a
+      href="admin.html"
+      class="button"
+    >
       + Publish News
     </a>
 
   </div>
 
 
-  <!--
-    NEWLY PUBLISHED NEWS
-    FROM ADMIN PAGE
-  -->
-
-  <div id="newNews"></div>
-
-
-  <!--
-    EXISTING NEWS ARTICLE
-  -->
+  <!-- ==================================================
+       NEW IBAJI ARTICLE
+       THIS WILL ALWAYS APPEAR AT THE TOP
+  =================================================== -->
 
   <article class="news-card">
 
+
+    <!-- IBAJI NEWS PICTURE -->
+
     <img
       src="https://i.ibb.co/1YvrWFxp/IMG-20260814-WA0173.jpg"
-      alt="Kogi State agricultural activities"
+      alt="Agricultural activities in Kogi State"
     >
 
+
+    <!-- IBAJI HEADLINE -->
+
     <h2>
-      Commissioner Launches New Agricultural Programme
+      Hon. Timothy Ojomah Urges Ibaji People to Remain Calm,
+      Assures Them Government Has Not Forgotten Them
     </h2>
 
+
+    <!-- DATE -->
+
     <div class="date">
-      Published: August 23, 2026
+      Published: August 25, 2026
     </div>
+
+
+    <!-- SUMMARY -->
 
     <div class="summary">
 
-      The Kogi State Ministry of Agriculture continues to strengthen
-      agricultural development through programmes and initiatives aimed
-      at supporting farmers, improving food production and promoting
-      agricultural development across the state.
+      The Commissioner for Agriculture and Food Security,
+      Hon. Timothy Ojomah, has urged the good people of Ibaji
+      Local Government Area to remain calm, assuring them that
+      the present administration has not forgotten them.
+
+      Hon. Timothy Ojomah reaffirmed the government's commitment
+      to the development and wellbeing of the people of Ibaji,
+      assuring them that their concerns and expectations remain
+      important to the government.
 
     </div>
 
+
+    <!-- READ FULL STORY -->
+
     <a
-      href="news-1.html"
+      href="news-ibaji.html"
       class="read-button"
     >
       Read Full Story →
@@ -297,9 +401,10 @@
 
     <div class="share-buttons">
 
+
       <button
         class="share-btn copy-btn"
-        onclick="copyLink(this)"
+        onclick="copyArticleLink(this)"
       >
         🔗 Copy Link
       </button>
@@ -307,9 +412,7 @@
 
       <button
         class="share-btn whatsapp-btn"
-        onclick="shareWhatsApp(
-          'Commissioner Launches New Agricultural Programme'
-        )"
+        onclick="shareIbajiWhatsApp()"
       >
         🟢 WhatsApp
       </button>
@@ -317,39 +420,133 @@
 
       <button
         class="share-btn facebook-btn"
-        onclick="shareFacebook()"
+        onclick="shareIbajiFacebook()"
       >
         🔵 Facebook
       </button>
+
 
     </div>
 
   </article>
 
 
-  <!-- INFORMATION -->
+  <!-- ==================================================
+       ADMIN PUBLISHED NEWS
+  =================================================== -->
+
+  <div id="newNews"></div>
+
+
+  <!-- ==================================================
+       EXISTING NEWS
+  =================================================== -->
+
+  <article class="news-card">
+
+
+    <img
+      src="https://i.ibb.co/1YvrWFxp/IMG-20260814-WA0173.jpg"
+      alt="Kogi State agricultural activities"
+    >
+
+
+    <h2>
+      Commissioner Launches New Agricultural Programme
+    </h2>
+
+
+    <div class="date">
+      Published: August 23, 2026
+    </div>
+
+
+    <div class="summary">
+
+      The Kogi State Ministry of Agriculture continues to
+      strengthen agricultural development through programmes
+      and initiatives aimed at supporting farmers, improving
+      food production and promoting agricultural development
+      across the state.
+
+    </div>
+
+
+    <a
+      href="news-1.html"
+      class="read-button"
+    >
+      Read Full Story →
+    </a>
+
+
+    <div class="share-buttons">
+
+
+      <button
+        class="share-btn copy-btn"
+        onclick="copyOldLink(this)"
+      >
+        🔗 Copy Link
+      </button>
+
+
+      <button
+        class="share-btn whatsapp-btn"
+        onclick="shareOldWhatsApp()"
+      >
+        🟢 WhatsApp
+      </button>
+
+
+      <button
+        class="share-btn facebook-btn"
+        onclick="shareOldFacebook()"
+      >
+        🔵 Facebook
+      </button>
+
+
+    </div>
+
+  </article>
+
+
+  <!-- =========================
+       INFORMATION
+  ========================== -->
 
   <div class="publish-note">
 
-    <strong>News Update:</strong>
+    <strong>
+      News Update:
+    </strong>
+
 
     <p>
-      New agricultural news and updates will be published on this page.
-      Visit the Publish News section to prepare new stories.
+      New agricultural news and updates will be published
+      on this page. Visit the Publish News section to
+      prepare new stories.
     </p>
 
   </div>
 
+
 </div>
 
 
-<!-- FOOTER -->
+<!-- =========================
+     FOOTER
+========================== -->
 
 <footer>
 
   <p>
-    <strong>Kogi State Ministry of Agriculture</strong>
+    <strong>
+      Kogi State Ministry of Agriculture
+    </strong>
   </p>
+
 
   <p>
     © 2026 Kogi State Ministry of Agriculture.
@@ -361,160 +558,149 @@
 
 <script>
 
-  /*
-    GET SAVED NEWS
-  */
 
-  let newsData =
-    JSON.parse(
-      localStorage.getItem("websiteNews")
-    ) || [];
+  /* ==================================================
+     IBAJI ARTICLE LINK
+  =================================================== */
 
-
-  const newNews =
-    document.getElementById("newNews");
+  const ibajiLink =
+    "https://timothyojomah957-netizen.github.io/timothyojomahspeaks-/news-ibaji.html";
 
 
-  /*
-    DISPLAY PUBLISHED NEWS
-  */
+  /* ==================================================
+     COPY IBAJI LINK
+  =================================================== */
 
-  function displayNews() {
+  function copyArticleLink(button) {
 
-    newNews.innerHTML = "";
-
-
-    /*
-      IF THERE IS NO NEW NEWS
-    */
-
-    if (newsData.length === 0) {
-
-      return;
-
-    }
-
-
-    /*
-      SHOW EVERY PUBLISHED NEWS
-    */
-
-    newsData.forEach(function(news) {
-
-      const article =
-        document.createElement("article");
-
-
-      article.className =
-        "news-card";
-
-
-      /*
-        NEWS IMAGE
-      */
-
-      let imageHTML = "";
-
-
-      if (news.image) {
-
-        imageHTML = `
-
-          <img
-            src="${escapeHTML(news.image)}"
-            alt="${escapeHTML(news.headline)}"
-          >
-
-        `;
-
-      }
-
-
-      /*
-        NEWS CARD
-      */
-
-      article.innerHTML = `
-
-        ${imageHTML}
-
-
-        <h2>
-          ${escapeHTML(news.headline)}
-        </h2>
-
-
-        <div class="date">
-          Published:
-          ${escapeHTML(news.date)}
-        </div>
-
-
-        <div class="summary">
-          ${escapeHTML(news.content)}
-        </div>
-
-
-        <div class="share-buttons">
-
-
-          <!-- COPY LINK -->
-
-          <button
-            class="share-btn copy-btn"
-            onclick="copyLink(this)"
-          >
-            🔗 Copy Link
-          </button>
-
-
-          <!-- WHATSAPP -->
-
-          <button
-            class="share-btn whatsapp-btn"
-            onclick="shareWhatsApp(
-              '${escapeJS(news.headline)}'
-            )"
-          >
-            🟢 WhatsApp
-          </button>
-
-
-          <!-- FACEBOOK -->
-
-          <button
-            class="share-btn facebook-btn"
-            onclick="shareFacebook()"
-          >
-            🔵 Facebook
-          </button>
-
-
-        </div>
-
-      `;
-
-
-      newNews.appendChild(article);
-
-    });
+    copyText(
+      ibajiLink,
+      button
+    );
 
   }
 
 
-  /*
-    COPY LINK
-  */
+  /* ==================================================
+     WHATSAPP IBAJI
+  =================================================== */
 
-  function copyLink(button) {
+  function shareIbajiWhatsApp() {
 
-    const link =
-      window.location.href;
+    const headline =
+      "Hon. Timothy Ojomah Urges Ibaji People to Remain Calm, Assures Them Government Has Not Forgotten Them";
 
 
-    /*
-      MODERN COPY
-    */
+    const text =
+      headline +
+      "\n\nRead the full story here:\n" +
+      ibajiLink;
+
+
+    const url =
+      "https://wa.me/?text=" +
+      encodeURIComponent(text);
+
+
+    window.open(
+      url,
+      "_blank"
+    );
+
+  }
+
+
+  /* ==================================================
+     FACEBOOK IBAJI
+  =================================================== */
+
+  function shareIbajiFacebook() {
+
+    const url =
+      "https://www.facebook.com/sharer/sharer.php?u=" +
+      encodeURIComponent(ibajiLink);
+
+
+    window.open(
+      url,
+      "_blank",
+      "width=600,height=500"
+    );
+
+  }
+
+
+  /* ==================================================
+     OLD NEWS LINK
+  =================================================== */
+
+  const oldNewsLink =
+    "https://timothyojomah957-netizen.github.io/timothyojomahspeaks-/news-1.html";
+
+
+  function copyOldLink(button) {
+
+    copyText(
+      oldNewsLink,
+      button
+    );
+
+  }
+
+
+  /* ==================================================
+     WHATSAPP OLD NEWS
+  =================================================== */
+
+  function shareOldWhatsApp() {
+
+    const text =
+      "Commissioner Launches New Agricultural Programme" +
+      "\n\nRead the full story here:\n" +
+      oldNewsLink;
+
+
+    const url =
+      "https://wa.me/?text=" +
+      encodeURIComponent(text);
+
+
+    window.open(
+      url,
+      "_blank"
+    );
+
+  }
+
+
+  /* ==================================================
+     FACEBOOK OLD NEWS
+  =================================================== */
+
+  function shareOldFacebook() {
+
+    const url =
+      "https://www.facebook.com/sharer/sharer.php?u=" +
+      encodeURIComponent(oldNewsLink);
+
+
+    window.open(
+      url,
+      "_blank",
+      "width=600,height=500"
+    );
+
+  }
+
+
+  /* ==================================================
+     COPY FUNCTION
+  =================================================== */
+
+  function copyText(
+    text,
+    button
+  ) {
 
     if (
       navigator.clipboard &&
@@ -522,26 +708,25 @@
     ) {
 
       navigator.clipboard
-        .writeText(link)
+        .writeText(text)
         .then(function() {
 
-          showCopied(button);
+          copiedMessage(button);
 
         })
         .catch(function() {
 
           fallbackCopy(
-            link,
+            text,
             button
           );
 
         });
 
-
     } else {
 
       fallbackCopy(
-        link,
+        text,
         button
       );
 
@@ -550,11 +735,11 @@
   }
 
 
-  /*
-    SHOW COPIED MESSAGE
-  */
+  /* ==================================================
+     COPIED MESSAGE
+  =================================================== */
 
-  function showCopied(button) {
+  function copiedMessage(button) {
 
     const oldText =
       button.innerHTML;
@@ -574,25 +759,28 @@
   }
 
 
-  /*
-    FALLBACK COPY
-  */
+  /* ==================================================
+     FALLBACK COPY
+  =================================================== */
 
   function fallbackCopy(
-    link,
+    text,
     button
   ) {
 
     const textarea =
-      document.createElement("textarea");
+      document.createElement(
+        "textarea"
+      );
 
 
     textarea.value =
-      link;
+      text;
 
 
     textarea.style.position =
       "fixed";
+
 
     textarea.style.left =
       "-9999px";
@@ -605,6 +793,7 @@
 
     textarea.focus();
 
+
     textarea.select();
 
 
@@ -614,13 +803,14 @@
         "copy"
       );
 
-      showCopied(button);
+
+      copiedMessage(button);
 
     } catch (error) {
 
       alert(
-        "Please copy this link manually: " +
-        link
+        "Please copy this link manually:\n\n" +
+        text
       );
 
     }
@@ -633,68 +823,122 @@
   }
 
 
-  /*
-    WHATSAPP SHARE
-  */
+  /* ==================================================
+     LOAD ADMIN NEWS
+  =================================================== */
 
-  function shareWhatsApp(
-    headline
-  ) {
-
-    const link =
-      window.location.href;
-
-
-    const text =
-      headline +
-      "\n\nRead the full story here:\n" +
-      link;
+  let newsData =
+    JSON.parse(
+      localStorage.getItem(
+        "websiteNews"
+      )
+    ) || [];
 
 
-    const whatsappURL =
-      "https://wa.me/?text=" +
-      encodeURIComponent(
-        text
-      );
+  const newNews =
+    document.getElementById(
+      "newNews"
+    );
 
 
-    window.open(
-      whatsappURL,
-      "_blank"
+  /* ==================================================
+     DISPLAY ADMIN NEWS
+  =================================================== */
+
+  function displayNews() {
+
+    newNews.innerHTML = "";
+
+
+    if (
+      newsData.length === 0
+    ) {
+
+      return;
+
+    }
+
+
+    newsData.forEach(
+      function(news) {
+
+
+        const article =
+          document.createElement(
+            "article"
+          );
+
+
+        article.className =
+          "news-card";
+
+
+        let imageHTML =
+          "";
+
+
+        if (
+          news.image
+        ) {
+
+          imageHTML = `
+
+            <img
+              src="${escapeHTML(news.image)}"
+              alt="${escapeHTML(news.headline)}"
+            >
+
+          `;
+
+        }
+
+
+        article.innerHTML = `
+
+          ${imageHTML}
+
+
+          <h2>
+            ${escapeHTML(
+              news.headline
+            )}
+          </h2>
+
+
+          <div class="date">
+
+            Published:
+            ${escapeHTML(
+              news.date
+            )}
+
+          </div>
+
+
+          <div class="summary">
+
+            ${escapeHTML(
+              news.content
+            )}
+
+          </div>
+
+        `;
+
+
+        newNews.appendChild(
+          article
+        );
+
+      }
     );
 
   }
 
 
-  /*
-    FACEBOOK SHARE
-  */
-
-  function shareFacebook() {
-
-    const link =
-      window.location.href;
-
-
-    const facebookURL =
-      "https://www.facebook.com/sharer/sharer.php?u=" +
-      encodeURIComponent(
-        link
-      );
-
-
-    window.open(
-      facebookURL,
-      "_blank",
-      "width=600,height=500"
-    );
-
-  }
-
-
-  /*
-    PROTECT HTML
-  */
+  /* ==================================================
+     PROTECT HTML
+  =================================================== */
 
   function escapeHTML(
     text
@@ -715,48 +959,14 @@
   }
 
 
-  /*
-    PROTECT JAVASCRIPT
-  */
-
-  function escapeJS(
-    text
-  ) {
-
-    return String(
-      text || ""
-    )
-
-      .replace(
-        /\\/g,
-        "\\\\"
-      )
-
-      .replace(
-        /'/g,
-        "\\'"
-      )
-
-      .replace(
-        /\n/g,
-        "\\n"
-      )
-
-      .replace(
-        /\r/g,
-        "\\r"
-      );
-
-  }
-
-
-  /*
-    LOAD NEWS
-  */
+  /* ==================================================
+     START
+  =================================================== */
 
   displayNews();
 
 </script>
+
 
 </body>
 </html>
