@@ -83,6 +83,7 @@
     .news-card h2 {
       color: #008000;
       font-size: 25px;
+      line-height: 1.3;
       margin-bottom: 8px;
     }
 
@@ -99,51 +100,6 @@
       white-space: pre-line;
     }
 
-    /* ACTION BUTTONS */
-
-    .news-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 20px;
-    }
-
-    .action-button {
-      border: none;
-      padding: 12px 16px;
-      border-radius: 6px;
-      color: white;
-      font-weight: bold;
-      cursor: pointer;
-      text-decoration: none;
-      font-size: 14px;
-      display: inline-block;
-    }
-
-    .copy-button {
-      background: #008000;
-    }
-
-    .copy-button:hover {
-      background: #005c00;
-    }
-
-    .whatsapp-button {
-      background: #25D366;
-    }
-
-    .whatsapp-button:hover {
-      background: #1da851;
-    }
-
-    .facebook-button {
-      background: #1877F2;
-    }
-
-    .facebook-button:hover {
-      background: #0d65d9;
-    }
-
     .read-button {
       display: inline-block;
       background: #008000;
@@ -152,11 +108,54 @@
       padding: 12px 18px;
       border-radius: 6px;
       font-weight: bold;
-      margin-top: 5px;
+      margin-bottom: 15px;
     }
 
     .read-button:hover {
       background: #005c00;
+    }
+
+    /* SHARE BUTTONS */
+
+    .share-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 5px;
+    }
+
+    .share-btn {
+      border: none;
+      color: white;
+      padding: 11px 15px;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .copy-btn {
+      background: #008000;
+    }
+
+    .copy-btn:hover {
+      background: #005c00;
+    }
+
+    .whatsapp-btn {
+      background: #25D366;
+    }
+
+    .whatsapp-btn:hover {
+      background: #1da851;
+    }
+
+    .facebook-btn {
+      background: #1877F2;
+    }
+
+    .facebook-btn:hover {
+      background: #0d65d9;
     }
 
     .publish-note {
@@ -166,15 +165,6 @@
       border-left: 5px solid #008000;
       border-radius: 6px;
       line-height: 1.7;
-    }
-
-    .empty-message {
-      background: white;
-      padding: 25px;
-      text-align: center;
-      border-radius: 10px;
-      color: #666;
-      margin-bottom: 25px;
     }
 
     footer {
@@ -190,7 +180,14 @@
       margin: 5px;
     }
 
-    /* MOBILE */
+    .no-news {
+      background: white;
+      padding: 30px;
+      text-align: center;
+      border-radius: 10px;
+      color: #666;
+      margin-bottom: 25px;
+    }
 
     @media (max-width: 600px) {
 
@@ -210,11 +207,11 @@
         text-align: center;
       }
 
-      .news-actions {
+      .share-buttons {
         flex-direction: column;
       }
 
-      .action-button,
+      .share-btn,
       .read-button {
         width: 100%;
         text-align: center;
@@ -252,12 +249,17 @@
   </div>
 
 
-  <!-- NEW NEWS PUBLISHED FROM ADMIN -->
+  <!--
+    NEWLY PUBLISHED NEWS
+    FROM ADMIN PAGE
+  -->
 
   <div id="newNews"></div>
 
 
-  <!-- EXISTING NEWS ARTICLE -->
+  <!--
+    EXISTING NEWS ARTICLE
+  -->
 
   <article class="news-card">
 
@@ -290,19 +292,21 @@
       Read Full Story →
     </a>
 
+
     <!-- SHARE BUTTONS -->
 
-    <div class="news-actions">
+    <div class="share-buttons">
 
       <button
-        class="action-button copy-button"
-        onclick="copyCurrentLink(this)"
+        class="share-btn copy-btn"
+        onclick="copyLink(this)"
       >
         🔗 Copy Link
       </button>
 
+
       <button
-        class="action-button whatsapp-button"
+        class="share-btn whatsapp-btn"
         onclick="shareWhatsApp(
           'Commissioner Launches New Agricultural Programme'
         )"
@@ -310,8 +314,9 @@
         🟢 WhatsApp
       </button>
 
+
       <button
-        class="action-button facebook-button"
+        class="share-btn facebook-btn"
         onclick="shareFacebook()"
       >
         🔵 Facebook
@@ -321,6 +326,8 @@
 
   </article>
 
+
+  <!-- INFORMATION -->
 
   <div class="publish-note">
 
@@ -335,6 +342,8 @@
 
 </div>
 
+
+<!-- FOOTER -->
 
 <footer>
 
@@ -353,48 +362,81 @@
 <script>
 
   /*
-    LOAD NEWS PUBLISHED FROM ADMIN PAGE
+    GET SAVED NEWS
   */
 
-  const newNewsContainer = document.getElementById("newNews");
+  let newsData =
+    JSON.parse(
+      localStorage.getItem("websiteNews")
+    ) || [];
 
-  let newsData = JSON.parse(
-    localStorage.getItem("websiteNews")
-  ) || [];
+
+  const newNews =
+    document.getElementById("newNews");
 
 
   /*
     DISPLAY PUBLISHED NEWS
   */
 
-  function displayNewNews() {
+  function displayNews() {
 
-    newNewsContainer.innerHTML = "";
+    newNews.innerHTML = "";
+
+
+    /*
+      IF THERE IS NO NEW NEWS
+    */
 
     if (newsData.length === 0) {
+
       return;
+
     }
 
 
-    newsData.forEach(function(news, index) {
+    /*
+      SHOW EVERY PUBLISHED NEWS
+    */
 
-      const article = document.createElement("article");
+    newsData.forEach(function(news) {
 
-      article.className = "news-card";
+      const article =
+        document.createElement("article");
 
+
+      article.className =
+        "news-card";
+
+
+      /*
+        NEWS IMAGE
+      */
+
+      let imageHTML = "";
+
+
+      if (news.image) {
+
+        imageHTML = `
+
+          <img
+            src="${escapeHTML(news.image)}"
+            alt="${escapeHTML(news.headline)}"
+          >
+
+        `;
+
+      }
+
+
+      /*
+        NEWS CARD
+      */
 
       article.innerHTML = `
 
-        ${
-          news.image
-          ? `
-            <img
-              src="${escapeHTML(news.image)}"
-              alt="${escapeHTML(news.headline)}"
-            >
-          `
-          : ""
-        }
+        ${imageHTML}
 
 
         <h2>
@@ -403,7 +445,8 @@
 
 
         <div class="date">
-          Published: ${escapeHTML(news.date)}
+          Published:
+          ${escapeHTML(news.date)}
         </div>
 
 
@@ -412,18 +455,23 @@
         </div>
 
 
-        <div class="news-actions">
+        <div class="share-buttons">
+
+
+          <!-- COPY LINK -->
 
           <button
-            class="action-button copy-button"
-            onclick="copyNewsLink(this)"
+            class="share-btn copy-btn"
+            onclick="copyLink(this)"
           >
             🔗 Copy Link
           </button>
 
 
+          <!-- WHATSAPP -->
+
           <button
-            class="action-button whatsapp-button"
+            class="share-btn whatsapp-btn"
             onclick="shareWhatsApp(
               '${escapeJS(news.headline)}'
             )"
@@ -432,19 +480,22 @@
           </button>
 
 
+          <!-- FACEBOOK -->
+
           <button
-            class="action-button facebook-button"
+            class="share-btn facebook-btn"
             onclick="shareFacebook()"
           >
             🔵 Facebook
           </button>
+
 
         </div>
 
       `;
 
 
-      newNewsContainer.appendChild(article);
+      newNews.appendChild(article);
 
     });
 
@@ -452,88 +503,132 @@
 
 
   /*
-    COPY CURRENT NEWS PAGE LINK
+    COPY LINK
   */
 
-  function copyCurrentLink(button) {
+  function copyLink(button) {
 
-    const link = window.location.href;
+    const link =
+      window.location.href;
 
-    navigator.clipboard.writeText(link)
-      .then(function() {
 
-        const oldText = button.innerHTML;
+    /*
+      MODERN COPY
+    */
 
-        button.innerHTML = "✅ Link Copied!";
+    if (
+      navigator.clipboard &&
+      window.isSecureContext
+    ) {
 
-        setTimeout(function() {
-          button.innerHTML = oldText;
-        }, 2000);
+      navigator.clipboard
+        .writeText(link)
+        .then(function() {
 
-      })
-      .catch(function() {
+          showCopied(button);
 
-        fallbackCopy(link, button);
+        })
+        .catch(function() {
 
-      });
+          fallbackCopy(
+            link,
+            button
+          );
+
+        });
+
+
+    } else {
+
+      fallbackCopy(
+        link,
+        button
+      );
+
+    }
 
   }
 
 
   /*
-    COPY NEWS LINK
+    SHOW COPIED MESSAGE
   */
 
-  function copyNewsLink(button) {
+  function showCopied(button) {
 
-    const link = window.location.href;
+    const oldText =
+      button.innerHTML;
 
-    navigator.clipboard.writeText(link)
-      .then(function() {
 
-        const oldText = button.innerHTML;
+    button.innerHTML =
+      "✅ Link Copied!";
 
-        button.innerHTML = "✅ Link Copied!";
 
-        setTimeout(function() {
-          button.innerHTML = oldText;
-        }, 2000);
+    setTimeout(function() {
 
-      })
-      .catch(function() {
+      button.innerHTML =
+        oldText;
 
-        fallbackCopy(link, button);
-
-      });
+    }, 2000);
 
   }
 
 
   /*
-    FALLBACK COPY METHOD
+    FALLBACK COPY
   */
 
-  function fallbackCopy(text, button) {
+  function fallbackCopy(
+    link,
+    button
+  ) {
 
-    const textarea = document.createElement("textarea");
+    const textarea =
+      document.createElement("textarea");
 
-    textarea.value = text;
 
-    document.body.appendChild(textarea);
+    textarea.value =
+      link;
+
+
+    textarea.style.position =
+      "fixed";
+
+    textarea.style.left =
+      "-9999px";
+
+
+    document.body.appendChild(
+      textarea
+    );
+
+
+    textarea.focus();
 
     textarea.select();
 
-    document.execCommand("copy");
 
-    document.body.removeChild(textarea);
+    try {
 
-    const oldText = button.innerHTML;
+      document.execCommand(
+        "copy"
+      );
 
-    button.innerHTML = "✅ Link Copied!";
+      showCopied(button);
 
-    setTimeout(function() {
-      button.innerHTML = oldText;
-    }, 2000);
+    } catch (error) {
+
+      alert(
+        "Please copy this link manually: " +
+        link
+      );
+
+    }
+
+
+    document.body.removeChild(
+      textarea
+    );
 
   }
 
@@ -542,19 +637,25 @@
     WHATSAPP SHARE
   */
 
-  function shareWhatsApp(headline) {
+  function shareWhatsApp(
+    headline
+  ) {
 
-    const websiteURL = window.location.href;
+    const link =
+      window.location.href;
 
-    const shareText =
+
+    const text =
       headline +
-      "\n\nRead more here:\n" +
-      websiteURL;
+      "\n\nRead the full story here:\n" +
+      link;
 
 
     const whatsappURL =
       "https://wa.me/?text=" +
-      encodeURIComponent(shareText);
+      encodeURIComponent(
+        text
+      );
 
 
     window.open(
@@ -571,11 +672,15 @@
 
   function shareFacebook() {
 
-    const websiteURL = window.location.href;
+    const link =
+      window.location.href;
+
 
     const facebookURL =
       "https://www.facebook.com/sharer/sharer.php?u=" +
-      encodeURIComponent(websiteURL);
+      encodeURIComponent(
+        link
+      );
 
 
     window.open(
@@ -588,14 +693,22 @@
 
 
   /*
-    PROTECT TEXT FROM HTML
+    PROTECT HTML
   */
 
-  function escapeHTML(text) {
+  function escapeHTML(
+    text
+  ) {
 
-    const div = document.createElement("div");
+    const div =
+      document.createElement(
+        "div"
+      );
 
-    div.textContent = text || "";
+
+    div.textContent =
+      text || "";
+
 
     return div.innerHTML;
 
@@ -603,25 +716,45 @@
 
 
   /*
-    PROTECT JAVASCRIPT VALUES
+    PROTECT JAVASCRIPT
   */
 
-  function escapeJS(text) {
+  function escapeJS(
+    text
+  ) {
 
-    return String(text || "")
-      .replace(/\\/g, "\\\\")
-      .replace(/'/g, "\\'")
-      .replace(/\n/g, "\\n")
-      .replace(/\r/g, "\\r");
+    return String(
+      text || ""
+    )
+
+      .replace(
+        /\\/g,
+        "\\\\"
+      )
+
+      .replace(
+        /'/g,
+        "\\'"
+      )
+
+      .replace(
+        /\n/g,
+        "\\n"
+      )
+
+      .replace(
+        /\r/g,
+        "\\r"
+      );
 
   }
 
 
   /*
-    START
+    LOAD NEWS
   */
 
-  displayNewNews();
+  displayNews();
 
 </script>
 
