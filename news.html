@@ -126,6 +126,24 @@
     }
 
 
+    .article-text {
+      line-height: 1.9;
+      font-size: 16px;
+      margin-bottom: 18px;
+      text-align: justify;
+    }
+
+
+    .article-text p {
+      margin-bottom: 18px;
+    }
+
+
+    .article-text strong {
+      color: #006600;
+    }
+
+
     /* =========================
        READ FULL STORY BUTTON
     ========================== */
@@ -215,20 +233,6 @@
 
 
     /* =========================
-       NO NEWS
-    ========================== */
-
-    .no-news {
-      background: white;
-      padding: 30px;
-      text-align: center;
-      border-radius: 10px;
-      color: #666;
-      margin-bottom: 25px;
-    }
-
-
-    /* =========================
        FOOTER
     ========================== */
 
@@ -282,6 +286,11 @@
       .read-button {
         width: 100%;
         text-align: center;
+      }
+
+
+      .article-text {
+        text-align: left;
       }
 
     }
@@ -340,14 +349,197 @@
 
 
   <!-- ==================================================
-       NEW IBAJI ARTICLE
-       THIS WILL ALWAYS APPEAR AT THE TOP
+       LATEST IBAJI APC POLITICAL NEWS
   =================================================== -->
 
   <article class="news-card">
 
 
-    <!-- IBAJI NEWS PICTURE -->
+    <!-- FEATURED NEWS IMAGE -->
+
+    <img
+      src="https://i.ibb.co/zHVnxDcH/IMG-20260823-WA0002.jpg"
+      alt="Hon. Timothy Ojomah, Kogi State Commissioner for Agriculture and Food Security"
+    >
+
+
+    <!-- HEADLINE -->
+
+    <h2>
+      Hon. Timothy Ojomah Urges Ibaji Political Appointees to Intensify Grassroots Mobilisation for APC Victory
+    </h2>
+
+
+    <!-- DATE -->
+
+    <div class="date">
+      Published: August 26, 2026
+    </div>
+
+
+    <!-- FULL NEWS STORY -->
+
+    <div class="article-text">
+
+
+      <p>
+        Hon. Timothy Ojomah, the Kogi State Commissioner for Agriculture
+        and Food Security, has called on all political appointees from
+        <strong>Ibaji Local Government Area</strong> to increase their
+        commitment, strengthen grassroots mobilisation and work
+        collectively towards the victory of the
+        <strong>All Progressives Congress (APC)</strong> in the
+        forthcoming general elections.
+      </p>
+
+
+      <p>
+        The Commissioner made the call while emphasizing the important
+        role political appointees play in connecting the government and
+        the party with the people at the grassroots. He urged all
+        appointees from Ibaji to return to their various wards,
+        communities and constituencies, engage directly with the people
+        and ensure that the achievements and programmes of the
+        <strong>APC-led administration</strong> are properly communicated
+        to the electorate.
+      </p>
+
+
+      <p>
+        Hon. Timothy Ojomah stressed that electoral success cannot be
+        achieved through individual efforts alone, but requires
+        <strong>unity, teamwork, dedication and continuous engagement
+        with the people</strong>. He therefore encouraged all political
+        appointees and APC stakeholders in Ibaji to put aside differences,
+        work together and build a stronger political structure across
+        the local government.
+      </p>
+
+
+      <p>
+        He further urged the appointees to listen to the concerns,
+        needs and aspirations of the people and maintain a strong
+        relationship with their communities. According to him,
+        effective grassroots mobilisation begins with being present
+        among the people, understanding their challenges and working
+        together to promote the ideals and programmes of the APC.
+      </p>
+
+
+      <p>
+        The Commissioner also called for greater cooperation among
+        party leaders, political appointees, ward executives, youth
+        leaders, women leaders and other stakeholders across Ibaji.
+        He emphasized that every member of the party has an important
+        role to play in strengthening the APC's presence and ensuring
+        that the party remains united and organised ahead of the
+        elections.
+      </p>
+
+
+      <p>
+        He noted that <strong>Ibaji remains an important political
+        constituency</strong>, and the commitment of its political
+        stakeholders will be critical to achieving a strong electoral
+        performance for the APC. He therefore encouraged everyone
+        involved to remain focused, disciplined and committed to the
+        collective political objective.
+      </p>
+
+
+      <p>
+        Hon. Timothy Ojomah urged the political appointees not to relent
+        in their efforts, but to intensify consultations, community
+        engagement and mobilisation across the various wards of Ibaji
+        Local Government Area.
+      </p>
+
+
+      <p>
+        He called on APC members and supporters to remain united,
+        avoid unnecessary divisions and work together in the spirit
+        of progress and collective responsibility.
+      </p>
+
+
+      <p>
+        As the forthcoming elections draw closer, the Commissioner
+        encouraged the political stakeholders to remain committed to
+        grassroots engagement and continue working with the people
+        across Ibaji Local Government Area.
+      </p>
+
+
+      <p>
+        The call is expected to further strengthen political
+        mobilisation and coordination among APC stakeholders in Ibaji
+        as preparations for the forthcoming elections continue.
+      </p>
+
+
+      <p>
+        <strong>APC — Progress, Unity and Victory!</strong>
+      </p>
+
+
+      <p>
+        <strong>
+          #APC #Ibaji #KogiState #TimothyOjomah #APCKogi
+          #IbajiPolitics #GrassrootsMobilisation #APC2027
+          #KogiPolitics #AgricultureAndFoodSecurity
+        </strong>
+      </p>
+
+    </div>
+
+
+    <!-- SHARE BUTTONS -->
+
+    <div class="share-buttons">
+
+
+      <button
+        class="share-btn copy-btn"
+        onclick="copyLatestLink(this)"
+      >
+        🔗 Copy Link
+      </button>
+
+
+      <button
+        class="share-btn whatsapp-btn"
+        onclick="shareLatestWhatsApp()"
+      >
+        🟢 WhatsApp
+      </button>
+
+
+      <button
+        class="share-btn facebook-btn"
+        onclick="shareLatestFacebook()"
+      >
+        🔵 Facebook
+      </button>
+
+
+    </div>
+
+  </article>
+
+
+  <!-- ==================================================
+       ADMIN PUBLISHED NEWS
+  =================================================== -->
+
+  <div id="newNews"></div>
+
+
+  <!-- ==================================================
+       PREVIOUS IBAJI NEWS
+  =================================================== -->
+
+  <article class="news-card">
+
 
     <img
       src="https://i.ibb.co/1YvrWFxp/IMG-20260814-WA0173.jpg"
@@ -355,22 +547,16 @@
     >
 
 
-    <!-- IBAJI HEADLINE -->
-
     <h2>
       Hon. Timothy Ojomah Urges Ibaji People to Remain Calm,
       Assures Them Government Has Not Forgotten Them
     </h2>
 
 
-    <!-- DATE -->
-
     <div class="date">
       Published: August 25, 2026
     </div>
 
-
-    <!-- SUMMARY -->
 
     <div class="summary">
 
@@ -387,8 +573,6 @@
     </div>
 
 
-    <!-- READ FULL STORY -->
-
     <a
       href="news-ibaji.html"
       class="read-button"
@@ -396,8 +580,6 @@
       Read Full Story →
     </a>
 
-
-    <!-- SHARE BUTTONS -->
 
     <div class="share-buttons">
 
@@ -429,13 +611,6 @@
     </div>
 
   </article>
-
-
-  <!-- ==================================================
-       ADMIN PUBLISHED NEWS
-  =================================================== -->
-
-  <div id="newNews"></div>
 
 
   <!-- ==================================================
@@ -560,7 +735,78 @@
 
 
   /* ==================================================
-     IBAJI ARTICLE LINK
+     LATEST ARTICLE LINK
+  =================================================== */
+
+  const latestNewsLink =
+    "https://timothyojomah957-netizen.github.io/timothyojomahspeaks-/news.html";
+
+
+  /* ==================================================
+     COPY LATEST NEWS LINK
+  =================================================== */
+
+  function copyLatestLink(button) {
+
+    copyText(
+      latestNewsLink,
+      button
+    );
+
+  }
+
+
+  /* ==================================================
+     WHATSAPP LATEST NEWS
+  =================================================== */
+
+  function shareLatestWhatsApp() {
+
+    const headline =
+      "Hon. Timothy Ojomah Urges Ibaji Political Appointees to Intensify Grassroots Mobilisation for APC Victory";
+
+
+    const text =
+      headline +
+      "\n\nRead the full story here:\n" +
+      latestNewsLink;
+
+
+    const url =
+      "https://wa.me/?text=" +
+      encodeURIComponent(text);
+
+
+    window.open(
+      url,
+      "_blank"
+    );
+
+  }
+
+
+  /* ==================================================
+     FACEBOOK LATEST NEWS
+  =================================================== */
+
+  function shareLatestFacebook() {
+
+    const url =
+      "https://www.facebook.com/sharer/sharer.php?u=" +
+      encodeURIComponent(latestNewsLink);
+
+
+    window.open(
+      url,
+      "_blank",
+      "width=600,height=500"
+    );
+
+  }
+
+
+  /* ==================================================
+     PREVIOUS IBAJI ARTICLE LINK
   =================================================== */
 
   const ibajiLink =
@@ -695,7 +941,7 @@
 
   /* ==================================================
      COPY FUNCTION
-  =================================================== */
+  ================================================== */
 
   function copyText(
     text,
@@ -737,7 +983,7 @@
 
   /* ==================================================
      COPIED MESSAGE
-  =================================================== */
+  ================================================== */
 
   function copiedMessage(button) {
 
@@ -761,7 +1007,7 @@
 
   /* ==================================================
      FALLBACK COPY
-  =================================================== */
+  ================================================== */
 
   function fallbackCopy(
     text,
