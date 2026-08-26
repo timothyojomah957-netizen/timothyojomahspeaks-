@@ -5,19 +5,26 @@
 
   <meta charset="UTF-8">
 
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>
-    Timothy Ojomah Urges Ibaji Political Appointees to Intensify Mobilisation for APC Victory
+    Hon. Timothy Ojomah Urges Ibaji Political Appointees to Intensify Grassroots Mobilisation for APC Victory
   </title>
 
 
-  <!-- =========================
-       WHATSAPP / FACEBOOK PREVIEW
-  ========================== -->
+  <!-- ==================================================
+       SEARCH ENGINE DESCRIPTION
+  =================================================== -->
+
+  <meta
+    name="description"
+    content="Hon. Timothy Ojomah, Kogi State Commissioner for Agriculture and Food Security, urges Ibaji political appointees to intensify grassroots mobilisation for APC victory."
+  >
+
+
+  <!-- ==================================================
+       OPEN GRAPH - WHATSAPP / FACEBOOK
+  =================================================== -->
 
   <meta property="og:type" content="article">
 
@@ -37,13 +44,18 @@
   >
 
   <meta
-    property="og:image:width"
-    content="1200"
+    property="og:image:secure_url"
+    content="https://i.ibb.co/zHVnxDcH/IMG-20260823-WA0002.jpg"
   >
 
   <meta
-    property="og:image:height"
-    content="630"
+    property="og:image:type"
+    content="image/jpeg"
+  >
+
+  <meta
+    property="og:image:alt"
+    content="Hon. Timothy Ojomah, Kogi State Commissioner for Agriculture and Food Security"
   >
 
   <meta
@@ -57,7 +69,9 @@
   >
 
 
-  <!-- TWITTER / X PREVIEW -->
+  <!-- ==================================================
+       TWITTER / X
+  =================================================== -->
 
   <meta
     name="twitter:card"
@@ -79,6 +93,15 @@
     content="https://i.ibb.co/zHVnxDcH/IMG-20260823-WA0002.jpg"
   >
 
+  <meta
+    name="twitter:image:alt"
+    content="Hon. Timothy Ojomah, Kogi State Commissioner for Agriculture and Food Security"
+  >
+
+
+  <!-- ==================================================
+       STYLES
+  =================================================== -->
 
   <style>
 
@@ -155,10 +178,15 @@
     }
 
 
-    .article img {
+    /* ==================================================
+       FEATURED IMAGE
+    =================================================== */
+
+    .featured-image {
       width: 100%;
-      max-height: 550px;
-      object-fit: cover;
+      max-height: 600px;
+      object-fit: contain;
+      background: #eeeeee;
       border-radius: 10px;
       display: block;
       margin-bottom: 22px;
@@ -253,6 +281,18 @@
     }
 
 
+    .home-button {
+      display: inline-block;
+      margin-top: 25px;
+      background: #008000;
+      color: white;
+      text-decoration: none;
+      padding: 12px 18px;
+      border-radius: 6px;
+      font-weight: bold;
+    }
+
+
     footer {
       margin-top: 40px;
       background: #004d00;
@@ -320,9 +360,9 @@
 <body>
 
 
-<!-- =========================
+<!-- ==================================================
      HEADER
-========================== -->
+=================================================== -->
 
 <header>
 
@@ -340,9 +380,9 @@
 <div class="container">
 
 
-  <!-- =========================
-       NAVIGATION BUTTONS
-  ========================== -->
+  <!-- ==================================================
+       NAVIGATION
+  =================================================== -->
 
   <div class="top-buttons">
 
@@ -364,38 +404,45 @@
   </div>
 
 
-  <!-- =========================
+  <!-- ==================================================
        ARTICLE
-  ========================== -->
+  =================================================== -->
 
   <article class="article">
 
 
-    <!-- FEATURED IMAGE -->
+    <!-- ==================================================
+         FEATURED NEWS IMAGE
+    =================================================== -->
 
     <img
+      class="featured-image"
       src="https://i.ibb.co/zHVnxDcH/IMG-20260823-WA0002.jpg"
-      alt="Hon. Timothy Ojomah, Commissioner for Agriculture and Food Security, Kogi State"
+      alt="Hon. Timothy Ojomah, Kogi State Commissioner for Agriculture and Food Security"
     >
 
 
-    <!-- HEADLINE -->
+    <!-- ==================================================
+         HEADLINE
+    =================================================== -->
 
     <h2>
       Hon. Timothy Ojomah Urges Ibaji Political Appointees to Intensify Grassroots Mobilisation for APC Victory
     </h2>
 
 
-    <!-- DATE -->
+    <!-- ==================================================
+         DATE
+    =================================================== -->
 
     <div class="date">
       Published: August 26, 2026
     </div>
 
 
-    <!-- =========================
-         FULL ARTICLE
-    ========================== -->
+    <!-- ==================================================
+         FULL NEWS
+    =================================================== -->
 
     <div class="article-content">
 
@@ -517,12 +564,13 @@
         </strong>
       </p>
 
+
     </div>
 
 
-    <!-- =========================
-         SHARE
-    ========================== -->
+    <!-- ==================================================
+         SHARE SECTION
+    =================================================== -->
 
     <h3 class="share-title">
       Share This News
@@ -558,15 +606,24 @@
 
     </div>
 
+
+    <a
+      href="news.html"
+      class="home-button"
+    >
+      ← Back to All News
+    </a>
+
+
   </article>
 
 
 </div>
 
 
-<!-- =========================
+<!-- ==================================================
      FOOTER
-========================== -->
+=================================================== -->
 
 <footer>
 
@@ -585,20 +642,24 @@
 </footer>
 
 
+<!-- ==================================================
+     JAVASCRIPT
+=================================================== -->
+
 <script>
 
 
-  /* =========================
-     ARTICLE LINK
-  ========================== */
+  /* ==================================================
+     EXACT ARTICLE URL
+  =================================================== */
 
   const articleLink =
     "https://timothyojomah957-netizen.github.io/timothyojomahspeaks-/news-apc-ibaji.html";
 
 
-  /* =========================
+  /* ==================================================
      COPY LINK
-  ========================== */
+  =================================================== */
 
   function copyLink(button) {
 
@@ -629,9 +690,9 @@
   }
 
 
-  /* =========================
-     COPIED MESSAGE
-  ========================== */
+  /* ==================================================
+     SHOW COPIED
+  =================================================== */
 
   function showCopied(button) {
 
@@ -653,9 +714,9 @@
   }
 
 
-  /* =========================
+  /* ==================================================
      FALLBACK COPY
-  ========================== */
+  =================================================== */
 
   function fallbackCopy(button) {
 
@@ -681,7 +742,6 @@
 
 
     textarea.focus();
-
 
     textarea.select();
 
@@ -709,9 +769,9 @@
   }
 
 
-  /* =========================
-     WHATSAPP SHARE
-  ========================== */
+  /* ==================================================
+     WHATSAPP
+  =================================================== */
 
   function shareWhatsApp() {
 
@@ -721,7 +781,8 @@
 
     const text =
       headline +
-      "\n\nRead the full story here:\n" +
+      "\n\n" +
+      "Read the full story here:\n" +
       articleLink;
 
 
@@ -738,9 +799,9 @@
   }
 
 
-  /* =========================
-     FACEBOOK SHARE
-  ========================== */
+  /* ==================================================
+     FACEBOOK
+  =================================================== */
 
   function shareFacebook() {
 
