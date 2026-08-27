@@ -1,33 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Latest News - Kogi State Agriculture</title>
+
+<style>
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#f4f7f4;
+    color:#222;
+}
+
+header{
+    background:#008000;
+    color:white;
+    text-align:center;
+    padding:30px 15px;
+}
+
+header h1{
+    font-size:30px;
+    margin-bottom:8px;
+}
+
+header p{
+    font-size:15px;
+}
+
+.container{
+    width:95%;
+    max-width:1000px;
+    margin:30px auto;
+}
+
+.top-buttons{
+    display:flex;
+    justify-content:space-between;
+    gap:10px;
+    margin-bottom:25px;
+    flex-wrap:wrap;
+}
+
+.button{
+    display:inline-block;
+    background:#008000;
+    color:white;
+    text-decoration:none;
+    padding:12px 18px;
+    border-radius:6px;
+    font-weight:bold;
+}
+
+.button:hover{
+    background:#005c00;
+}
+
+/* FEATURED NEWS */
+
+.featured-news{
+    background:white;
+    border-radius:18px;
+    overflow:hidden;
+    margin-bottom:35px;
+    box-shadow:0 8px 30px rgba(0,0,0,0.15);
+    border:2px solid #008000;
+}
+
+.featured-label{
+    background:#008000;
+    color:white;
+    text-align:center;
+    padding:12px;
+    font-size:15px;
+    font-weight:bold;
+    letter-spacing:1px;
+}
+
+.featured-image{
+    width:100%;
+    display:block;
+    height:520px;
+    object-fit:cover;
+    object-position:center;
+}
+
+.featured-content{
+    padding:28px;
+}
+
+.category{
+    color:#008000;
+    font-size:14px;
+    font-weight:bold;
+    margin-bottom:12px;
+    text-transform:uppercase;
+}
+
+.featured-content h2{
+    color:#006600;
+    font-size:31px;
+    line-height:1.35;
+    margin-bottom:12px;
+}
+
+.date{
+    color:#777;
+    font-size:14px;
+    margin-bottom:20px;
+}
+
+.featured-content p{
+    font-size:17px;
+    line-height:1.9;
+    margin-bottom:18px;
+    text-align:justify;
+}
+
+.highlight{
+    background:#eef8ee;
+    border-left:5px solid #008000;
+    padding:18px;
+    margin:20px 0;
+    border-radius:7px;
+    color:#005c00;
+    line-height:1.7;
+}
+
+.read-button{
+    display:inline-block;
+    background:#008000;
+    color:white;
+    text-decoration:none;
+    padding:14px 22px;
+    border-radius:7px;
+    font-weight:bold;
+    margin-top:8px;
+}
+
+.read-button:hover{
+    background:#005c00;
+}
+
+/* SHARE BUTTONS */
+
+.share-buttons{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    margin-top:18px;
+}
+
+.share-btn{
+    border:none;
+    color:white;
+    padding:12px 16px;
+    border-radius:7px;
+    font-size:14px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.whatsapp{
+    background:#25D366;
+}
+
+.facebook{
+    background:#1877F2;
+}
+
+.copy{
+    background:#008000;
+}
+
+/* NEWS CARDS */
+
+.news-card{
+    background:white;
+    margin-bottom:30px;
+    padding:22px;
+    border-radius:12px;
+    box-shadow:0 3px 15px rgba(0,0,0,0.10);
+}
+
+.news-card img{
+    display:block;
+    width:100%;
+    max-height:450px;
+    object-fit:cover;
+    border-radius:10px;
+    margin-bottom:18px;
+}
+
+.news-card h2{
+    color:#008000;
+    font-size:25px;
+    line-height:1.3;
+    margin-bottom:8px;
+}
+
+.summary{
+    line-height:1.8;
+    font-size:16px;
+    margin-bottom:18px;
+    white-space:pre-line;
+}
+
+.delete-button{
+    background:#cc0000;
+    color:white;
+    border:none;
+    padding:10px 15px;
+    border-radius:6px;
+    margin-top:10px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.publish-note{
+    background:white;
+    padding:20px;
+    margin-top:25px;
+    border-left:5px solid #008000;
+    border-radius:6px;
+    line-height:1.7;
+}
+
+footer{
+    margin-top:40px;
+    background:#004d00;
+    color:white;
+    text-align:center;
+    padding:25px 15px;
+    font-size:14px;
+}
+
+footer p{
+    margin:5px;
+}
+
+/* MOBILE */
+
+@media(max-width:600px){
+
+    header h1{
+        font-size:24px;
+    }
+
+    .top-buttons{
+        flex-direction:column;
+    }
+
+    .button{
+        text-align:center;
+    }
+
+    .featured-image{
+        height:330px;
+    }
+
+    .featured-content{
+        padding:20px;
+    }
+
+    .featured-content h2{
+        font-size:23px;
+    }
+
+    .featured-content p{
+        font-size:16px;
+        text-align:left;
+    }
+
+    .share-buttons{
+        flex-direction:column;
+    }
+
+    .share-btn,
+    .read-button{
+        width:100%;
+        text-align:center;
+    }
+
+    .news-card h2{
+        font-size:21px;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+<header>
+
+<h1>Latest News</h1>
+
+<p>
+Commissioner of Agriculture and Food Security - Kogi State
+</p>
+
+</header>
+
+
+<div class="container">
+
+
+<div class="top-buttons">
+
+<a href="index.html" class="button">
+← Home
+</a>
+
+<a href="admin.html" class="button">
++ Publish News
+</a>
+
+</div>
+
+
+<!-- FEATURED NEWS -->
+
+<article class="featured-news">
+
+<div class="featured-label">
+⭐ FEATURED NEWS
+</div>
+
+
+<img
+class="featured-image"
+src="https://i.ibb.co/pvsPjZd5/file-00000000078c81f4855c0b93a182cf4f.png"
+alt="Hon. Timothy Ojomah celebrates Kogi State at 35"
+>
+
+
+<div class="featured-content">
+
+<div class="category">
+KOGI STATE • 35TH ANNIVERSARY
+</div>
+
+
+<h2>
+KOGI STATE @35: COMMISSIONER FOR AGRICULTURE AND FOOD SECURITY CELEBRATES 35 YEARS OF UNITY, RESILIENCE AND PROGRESS
+</h2>
+
+
+<div class="date">
+📅 Published: August 27, 2026
+</div>
+
+
+<p>
+As Kogi State commemorates the 35th anniversary of its creation,
+the Honourable Commissioner for Agriculture and Food Security,
+Hon. Timothy Ojomah, extends warm congratulations to the
+Government and the good people of Kogi State on this historic
+milestone.
+</p>
+
+
+<p>
+The 35th anniversary is an important opportunity to reflect on
+the journey of Kogi State, celebrate the achievements recorded
+over the years and recognise the resilience, unity and
+determination of the people who have contributed to the growth
+and development of the state.
+</p>
+
+
+<p>
+The Commissioner celebrates farmers, agricultural workers,
+civil servants, entrepreneurs, traditional leaders, youths,
+women and all citizens whose contributions continue to
+strengthen the state and move Kogi forward.
+</p>
+
+
+<div class="highlight">
+
+🌾 <strong>
+Agriculture remains a major pillar of Kogi State's development,
+food security, economic growth and empowerment of our people.
+</strong>
+
+</div>
+
+
+<p>
+Hon. Timothy Ojomah reaffirmed the importance of supporting
+farmers, improving food production and creating sustainable
+opportunities for the people of Kogi State.
+</p>
+
+
+<p>
+As Kogi State celebrates 35 years, the Commissioner calls for
+continued peace, unity, cooperation and commitment towards
+building a stronger and more prosperous state.
+</p>
+
+
+<p>
+
+<strong>
+Happy 35th Anniversary to Kogi State! 🎉🌾
+May Kogi State continue to grow, prosper and achieve greater heights.
+</strong>
+
+</p>
+
+
+<a
+href="news-kogi-35.html"
+class="read-button"
+>
+Read Full Story →
+</a>
+
+
+<div class="share-buttons">
+
+<button
+class="share-btn whatsapp"
+onclick="shareWhatsApp()"
+>
+🟢 Share on WhatsApp
+</button>
+
+
+<button
+class="share-btn facebook"
+onclick="shareFacebook()"
+>
+🔵 Share on Facebook
+</button>
+
+
+<button
+class="share-btn copy"
+onclick="copyLink(this)"
+>
+🔗 Copy Link
+</button>
+
+</div>
+
+</div>
+
+</article>
+
+
+<!-- NEW NEWS FROM LOCAL STORAGE -->
+
+<div id="newNews"></div>
+
+
+<div class="publish-note">
+
+<strong>
+News Update:
+</strong>
+
+<p>
+New agricultural news and updates will appear here after
+they are published from the Publish News page.
+</p>
+
+</div>
+
+
+</div>
+
+
+<footer>
+
+<p>
+<strong>
+Kogi State Ministry of Agriculture
+</strong>
+</p>
+
+<p>
+© 2026 Kogi State Ministry of Agriculture.
+All Rights Reserved.
+</p>
+
+</footer>
+
+
 <script>
 
-let newsData = JSON.parse(
+/* ==========================================
+   NEWS LINK
+========================================== */
+
+const newsLink =
+"https://timothyojomah957-netizen.github.io/timothyojomahspeaks-/news-kogi-35.html";
+
+
+/* ==========================================
+   WHATSAPP
+========================================== */
+
+function shareWhatsApp(){
+
+    const message =
+"KOGI STATE @35: COMMISSIONER FOR AGRICULTURE AND FOOD SECURITY CELEBRATES 35 YEARS OF UNITY, RESILIENCE AND PROGRESS\n\nRead the full story here:\n"
++ newsLink;
+
+    const url =
+"https://wa.me/?text="
++ encodeURIComponent(message);
+
+    window.open(url,"_blank");
+
+}
+
+
+/* ==========================================
+   FACEBOOK
+========================================== */
+
+function shareFacebook(){
+
+    const url =
+"https://www.facebook.com/sharer/sharer.php?u="
++ encodeURIComponent(newsLink);
+
+    window.open(
+        url,
+        "_blank",
+        "width=600,height=500"
+    );
+
+}
+
+
+/* ==========================================
+   COPY LINK
+========================================== */
+
+function copyLink(button){
+
+    navigator.clipboard.writeText(newsLink)
+
+    .then(function(){
+
+        const oldText =
+        button.innerHTML;
+
+        button.innerHTML =
+        "✅ Link Copied!";
+
+        setTimeout(function(){
+
+            button.innerHTML =
+            oldText;
+
+        },2000);
+
+    })
+
+    .catch(function(){
+
+        alert(
+            "Copy this link:\n\n"
+            + newsLink
+        );
+
+    });
+
+}
+
+
+/* ==========================================
+   LOCAL STORAGE NEWS
+========================================== */
+
+let newsData =
+JSON.parse(
     localStorage.getItem("websiteNews")
 ) || [];
 
-const newNews = document.getElementById("newNews");
 
-function displayNews() {
+const newNews =
+document.getElementById("newNews");
+
+
+/* ==========================================
+   DISPLAY NEWS
+========================================== */
+
+function displayNews(){
 
     newNews.innerHTML = "";
 
-    newsData.forEach(function(news) {
 
-        const article = document.createElement("article");
+    if(newsData.length === 0){
 
-        article.className = "news-card";
+        return;
+
+    }
+
+
+    newsData.forEach(function(news,index){
+
+        const article =
+        document.createElement("article");
+
+        article.className =
+        "news-card";
+
 
         article.innerHTML = `
 
-            ${
-                news.image
-                ? `
-                <img
-                    src="${news.image}"
-                    alt="${news.headline}"
-                >
-                `
-                : ""
-            }
+            <img
+                src="${news.image}"
+                alt="${news.headline}"
+            >
 
             <h2>
                 ${news.headline}
@@ -41,14 +646,15 @@ function displayNews() {
                 ${news.content}
             </div>
 
-            <a
-                href="#"
-                class="read-button"
+            <button
+                class="delete-button"
+                onclick="deleteNews(${index})"
             >
-                Read Full Story →
-            </a>
+                🗑️ Delete News
+            </button>
 
         `;
+
 
         newNews.appendChild(article);
 
@@ -56,6 +662,45 @@ function displayNews() {
 
 }
 
+
+/* ==========================================
+   DELETE NEWS
+========================================== */
+
+function deleteNews(index){
+
+    const answer =
+    confirm(
+        "Are you sure you want to delete this news?"
+    );
+
+
+    if(answer){
+
+        newsData.splice(index,1);
+
+
+        localStorage.setItem(
+            "websiteNews",
+            JSON.stringify(newsData)
+        );
+
+
+        displayNews();
+
+    }
+
+}
+
+
+/* ==========================================
+   START
+========================================== */
+
 displayNews();
 
 </script>
+
+
+</body>
+</html>
