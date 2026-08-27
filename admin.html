@@ -1,487 +1,267 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Admin - News Management</title>
+<title>Publish News</title>
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-    }
+<style>
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+    font-family:Arial,sans-serif;
+}
 
-    body {
-      background: #f4f7f5;
-      color: #222;
-    }
+body{
+    background:#f4f7f4;
+    padding:20px;
+}
 
-    header {
-      background: #006b35;
-      color: white;
-      padding: 25px 15px;
-      text-align: center;
-    }
+.container{
+    max-width:600px;
+    margin:30px auto;
+    background:white;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 4px 15px rgba(0,0,0,.15);
+}
 
-    header h1 {
-      font-size: 26px;
-      margin-bottom: 7px;
-    }
+h1{
+    color:#008000;
+    text-align:center;
+    margin-bottom:25px;
+}
 
-    header p {
-      font-size: 14px;
-    }
+label{
+    display:block;
+    font-weight:bold;
+    margin-top:15px;
+    margin-bottom:7px;
+}
 
-    .container {
-      width: 95%;
-      max-width: 850px;
-      margin: 25px auto;
-    }
+input,
+textarea{
+    width:100%;
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:6px;
+    font-size:16px;
+}
 
-    .admin-box {
-      background: white;
-      padding: 25px;
-      border-radius: 10px;
-      box-shadow: 0 3px 15px rgba(0,0,0,0.08);
-    }
+textarea{
+    height:180px;
+    resize:vertical;
+}
 
-    .admin-box h2 {
-      color: #006b35;
-      margin-bottom: 20px;
-    }
+button{
+    width:100%;
+    padding:14px;
+    margin-top:20px;
+    border:0;
+    border-radius:7px;
+    background:#008000;
+    color:white;
+    font-size:17px;
+    font-weight:bold;
+    cursor:pointer;
+}
 
-    label {
-      display: block;
-      font-weight: bold;
-      margin-top: 18px;
-      margin-bottom: 7px;
-    }
+button:hover{
+    background:#005c00;
+}
 
-    input,
-    textarea {
-      width: 100%;
-      padding: 13px;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      font-size: 15px;
-      outline: none;
-    }
+.preview{
+    width:100%;
+    max-height:350px;
+    object-fit:cover;
+    margin-top:15px;
+    border-radius:8px;
+    display:none;
+}
 
-    input:focus,
-    textarea:focus {
-      border-color: #006b35;
-    }
-
-    textarea {
-      min-height: 250px;
-      resize: vertical;
-      line-height: 1.6;
-    }
-
-    .hint {
-      color: #666;
-      font-size: 13px;
-      margin-top: 6px;
-      line-height: 1.5;
-    }
-
-    .preview {
-      display: none;
-      margin-top: 15px;
-      text-align: center;
-    }
-
-    .preview img {
-      width: 100%;
-      max-height: 400px;
-      object-fit: cover;
-      border-radius: 8px;
-    }
-
-    .preview-text {
-      color: #006b35;
-      font-weight: bold;
-      margin-top: 8px;
-    }
-
-    .publish-btn {
-      width: 100%;
-      padding: 15px;
-      margin-top: 25px;
-      border: none;
-      border-radius: 6px;
-      background: #006b35;
-      color: white;
-      font-size: 16px;
-      font-weight: bold;
-      cursor: pointer;
-    }
-
-    .publish-btn:hover {
-      background: #00552b;
-    }
-
-    .message {
-      display: none;
-      margin-top: 15px;
-      padding: 13px;
-      border-radius: 6px;
-      text-align: center;
-      background: #d9f5e5;
-      color: #006b35;
-      font-weight: bold;
-    }
-
-    .back-btn {
-      display: block;
-      text-align: center;
-      margin-top: 20px;
-      color: #006b35;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    @media (max-width: 600px) {
-
-      .container {
-        margin: 15px auto;
-      }
-
-      .admin-box {
-        padding: 18px;
-      }
-
-      header h1 {
-        font-size: 22px;
-      }
-    }
-  </style>
+.back{
+    display:block;
+    text-align:center;
+    margin-top:20px;
+    color:#008000;
+    text-decoration:none;
+}
+</style>
 </head>
 
 <body>
 
-<header>
-
-  <h1>
-    News Administration
-  </h1>
-
-  <p>
-    Ministry of Agriculture & Food Security, Kogi State
-  </p>
-
-</header>
-
-
 <div class="container">
 
-  <div class="admin-box">
+<h1>📰 Publish News</h1>
 
-    <h2>
-      Publish News
-    </h2>
+<form id="newsForm">
 
+<label>News Headline</label>
 
-    <!-- NEWS HEADLINE -->
+<input
+    type="text"
+    id="headline"
+    placeholder="Enter news headline"
+    required
+>
 
-    <label for="headline">
-      News Headline
-    </label>
+<label>Date</label>
 
-    <input
-      type="text"
-      id="headline"
-      placeholder="Enter news headline"
-    >
+<input
+    type="date"
+    id="date"
+    required
+>
 
+<label>News Picture</label>
 
-    <!-- IMAGE LINK -->
+<input
+    type="file"
+    id="image"
+    accept="image/*"
+    required
+>
 
-    <label for="image">
-      News Picture
-    </label>
+<img
+    id="preview"
+    class="preview"
+    alt="Picture Preview"
+>
 
-    <input
-      type="url"
-      id="image"
-      placeholder="Paste direct ImgBB image link here"
-    >
+<label>News Story</label>
 
-    <div class="hint">
+<textarea
+    id="content"
+    placeholder="Write your news story here..."
+    required
+></textarea>
 
-      Example:
-      https://i.ibb.co/xxxxx/your-picture.jpg
+<button type="submit">
+    📢 Publish News
+</button>
 
-      <br>
+</form>
 
-      Make sure you paste the direct image link,
-      not the ImgBB webpage link.
-
-    </div>
-
-
-    <!-- IMAGE PREVIEW -->
-
-    <div
-      class="preview"
-      id="preview"
-    >
-
-      <img
-        id="previewImage"
-        src=""
-        alt="News picture preview"
-      >
-
-      <div class="preview-text">
-        Picture Preview
-      </div>
-
-    </div>
-
-
-    <!-- NEWS CONTENT -->
-
-    <label for="content">
-      News Content
-    </label>
-
-    <textarea
-      id="content"
-      placeholder="Write your news story here..."
-    ></textarea>
-
-
-    <!-- PUBLISH BUTTON -->
-
-    <button
-      class="publish-btn"
-      onclick="publishNews()"
-    >
-      Publish News
-    </button>
-
-
-    <div
-      id="message"
-      class="message"
-    >
-      News published successfully!
-    </div>
-
-  </div>
-
-
-  <a
-    href="news.html"
-    class="back-btn"
-  >
-    ← View Latest News
-  </a>
+<a href="news.html" class="back">
+    ← Go to News Page
+</a>
 
 </div>
 
-
 <script>
 
-  const imageInput =
+const imageInput =
     document.getElementById("image");
 
-  const preview =
+const preview =
     document.getElementById("preview");
 
-  const previewImage =
-    document.getElementById("previewImage");
 
+/* PICTURE PREVIEW */
 
-  /*
-    IMAGE PREVIEW
-  */
+imageInput.addEventListener("change", function(){
 
-  imageInput.addEventListener(
-    "input",
-    function() {
+    const file = this.files[0];
 
-      const imageURL =
-        imageInput.value.trim();
+    if(file){
 
+        const reader = new FileReader();
 
-      if (imageURL) {
+        reader.onload = function(e){
 
-        previewImage.src =
-          imageURL;
+            preview.src = e.target.result;
 
-        preview.style.display =
-          "block";
+            preview.style.display = "block";
 
-      } else {
+        };
 
-        preview.style.display =
-          "none";
-
-      }
+        reader.readAsDataURL(file);
 
     }
-  );
+
+});
 
 
-  /*
-    PUBLISH NEWS
-  */
+/* PUBLISH NEWS */
 
-  function publishNews() {
+document
+.getElementById("newsForm")
+.addEventListener("submit", function(e){
+
+    e.preventDefault();
 
     const headline =
-      document
-        .getElementById("headline")
-        .value
-        .trim();
+        document.getElementById("headline").value.trim();
 
-
-    const image =
-      document
-        .getElementById("image")
-        .value
-        .trim();
-
+    const date =
+        document.getElementById("date").value;
 
     const content =
-      document
-        .getElementById("content")
-        .value
-        .trim();
+        document.getElementById("content").value.trim();
+
+    const file =
+        imageInput.files[0];
 
 
-    if (!headline) {
+    if(!file){
 
-      alert(
-        "Please enter the news headline."
-      );
+        alert("Please select a picture.");
 
-      return;
+        return;
 
     }
 
 
-    if (!image) {
-
-      alert(
-        "Please paste the direct ImgBB picture link."
-      );
-
-      return;
-
-    }
+    const reader = new FileReader();
 
 
-    if (!content) {
+    reader.onload = function(e){
 
-      alert(
-        "Please write the news content."
-      );
+        const news = {
 
-      return;
+            id: Date.now(),
 
-    }
+            headline: headline,
+
+            date: date,
+
+            content: content,
+
+            image: e.target.result
+
+        };
 
 
-    const news = {
+        let newsData =
+            JSON.parse(
+                localStorage.getItem("websiteNews")
+            ) || [];
 
-      id: Date.now(),
 
-      headline: headline,
+        newsData.unshift(news);
 
-      image: image,
 
-      content: content,
+        localStorage.setItem(
+            "websiteNews",
+            JSON.stringify(newsData)
+        );
 
-      date:
-        new Date().toLocaleDateString(
-          "en-US",
-          {
-            year: "numeric",
-            month: "long",
-            day: "numeric"
-          }
-        )
+
+        alert("✅ News published successfully!");
+
+
+        window.location.href =
+            "news.html";
 
     };
 
 
-    let newsData =
-      JSON.parse(
-        localStorage.getItem(
-          "websiteNews"
-        )
-      ) || [];
+    reader.readAsDataURL(file);
 
-
-    newsData.unshift(news);
-
-
-    try {
-
-      localStorage.setItem(
-        "websiteNews",
-        JSON.stringify(
-          newsData
-        )
-      );
-
-    } catch(error) {
-
-      alert(
-        "The news could not be saved. Please try again."
-      );
-
-      return;
-
-    }
-
-
-    document
-      .getElementById("message")
-      .style.display =
-      "block";
-
-
-    document
-      .getElementById("headline")
-      .value = "";
-
-
-    document
-      .getElementById("image")
-      .value = "";
-
-
-    document
-      .getElementById("content")
-      .value = "";
-
-
-    preview.style.display =
-      "none";
-
-
-    /*
-      OPEN NEWS PAGE
-    */
-
-    setTimeout(
-      function() {
-
-        window.location.href =
-          "news.html";
-
-      },
-      1000
-    );
-
-  }
+});
 
 </script>
 
