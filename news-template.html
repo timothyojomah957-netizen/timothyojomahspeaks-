@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- WHATSAPP PREVIEW -->
+<meta property="og:title" content="YOUR NEWS HEADLINE">
+<meta property="og:description" content="Latest news from the Kogi State Commissioner for Agriculture and Food Security.">
+<meta property="og:image" content="YOUR PICTURE LINK">
+<meta property="og:type" content="article">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="YOUR NEWS HEADLINE">
+<meta name="twitter:description" content="Latest news from the Kogi State Commissioner for Agriculture and Food Security.">
+<meta name="twitter:image" content="YOUR PICTURE LINK">
+
+<title>YOUR NEWS HEADLINE - Kogi State Agriculture</title>
+
+<style>
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#f4f7f4;
+    color:#222;
+}
+
+header{
+    background:#008000;
+    color:white;
+    text-align:center;
+    padding:30px 15px;
+}
+
+header h1{
+    font-size:27px;
+}
+
+header p{
+    margin-top:8px;
+}
+
+.container{
+    width:95%;
+    max-width:900px;
+    margin:30px auto;
+}
+
+.article{
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 4px 15px rgba(0,0,0,.15);
+}
+
+.article-image{
+    width:100%;
+    max-height:500px;
+    object-fit:cover;
+    display:block;
+}
+
+.content{
+    padding:25px;
+}
+
+h2{
+    color:#006600;
+    font-size:28px;
+    line-height:1.4;
+    margin-bottom:12px;
+}
+
+.date{
+    color:#777;
+    font-size:14px;
+    margin-bottom:20px;
+}
+
+.story{
+    font-size:17px;
+    line-height:1.9;
+    white-space:pre-line;
+}
+
+.share-button{
+    width:100%;
+    margin-top:25px;
+    padding:15px;
+    border:0;
+    border-radius:7px;
+    background:#075e54;
+    color:white;
+    font-size:17px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.home-button{
+    display:block;
+    text-align:center;
+    margin-top:20px;
+    padding:13px;
+    background:#008000;
+    color:white;
+    text-decoration:none;
+    border-radius:7px;
+    font-weight:bold;
+}
+
+footer{
+    background:#004d00;
+    color:white;
+    text-align:center;
+    padding:25px;
+    margin-top:40px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>Kogi State Ministry of Agriculture</h1>
+
+<p>
+Commissioner for Agriculture and Food Security
+</p>
+
+</header>
+
+
+<div class="container">
+
+<div class="article">
+
+<!-- NEWS PICTURE -->
+
+<img
+class="article-image"
+src="YOUR PICTURE LINK"
+alt="News Picture"
+>
+
+
+<div class="content">
+
+<!-- NEWS HEADLINE -->
+
+<h2>
+YOUR NEWS HEADLINE
+</h2>
+
+
+<!-- DATE -->
+
+<div class="date">
+📅 Published: YOUR DATE
+</div>
+
+
+<!-- NEWS STORY -->
+
+<div class="story">
+
+YOUR NEWS STORY GOES HERE.
+
+Write the complete news story in this section.
+
+</div>
+
+
+<!-- SHARE BUTTON -->
+
+<button
+class="share-button"
+onclick="shareNews()"
+>
+
+📤 Share This News
+
+</button>
+
+
+<a
+href="news.html"
+class="home-button"
+>
+
+← Back to Latest News
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+
+<footer>
+
+<strong>
+Kogi State Ministry of Agriculture
+</strong>
+
+<br><br>
+
+© 2026 Kogi State Ministry of Agriculture
+
+</footer>
+
+
+<script>
+
+async function shareNews(){
+
+const shareData = {
+
+title: document.title,
+
+text:
+"Read this latest news from the Kogi State Commissioner for Agriculture and Food Security.",
+
+url: window.location.href
+
+};
+
+if(navigator.share){
+
+try{
+
+await navigator.share(shareData);
+
+}catch(error){
+
+console.log("Sharing cancelled");
+
+}
+
+}else{
+
+try{
+
+await navigator.clipboard.writeText(
+window.location.href
+);
+
+alert(
+"News link copied. Paste it on WhatsApp."
+);
+
+}catch(error){
+
+alert(
+"Please copy the news link manually."
+);
+
+}
+
+}
+
+}
+
+</script>
+
+</body>
+</html>
