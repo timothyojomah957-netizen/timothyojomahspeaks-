@@ -60,6 +60,7 @@ header p{
     font-weight:bold;
 }
 
+
 /* NEWS HEADLINE */
 
 .news-item{
@@ -99,6 +100,7 @@ header p{
     font-size:13px;
 }
 
+
 /* FEATURED NEWS */
 
 .featured{
@@ -132,6 +134,9 @@ header p{
     margin-top:15px;
 }
 
+
+/* BUTTONS */
+
 .read-button{
     display:inline-block;
     margin-top:15px;
@@ -143,6 +148,47 @@ header p{
     font-weight:bold;
 }
 
+
+/* SHARE BUTTON */
+
+.share-button{
+    display:inline-block;
+    margin-top:15px;
+    margin-left:8px;
+    background:#075e54;
+    color:white;
+    border:none;
+    text-decoration:none;
+    padding:12px 18px;
+    border-radius:6px;
+    font-weight:bold;
+    cursor:pointer;
+    font-size:15px;
+}
+
+.share-button:hover{
+    opacity:.9;
+}
+
+
+/* SHARE BUTTON FOR NEWS LIST */
+
+.news-share{
+    display:inline-block;
+    margin-top:10px;
+    background:#075e54;
+    color:white;
+    border:none;
+    padding:9px 14px;
+    border-radius:6px;
+    font-weight:bold;
+    cursor:pointer;
+    font-size:14px;
+}
+
+
+/* FOOTER */
+
 footer{
     background:#004d00;
     color:white;
@@ -150,6 +196,7 @@ footer{
     padding:25px;
     margin-top:40px;
 }
+
 
 /* MOBILE */
 
@@ -183,6 +230,17 @@ footer{
 
     .featured-content h2{
         font-size:22px;
+    }
+
+    .share-button{
+        margin-left:0;
+        width:100%;
+        text-align:center;
+    }
+
+    .read-button{
+        width:100%;
+        text-align:center;
     }
 
 }
@@ -248,12 +306,21 @@ Government and the good people of Kogi State on this historic
 milestone.
 </p>
 
+
 <a
 href="news-kogi-35.html"
 class="read-button"
 >
 Read Full Story →
 </a>
+
+
+<button
+class="share-button"
+onclick="shareFeaturedNews()"
+>
+📤 Share News
+</button>
 
 </div>
 
@@ -284,7 +351,117 @@ All Rights Reserved.
 
 <script>
 
+/* ============================= */
+/* SHARE FEATURED NEWS */
+/* ============================= */
+
+async function shareFeaturedNews(){
+
+const shareData = {
+
+title:
+"Kogi State @35: Commissioner for Agriculture and Food Security Celebrates 35 Years",
+
+text:
+"Read the latest news from the Kogi State Commissioner for Agriculture and Food Security.",
+
+url:
+window.location.origin +
+window.location.pathname
+
+};
+
+
+if(navigator.share){
+
+try{
+
+await navigator.share(shareData);
+
+}catch(error){
+
+console.log("Share cancelled");
+
+}
+
+}else{
+
+copyLink();
+
+}
+
+}
+
+
+/* ============================= */
+/* SHARE OTHER NEWS */
+/* ============================= */
+
+async function shareNews(headline){
+
+const shareData = {
+
+title: headline,
+
+text:
+"Read this latest news from the Kogi State Commissioner for Agriculture and Food Security.",
+
+url: window.location.href
+
+};
+
+
+if(navigator.share){
+
+try{
+
+await navigator.share(shareData);
+
+}catch(error){
+
+console.log("Share cancelled");
+
+}
+
+}else{
+
+copyLink();
+
+}
+
+}
+
+
+/* ============================= */
+/* COPY LINK */
+/* ============================= */
+
+function copyLink(){
+
+navigator.clipboard.writeText(window.location.href)
+
+.then(function(){
+
+alert(
+"News link copied successfully. You can now paste it on WhatsApp."
+);
+
+})
+
+.catch(function(){
+
+alert(
+"Please copy the website link manually."
+);
+
+});
+
+}
+
+
+/* ============================= */
 /* GET SAVED NEWS */
+/* ============================= */
 
 let newsData =
 JSON.parse(
@@ -298,7 +475,9 @@ const newsList =
 document.getElementById("newsList");
 
 
+/* ============================= */
 /* DISPLAY NEWS */
+/* ============================= */
 
 function displayNews(){
 
@@ -308,14 +487,11 @@ newsList.innerHTML = "";
 newsData.forEach(function(news){
 
 const item =
-document.createElement("a");
+document.createElement("div");
+
 
 item.className =
 "news-item";
-
-
-item.href =
-"#";
 
 
 item.innerHTML = `
@@ -335,6 +511,13 @@ ${news.headline}
 <div class="news-date">
 📅 Published: ${news.date}
 </div>
+
+<button
+class="news-share"
+onclick="shareNews('${news.headline.replace(/'/g, "\\'")}')"
+>
+📤 Share News
+</button>
 
 </div>
 
