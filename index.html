@@ -22,7 +22,7 @@
 
 
     /* =========================================
-       SLOW MOVING WELCOME MESSAGE
+       MOVING WELCOME MESSAGE
        ========================================= */
 
     .welcome-banner {
@@ -49,6 +49,7 @@
       display: inline-flex;
       width: max-content;
       animation: welcomeMove 55s linear infinite;
+      transform: translateX(0);
     }
 
     .welcome-message {
@@ -65,10 +66,11 @@
       margin: 0 10px;
     }
 
+    /* START MOVING IMMEDIATELY */
     @keyframes welcomeMove {
 
       0% {
-        transform: translateX(100%);
+        transform: translateX(0);
       }
 
       100% {
@@ -297,7 +299,7 @@
 
 
     /* =========================================
-       MOBILE PHONE
+       MOBILE
        ========================================= */
 
     @media (max-width: 700px) {
@@ -401,57 +403,31 @@
 
     <nav>
 
-      <a href="index.html">
-        Home
-      </a>
+      <a href="index.html">Home</a>
 
-      <a href="about.html">
-        About
-      </a>
+      <a href="about.html">About</a>
 
-      <a href="biography.html">
-        Biography
-      </a>
+      <a href="biography.html">Biography</a>
 
-      <a href="profile.html">
-        Profile
-      </a>
+      <a href="profile.html">Profile</a>
 
-      <a href="mission.html">
-        Mission &amp; Vision
-      </a>
+      <a href="mission.html">Mission &amp; Vision</a>
 
-      <a href="portfolio.html">
-        Portfolio
-      </a>
+      <a href="portfolio.html">Portfolio</a>
 
-      <a href="service-project.html">
-        Projects
-      </a>
+      <a href="service-project.html">Projects</a>
 
-      <a href="service.html">
-        Services
-      </a>
+      <a href="service.html">Services</a>
 
-      <a href="farmer.html">
-        Farmers
-      </a>
+      <a href="farmer.html">Farmers</a>
 
-      <a href="gallery.html">
-        Gallery
-      </a>
+      <a href="gallery.html">Gallery</a>
 
-      <a href="video.html">
-        Videos
-      </a>
+      <a href="video.html">Videos</a>
 
-      <a href="news.html">
-        News
-      </a>
+      <a href="news.html">News</a>
 
-      <a href="contact.html">
-        Contact
-      </a>
+      <a href="contact.html">Contact</a>
 
     </nav>
 
@@ -512,7 +488,6 @@
     </p>
 
     <div class="cards">
-
 
       <div class="card">
 
@@ -585,7 +560,6 @@
     </h2>
 
     <div class="cards">
-
 
       <div class="card">
 
@@ -679,7 +653,6 @@
     </h2>
 
     <div class="cards">
-
 
       <div class="card">
 
