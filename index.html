@@ -20,6 +20,60 @@
       color: #222;
     }
 
+
+    /* ==============================
+       MOVING POWERPOINT WELCOME
+       ============================== */
+
+    .welcome-banner {
+      width: 100%;
+      overflow: hidden;
+      background: linear-gradient(90deg, #004d00, #008000, #006b35, #008000, #004d00);
+      color: white;
+      border-bottom: 3px solid #f5c400;
+      padding: 14px 0;
+      white-space: nowrap;
+      position: relative;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.20);
+    }
+
+    .welcome-track {
+      display: inline-flex;
+      width: max-content;
+      animation: welcomeMove 28s linear infinite;
+    }
+
+    .welcome-message {
+      display: inline-block;
+      padding-right: 120px;
+      font-size: 16px;
+      font-weight: bold;
+      letter-spacing: 0.4px;
+    }
+
+    .welcome-message .star {
+      color: #f5c400;
+      font-size: 19px;
+      margin: 0 8px;
+    }
+
+    @keyframes welcomeMove {
+
+      0% {
+        transform: translateX(100%);
+      }
+
+      100% {
+        transform: translateX(-100%);
+      }
+
+    }
+
+
+    /* ==============================
+       HEADER
+       ============================== */
+
     header {
       background: #008000;
       color: white;
@@ -54,6 +108,11 @@
       background: white;
       color: #008000;
     }
+
+
+    /* ==============================
+       HERO
+       ============================== */
 
     .hero {
       min-height: 560px;
@@ -96,6 +155,11 @@
       margin-bottom: 30px;
     }
 
+
+    /* ==============================
+       BUTTONS
+       ============================== */
+
     .btn {
       display: inline-block;
       background: white;
@@ -110,6 +174,11 @@
     .btn:hover {
       background: #e8e8e8;
     }
+
+
+    /* ==============================
+       SECTIONS
+       ============================== */
 
     section {
       padding: 60px 7%;
@@ -129,6 +198,11 @@
       line-height: 1.8;
       color: #555;
     }
+
+
+    /* ==============================
+       CARDS
+       ============================== */
 
     .cards {
       display: grid;
@@ -155,6 +229,11 @@
       line-height: 1.6;
     }
 
+
+    /* ==============================
+       STATS
+       ============================== */
+
     .stats {
       background: #008000;
       color: white;
@@ -176,6 +255,11 @@
       color: #333;
     }
 
+
+    /* ==============================
+       CTA
+       ============================== */
+
     .cta {
       background: white;
       text-align: center;
@@ -186,6 +270,11 @@
       font-size: 30px;
       margin-bottom: 15px;
     }
+
+
+    /* ==============================
+       FOOTER
+       ============================== */
 
     footer {
       background: #004d00;
@@ -198,7 +287,29 @@
       margin: 6px 0;
     }
 
+
+    /* ==============================
+       MOBILE
+       ============================== */
+
     @media (max-width: 700px) {
+
+      .welcome-banner {
+        padding: 12px 0;
+      }
+
+      .welcome-message {
+        font-size: 13px;
+        padding-right: 80px;
+      }
+
+      .welcome-message .star {
+        font-size: 15px;
+      }
+
+      .welcome-track {
+        animation-duration: 22s;
+      }
 
       header {
         justify-content: center;
@@ -229,7 +340,40 @@
 
 <body>
 
-  <!-- HEADER -->
+
+  <!-- =================================
+       MOVING WELCOME MESSAGE
+       ================================= -->
+
+  <div class="welcome-banner">
+
+    <div class="welcome-track">
+
+      <div class="welcome-message">
+
+        <span class="star">★</span>
+
+        WELCOME TO THE OFFICIAL WEBSITE OF HON. TIMOTHY OJOMAH,
+        COMMISSIONER FOR AGRICULTURE AND FOOD SECURITY, KOGI STATE.
+
+        <span class="star">★</span>
+
+        TOGETHER, WE ARE ADVANCING AGRICULTURE, SUPPORTING FARMERS,
+        PROMOTING FOOD SECURITY AND BUILDING A STRONGER AGRICULTURAL
+        FUTURE FOR KOGI STATE.
+
+        <span class="star">★</span>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- =================================
+       HEADER
+       ================================= -->
 
   <header>
 
@@ -296,7 +440,9 @@
   </header>
 
 
-  <!-- HERO -->
+  <!-- =================================
+       HERO
+       ================================= -->
 
   <section class="hero">
 
@@ -330,7 +476,9 @@
   </section>
 
 
-  <!-- WELCOME -->
+  <!-- =================================
+       WELCOME
+       ================================= -->
 
   <section>
 
@@ -407,7 +555,9 @@
   </section>
 
 
-  <!-- EXPLORE -->
+  <!-- =================================
+       EXPLORE
+       ================================= -->
 
   <section>
 
@@ -498,7 +648,9 @@
   </section>
 
 
-  <!-- FOCUS -->
+  <!-- =================================
+       FOCUS
+       ================================= -->
 
   <section class="stats">
 
@@ -564,7 +716,9 @@
   </section>
 
 
-  <!-- CTA -->
+  <!-- =================================
+       CTA
+       ================================= -->
 
   <section class="cta">
 
@@ -586,7 +740,9 @@
   </section>
 
 
-  <!-- FOOTER -->
+  <!-- =================================
+       FOOTER
+       ================================= -->
 
   <footer>
 
@@ -604,6 +760,7 @@
     </p>
 
   </footer>
+
 
 </body>
 </html>
